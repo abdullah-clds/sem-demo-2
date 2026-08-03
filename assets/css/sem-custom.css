@@ -1,0 +1,916 @@
+/* ============================================================
+   SEM Custom Styles — Kapadokya Üniversitesi SEM
+   Tüm yeni stiller buraya. Vendor dosyalarına dokunma.
+   ============================================================ */
+
+/* ── 1. KÜN Renk Paleti ──────────────────────────────────── */
+:root {
+  --sem-primary: #002855; /* derin lacivert — ana */
+  --sem-accent: #cb333b; /* kırmızı — vurgu */
+  --sem-gold: #c9a84c; /* altın — sertifika/prestij */
+  --sem-navy-light: #00428a; /* hover */
+  --sem-success: #1a7a4a; /* Kayıtlar Açık */
+  --sem-warning: #d97706; /* Son Kontenjanlar */
+  --sem-info: #0369a1; /* bilgi */
+  --sem-muted: #94a3b8; /* Yakında */
+  --sem-bg-2: #f8f9fc; /* açık arka plan */
+  --sem-footer-bg: #001a3a; /* footer */
+  --sem-text: #0f172a;
+}
+
+/* ── 2. Kurs Kartı ───────────────────────────────────────── */
+.sem-course-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 40, 85, 0.1);
+  border: 1px solid rgba(0, 40, 85, 0.08);
+  overflow: hidden;
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
+  background: #fff;
+}
+
+.sem-course-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 28px rgba(0, 40, 85, 0.18);
+}
+
+.sem-course-card .rbt-card-img {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+.sem-course-card .rbt-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.sem-course-card .card-body {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+}
+
+.sem-course-card .card-footer {
+  margin-top: auto;
+  padding: 1rem 1.25rem;
+  background: transparent;
+  border-top: 1px solid rgba(0, 40, 85, 0.07);
+}
+
+/* ── 2b. Kurs Kartı Metin Boyutları ─────────────────────── */
+.sem-course-card .rbt-card-title {
+  font-size: 22px !important;
+}
+.sem-course-card .rbt-card-text {
+  font-size: 14px;
+}
+.sem-course-card .rbt-meta li {
+  font-size: 14px;
+}
+.sem-course-card .card-footer .fw-bold {
+  font-size: 14px;
+}
+
+/* ── 3. Durum Etiketleri ─────────────────────────────────── */
+.sem-status-badge {
+  display: inline-block;
+  padding: 0.25em 0.75em;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+}
+
+.sem-status-badge--acik {
+  background: rgba(26, 122, 74, 0.12);
+  color: var(--sem-success);
+}
+.sem-status-badge--son {
+  background: rgba(217, 119, 6, 0.12);
+  color: var(--sem-warning);
+}
+.sem-status-badge--yakinda {
+  background: rgba(148, 163, 184, 0.15);
+  color: #475569;
+}
+.sem-status-badge--kapandi {
+  background: rgba(203, 51, 59, 0.12);
+  color: var(--sem-accent);
+}
+.sem-status-badge--talep {
+  background: rgba(3, 105, 161, 0.12);
+  color: var(--sem-info);
+}
+
+/* ── 4. Filtre yardımcısı ────────────────────────────────── */
+.sem-hidden {
+  display: none !important;
+}
+
+/* ── 5. Başvur Butonu ────────────────────────────────────── */
+.sem-apply-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1.4rem;
+  background: var(--sem-primary);
+  color: #fff !important;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-decoration: none;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+.sem-apply-btn:hover {
+  background: var(--sem-navy-light);
+  color: #fff !important;
+}
+
+/* ── 6. Modal Başlık ─────────────────────────────────────── */
+#semApplyModal .modal-header {
+  background: var(--sem-primary);
+  color: #fff;
+  border-radius: 0;
+}
+
+/* ── 7. Mobil menü collapse butonu ──────────────────────── */
+.sem-mob-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+  font-weight: 500;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  line-height: inherit;
+}
+.sem-mob-toggle:focus {
+  outline: none;
+  box-shadow: none;
+}
+.sem-mob-toggle[aria-expanded="true"] .feather-chevron-down {
+  transform: rotate(180deg);
+}
+.feather-chevron-down {
+  transition: transform 0.2s ease;
+}
+
+/* ── 8. Birincil CTA Butonu (btn-gradient mor/magenta override) ─── */
+.rbt-btn.sem-btn-primary,
+a.rbt-btn.sem-btn-primary {
+  background: var(--sem-primary) !important;
+  background-image: none !important;
+  border-color: var(--sem-primary) !important;
+  color: #fff !important;
+}
+.rbt-btn.sem-btn-primary:hover,
+a.rbt-btn.sem-btn-primary:hover {
+  background: var(--sem-navy-light) !important;
+  border-color: var(--sem-navy-light) !important;
+}
+
+/* ── 9. Header Arama Dropdown ───────────────────────────── */
+.rbt-search-dropdown #sem-header-search-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border: 2px solid rgba(0, 40, 85, 0.15);
+  border-radius: 50px;
+  padding: 6px 6px 6px 24px;
+  box-shadow: 0 4px 20px rgba(0, 40, 85, 0.08);
+  transition: border-color 0.2s;
+}
+.rbt-search-dropdown #sem-header-search-form:focus-within {
+  border-color: var(--sem-primary);
+}
+.rbt-search-dropdown #sem-header-search-form input {
+  flex: 1;
+  border: none !important;
+  background: transparent !important;
+  outline: none !important;
+  box-shadow: none !important;
+  font-size: 18px;
+  color: #0f172a;
+  padding: 0;
+}
+.rbt-search-dropdown #sem-header-search-form input::placeholder {
+  color: #94a3b8;
+}
+.rbt-search-dropdown #sem-header-search-form .submit-btn button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 28px;
+  background: var(--sem-primary);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+.rbt-search-dropdown #sem-header-search-form .submit-btn button:hover {
+  background: var(--sem-navy-light);
+}
+
+/* ── 10. Sınav Merkezleri + Duyurular kart açıklamaları ─── */
+#sem-sinav-merkezleri p.description.mt--10 {
+  font-size: 22px !important;
+}
+#sem-sinav-merkezleri p.description {
+  font-size: 14px !important;
+}
+#sem-duyurular p.description {
+  font-size: 14px !important;
+}
+
+/* ── 11. Liste Görünümü — Yatay Kart Düzeni ─────────── */
+.rbt-course-grid-column.active-list-view .sem-course-card {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 1fr auto;
+  border-radius: 12px;
+}
+.rbt-course-grid-column.active-list-view .sem-course-card .rbt-card-img {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  aspect-ratio: unset !important;
+  height: 100%;
+  min-height: 150px;
+  border-radius: 12px 0 0 12px;
+  overflow: hidden;
+}
+.rbt-course-grid-column.active-list-view .sem-course-card .rbt-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.rbt-course-grid-column.active-list-view .sem-course-card .card-body {
+  grid-column: 2;
+  grid-row: 1;
+}
+.rbt-course-grid-column.active-list-view .sem-course-card .card-footer {
+  grid-column: 2;
+  grid-row: 2;
+  margin-top: 0;
+}
+@media (max-width: 575px) {
+  .rbt-course-grid-column.active-list-view .sem-course-card {
+    grid-template-columns: 120px 1fr;
+  }
+}
+
+/* anasayfa: Duyurular → Eğitimler arası boşluğu kıs */
+#sem-duyurular {
+  padding-bottom: 40px;
+}
+#sem-populer-egitimler {
+  padding-top: 40px;
+}
+
+/* kurs-detay.html: mobil sabit Başvur çubuğu için body boşluğu */
+@media (max-width: 991.98px) {
+  body.kurs-detay-page {
+    padding-bottom: 80px;
+  }
+}
+
+/* ── 12. SSS Sayfa Stilleri ─────────────────────────────── */
+.sem-faq-group { display: none; }
+.sem-faq-group.is-active { display: block; }
+
+/* Kategori pilleri */
+.sem-faq-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 22px;
+  border: 2px solid rgba(0, 40, 85, 0.18);
+  border-radius: 50px;
+  background: #fff;
+  color: #4a5568;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+  box-shadow: 0 1px 4px rgba(0,40,85,0.06);
+}
+.sem-faq-pill:hover {
+  border-color: var(--sem-primary);
+  color: var(--sem-primary);
+}
+.sem-faq-pill.active {
+  background: var(--sem-primary);
+  border-color: var(--sem-primary);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0,40,85,0.25);
+}
+
+/* Accordion — rem → px override (vendor html:62.5% nedeniyle) */
+.sem-sss-accordion .accordion-item {
+  border: none !important;
+  border-radius: 12px !important;
+  overflow: hidden;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 16px rgba(0, 40, 85, 0.07);
+  background: #fff;
+}
+.sem-sss-accordion .accordion-button {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: var(--sem-primary) !important;
+  background: #fff !important;
+  padding: 20px 22px 20px 22px !important;
+  border-left: 4px solid transparent !important;
+  box-shadow: none !important;
+  line-height: 1.45 !important;
+  transition: border-color 0.2s, background 0.2s;
+}
+.sem-sss-accordion .accordion-button:not(.collapsed) {
+  border-left-color: var(--sem-accent) !important;
+  background: #fafbff !important;
+  box-shadow: none !important;
+  color: var(--sem-primary) !important;
+}
+.sem-sss-accordion .accordion-button::after {
+  background-size: 18px !important;
+  width: 20px !important;
+  height: 20px !important;
+  flex-shrink: 0;
+}
+.sem-sss-accordion .accordion-body {
+  font-size: 15px !important;
+  line-height: 1.8 !important;
+  color: #475569;
+  padding: 4px 22px 22px 26px !important;
+  border-left: 4px solid var(--sem-accent) !important;
+  background: #fafbff !important;
+}
+.sem-sss-accordion .accordion-body a {
+  color: var(--sem-primary);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* SSS hero banner */
+.sem-sss-hero {
+  background: linear-gradient(135deg, var(--sem-primary) 0%, #00428a 100%);
+  padding: 64px 0 52px;
+  position: relative;
+  overflow: hidden;
+}
+.sem-sss-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='28'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+  pointer-events: none;
+}
+.sem-sss-hero .breadcrumb-inner { position: relative; }
+.sem-sss-hero h1 {
+  font-size: 36px !important;
+  font-weight: 800 !important;
+  color: #fff !important;
+  margin-top: 12px;
+  line-height: 1.25;
+}
+.sem-sss-hero p {
+  font-size: 16px !important;
+  color: rgba(255,255,255,0.78) !important;
+  margin-top: 10px;
+  max-width: 520px;
+}
+.sem-sss-hero .page-list li,
+.sem-sss-hero .page-list li a {
+  font-size: 14px !important;
+  color: rgba(255,255,255,0.65) !important;
+}
+.sem-sss-hero .page-list li a:hover { color: #fff !important; }
+.sem-sss-hero .page-list .rbt-breadcrumb-item.active { color: rgba(255,255,255,0.65) !important; }
+
+/* SSS CTA band */
+.sem-sss-cta {
+  background: linear-gradient(135deg, var(--sem-primary) 0%, #00357a 100%);
+  border-radius: 16px;
+  padding: 40px 36px;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.sem-sss-cta h4 {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  margin-bottom: 6px;
+}
+.sem-sss-cta p {
+  font-size: 14px !important;
+  color: rgba(255,255,255,0.75) !important;
+  margin: 0;
+}
+@media (max-width: 575px) {
+  .sem-sss-cta { padding: 28px 20px; flex-direction: column; text-align: center; }
+  .sem-sss-hero h1 { font-size: 26px !important; }
+  .sem-sss-hero { padding: 48px 0 36px; }
+}
+
+/* ── 13. Sayfa Hero Banner (görsel tabanlı) ──────────────── */
+.sem-page-banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: block;
+}
+.sem-page-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.sem-page-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 20, 55, 0.52);
+  pointer-events: none;
+}
+.sem-page-banner-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sem-page-banner-content .inner { width: 100%; }
+
+/* ── 14. Hero Arama Bölümü ───────────────────────────────── */
+.sem-hero-search-wrap {
+  background: #fff;
+  padding: 28px 0 24px;
+  border-bottom: 1px solid rgba(0,40,85,0.08);
+}
+.sem-hero-search-inner {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto;
+}
+.sem-hero-search-label { display: none; }
+.sem-hero-search-title { display: none; }
+
+/* Arama kutusu */
+.sem-hero-search-box {
+  display: flex;
+  align-items: center;
+  background: #f8f9fc;
+  border-radius: 50px;
+  border: 1.5px solid rgba(0,40,85,0.14);
+  padding: 5px 5px 5px 18px;
+  box-shadow: 0 2px 12px rgba(0,40,85,0.07);
+  gap: 8px;
+  transition: border-color 0.18s, box-shadow 0.18s;
+}
+.sem-hero-search-box:focus-within {
+  border-color: var(--sem-primary);
+  box-shadow: 0 2px 16px rgba(0,40,85,0.13);
+  background: #fff;
+}
+.sem-hero-search-icon {
+  font-size: 18px;
+  color: #94a3b8;
+  flex-shrink: 0;
+}
+.sem-hero-search-input {
+  flex: 1;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  font-size: 15px !important;
+  color: #0f172a !important;
+  padding: 9px 0 !important;
+  min-width: 0;
+}
+.sem-hero-search-input::placeholder { color: #94a3b8 !important; }
+.sem-hero-search-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 24px;
+  background: var(--sem-primary);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+.sem-hero-search-btn:hover { background: var(--sem-accent); }
+
+/* Kategori etiketleri */
+.sem-hero-search-cats {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+.sem-hero-search-cats span {
+  font-size: 12px !important;
+  color: #94a3b8 !important;
+  font-weight: 500;
+}
+.sem-hero-search-cats a {
+  font-size: 12px !important;
+  color: #475569 !important;
+  background: #f1f5f9;
+  border: 1px solid rgba(0,40,85,0.1);
+  border-radius: 50px;
+  padding: 3px 12px;
+  text-decoration: none !important;
+  transition: background 0.18s, color 0.18s, border-color 0.18s;
+}
+.sem-hero-search-cats a:hover {
+  background: var(--sem-primary);
+  border-color: var(--sem-primary);
+  color: #fff !important;
+}
+
+@media (max-width: 767px) {
+  .sem-hero-search-wrap { padding: 20px 0 18px; }
+  .sem-hero-search-btn span { display: none; }
+  .sem-hero-search-btn { padding: 10px 14px; }
+}
+
+/* ── 15. İletişim Sayfası ────────────────────────────────── */
+.sem-contact-card {
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid rgba(0,40,85,0.08);
+  box-shadow: 0 2px 16px rgba(0,40,85,0.07);
+  padding: 32px 28px;
+  height: 100%;
+  text-align: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.sem-contact-card:hover {
+  box-shadow: 0 8px 28px rgba(0,40,85,0.13);
+  transform: translateY(-4px);
+}
+.sem-contact-card-icon {
+  width: 56px; height: 56px;
+  background: rgba(0,40,85,0.07);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 18px;
+  font-size: 24px;
+  color: var(--sem-primary);
+}
+.sem-contact-card h5 {
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  color: var(--sem-primary) !important;
+  margin-bottom: 10px;
+}
+.sem-contact-card p {
+  font-size: 14px !important;
+  color: #475569 !important;
+  line-height: 1.8;
+  margin: 0;
+}
+.sem-contact-card p a {
+  color: var(--sem-primary) !important;
+  text-decoration: none;
+  font-weight: 500;
+}
+.sem-contact-card p a:hover { color: var(--sem-accent) !important; }
+
+/* Form alanı */
+.sem-contact-form-wrap {
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid rgba(0,40,85,0.08);
+  box-shadow: 0 2px 20px rgba(0,40,85,0.07);
+  padding: 40px 36px;
+  height: 100%;
+}
+.sem-form-label {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #0f172a !important;
+  margin-bottom: 6px;
+  display: block;
+}
+.sem-form-control {
+  width: 100%;
+  padding: 11px 16px;
+  border: 1.5px solid rgba(0,40,85,0.15);
+  border-radius: 8px;
+  font-size: 15px !important;
+  color: #0f172a !important;
+  background: #f8f9fc !important;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  appearance: none;
+}
+.sem-form-control:focus {
+  border-color: var(--sem-primary);
+  box-shadow: 0 0 0 3px rgba(0,40,85,0.08);
+  background: #fff !important;
+}
+.sem-form-control::placeholder { color: #94a3b8 !important; }
+textarea.sem-form-control { resize: vertical; min-height: 120px; }
+
+.sem-contact-success {
+  align-items: center;
+  gap: 10px;
+  background: rgba(26,122,74,0.1);
+  border: 1px solid rgba(26,122,74,0.3);
+  border-radius: 10px;
+  padding: 16px 20px;
+  font-size: 15px !important;
+  font-weight: 600;
+  color: var(--sem-success) !important;
+  margin-top: 16px;
+}
+
+/* Harita */
+.sem-map-wrap {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 20px rgba(0,40,85,0.1);
+  border: 1px solid rgba(0,40,85,0.08);
+  flex-shrink: 0;
+}
+.sem-map-wrap iframe { display: block; }
+
+/* Kurumsal CTA band */
+.sem-kurumsal-cta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: linear-gradient(135deg, var(--sem-primary) 0%, #003d7a 100%);
+  border-radius: 14px;
+  padding: 28px 28px;
+  flex-wrap: wrap;
+}
+.sem-kurumsal-cta-icon {
+  width: 52px; height: 52px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px;
+  color: #fff;
+  flex-shrink: 0;
+}
+.sem-kurumsal-cta h5 {
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  margin-bottom: 4px;
+}
+.sem-kurumsal-cta p {
+  font-size: 13px !important;
+  color: rgba(255,255,255,0.75) !important;
+  margin: 0;
+}
+
+@media (max-width: 575px) {
+  .sem-contact-form-wrap { padding: 28px 20px; }
+  .sem-kurumsal-cta { flex-direction: column; text-align: center; }
+}
+
+/* ════════════════════════════════════════════════════════════
+   MOBİL RESPONSIVE — Kapsamlı düzeltmeler
+   Breakpoint referansı (Bootstrap 5):
+     xs < 576 | sm 576 | md 768 | lg 992 | xl 1200
+   ════════════════════════════════════════════════════════════ */
+
+/* ── Genel: uzun metinler kırılsın ──────────────────────── */
+@media (max-width: 991px) {
+  h1, h2, h3, h4, h5,
+  .title, .banner-title,
+  .sem-course-card .rbt-card-title,
+  .sem-page-banner-content h1 {
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+}
+
+/* ── Anasayfa slider: görsel + metin dikey yığılsın ─────── */
+@media (max-width: 991px) {
+  .rbt-banner-area.rbt-banner-11 { padding-top: 40px; padding-bottom: 40px; }
+  .rbt-banner-11 .course-thumbnail { margin-bottom: 20px; }
+  .rbt-banner-11 .banner-title { font-size: 26px !important; }
+  .rbt-banner-11 .description { font-size: 14px !important; }
+}
+
+/* ── Hero arama kutusu ───────────────────────────────────── */
+@media (max-width: 576px) {
+  .sem-hero-search-wrap { padding: 16px 0 14px; }
+  .sem-hero-search-box { padding: 4px 4px 4px 14px; }
+  .sem-hero-search-input { font-size: 13px !important; padding: 7px 0 !important; }
+  .sem-hero-search-cats { margin-top: 8px; gap: 4px; }
+  .sem-hero-search-cats a { font-size: 11px !important; padding: 2px 10px; }
+}
+
+/* ── SSS sayfası ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .sem-faq-pill { padding: 7px 14px; font-size: 12px !important; }
+  .sem-sss-accordion .accordion-button { padding: 14px 16px 14px 16px !important; font-size: 15px !important; }
+  .sem-sss-accordion .accordion-body { padding: 4px 16px 18px 18px !important; font-size: 14px !important; }
+  .sem-sss-cta { flex-direction: column; text-align: center; padding: 28px 20px; }
+  .sem-sss-hero { padding: 40px 0 32px; }
+  .sem-sss-hero h1 { font-size: 24px !important; }
+  .sem-sss-hero p { font-size: 14px !important; }
+}
+
+/* ── Sayfa hero banner (slider1/2/3 görseller) ───────────── */
+@media (max-width: 768px) {
+  .sem-page-banner-content .title { font-size: 28px !important; }
+  .sem-page-banner-content .description { font-size: 13px !important; }
+  .sem-page-banner-overlay { background: rgba(0,20,55,0.62); }
+}
+@media (max-width: 576px) {
+  .sem-page-banner-content .title { font-size: 22px !important; }
+  .sem-page-banner-content .subtitle { font-size: 11px !important; }
+}
+
+/* ── Kurs kartı grid → liste görünümü tablet ────────────── */
+@media (max-width: 768px) {
+  .rbt-course-grid-column.active-list-view .sem-course-card {
+    grid-template-columns: 150px 1fr;
+  }
+  .rbt-course-grid-column.active-list-view .sem-course-card .rbt-card-img {
+    min-height: 120px;
+  }
+}
+@media (max-width: 576px) {
+  .rbt-course-grid-column.active-list-view .sem-course-card {
+    grid-template-columns: 110px 1fr;
+  }
+}
+
+/* ── Kurs kartı font boyutları ───────────────────────────── */
+@media (max-width: 576px) {
+  .sem-course-card .rbt-card-title { font-size: 17px !important; }
+  .sem-status-badge { font-size: 13px !important; }
+}
+
+/* ── Duyurular 3'lü grid → mobil 1 kolon ────────────────── */
+@media (max-width: 576px) {
+  .rbt-blog-area .sem-contact-card,
+  .rbt-blog-area .rbt-card-body { padding: 20px 16px; }
+}
+
+/* ── İletişim sayfası ────────────────────────────────────── */
+@media (max-width: 768px) {
+  .sem-contact-card { padding: 24px 18px; }
+  .sem-contact-form-wrap { padding: 28px 20px; }
+  .sem-map-wrap iframe { height: 260px; }
+  .sem-kurumsal-cta { gap: 14px; }
+}
+@media (max-width: 576px) {
+  .sem-contact-form-wrap { padding: 22px 16px; }
+  .sem-kurumsal-cta { padding: 22px 16px; }
+  .sem-kurumsal-cta h5 { font-size: 15px !important; }
+}
+
+/* ── Footer tablet/mobil boşluklar ──────────────────────── */
+@media (max-width: 768px) {
+  .rbt-footer .footer-widget { margin-bottom: 28px; }
+}
+
+/* ── Tüm kurslar: filtre sidebar ─────────────────────────── */
+@media (max-width: 991px) {
+  #semFilterCollapse { margin-bottom: 24px; }
+}
+
+/* ── Mobile popup menu ───────────────────────────────────── */
+/* Marka renk override */
+.popup-mobile-menu .inner-wrapper {
+  border-right: 3px solid var(--sem-primary);
+}
+.popup-mobile-menu .inner-wrapper .inner-top {
+  border-bottom: 1px solid rgba(0,40,85,0.12);
+  padding-bottom: 18px;
+  margin-bottom: 16px;
+}
+
+/* Menü linkleri */
+.popup-mobile-menu .mainmenu li a {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: var(--sem-primary) !important;
+}
+.popup-mobile-menu .mainmenu li a:hover {
+  color: var(--sem-accent) !important;
+}
+.popup-mobile-menu .mainmenu .submenu li a {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  color: #475569 !important;
+  padding-left: 16px !important;
+}
+.popup-mobile-menu .mainmenu .submenu li a:hover {
+  color: var(--sem-primary) !important;
+}
+
+/* Alt: iletişim + auth */
+.sem-mob-footer {
+  margin-top: auto;
+  padding-top: 24px;
+  border-top: 1px solid rgba(0,40,85,0.1);
+}
+.sem-mob-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.sem-mob-contact a {
+  font-size: 13px !important;
+  color: #475569 !important;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.sem-mob-contact a:hover { color: var(--sem-primary) !important; }
+.sem-mob-contact i { font-size: 14px; color: var(--sem-primary); }
+
+.sem-mob-auth {
+  display: flex;
+  gap: 10px;
+}
+.sem-mob-btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 14px;
+  border-radius: 50px;
+  font-size: 13px !important;
+  font-weight: 700;
+  text-decoration: none !important;
+  text-align: center;
+  transition: all 0.18s;
+}
+.sem-mob-btn--outline {
+  border: 2px solid var(--sem-primary);
+  color: var(--sem-primary) !important;
+  background: transparent;
+}
+.sem-mob-btn--outline:hover {
+  background: var(--sem-primary);
+  color: #fff !important;
+}
+.sem-mob-btn--solid {
+  background: var(--sem-primary);
+  color: #fff !important;
+  border: 2px solid var(--sem-primary);
+}
+.sem-mob-btn--solid:hover {
+  background: var(--sem-navy-light);
+  border-color: var(--sem-navy-light);
+}
+
+/* ── Anasayfa SSS bölümü ─────────────────────────────────── */
+@media (max-width: 768px) {
+  #sem-sss { padding-top: 40px; padding-bottom: 40px; }
+}
+
+/* ── Kurs detay mobil sabit çubuk ───────────────────────── */
+@media (max-width: 991px) {
+  body.kurs-detay-page { padding-bottom: 72px; }
+}
+
+/* ── sem-hero-search genel padding kısaltma ─────────────── */
+@media (max-width: 768px) {
+  .sem-hero-search-wrap { padding: 20px 0 16px; }
+}

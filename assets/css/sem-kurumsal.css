@@ -1,0 +1,128 @@
+/* ============================================================
+   SEM KURUMSAL KİMLİK — Kapadokya Üniversitesi
+   Kaynak: Kurumsal Kimlik Kılavuzu (el notu, 2/3 Ocak)
+   Bu dosya TÜM sayfalarda sem-custom.css'ten SONRA yüklenmeli.
+   ============================================================ */
+
+/* ── 1. DIN Pro Font ──────────────────────────────────────────
+   NOT: DIN Pro ticari/lisanslı bir fonttur. Lisanslı .woff2/.woff
+   dosyalarını assets/fonts/dinpro/ klasörüne koyun.
+   Dosyalar yoksa aşağıdaki @font-face bloklarını yorum satırına
+   alın; sistem otomatik yedek fonta (fallback) düşer.
+   Ücretsiz en yakın alternatif: "D-DIN" / "Barlow" (Google Fonts).
+--------------------------------------------------------------- */
+@font-face {
+  font-family: "DIN Pro";
+  src:
+    url("../fonts/dinpro/DINPro-Regular.woff2") format("woff2"),
+    url("../fonts/dinpro/DINPro-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DIN Pro";
+  src:
+    url("../fonts/dinpro/DINPro-Medium.woff2") format("woff2"),
+    url("../fonts/dinpro/DINPro-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DIN Pro";
+  src:
+    url("../fonts/dinpro/DINPro-Bold.woff2") format("woff2"),
+    url("../fonts/dinpro/DINPro-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── 2. Kurumsal Renk Paleti (RGB + Pantone) ──────────────────
+   Lacivert koyu  #002855  rgb(0,40,85)      (ANA)
+   Mavi           #0072CE  rgb(0,114,206)    P.285C
+   Turkuaz        #00A1AA  rgb(0,161,170)    P.320C
+   Sarı           #F2A900  rgb(242,169,0)    P.130C
+   Mor            #93328E  rgb(147,50,142)   P.513C
+   Kırmızı        #CB333B  rgb(203,51,59)    P.1797C
+   Kum rengi      #D6D2C4  rgb(214,210,196)  P.7527C
+   Gri            #53565A  rgb(83,86,90)     Cool Gray 11C
+--------------------------------------------------------------- */
+:root {
+  /* Kurumsal renkler — ham değerler */
+  --kun-lacivert: #002855;
+  --kun-mavi: #0072ce;
+  --kun-turkuaz: #00a1aa;
+  --kun-sari: #f2a900;
+  --kun-mor: #93328e;
+  --kun-kirmizi: #cb333b;
+  --kun-kum: #d6d2c4;
+  --kun-gri: #53565a;
+  --kun-kirik-beyaz: #f8f6f2; /* body/navbar zemini — kum'un çok açık tonu, saf beyaz değil */
+
+  /* RGB bileşenleri (rgba() gölge/opaklık için) */
+  --kun-lacivert-rgb: 0, 40, 85;
+  --kun-mavi-rgb: 0, 114, 206;
+  --kun-turkuaz-rgb: 0, 161, 170;
+  --kun-sari-rgb: 242, 169, 0;
+  --kun-mor-rgb: 147, 50, 142;
+  --kun-kirmizi-rgb: 203, 51, 59;
+  --kun-gri-rgb: 83, 86, 90;
+  --kun-kum-rgb: 214, 210, 196;
+
+  /* --- sem-custom.css değişkenlerini kurumsal paletle EŞLE ---
+     (Var olan --sem-* değişkenleri buradan besleniyor;
+      böylece tüm mevcut bileşenler kurumsal renge geçer.) */
+  --sem-primary: var(--kun-lacivert); /* ana lacivert */
+  --sem-accent: var(--kun-kirmizi); /* kırmızı vurgu */
+  --sem-navy-light: var(--kun-mavi); /* hover mavi */
+  --sem-info: var(--kun-turkuaz); /* bilgi/turkuaz */
+  --sem-gold: var(--kun-sari); /* sertifika/prestij → sarı */
+  --sem-warning: var(--kun-sari); /* uyarı → sarı */
+  --sem-muted: var(--kun-gri); /* pasif metin/gri */
+  --sem-text: #212121;
+  --sem-bg-2: #f7f7f5; /* kum tonundan türetilmiş açık zemin */
+  --sem-footer-bg: var(--kun-lacivert);
+}
+
+/* ── 3. Tipografi — DIN Pro tüm gövdeye ───────────────────────
+   HiStudy varsayılanı "Euclid Circular A" idi; kurumsal fonta
+   geçiyoruz. Yedek stack korunuyor.
+--------------------------------------------------------------- */
+body,
+button,
+input,
+select,
+textarea,
+.rbt-btn,
+h1, h2, h3, h4, h5, h6,
+.title,
+.banner-title {
+  font-family:
+    "DIN Pro", "Barlow", "Euclid Circular A", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+/* ── 4. Marka vurgu yardımcı sınıfları (opsiyonel) ────────────
+   Şablon içinde ihtiyaç oldukça kullanılabilir.
+--------------------------------------------------------------- */
+.kun-bg-lacivert { background-color: var(--kun-lacivert) !important; color: #fff; }
+.kun-bg-mavi     { background-color: var(--kun-mavi) !important; color: #fff; }
+.kun-bg-turkuaz  { background-color: var(--kun-turkuaz) !important; color: #fff; }
+.kun-bg-sari     { background-color: var(--kun-sari) !important; color: #212121; }
+.kun-bg-mor      { background-color: var(--kun-mor) !important; color: #fff; }
+.kun-bg-kirmizi  { background-color: var(--kun-kirmizi) !important; color: #fff; }
+.kun-bg-kum      { background-color: var(--kun-kum) !important; color: #212121; }
+
+.kun-text-lacivert { color: var(--kun-lacivert) !important; }
+.kun-text-mavi     { color: var(--kun-mavi) !important; }
+.kun-text-turkuaz  { color: var(--kun-turkuaz) !important; }
+.kun-text-kirmizi  { color: var(--kun-kirmizi) !important; }
+
+/* ── 5. Buton & bağlantı kurumsal hover uyumu ─────────────────*/
+.rbt-btn.btn-gradient,
+.sem-btn-primary {
+  background: linear-gradient(135deg, var(--kun-lacivert) 0%, var(--kun-mavi) 100%);
+}
+a:hover { color: var(--kun-mavi); }

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Sürekli Eğitim Merkezi</title>
+    <title>Slider Demo | Kapadokya Üniversitesi SEM</title>
     <meta name="robots" content="noindex, follow" />
     <meta
       name="description"
@@ -41,8 +41,9 @@
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <link rel="stylesheet" href="./assets/css/sem-custom.css" />
     <link rel="stylesheet" href="./assets/css/sem-kurumsal.css" />
+    <!-- slider.html'e özel stiller artık sem-custom.css içinde (.rbt-banner-11) — anasayfa.html ile ortak -->
   </head>
-  <body class="rbt-header-sticky sem-home">
+  <body class="rbt-header-sticky">
     <div id="my_switcher" class="my_switcher">
       <ul>
         <li>
@@ -1073,7 +1074,7 @@
             </p>
           </div>
         </div>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 g-4">
           <!-- Dijital Pazarlama -->
           <div class="col">
             <div
@@ -1117,9 +1118,7 @@
                 <span class="fw-bold" style="color: var(--sem-primary)"
                   >8.500 TL</span
                 >
-                <div class="d-flex align-items-center gap-3">
-                  <a class="rbt-btn-link" href="kurs-detay.html">Detaylar</a>
-                  <button
+                <button
                   class="sem-apply-btn"
                   onclick="
                     openApplyModal(
@@ -1131,7 +1130,6 @@
                 >
                   Başvur <i class="feather-arrow-right"></i>
                 </button>
-                </div>
               </div>
             </div>
           </div>
@@ -1176,9 +1174,7 @@
                 <span class="fw-bold" style="color: var(--sem-primary)"
                   >18.000 TL</span
                 >
-                <div class="d-flex align-items-center gap-3">
-                  <a class="rbt-btn-link" href="kurs-detay.html">Detaylar</a>
-                  <button
+                <button
                   class="sem-apply-btn"
                   onclick="
                     openApplyModal(
@@ -1190,7 +1186,6 @@
                 >
                   Başvur <i class="feather-arrow-right"></i>
                 </button>
-                </div>
               </div>
             </div>
           </div>
@@ -1237,9 +1232,7 @@
                 <span class="fw-bold" style="color: var(--sem-primary)"
                   >24.000 TL</span
                 >
-                <div class="d-flex align-items-center gap-3">
-                  <a class="rbt-btn-link" href="tum-kurslar.html?kategori=gastronomi">Detaylar</a>
-                  <button
+                <button
                   class="sem-apply-btn"
                   onclick="
                     openApplyModal(
@@ -1251,7 +1244,6 @@
                 >
                   Başvur <i class="feather-arrow-right"></i>
                 </button>
-                </div>
               </div>
             </div>
           </div>
@@ -1299,9 +1291,7 @@
                 <span class="fw-bold" style="color: var(--sem-primary)"
                   >24.000 TL</span
                 >
-                <div class="d-flex align-items-center gap-3">
-                  <a class="rbt-btn-link" href="tum-kurslar.html?kategori=turizm">Detaylar</a>
-                  <button
+                <button
                   class="sem-apply-btn"
                   onclick="
                     openApplyModal(
@@ -1313,7 +1303,6 @@
                 >
                   Başvur <i class="feather-arrow-right"></i>
                 </button>
-                </div>
               </div>
             </div>
           </div>
@@ -1361,9 +1350,7 @@
                 <span class="fw-bold" style="color: var(--sem-primary)"
                   >12.000 TL</span
                 >
-                <div class="d-flex align-items-center gap-3">
-                  <a class="rbt-btn-link" href="tum-kurslar.html?kategori=saglik">Detaylar</a>
-                  <button
+                <button
                   class="sem-apply-btn"
                   onclick="
                     openApplyModal(
@@ -1375,7 +1362,6 @@
                 >
                   Başvur <i class="feather-arrow-right"></i>
                 </button>
-                </div>
               </div>
             </div>
           </div>
@@ -1423,9 +1409,7 @@
                 <span class="fw-bold" style="color: var(--sem-primary)"
                   >4.200 TL</span
                 >
-                <div class="d-flex align-items-center gap-3">
-                  <a class="rbt-btn-link" href="tum-kurslar.html?kategori=kisisel-gelisim">Detaylar</a>
-                  <button
+                <button
                   class="sem-apply-btn"
                   onclick="
                     openApplyModal(
@@ -1437,11 +1421,9 @@
                 >
                   Başvur <i class="feather-arrow-right"></i>
                 </button>
-                </div>
               </div>
             </div>
           </div>
-
         </div>
         <div class="text-center mt--40">
           <a
@@ -2081,81 +2063,6 @@
     </div>
     <!-- End Kurumsal CTA -->
 
-    <!-- Start Blog -->
-    <div class="rbt-section-gap bg-color-white" id="sem-blog">
-      <div class="container">
-        <div class="row mb--40">
-          <div class="col-lg-12 text-center">
-            <span class="subtitle bg-coral-opacity">BLOG</span>
-            <h2 class="title mt--10">Son Yazılarımız</h2>
-            <p class="description mt--10">
-              Eğitim, kariyer ve kişisel gelişim üzerine güncel yazılarımızı keşfedin.
-            </p>
-          </div>
-        </div>
-        <div class="row g-4">
-          <div class="col-lg-4 col-md-6 col-12">
-            <a href="blog-detay.html?id=1" class="sem-duyuru-kart d-flex flex-column">
-              <div class="sem-duyuru-gorsel">
-                <img src="./assets/images/blog/blog-card-01.jpg" alt="Sertifikalı Eğitimler Kariyerinize Nasıl Değer Katar?">
-              </div>
-              <div class="sem-duyuru-govde">
-                <span class="sem-blog-kategori">Kariyer</span>
-                <p class="sem-duyuru-tarih">12.06.2026</p>
-                <h5 class="sem-duyuru-baslik">Sertifikalı Eğitimler Kariyerinize Nasıl Değer Katar?</h5>
-                <p class="sem-duyuru-ozet">Sürekli eğitim programlarının iş başvurularında ve terfi süreçlerinde sağladığı somut avantajlara göz atın.</p>
-                <span class="sem-blog-devamini-oku">Devamını oku <i class="feather-arrow-right"></i></span>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-lg-4 col-md-6 col-12">
-            <a href="blog-detay.html?id=2" class="sem-duyuru-kart d-flex flex-column">
-              <div class="sem-duyuru-gorsel">
-                <img src="./assets/images/blog/blog-card-02.jpg" alt="Yüz Yüze mi, Online mı? Doğru Eğitim Formatını Seçmek">
-              </div>
-              <div class="sem-duyuru-govde">
-                <span class="sem-blog-kategori">Eğitim</span>
-                <p class="sem-duyuru-tarih">05.06.2026</p>
-                <h5 class="sem-duyuru-baslik">Yüz Yüze mi, Online mı? Doğru Eğitim Formatını Seçmek</h5>
-                <p class="sem-duyuru-ozet">Öğrenme hedeflerinize en uygun eğitim formatını seçerken dikkat etmeniz gereken kriterleri derledik.</p>
-                <span class="sem-blog-devamini-oku">Devamını oku <i class="feather-arrow-right"></i></span>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-lg-4 col-md-6 col-12">
-            <a href="blog-detay.html?id=3" class="sem-duyuru-kart d-flex flex-column">
-              <div class="sem-duyuru-gorsel">
-                <img src="./assets/images/blog/blog-card-03.jpg" alt="Havacılıkta Kariyer: SHGM Onaylı Eğitimlerin Önemi">
-              </div>
-              <div class="sem-duyuru-govde">
-                <span class="sem-blog-kategori">Havacılık</span>
-                <p class="sem-duyuru-tarih">28.05.2026</p>
-                <h5 class="sem-duyuru-baslik">Havacılıkta Kariyer: SHGM Onaylı Eğitimlerin Önemi</h5>
-                <p class="sem-duyuru-ozet">Sivil havacılık sektöründe kariyer hedefleyenler için onaylı eğitim ve sertifikasyon süreçleri.</p>
-                <span class="sem-blog-devamini-oku">Devamını oku <i class="feather-arrow-right"></i></span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="text-center mt--40">
-          <a
-            class="rbt-btn btn-gradient sem-btn-primary hover-icon-reverse"
-            href="blog.html"
-          >
-            <span class="icon-reverse-wrapper">
-              <span class="btn-text">Tüm Yazıları Gör</span>
-              <span class="btn-icon"><i class="feather-arrow-right"></i></span>
-              <span class="btn-icon likeicon"
-                ><i class="feather-arrow-right"></i
-              ></span>
-            </span>
-          </a>
-        </div>
-      </div>
-    </div>
-    <!-- End Blog -->
 
     <!-- Start SSS -->
     <div class="rbt-section-gap" id="sem-sss" style="background: #f8f9fc">
@@ -2422,7 +2329,6 @@
                   <li><a href="anasayfa.html">Ana Sayfa</a></li>
                   <li><a href="tum-kurslar.html">Eğitimler</a></li>
                   <li><a href="duyurular.html">Duyurular</a></li>
-                  <li><a href="blog.html">Blog</a></li>
                   <li><a href="iletisim.html">İletişim</a></li>
                   <li><a href="kvkk.html">KVKK</a></li>
                   <li><a href="sozlesmeler.html">Sözleşmeler</a></li>
@@ -2438,11 +2344,9 @@
                 <h5 class="ft-title">Sınav Merkezleri</h5>
                 <ul class="ft-link">
                   <li>
-                    <a href="anasayfa.html#sem-sinav-merkezleri"
-                      >Akredite Merkezlerimiz</a
-                    >
+                      <a href="anasayfa.html#sem-sinav-merkezleri">Akredite Merkezlerimiz</a>
                   </li>
-                  <li>
+<li>
                     <a
                       href="https://ilkyardim.kapadokya.edu.tr/"
                       target="_blank"

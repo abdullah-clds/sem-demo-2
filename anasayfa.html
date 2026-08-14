@@ -42,7 +42,7 @@
     <link rel="stylesheet" href="./assets/css/sem-custom.css" />
     <link rel="stylesheet" href="./assets/css/sem-kurumsal.css" />
   </head>
-  <body class="rbt-header-sticky sem-home">
+  <body class="rbt-header-sticky sem-home sem-detay">
     <div id="my_switcher" class="my_switcher">
       <ul>
         <li>
@@ -209,11 +209,6 @@
                     ></a>
                     <ul class="submenu">
                       <li>
-                        <a href="anasayfa.html#sem-sinav-merkezleri"
-                          >Akredite Merkezlerimiz</a
-                        >
-                      </li>
-                      <li>
                         <a
                           href="https://ilkyardim.kapadokya.edu.tr/"
                           target="_blank"
@@ -222,17 +217,15 @@
                         >
                       </li>
                       <li>
-                        <a
-                          href="https://belgelendirme.kapadokya.edu.tr"
-                          target="_blank"
-                          rel="noopener"
-                          >Personel Belgelendirme Merkezi</a
+                        <a href="#">Modül Sınav Merkezi</a>
+                      </li>
+                      <li>
+                        <a href="egitim-kaynak-saglayici.html"
+                          >Eğitim Kaynak Sağlayıcı</a
                         >
                       </li>
                     </ul>
                   </li>
-                  <li><a href="duyurular.html">Duyurular</a></li>
-                  <li><a href="blog.html">Blog</a></li>
                   <li><a href="iletisim.html">İletişim</a></li>
                 </ul>
               </nav>
@@ -759,14 +752,12 @@
             <li class="has-dropdown has-menu-child-item">
               <a href="#">Sınav Merkezleri</a>
               <ul class="submenu">
-                <li><a href="anasayfa.html#sem-sinav-merkezleri">Akredite Merkezlerimiz</a></li>
                 <li><a href="https://ilkyardim.kapadokya.edu.tr/" target="_blank" rel="noopener">İlk Yardım Eğitim Merkezi</a></li>
-                <li><a href="https://belgelendirme.kapadokya.edu.tr" target="_blank" rel="noopener">Personel Belgelendirme Merkezi</a></li>
+                <li><a href="#">Modül Sınav Merkezi</a></li>
+                <li><a href="egitim-kaynak-saglayici.html">Eğitim Kaynak Sağlayıcı</a></li>
               </ul>
             </li>
 
-            <li><a href="duyurular.html">Duyurular</a></li>
-            <li><a href="blog.html">Blog</a></li>
             <li><a href="iletisim.html">İletişim</a></li>
 
           </ul>
@@ -787,54 +778,23 @@
       </div>
     </div>
     <!-- Start Banner Area  -->
-    <div class="rbt-banner-area rbt-banner-11 bg-color-darker ptb--100">
-      <div class="wrapper">
-        <div class="container">
-          <div class="swiper udemy-affilite-activation rbt-arrow-between">
-            <div class="swiper-wrapper">
+    <!-- Start Banner Area  -->
+    <div class="rbt-banner-area rbt-banner-11 sem-hero-slider">
+      <div class="swiper udemy-affilite-activation rbt-arrow-between">
+        <div class="swiper-wrapper">
               <!-- Start Single Slider  -->
               <div class="swiper-slide">
-                <div class="row gy-5 row--30 align-items-center">
-                  <div class="col-lg-6 col-12">
-                    <div class="course-thumbnail">
-                      <a href="kurs-detay.html">
-                        <img
-                          class="radius-6"
-                          src="./assets/images/course/sem-slider.jpg"
-                          alt="Course Images"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                  <div class="col-lg-6 col-12">
-                    <div class="content">
-                      <div class="inner text-start">
-                        <h2 class="banner-title">
-                          PEMER-MYK-AŞÇI (SEVİYE 4) Sınavı
-                        </h2>
-                        <p class="description has-medium-font-size mt--20">
-                          Adayların mesleki bilgi, beceri ve uygulama
-                          yeterliliklerini ölçmeyi amaçlayan profesyonel bir
-                          değerlendirme sürecidir.
-                        </p>
-                        <div
-                          class="slider-btn rbt-button-group justify-content-start"
-                        >
-                          <a
-                            class="rbt-btn rbt-switch-btn rbt-switch-y"
-                            href="#"
-                            onclick="
-                              openApplyModal(
-                                'basvuru',
-                                'pemer-asci',
-                                'PEMER-MYK Aşçı Sınavı',
-                              );
-                              return false;
-                            "
-                          >
-                            <span data-text="Kayıt Ol">Kayıt Ol</span>
-                          </a>
-                        </div>
+                <div class="sem-hero-slide" style="background-image:url('./assets/images/course/sem-slider.jpg')">
+                  <div class="sem-hero-overlay"></div>
+                  <div class="container">
+                    <div class="sem-hero-content">
+                      <span class="sem-hero-tag">SINAV MERKEZİ</span>
+                      <h2 class="sem-hero-title">PEMER-MYK-AŞÇI (SEVİYE 4) Sınavı</h2>
+                      <p class="sem-hero-desc">Adayların mesleki bilgi, beceri ve uygulama yeterliliklerini ölçmeyi amaçlayan profesyonel bir değerlendirme sürecidir.</p>
+                      <div class="slider-btn">
+                        <a class="sem-hero-btn" href="#" onclick="openApplyModal('basvuru','pemer-asci','PEMER-MYK Aşçı Sınavı'); return false;">
+                          <span>Kayıt Ol</span> <i class="feather-arrow-right"></i>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -843,46 +803,17 @@
               <!-- End Single Slider  -->
               <!-- Start Single Slider  -->
               <div class="swiper-slide">
-                <div class="row gy-5 row--30 align-items-center">
-                  <div class="col-lg-6 col-12">
-                    <div class="course-thumbnail">
-                      <a href="kurs-detay.html">
-                        <img
-                          class="radius-6"
-                          src="./assets/images/course/course-2.jpg"
-                          alt="Course Images"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                  <div class="col-lg-6 col-12">
-                    <div class="content">
-                      <div class="inner text-start">
-                        <h2 class="banner-title">
-                          Sanal Gerçeklik Terapisi Eğitimi
-                        </h2>
-                        <p class="description has-medium-font-size mt--20">
-                          Teknolojiyi terapi süreçlerine entegre etmeye yönelik
-                          uygulamalı bir eğitim programıdır.
-                        </p>
-                        <div
-                          class="slider-btn rbt-button-group justify-content-start"
-                        >
-                          <a
-                            class="rbt-btn rbt-switch-btn rbt-switch-y"
-                            href="#"
-                            onclick="
-                              openApplyModal(
-                                'basvuru',
-                                'vr-terapi',
-                                'Sanal Gerçeklik Terapisi Eğitimi',
-                              );
-                              return false;
-                            "
-                          >
-                            <span data-text="Kayıt Ol">Kayıt Ol</span>
-                          </a>
-                        </div>
+                <div class="sem-hero-slide" style="background-image:url('./assets/images/course/course-2.jpg')">
+                  <div class="sem-hero-overlay"></div>
+                  <div class="container">
+                    <div class="sem-hero-content">
+                      <span class="sem-hero-tag">EĞİTİM</span>
+                      <h2 class="sem-hero-title">Sanal Gerçeklik Terapisi Eğitimi</h2>
+                      <p class="sem-hero-desc">Teknolojiyi terapi süreçlerine entegre etmeye yönelik uygulamalı bir eğitim programıdır.</p>
+                      <div class="slider-btn">
+                        <a class="sem-hero-btn" href="#" onclick="openApplyModal('basvuru','vr-terapi','Sanal Gerçeklik Terapisi Eğitimi'); return false;">
+                          <span>Kayıt Ol</span> <i class="feather-arrow-right"></i>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -891,45 +822,17 @@
               <!-- End Single Slider  -->
               <!-- Start Single Slider  -->
               <div class="swiper-slide">
-                <div class="row gy-5 row--30 align-items-center">
-                  <div class="col-lg-6 col-12">
-                    <div class="course-thumbnail">
-                      <a href="kurs-detay.html">
-                        <img
-                          class="radius-6"
-                          src="./assets/images/course/course-3.jpg"
-                          alt="Course Images"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                  <div class="col-lg-6 col-12">
-                    <div class="content">
-                      <div class="inner text-start">
-                        <h2 class="banner-title">Meteoroloji Temel Eğitimi</h2>
-                        <p class="description has-medium-font-size mt--20">
-                          Hava olayları ve atmosfer süreçlerine dair temel
-                          bilgilerin kazandırıldığı uygulamalı bir eğitim
-                          programıdır.
-                        </p>
-                        <div
-                          class="slider-btn rbt-button-group justify-content-start"
-                        >
-                          <a
-                            class="rbt-btn rbt-switch-btn rbt-switch-y"
-                            href="#"
-                            onclick="
-                              openApplyModal(
-                                'basvuru',
-                                'meteoroloji',
-                                'Meteoroloji Temel Eğitimi',
-                              );
-                              return false;
-                            "
-                          >
-                            <span data-text="Kayıt Ol">Kayıt Ol</span>
-                          </a>
-                        </div>
+                <div class="sem-hero-slide" style="background-image:url('./assets/images/course/course-3.jpg')">
+                  <div class="sem-hero-overlay"></div>
+                  <div class="container">
+                    <div class="sem-hero-content">
+                      <span class="sem-hero-tag">EĞİTİM</span>
+                      <h2 class="sem-hero-title">Meteoroloji Temel Eğitimi</h2>
+                      <p class="sem-hero-desc">Hava olayları ve atmosfer süreçlerine dair temel bilgilerin kazandırıldığı uygulamalı bir eğitim programıdır.</p>
+                      <div class="slider-btn">
+                        <a class="sem-hero-btn" href="#" onclick="openApplyModal('basvuru','meteoroloji','Meteoroloji Temel Eğitimi'); return false;">
+                          <span>Kayıt Ol</span> <i class="feather-arrow-right"></i>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -949,10 +852,9 @@
                 <i class="rbt-icon-top feather-arrow-right"></i>
               </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
+    <!-- End Banner Area  -->
     <!-- End Banner Area  -->
 
     <!-- Start Hero Search  -->
@@ -985,80 +887,6 @@
         </div>
     </div>
     <!-- End Hero Search  -->
-
-    <!-- Start Duyurular -->
-    <div class="rbt-section-gap bg-color-white" id="sem-duyurular">
-      <div class="container">
-        <div class="row mb--40">
-          <div class="col-lg-12 text-center">
-            <span class="subtitle bg-coral-opacity">GÜNCEL BİLGİLER</span>
-            <h2 class="title mt--10">Son Duyurular</h2>
-            <p class="description mt--10">
-              Başvuru, sınav, kontenjan ve eğitim süreçlerine dair duyuruları
-              takip edin.
-            </p>
-          </div>
-        </div>
-        <div class="row g-4">
-          <div class="col-lg-4 col-md-6 col-12">
-            <a href="duyuru-detay.html?id=1" class="sem-duyuru-kart d-flex flex-column">
-              <div class="sem-duyuru-gorsel">
-                <img src="./assets/images/blog/blog-card-01.jpg" alt="Duyuru görseli">
-              </div>
-              <div class="sem-duyuru-govde">
-                <p class="sem-duyuru-tarih">12.06.2026</p>
-                <h5 class="sem-duyuru-baslik">2026 Güz Dönemi Sertifika Programları Başvuruları Başladı</h5>
-                <p class="sem-duyuru-ozet">Kariyerinize değer katacak yeni dönem eğitimlerimizin kayıtları açılmıştır. Erken kayıt fırsatlarını kaçırmayın.</p>
-                <span class="sem-duyuru-ok">→</span>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-lg-4 col-md-6 col-12">
-            <a href="duyuru-detay.html?id=2" class="sem-duyuru-kart d-flex flex-column">
-              <div class="sem-duyuru-gorsel">
-                <img src="./assets/images/blog/blog-card-02.jpg" alt="Duyuru görseli">
-              </div>
-              <div class="sem-duyuru-govde">
-                <p class="sem-duyuru-tarih">05.06.2026</p>
-                <h5 class="sem-duyuru-baslik">Aşçılık ve Gastronomi Uygulamalı Sınav Merkezi Değişikliği</h5>
-                <p class="sem-duyuru-ozet">Hafta sonu yapılacak aşçılık yeterlilik sınavımız yeni yerleşkemizdeki endüstriyel mutfakta gerçekleştirilecektir.</p>
-                <span class="sem-duyuru-ok">→</span>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-lg-4 col-md-6 col-12">
-            <a href="duyuru-detay.html?id=3" class="sem-duyuru-kart d-flex flex-column">
-              <div class="sem-duyuru-gorsel">
-                <img src="./assets/images/blog/blog-card-03.jpg" alt="Duyuru görseli">
-              </div>
-              <div class="sem-duyuru-govde">
-                <p class="sem-duyuru-tarih">28.05.2026</p>
-                <h5 class="sem-duyuru-baslik">SHGM Onaylı İHA Eğitimleri Kontenjan Güncellemesi</h5>
-                <p class="sem-duyuru-ozet">Yoğun talep üzerine İHA pilotluğu eğitim programımıza ek kontenjan açılmıştır.</p>
-                <span class="sem-duyuru-ok">→</span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="text-center mt--40">
-          <a
-            class="rbt-btn btn-gradient sem-btn-primary hover-icon-reverse"
-            href="duyurular.html"
-          >
-            <span class="icon-reverse-wrapper">
-              <span class="btn-text">Tüm Duyuruları Gör</span>
-              <span class="btn-icon"><i class="feather-arrow-right"></i></span>
-              <span class="btn-icon likeicon"
-                ><i class="feather-arrow-right"></i
-              ></span>
-            </span>
-          </a>
-        </div>
-      </div>
-    </div>
-    <!-- End Duyurular -->
 
     <!-- Start Popüler Eğitimler -->
     <div class="rbt-section-gap bg-color-white" id="sem-populer-egitimler">
@@ -1442,6 +1270,7 @@
             </div>
           </div>
 
+
         </div>
         <div class="text-center mt--40">
           <a
@@ -1460,6 +1289,148 @@
       </div>
     </div>
     <!-- End Popüler Eğitimler -->
+
+    <!-- Start Kurumsal CTA -->
+    <div
+      class="rbt-section-gap"
+      style="
+        background: linear-gradient(
+          135deg,
+          var(--sem-primary) 0%,
+          var(--sem-navy-light) 100%
+        );
+      "
+    >
+      <div class="container">
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-8 text-white">
+            <span
+              class="d-block mb-2"
+              style="
+                font-size: 0.8rem;
+                font-weight: 600;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                opacity: 0.8;
+              "
+              >KURUMSAL ÇÖZÜMLER</span
+            >
+            <h2 class="title text-white mb-2">
+              Kurumunuza Özel Eğitim Programları
+            </h2>
+            <p class="description text-white" style="opacity: 0.85">
+              Şirketinizin ihtiyaçlarına göre tasarlanan online, yüz yüze veya
+              hibrit eğitim çözümleri. Uzman kadromuzla özel müfredat
+              hazırlıyoruz.
+            </p>
+            <div class="d-flex flex-wrap gap-3 mt-3">
+              <span class="text-white" style="font-size: 0.85rem"
+                ><i class="feather-check me-1"></i>Esnek Ders Müfredatı</span
+              >
+              <span class="text-white" style="font-size: 0.85rem"
+                ><i class="feather-check me-1"></i>Yerinde Eğitim
+                Uygulamaları</span
+              >
+              <span class="text-white" style="font-size: 0.85rem"
+                ><i class="feather-check me-1"></i>İK Başarı Raporları</span
+              >
+            </div>
+          </div>
+          <div class="col-lg-4 text-center text-lg-end">
+            <button
+              class="rbt-btn btn-white hover-icon-reverse"
+              onclick="openApplyModal('kurumsal', '', '')"
+            >
+              <span class="icon-reverse-wrapper">
+                <span class="btn-text">Kurumsal Teklif Al</span>
+                <span class="btn-icon"
+                  ><i class="feather-arrow-right"></i
+                ></span>
+                <span class="btn-icon likeicon"
+                  ><i class="feather-arrow-right"></i
+                ></span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Kurumsal CTA -->
+
+    <!-- Start Duyurular -->
+    <div class="rbt-section-gap bg-color-white" id="sem-duyurular">
+      <div class="container">
+        <div class="row mb--40">
+          <div class="col-lg-12 text-center">
+            <span class="subtitle bg-coral-opacity">GÜNCEL BİLGİLER</span>
+            <h2 class="title mt--10">Son Duyurular</h2>
+            <p class="description mt--10">
+              Başvuru, sınav, kontenjan ve eğitim süreçlerine dair duyuruları
+              takip edin.
+            </p>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6 col-12">
+            <a href="duyuru-detay.html?id=1" class="sem-duyuru-kart d-flex flex-column">
+              <div class="sem-duyuru-gorsel">
+                <img src="./assets/images/blog/blog-card-01.jpg" alt="Duyuru görseli">
+              </div>
+              <div class="sem-duyuru-govde">
+                <p class="sem-duyuru-tarih">12.06.2026</p>
+                <h5 class="sem-duyuru-baslik">2026 Güz Dönemi Sertifika Programları Başvuruları Başladı</h5>
+                <p class="sem-duyuru-ozet">Kariyerinize değer katacak yeni dönem eğitimlerimizin kayıtları açılmıştır. Erken kayıt fırsatlarını kaçırmayın.</p>
+                <span class="sem-duyuru-ok">→</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-12">
+            <a href="duyuru-detay.html?id=2" class="sem-duyuru-kart d-flex flex-column">
+              <div class="sem-duyuru-gorsel">
+                <img src="./assets/images/blog/blog-card-02.jpg" alt="Duyuru görseli">
+              </div>
+              <div class="sem-duyuru-govde">
+                <p class="sem-duyuru-tarih">05.06.2026</p>
+                <h5 class="sem-duyuru-baslik">Aşçılık ve Gastronomi Uygulamalı Sınav Merkezi Değişikliği</h5>
+                <p class="sem-duyuru-ozet">Hafta sonu yapılacak aşçılık yeterlilik sınavımız yeni yerleşkemizdeki endüstriyel mutfakta gerçekleştirilecektir.</p>
+                <span class="sem-duyuru-ok">→</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-12">
+            <a href="duyuru-detay.html?id=3" class="sem-duyuru-kart d-flex flex-column">
+              <div class="sem-duyuru-gorsel">
+                <img src="./assets/images/blog/blog-card-03.jpg" alt="Duyuru görseli">
+              </div>
+              <div class="sem-duyuru-govde">
+                <p class="sem-duyuru-tarih">28.05.2026</p>
+                <h5 class="sem-duyuru-baslik">SHGM Onaylı İHA Eğitimleri Kontenjan Güncellemesi</h5>
+                <p class="sem-duyuru-ozet">Yoğun talep üzerine İHA pilotluğu eğitim programımıza ek kontenjan açılmıştır.</p>
+                <span class="sem-duyuru-ok">→</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="text-center mt--40">
+          <a
+            class="rbt-btn btn-gradient sem-btn-primary hover-icon-reverse"
+            href="duyurular.html"
+          >
+            <span class="icon-reverse-wrapper">
+              <span class="btn-text">Tüm Duyuruları Gör</span>
+              <span class="btn-icon"><i class="feather-arrow-right"></i></span>
+              <span class="btn-icon likeicon"
+                ><i class="feather-arrow-right"></i
+              ></span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- End Duyurular -->
+
     <div
       class="rbt-categories-area bg-color-white dark-bg-color-white rbt-section-gap"
     >
@@ -1945,25 +1916,22 @@
         <div class="row mb--40">
           <div class="col-lg-12 text-center">
             <span class="subtitle bg-pink-opacity">AKREDİTE MERKEZLERİMİZ</span>
-            <h2 class="title mt--10">Sınav ve Belgelendirme Merkezlerimiz</h2>
+            <h2 class="title mt--10">Sınav ve Akredite Merkezlerimiz</h2>
             <p class="description mt--10">
               SEM çatısı altında hizmet veren akredite merkezlerimiz ve sınav
               birimlerimiz.
             </p>
           </div>
         </div>
-        <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
           <div class="col">
             <div
               class="rbt-card variation-01 rbt-hover text-center p-4 h-100"
-              style="
-                border-top: 4px solid var(--sem-success);
-                border-radius: 12px;
-              "
+              style="border-top: 4px solid var(--sem-primary); border-radius: 0"
             >
               <div
                 class="mb-3"
-                style="font-size: 2.5rem; color: var(--sem-success)"
+                style="font-size: 2.5rem; color: var(--sem-primary)"
               >
                 <i class="feather-heart"></i>
               </div>
@@ -1985,27 +1953,48 @@
           <div class="col">
             <div
               class="rbt-card variation-01 rbt-hover text-center p-4 h-100"
-              style="border-top: 4px solid var(--sem-gold); border-radius: 12px"
+              style="border-top: 4px solid var(--sem-primary); border-radius: 0"
             >
               <div
                 class="mb-3"
-                style="font-size: 2.5rem; color: var(--sem-gold)"
+                style="font-size: 2.5rem; color: var(--sem-primary)"
               >
-                <i class="feather-award"></i>
+                <i class="feather-grid"></i>
               </div>
-              <h5 class="rbt-card-title mb-2">
-                Personel Belgelendirme Merkezi
-              </h5>
+              <h5 class="rbt-card-title mb-2">Modül Sınav Merkezi</h5>
               <p class="description" style="font-size: 0.85rem">
-                MYK kapsamında ulusal yeterliliklere dayalı personel
-                belgelendirme.
+                Akredite modül sınavlarının planlandığı ve yürütüldüğü
+                merkez.
               </p>
               <a
-                href="https://belgelendirme.kapadokya.edu.tr"
-                target="_blank"
-                rel="noopener"
+                href="#"
                 class="rbt-btn-link mt--10 d-inline-block"
-                >Ziyaret Et <i class="feather-arrow-right"></i
+                aria-disabled="true"
+                >Yakında <i class="feather-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="col">
+            <div
+              class="rbt-card variation-01 rbt-hover text-center p-4 h-100"
+              style="border-top: 4px solid var(--kun-turkuaz, #00A1AA); border-radius: 0"
+            >
+              <div
+                class="mb-3"
+                style="font-size: 2.5rem; color: var(--kun-turkuaz, #00A1AA)"
+              >
+                <i class="feather-book-open"></i>
+              </div>
+              <h5 class="rbt-card-title mb-2">Eğitim Kaynak Sağlayıcı</h5>
+              <p class="description" style="font-size: 0.85rem">
+                SHGM yetkili Eğitim Kaynak Sağlayıcı (EKS) ve Sınav Merkezi;
+                sivil havacılık sınav başvuru ve süreçleri.
+              </p>
+              <a
+                href="egitim-kaynak-saglayici.html"
+                class="rbt-btn-link mt--10 d-inline-block"
+                >İncele <i class="feather-arrow-right"></i
               ></a>
             </div>
           </div>
@@ -2013,73 +2002,6 @@
       </div>
     </div>
     <!-- End Sınav Merkezleri -->
-
-    <!-- Start Kurumsal CTA -->
-    <div
-      class="rbt-section-gap"
-      style="
-        background: linear-gradient(
-          135deg,
-          var(--sem-primary) 0%,
-          var(--sem-navy-light) 100%
-        );
-      "
-    >
-      <div class="container">
-        <div class="row align-items-center gy-4">
-          <div class="col-lg-8 text-white">
-            <span
-              class="d-block mb-2"
-              style="
-                font-size: 0.8rem;
-                font-weight: 600;
-                letter-spacing: 0.08em;
-                text-transform: uppercase;
-                opacity: 0.8;
-              "
-              >KURUMSAL ÇÖZÜMLER</span
-            >
-            <h2 class="title text-white mb-2">
-              Kurumunuza Özel Eğitim Programları
-            </h2>
-            <p class="description text-white" style="opacity: 0.85">
-              Şirketinizin ihtiyaçlarına göre tasarlanan online, yüz yüze veya
-              hibrit eğitim çözümleri. Uzman kadromuzla özel müfredat
-              hazırlıyoruz.
-            </p>
-            <div class="d-flex flex-wrap gap-3 mt-3">
-              <span class="text-white" style="font-size: 0.85rem"
-                ><i class="feather-check me-1"></i>Esnek Ders Müfredatı</span
-              >
-              <span class="text-white" style="font-size: 0.85rem"
-                ><i class="feather-check me-1"></i>Yerinde Eğitim
-                Uygulamaları</span
-              >
-              <span class="text-white" style="font-size: 0.85rem"
-                ><i class="feather-check me-1"></i>İK Başarı Raporları</span
-              >
-            </div>
-          </div>
-          <div class="col-lg-4 text-center text-lg-end">
-            <button
-              class="rbt-btn btn-white hover-icon-reverse"
-              onclick="openApplyModal('kurumsal', '', '')"
-            >
-              <span class="icon-reverse-wrapper">
-                <span class="btn-text">Kurumsal Teklif Al</span>
-                <span class="btn-icon"
-                  ><i class="feather-arrow-right"></i
-                ></span>
-                <span class="btn-icon likeicon"
-                  ><i class="feather-arrow-right"></i
-                ></span>
-              </span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End Kurumsal CTA -->
 
     <!-- Start Blog -->
     <div class="rbt-section-gap bg-color-white" id="sem-blog">
@@ -2437,28 +2359,10 @@
               <div class="footer-widget">
                 <h5 class="ft-title">Sınav Merkezleri</h5>
                 <ul class="ft-link">
-                  <li>
-                    <a href="anasayfa.html#sem-sinav-merkezleri"
-                      >Akredite Merkezlerimiz</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="https://ilkyardim.kapadokya.edu.tr/"
-                      target="_blank"
-                      rel="noopener"
-                      >İlk Yardım Eğitim Merkezi</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="https://belgelendirme.kapadokya.edu.tr"
-                      target="_blank"
-                      rel="noopener"
-                      >Personel Belgelendirme Merkezi</a
-                    >
-                  </li>
-                </ul>
+                                <li><a href="https://ilkyardim.kapadokya.edu.tr/" target="_blank" rel="noopener">İlk Yardım Eğitim Merkezi</a></li>
+                                <li><a href="#">Modül Sınav Merkezi</a></li>
+                                <li><a href="egitim-kaynak-saglayici.html">Eğitim Kaynak Sağlayıcı</a></li>
+                            </ul>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">

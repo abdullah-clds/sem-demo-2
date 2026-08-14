@@ -43,7 +43,7 @@
     <link rel="stylesheet" href="./assets/css/sem-kurumsal.css" />
     <!-- slider.html'e özel stiller artık sem-custom.css içinde (.rbt-banner-11) — anasayfa.html ile ortak -->
   </head>
-  <body class="rbt-header-sticky">
+  <body class="rbt-header-sticky sem-detay">
     <div id="my_switcher" class="my_switcher">
       <ul>
         <li>
@@ -210,11 +210,6 @@
                     ></a>
                     <ul class="submenu">
                       <li>
-                        <a href="anasayfa.html#sem-sinav-merkezleri"
-                          >Akredite Merkezlerimiz</a
-                        >
-                      </li>
-                      <li>
                         <a
                           href="https://ilkyardim.kapadokya.edu.tr/"
                           target="_blank"
@@ -223,17 +218,15 @@
                         >
                       </li>
                       <li>
-                        <a
-                          href="https://belgelendirme.kapadokya.edu.tr"
-                          target="_blank"
-                          rel="noopener"
-                          >Personel Belgelendirme Merkezi</a
+                        <a href="#">Modül Sınav Merkezi</a>
+                      </li>
+                      <li>
+                        <a href="egitim-kaynak-saglayici.html"
+                          >Eğitim Kaynak Sağlayıcı</a
                         >
                       </li>
                     </ul>
                   </li>
-                  <li><a href="duyurular.html">Duyurular</a></li>
-                  <li><a href="blog.html">Blog</a></li>
                   <li><a href="iletisim.html">İletişim</a></li>
                 </ul>
               </nav>
@@ -760,14 +753,12 @@
             <li class="has-dropdown has-menu-child-item">
               <a href="#">Sınav Merkezleri</a>
               <ul class="submenu">
-                <li><a href="anasayfa.html#sem-sinav-merkezleri">Akredite Merkezlerimiz</a></li>
                 <li><a href="https://ilkyardim.kapadokya.edu.tr/" target="_blank" rel="noopener">İlk Yardım Eğitim Merkezi</a></li>
-                <li><a href="https://belgelendirme.kapadokya.edu.tr" target="_blank" rel="noopener">Personel Belgelendirme Merkezi</a></li>
+                <li><a href="#">Modül Sınav Merkezi</a></li>
+                <li><a href="egitim-kaynak-saglayici.html">Eğitim Kaynak Sağlayıcı</a></li>
               </ul>
             </li>
 
-            <li><a href="duyurular.html">Duyurular</a></li>
-            <li><a href="blog.html">Blog</a></li>
             <li><a href="iletisim.html">İletişim</a></li>
 
           </ul>
@@ -1927,7 +1918,7 @@
         <div class="row mb--40">
           <div class="col-lg-12 text-center">
             <span class="subtitle bg-pink-opacity">AKREDİTE MERKEZLERİMİZ</span>
-            <h2 class="title mt--10">Sınav ve Belgelendirme Merkezlerimiz</h2>
+            <h2 class="title mt--10">Sınav ve Akredite Merkezlerimiz</h2>
             <p class="description mt--10">
               SEM çatısı altında hizmet veren akredite merkezlerimiz ve sınav
               birimlerimiz.
@@ -1938,14 +1929,11 @@
           <div class="col">
             <div
               class="rbt-card variation-01 rbt-hover text-center p-4 h-100"
-              style="
-                border-top: 4px solid var(--sem-success);
-                border-radius: 12px;
-              "
+              style="border-top: 4px solid var(--sem-primary); border-radius: 0"
             >
               <div
                 class="mb-3"
-                style="font-size: 2.5rem; color: var(--sem-success)"
+                style="font-size: 2.5rem; color: var(--sem-primary)"
               >
                 <i class="feather-heart"></i>
               </div>
@@ -1967,27 +1955,24 @@
           <div class="col">
             <div
               class="rbt-card variation-01 rbt-hover text-center p-4 h-100"
-              style="border-top: 4px solid var(--sem-gold); border-radius: 12px"
+              style="border-top: 4px solid var(--sem-primary); border-radius: 0"
             >
               <div
                 class="mb-3"
-                style="font-size: 2.5rem; color: var(--sem-gold)"
+                style="font-size: 2.5rem; color: var(--sem-primary)"
               >
-                <i class="feather-award"></i>
+                <i class="feather-grid"></i>
               </div>
-              <h5 class="rbt-card-title mb-2">
-                Personel Belgelendirme Merkezi
-              </h5>
+              <h5 class="rbt-card-title mb-2">Modül Sınav Merkezi</h5>
               <p class="description" style="font-size: 0.85rem">
-                MYK kapsamında ulusal yeterliliklere dayalı personel
-                belgelendirme.
+                Akredite modül sınavlarının planlandığı ve yürütüldüğü
+                merkez.
               </p>
               <a
-                href="https://belgelendirme.kapadokya.edu.tr"
-                target="_blank"
-                rel="noopener"
+                href="#"
                 class="rbt-btn-link mt--10 d-inline-block"
-                >Ziyaret Et <i class="feather-arrow-right"></i
+                aria-disabled="true"
+                >Yakında <i class="feather-arrow-right"></i
               ></a>
             </div>
           </div>
@@ -2343,26 +2328,10 @@
               <div class="footer-widget">
                 <h5 class="ft-title">Sınav Merkezleri</h5>
                 <ul class="ft-link">
-                  <li>
-                      <a href="anasayfa.html#sem-sinav-merkezleri">Akredite Merkezlerimiz</a>
-                  </li>
-<li>
-                    <a
-                      href="https://ilkyardim.kapadokya.edu.tr/"
-                      target="_blank"
-                      rel="noopener"
-                      >İlk Yardım Eğitim Merkezi</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="https://belgelendirme.kapadokya.edu.tr"
-                      target="_blank"
-                      rel="noopener"
-                      >Personel Belgelendirme Merkezi</a
-                    >
-                  </li>
-                </ul>
+                                <li><a href="https://ilkyardim.kapadokya.edu.tr/" target="_blank" rel="noopener">İlk Yardım Eğitim Merkezi</a></li>
+                                <li><a href="#">Modül Sınav Merkezi</a></li>
+                                <li><a href="egitim-kaynak-saglayici.html">Eğitim Kaynak Sağlayıcı</a></li>
+                            </ul>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">

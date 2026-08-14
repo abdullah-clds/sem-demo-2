@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="./assets/css/sem-custom.css">
     <link rel="stylesheet" href="./assets/css/sem-kurumsal.css">
 </head>
-<body class="rbt-header-sticky">
+<body class="rbt-header-sticky sem-egitim-banner-page">
 
 
                 <div id="my_switcher" class="my_switcher">
@@ -190,11 +190,6 @@
                     ></a>
                     <ul class="submenu">
                       <li>
-                        <a href="anasayfa.html#sem-sinav-merkezleri"
-                          >Akredite Merkezlerimiz</a
-                        >
-                      </li>
-                      <li>
                         <a
                           href="https://ilkyardim.kapadokya.edu.tr/"
                           target="_blank"
@@ -203,17 +198,15 @@
                         >
                       </li>
                       <li>
-                        <a
-                          href="https://belgelendirme.kapadokya.edu.tr"
-                          target="_blank"
-                          rel="noopener"
-                          >Personel Belgelendirme Merkezi</a
+                        <a href="#">Modül Sınav Merkezi</a>
+                      </li>
+                      <li>
+                        <a href="egitim-kaynak-saglayici.html"
+                          >Eğitim Kaynak Sağlayıcı</a
                         >
                       </li>
                     </ul>
                   </li>
-                  <li><a href="duyurular.html">Duyurular</a></li>
-                  <li><a href="blog.html">Blog</a></li>
                   <li><a href="iletisim.html">İletişim</a></li>
                 </ul>
               </nav>
@@ -740,14 +733,12 @@
             <li class="has-dropdown has-menu-child-item">
               <a href="#">Sınav Merkezleri</a>
               <ul class="submenu">
-                <li><a href="anasayfa.html#sem-sinav-merkezleri">Akredite Merkezlerimiz</a></li>
                 <li><a href="https://ilkyardim.kapadokya.edu.tr/" target="_blank" rel="noopener">İlk Yardım Eğitim Merkezi</a></li>
-                <li><a href="https://belgelendirme.kapadokya.edu.tr" target="_blank" rel="noopener">Personel Belgelendirme Merkezi</a></li>
+                <li><a href="#">Modül Sınav Merkezi</a></li>
+                <li><a href="egitim-kaynak-saglayici.html">Eğitim Kaynak Sağlayıcı</a></li>
               </ul>
             </li>
 
-            <li><a href="duyurular.html">Duyurular</a></li>
-            <li><a href="blog.html">Blog</a></li>
             <li><a href="iletisim.html">İletişim</a></li>
 
           </ul>
@@ -772,7 +763,9 @@
 
     <div class="rbt-page-banner-wrapper">
         <!-- Start Banner BG Image  -->
-        <div class="rbt-banner-image"></div>
+        <div class="rbt-banner-image">
+            <img src="./assets/images/banner/sem-egitim-motif.svg" alt="" aria-hidden="true" class="banner-motif">
+        </div>
         <!-- End Banner BG Image  -->
         <div class="rbt-banner-content">
             <!-- Start Banner Content Top  -->
@@ -792,7 +785,7 @@
 
                             <div class=" title-wrapper">
                                 <h1 class="title mb--0">Tüm Kurslar</h1>
-                              
+
                             </div>
 
                             <p class="description">Alanında uzman eğitmenlerle güncel eğitim programlarını keşfedin.</p>
@@ -801,48 +794,49 @@
                 </div>
             </div>
             <!-- End Banner Content Top  -->
-            <!-- Start Course Top  -->
-            <div class="rbt-course-top-wrapper mt--40">
-                <div class="container">
-                    <div class="row g-5 align-items-center">
-                        <div class="col-lg-5 col-md-12">
-                            <div class="rbt-sorting-list d-flex flex-wrap align-items-center">
-                                <div class="rbt-short-item switch-layout-container">
-                                    <ul class="course-switch-layout">
-                                        <li class="course-switch-item"><button class="rbt-grid-view active" title="Grid Layout"><i class="feather-grid"></i> <span class="text">Izgara</span></button></li>
-                                        <li class="course-switch-item"><button class="rbt-list-view" title="List Layout"><i class="feather-list"></i> <span class="text">Liste</span></button></li>
-                                    </ul>
-                                </div>
-                                <div class="rbt-short-item">
-                                    <span class="course-index">1-9 / 19 Sonuç Gösteriliyor</span>
-                                </div>
-                            </div>
+        </div>
+    </div>
+
+    <!-- Start Course Top  -->
+    <div class="rbt-course-top-wrapper mt--40">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-5 col-md-12">
+                    <div class="rbt-sorting-list d-flex flex-wrap align-items-center">
+                        <div class="rbt-short-item switch-layout-container">
+                            <ul class="course-switch-layout">
+                                <li class="course-switch-item"><button class="rbt-grid-view active" title="Grid Layout"><i class="feather-grid"></i> <span class="text">Izgara</span></button></li>
+                                <li class="course-switch-item"><button class="rbt-list-view" title="List Layout"><i class="feather-list"></i> <span class="text">Liste</span></button></li>
+                            </ul>
                         </div>
-                        <div class="col-lg-7 col-md-12">
-                            <div class="rbt-sorting-list d-flex flex-wrap align-items-center justify-content-start justify-content-lg-end">
-                                <div class="rbt-short-item">
-                                    <div class="filter-select">
-                                        <span class="select-label d-block">Sıralama</span>
-                                        <div class="filter-select rbt-modern-select search-by-category">
-                                            <select class="form-select form-select-sm" style="border-radius:6px;border:1px solid #dde;min-width:160px;">
-                                                <option>Normal</option>
-                                                <option>Yaklaşan</option>
-                                                <option>En Son</option>
-                                                <option>Popülerlik</option>
-                                                <option>Fiyat: Düşükten Yükseğe</option>
-                                                <option>Fiyat: Yüksekten Düşüğe</option>
-                                            </select>
-                                        </div>
-                                    </div>
+                        <div class="rbt-short-item">
+                            <span class="course-index">1-9 / 19 Sonuç Gösteriliyor</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-12">
+                    <div class="rbt-sorting-list d-flex flex-wrap align-items-center justify-content-start justify-content-lg-end">
+                        <div class="rbt-short-item">
+                            <div class="filter-select">
+                                <span class="select-label d-block">Sıralama</span>
+                                <div class="filter-select rbt-modern-select search-by-category">
+                                    <select class="form-select form-select-sm" style="border-radius:6px;border:1px solid #dde;min-width:160px;">
+                                        <option>Normal</option>
+                                        <option>Yaklaşan</option>
+                                        <option>En Son</option>
+                                        <option>Popülerlik</option>
+                                        <option>Fiyat: Düşükten Yükseğe</option>
+                                        <option>Fiyat: Yüksekten Düşüğe</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- End Course Top  -->
         </div>
     </div>
+    <!-- End Course Top  -->
 
     <!-- Start Card Style -->
     <div class="rbt-section-overlayping-top rbt-section-gapBottom">
@@ -859,7 +853,7 @@
             </div>
 
             <div class="row row--30 gy-5">
-                <div class="col-lg-3 order-2 order-lg-1">
+                <div class="col-lg-3 col-xl-2 order-2 order-lg-1 sem-course-sidebar-col">
                     <div class="collapse d-lg-block" id="semFilterCollapse">
                     <aside class="rbt-sidebar-widget-wrapper">
 
@@ -946,7 +940,7 @@
                     </aside>
                     </div><!-- /collapse -->
                 </div>
-                <div class="col-lg-9 order-1 order-lg-2">
+                <div class="col-lg-9 col-xl-10 order-1 order-lg-2 sem-course-grid-col">
                     <div class="rbt-course-grid-column active-grid-view">
 
                         <!-- Start Single Card  -->
@@ -1220,7 +1214,7 @@
                                  data-durum="acik">
                                 <div class="rbt-card-img">
                                     <a href="kurs-detay.html">
-                                        <img src="./assets/images/course/course-4.jpg" alt="Profesyonel Aşçılık Temel Eğitimi">
+                                        <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=1080&h=1350&fit=crop&q=80" alt="Profesyonel Aşçılık Temel Eğitimi">
                                     </a>
                                 </div>
                                 <div class="card-body">
@@ -1257,7 +1251,7 @@
                                  data-durum="acik">
                                 <div class="rbt-card-img">
                                     <a href="kurs-detay.html">
-                                        <img src="./assets/images/course/course-5.jpg" alt="Sürdürülebilir Turizm Eğitimi">
+                                        <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1080&h=1350&fit=crop&q=80" alt="Sürdürülebilir Turizm Eğitimi">
                                     </a>
                                 </div>
                                 <div class="card-body">
@@ -1294,7 +1288,7 @@
                                  data-durum="yakinda">
                                 <div class="rbt-card-img">
                                     <a href="kurs-detay.html">
-                                        <img src="./assets/images/course/course-6.jpg" alt="Siber Güvenlik Temel Eğitimi">
+                                        <img src="https://images.unsplash.com/photo-1518818608552-195ed130cdf4?w=1080&h=1350&fit=crop&q=80" alt="Siber Güvenlik Temel Eğitimi">
                                     </a>
                                 </div>
                                 <div class="card-body">
@@ -1518,16 +1512,9 @@
                         <div class="footer-widget">
                             <h5 class="ft-title">Sınav Merkezleri</h5>
                             <ul class="ft-link">
-                                <li>
-                                    <a href="anasayfa.html#sem-sinav-merkezleri">Akredite Merkezlerimiz</a>
-                                </li>
-<li>
-                                    <a href="https://ilkyardim.kapadokya.edu.tr/" target="_blank" rel="noopener">İlk Yardım Eğitim Merkezi</a>
-                                </li>
-                                <li>
-                                    <a href="https://belgelendirme.kapadokya.edu.tr" target="_blank" rel="noopener">Personel Belgelendirme Merkezi</a>
-                                </li>
-                                
+                                <li><a href="https://ilkyardim.kapadokya.edu.tr/" target="_blank" rel="noopener">İlk Yardım Eğitim Merkezi</a></li>
+                                <li><a href="#">Modül Sınav Merkezi</a></li>
+                                <li><a href="egitim-kaynak-saglayici.html">Eğitim Kaynak Sağlayıcı</a></li>
                             </ul>
                         </div>
                     </div>

@@ -193,20 +193,6 @@ p  { font-size: 16px !important; line-height: 1.6 !important; }
   transition: transform 0.2s ease;
 }
 
-/* ── 8. Birincil CTA Butonu (btn-gradient mor/magenta override) ─── */
-.rbt-btn.sem-btn-primary,
-a.rbt-btn.sem-btn-primary {
-  background: var(--sem-primary) !important;
-  background-image: none !important;
-  border-color: var(--sem-primary) !important;
-  color: #fff !important;
-}
-.rbt-btn.sem-btn-primary:hover,
-a.rbt-btn.sem-btn-primary:hover {
-  background: var(--sem-navy-light) !important;
-  border-color: var(--sem-navy-light) !important;
-}
-
 /* ── 9. Header Arama Dropdown ───────────────────────────── */
 .rbt-search-dropdown #sem-header-search-form {
   display: flex;
@@ -1071,11 +1057,6 @@ textarea.sem-form-control { resize: vertical; min-height: 120px; }
 .sem-auth-submit:hover { opacity:.92; }
 @media (max-width:900px) { .sem-auth-wrap { grid-template-columns:1fr; } .sem-auth-visual { display:none; } }
 
-/* ── Eğitimler / Hizmet İçi Eğitimler / Eğitmen Paneli — sayfa banner rengi (kurumsal) ── */
-.rbt-page-banner-wrapper .rbt-banner-image {
-  background: linear-gradient(135deg, var(--kun-lacivert, #002855), var(--kun-mavi, #0072ce)) !important;
-}
-
 /* ── Blog kartı ───────────────────────────────────────────── */
 .sem-blog-kategori { display:inline-block; background:rgba(var(--kun-mavi-rgb, 0,114,206),.1);
   color:var(--kun-mavi, #0072ce); font-size:12px; font-weight:700; letter-spacing:.02em;
@@ -1125,27 +1106,22 @@ textarea,
   border-radius: 0 !important;
 }
 
-/* ── Gri (kapadokya.edu.tr kurumsal grisi) — buton vurgusu ── */
-.rbt-btn.btn-border,
-.rbt-btn.btn-border-gradient {
+/* ── İkincil buton (.btn-border) — kurumsal OUTLINE turkuaz, hover'da dolu ──
+   (primary solid turkuaz'dan ayrışır; ör. "Talep Bırak") ── */
+.rbt-btn.btn-border {
   background-image: none !important;
-  background-color: var(--kun-gri, #53565a) !important;
-  border-color: var(--kun-gri, #53565a) !important;
+  background-color: transparent !important;
+  border: 1px solid var(--kun-turkuaz, #00A1AA) !important;
+  color: var(--kun-turkuaz, #00A1AA) !important;
+}
+.rbt-btn.btn-border span { color: inherit !important; -webkit-text-fill-color: currentColor !important; }
+.rbt-btn.btn-border:hover {
+  background-image: none !important;
+  background-color: var(--kun-turkuaz, #00A1AA) !important;
+  border-color: var(--kun-turkuaz, #00A1AA) !important;
   color: #fff !important;
 }
-.rbt-btn.btn-border-gradient::before {
-  background: var(--kun-gri, #53565a) !important;
-}
-.rbt-btn.btn-border:hover,
-.rbt-btn.btn-border-gradient:hover {
-  background-image: none !important;
-  background-color: var(--kun-lacivert, #002855) !important;
-  border-color: var(--kun-lacivert, #002855) !important;
-  color: #fff !important;
-}
-.rbt-btn.btn-border-gradient:hover::before {
-  background: var(--kun-lacivert, #002855) !important;
-}
+.rbt-btn.btn-border:hover span { color: #fff !important; -webkit-text-fill-color: #fff !important; }
 
 /* ── Footer "Bizimle İletişime Geçin" — beyaz yazı, sabit (animasyonsuz) ── */
 .footer-widget .contact-btn .rbt-btn {
@@ -1249,3 +1225,247 @@ textarea,
 @media (max-width: 767px) {
   .sem-home .rbt-section-gap { padding: 44px 0; }
 }
+
+/* ── Eğitim ızgarası — 3 sütun + daraltılmış filtre (kartlar büyür) ───
+   Vendor .container xl/xxl'de 1140-1320px'te sabitleniyor, bu yüzden
+   col-xl-2 (%16.66) sidebar'ı hiçbir ekranda ~220px'i geçemiyor — bu,
+   en uzun filtre kelimesi ("Teknolojileri", 13 karakter) için bile
+   sıkışık kalıyordu. Çözüm: sidebar'a yüzde yerine SABİT/geniş bir
+   genişlik (280px — 13 karakterlik kelime + checkbox + boşluk payı
+   rahatça sığar), grid sütununu da flex-grow ile kalan alanı dolduracak
+   şekilde ayarladık — taşma/alt satıra kayma riski olmadan. ────────── */
+@media (min-width: 1200px) {
+  .sem-course-sidebar-col { flex: 0 0 280px; width: 280px; max-width: 280px; }
+  .sem-course-grid-col { flex: 1 1 0%; width: auto; max-width: 100%; }
+}
+.rbt-course-grid-column .course-grid-3 { width: 33.333%; }
+@media (min-width: 768px) and (max-width: 991px) { .rbt-course-grid-column .course-grid-3 { width: 50%; } }
+@media (max-width: 767px) { .rbt-course-grid-column .course-grid-3 { width: 100%; } }
+
+/* ── Kart simetrisi — metin uzunluğundan bağımsız hizalama ─── */
+.sem-course-card .rbt-card-title {
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  overflow: hidden; min-height: 2.8em; line-height: 1.4; margin-bottom: .6rem;
+}
+/* Yön A (tum-kurslar.html): açıklama 2 satır clamp — hizmet-ici'de element yok, etkisiz */
+.sem-course-card .rbt-card-text {
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  overflow: hidden; min-height: 2.6em; margin-bottom: .6rem;
+}
+.sem-course-card .rbt-meta { min-height: 1.6em; margin-bottom: 0; }
+
+/* ── Görsel oranı — 4:5 dikey (Instagram post) ─── */
+.sem-course-card .rbt-card-img,
+.rbt-card.variation-01 .rbt-card-img { aspect-ratio: 4 / 5; overflow: hidden; }
+.sem-course-card .rbt-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* ── Kart kontrastı — beyaz kart, gri (#f8f9fa) zemin üzerinde net ayrışma
+   Kurumsal: ince lacivert hairline + yumuşak nötr gölge (kum kaldırıldı) ── */
+.sem-course-card {
+  position: relative;
+  background: #fff;
+  border: 1px solid rgba(0, 40, 85, .10);
+  box-shadow: 0 2px 12px rgba(0, 40, 85, .06);
+}
+.sem-course-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 26px rgba(0, 40, 85, .13);
+  border-color: rgba(0, 40, 85, .20);
+}
+.sem-status-badge {
+  background: #fff; border: 1px solid rgba(0, 40, 85, .15);
+  color: var(--sem-text, #222); font-size: 12px; font-weight: 600;
+  padding: .2em .7em; display: inline-flex; align-items: center; gap: .4em;
+}
+.sem-status-badge::before { content: ""; width: 7px; height: 7px; border-radius: 50%; }
+.sem-status-badge--acik::before { background: var(--sem-success, #2e7d32); }
+.sem-status-badge--son::before { background: var(--sem-warning, #f2a900); }
+.sem-status-badge--yakinda::before { background: var(--sem-muted, #9aa0a6); }
+.sem-status-badge--kapandi::before { background: var(--sem-accent, #cb333b); }
+.sem-status-badge--talep::before { background: var(--sem-info, #0072ce); }
+
+/* ── Sayfa banner'ı — KİLİTLİ: gri (#f8f9fa) + küçültülmüş boyut + motif ───
+   Hedef ölçü: sem-hakkinda.html hero'su (~215px, padding:48px 0). Toolbar
+   (rbt-course-top-wrapper) artık banner içinde DEĞİL — HTML'de sidebar+grid
+   satırının hemen üstüne taşındı (bkz. tum-kurslar.html / hizmet-ici-egitimler.html). */
+.rbt-page-banner-wrapper { padding: 48px 0 !important; }
+.rbt-page-banner-wrapper .rbt-banner-image {
+  background: #f8f9fa !important;
+  position: relative;
+  overflow: hidden;
+}
+.rbt-page-banner-wrapper .rbt-banner-image::after { display: none !important; }
+.rbt-page-banner-wrapper .rbt-banner-content-top .title { color: var(--sem-primary, #002855) !important; }
+.rbt-page-banner-wrapper .page-list a,
+.rbt-page-banner-wrapper .page-list li,
+.rbt-page-banner-wrapper .page-list .active,
+.rbt-page-banner-wrapper .description { color: var(--kun-gri, #53565a) !important; }
+
+/* Banner'ın kartlara taşan -175px negatif üst boşluğu bu iki sayfada sıfırlanır
+   (bkz. .sem-egitim-banner-page body sınıfı) — egitmen-panel.html etkilenmez. */
+body.sem-egitim-banner-page .rbt-section-overlayping-top { margin-top: 24px; }
+
+/* Animasyonlu eğitim motifi — banner sağında, mobilde gizlenir */
+.banner-motif {
+  position: absolute; right: 20px; top: 50%; transform: translateY(-50%);
+  height: 150px; max-width: 45%; object-fit: contain; pointer-events: none;
+}
+@media (max-width: 575px) { .banner-motif { display: none; } }
+
+/* ── Butonlar — kurumsal turkuaz + sarı hover (SİTE GENELİ, kilitli karar) ─── */
+.rbt-btn, .sem-apply-btn, .sem-btn-primary,
+a.rbt-btn, button.rbt-btn, .rbt-btn.btn-gradient {
+  background: var(--kun-turkuaz, #00A1AA) !important;
+  background-image: none !important;
+  border-color: var(--kun-turkuaz, #00A1AA) !important;
+  color: #fff !important;
+  transition: background .2s, color .2s, border-color .2s !important;
+}
+.rbt-btn:hover, .sem-apply-btn:hover, .sem-btn-primary:hover,
+a.rbt-btn:hover, button.rbt-btn:hover, .rbt-btn.btn-gradient:hover {
+  background: var(--kun-sari, #F2A900) !important;
+  border-color: var(--kun-sari, #F2A900) !important;
+  color: var(--sem-primary, #002855) !important;
+}
+
+/* Üst menüdeki "Kayıt Ol" — border-gradient + marquee butonu; solid turkuaz/sarı yap */
+.rbt-btn-wrapper .rbt-btn,
+.rbt-btn.btn-border-gradient,
+.rbt-btn.rbt-marquee-btn {
+  background: var(--kun-turkuaz, #00A1AA) !important;
+  background-image: none !important;
+  border: 1px solid var(--kun-turkuaz, #00A1AA) !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+.rbt-btn-wrapper .rbt-btn::before, .rbt-btn-wrapper .rbt-btn::after,
+.rbt-btn.btn-border-gradient::before, .rbt-btn.btn-border-gradient::after {
+  background: var(--kun-turkuaz, #00A1AA) !important;
+  background-image: none !important;
+}
+.rbt-btn-wrapper .rbt-btn span,
+.rbt-btn.btn-border-gradient span {
+  color: #fff !important; -webkit-text-fill-color: #fff !important;
+}
+.rbt-btn-wrapper .rbt-btn:hover,
+.rbt-btn.btn-border-gradient:hover,
+.rbt-btn.rbt-marquee-btn:hover {
+  background: var(--kun-sari, #F2A900) !important;
+  border-color: var(--kun-sari, #F2A900) !important;
+  color: var(--sem-primary, #002855) !important;
+  -webkit-text-fill-color: var(--sem-primary, #002855) !important;
+}
+.rbt-btn-wrapper .rbt-btn:hover::before, .rbt-btn-wrapper .rbt-btn:hover::after {
+  background: var(--kun-sari, #F2A900) !important;
+}
+.rbt-btn-wrapper .rbt-btn:hover span,
+.rbt-btn.btn-border-gradient:hover span {
+  color: var(--sem-primary, #002855) !important; -webkit-text-fill-color: var(--sem-primary, #002855) !important;
+}
+
+/* ── Site geneli zemin rengi — #f8f9fa (beyaz kartlar bu gri üzerinde ayrışır) ─── */
+body { background: #f8f9fa !important; }
+
+/* ── Anasayfa "Öne Çıkan Eğitimler" — kapadokya.edu.tr etkinlik kartı ölçüsü feyzi:
+   kart kolonu doldurur (yan boşluk yok), görsel KOMPAKT landscape (16:10),
+   böylece kart ~kapadokya boyutunda; 4:5 sadece listeleme sayfalarında kalır. */
+#sem-populer-egitimler .sem-course-card { max-width: none; margin: 0; }
+/* Görsel DİKEY (4:5) — kullanıcının 1080x1350 varlıklarıyla uyumlu */
+#sem-populer-egitimler .sem-course-card .rbt-card-img { aspect-ratio: 4 / 5; }
+/* Boşluklar dar ve dengeli (yatay + dikey eşit) */
+#sem-populer-egitimler .row.g-4 { --bs-gutter-x: 12px; --bs-gutter-y: 12px; }
+/* Kartları biraz küçült: bölüm konteynerini daralt (3 sütun + dar boşluk korunur,
+   yan boşluk oluşmadan tüm ızgara orantılı küçülür) */
+#sem-populer-egitimler .container { max-width: 980px; }
+
+/* ── Durum rozetleri — kurumsal solid pill, kart gövdesinde başlığın ÜSTÜNDE
+   (görsel üstünde belirsiz kalıyordu; kum şerit de kaldırıldı) ──────────── */
+.sem-status-badge {
+  position: static !important;
+  display: inline-block !important;
+  width: auto !important; margin: 0 0 10px !important;
+  padding: 5px 12px !important;
+  font-size: 12px !important; font-weight: 600 !important;
+  border: none !important; border-radius: 0 !important;
+  color: #fff !important; background: var(--sem-primary, #002855) !important;
+}
+.sem-status-badge::before { display: none !important; }
+.sem-status-badge--acik    { background: var(--sem-success, #1a7a4a) !important; }
+.sem-status-badge--son     { background: var(--kun-sari, #f2a900) !important; color: var(--sem-primary, #002855) !important; }
+.sem-status-badge--yakinda { background: var(--kun-gri, #53565a) !important; }
+.sem-status-badge--kapandi { background: var(--sem-accent, #cb333b) !important; }
+.sem-status-badge--talep   { background: var(--kun-mavi, #0072ce) !important; }
+
+/* ══ Anasayfa slider — klasik full-görsel hero (split/dikey yapı kaldırıldı) ══ */
+.rbt-banner-area.sem-hero-slider {
+  padding: 0 !important;
+  background: transparent !important;
+}
+.sem-hero-slider .swiper,
+.sem-hero-slider .swiper-wrapper,
+.sem-hero-slider .swiper-slide { height: auto; }
+.sem-hero-slide {
+  position: relative;
+  min-height: 540px;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.sem-hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(0,40,85,.85) 0%, rgba(0,40,85,.60) 42%, rgba(0,40,85,.15) 100%);
+}
+.sem-hero-slide .container { position: relative; z-index: 2; }
+.sem-hero-content { max-width: 620px; color: #fff; }
+.sem-hero-tag {
+  display: inline-block; background: var(--kun-turkuaz, #00A1AA); color: #fff;
+  font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+  padding: 6px 14px; margin-bottom: 18px;
+}
+.sem-hero-title {
+  color: #fff; font-weight: 800; line-height: 1.1; margin: 0;
+  font-size: clamp(30px, 4.4vw, 52px);
+}
+.sem-hero-desc {
+  color: rgba(255,255,255,.9); font-size: 17px; line-height: 1.7;
+  margin: 18px 0 0; max-width: 540px;
+}
+.sem-hero-btn {
+  display: inline-flex; align-items: center; gap: 10px; margin-top: 26px;
+  background: var(--kun-turkuaz, #00A1AA); color: #fff !important;
+  font-weight: 700; font-size: 15px; padding: 14px 32px;
+  transition: background .2s, color .2s;
+}
+.sem-hero-btn:hover { background: var(--kun-sari, #F2A900); color: var(--sem-primary, #002855) !important; }
+/* okları görselin üstünde belirgin tut */
+.sem-hero-slider .rbt-swiper-arrow { z-index: 5; }
+@media (max-width: 767px) {
+  .sem-hero-slide { min-height: 420px; }
+  .sem-hero-overlay { background: linear-gradient(90deg, rgba(0,40,85,.88) 0%, rgba(0,40,85,.72) 100%); }
+}
+
+/* ══ İçerik şablonu (.sem-icerik) — CMS'ten gelen düz metin/HTML otomatik
+   kurumsal görünür. Detay/iç sayfalar bu şablonu kullanır. ══ */
+.sem-icerik { font-size: 16px; line-height: 1.85; color: #333; }
+.sem-icerik > *:first-child { margin-top: 0; }
+.sem-icerik p { margin: 0 0 16px; }
+.sem-icerik h2 { color: var(--sem-primary, #002855); font-weight: 800; font-size: clamp(24px, 3vw, 32px); margin: 40px 0 14px; }
+.sem-icerik h3 { color: var(--sem-primary, #002855); font-weight: 700; font-size: 20px; margin: 28px 0 10px; }
+.sem-icerik a { color: var(--kun-turkuaz, #00A1AA); text-decoration: underline; }
+.sem-icerik a:hover { color: var(--sem-primary, #002855); }
+.sem-icerik strong { color: var(--sem-primary, #002855); }
+.sem-icerik img { max-width: 100%; height: auto; margin: 20px 0; }
+.sem-icerik ul, .sem-icerik ol { margin: 0 0 20px; padding-left: 0; list-style: none; }
+.sem-icerik ol { counter-reset: sem-li; }
+.sem-icerik ul li, .sem-icerik ol li { position: relative; padding-left: 34px; margin-bottom: 12px; }
+.sem-icerik ul li::before { content: ""; position: absolute; left: 7px; top: 12px; width: 8px; height: 8px; background: var(--kun-turkuaz, #00A1AA); border-radius: 50%; }
+.sem-icerik ol li { counter-increment: sem-li; }
+.sem-icerik ol li::before { content: counter(sem-li); position: absolute; left: 0; top: 1px; width: 24px; height: 24px; background: var(--sem-primary, #002855); color: #fff; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.sem-icerik blockquote { margin: 24px 0; padding: 16px 22px; background: #fff; border-left: 5px solid var(--kun-turkuaz, #00A1AA); box-shadow: 0 2px 12px rgba(0,40,85,.05); font-size: 15px; color: #333; }
+
+/* ══ Detay/şablon sayfaları — body BEYAZ, yalnız hero ("slider") gri ══
+   <body class="sem-detay"> ekle. Hero section'ı kendi inline #f8f9fa gri'sini
+   korur; içerik/yazı alanı beyaz zeminde durur. ══ */
+body.sem-detay { background: #fff !important; }

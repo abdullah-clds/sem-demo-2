@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 240" fill="none" role="img" aria-label="Eğitim temalı animasyonlu motif">
+  <style>
+    .flt1 { animation: flt1 6s ease-in-out infinite; }
+    .flt2 { animation: flt2 7.5s ease-in-out infinite; }
+    .flt3 { animation: flt3 8.5s ease-in-out infinite; }
+    .tw   { animation: tw 3.2s ease-in-out infinite; transform-origin:center; }
+    .tw2  { animation: tw 4.1s ease-in-out infinite; animation-delay:.8s; }
+    .tw3  { animation: tw 2.7s ease-in-out infinite; animation-delay:1.4s; }
+    @keyframes flt1 { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+    @keyframes flt2 { 0%,100%{transform:translateY(0)} 50%{transform:translateY(10px)} }
+    @keyframes flt3 { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+    @keyframes tw   { 0%,100%{opacity:.25} 50%{opacity:.9} }
+    @media (prefers-reduced-motion: reduce){
+      .flt1,.flt2,.flt3,.tw,.tw2,.tw3{ animation:none; }
+    }
+  </style>
+
+  <!-- Mezuniyet kepi (lacivert) -->
+  <g class="flt1">
+    <path d="M120 70 L180 92 L120 114 L60 92 Z" fill="#002855"/>
+    <path d="M96 104 L96 128 C96 140 144 140 144 128 L144 104" fill="none" stroke="#002855" stroke-width="6" stroke-linecap="round"/>
+    <line x1="180" y1="92" x2="180" y2="126" stroke="#F2A900" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="180" cy="130" r="6" fill="#F2A900"/>
+  </g>
+
+  <!-- Açık kitap (turkuaz) -->
+  <g class="flt2">
+    <path d="M250 150 C270 138 300 138 316 148 L316 196 C300 186 270 186 250 198 Z" fill="#00A1AA"/>
+    <path d="M382 150 C362 138 332 138 316 148 L316 196 C332 186 362 186 382 198 Z" fill="#0072CE"/>
+    <line x1="316" y1="148" x2="316" y2="196" stroke="#f8f9fa" stroke-width="3"/>
+  </g>
+
+  <!-- Ampul / fikir (sarı) -->
+  <g class="flt3">
+    <circle cx="405" cy="70" r="26" fill="#F2A900"/>
+    <rect x="396" y="94" width="18" height="12" rx="3" fill="#002855"/>
+    <line x1="399" y1="110" x2="411" y2="110" stroke="#002855" stroke-width="4" stroke-linecap="round"/>
+    <path d="M405 58 v14 M398 66 h14" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+  </g>
+
+  <!-- Kalem (kırmızı) -->
+  <g class="flt1">
+    <g transform="rotate(38 210 200)">
+      <rect x="196" y="150" width="28" height="86" rx="5" fill="#CB333B"/>
+      <rect x="196" y="150" width="28" height="14" fill="#002855"/>
+      <path d="M196 236 L210 258 L224 236 Z" fill="#F2A900"/>
+      <path d="M205 236 L210 244 L215 236 Z" fill="#002855"/>
+    </g>
+  </g>
+
+  <!-- Serpiştirilmiş bilgi noktaları / artılar -->
+  <circle class="tw"  cx="60"  cy="150" r="7" fill="#00A1AA"/>
+  <circle class="tw2" cx="300" cy="60"  r="6" fill="#CB333B"/>
+  <circle class="tw3" cx="440" cy="170" r="7" fill="#0072CE"/>
+  <g class="tw2" stroke="#F2A900" stroke-width="4" stroke-linecap="round">
+    <line x1="150" y1="180" x2="166" y2="180"/><line x1="158" y1="172" x2="158" y2="188"/>
+  </g>
+  <g class="tw3" stroke="#00A1AA" stroke-width="4" stroke-linecap="round">
+    <line x1="360" y1="40" x2="374" y2="40"/><line x1="367" y1="33" x2="367" y2="47"/>
+  </g>
+</svg>

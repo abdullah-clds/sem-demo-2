@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Slider Tasarım Seçenekleri | Kapadokya Üniversitesi SEM</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/images/simge.png" />
+    <link rel="stylesheet" href="./assets/css/plugins/feather.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/sem-custom.css" />
+    <link rel="stylesheet" href="./assets/css/sem-kurumsal.css" />
+    <style>
+      body { background: #f2f2f2; }
+      .sv-intro {
+        max-width: 900px; margin: 0 auto; padding: 48px 24px 24px; text-align: center;
+      }
+      .sv-intro h1 { font-size: 28px; margin-bottom: 10px; }
+      .sv-intro p { color: #555; }
+      .sv-wrap { max-width: 1320px; margin: 0 auto; padding: 0 24px 80px; }
+      .sv-block { margin-bottom: 56px; }
+      .sv-label {
+        display: flex; align-items: center; gap: 10px; margin-bottom: 14px;
+      }
+      .sv-label .num {
+        width: 28px; height: 28px; border-radius: 50%; background: var(--sem-primary, #002855);
+        color: #fff; display: flex; align-items: center; justify-content: center;
+        font-size: 13px; font-weight: 700; flex-shrink: 0;
+      }
+      .sv-label h2 { font-size: 18px; margin: 0; }
+      .sv-label span.tag {
+        font-size: 12px; background: #eef1f4; color: #555; padding: 3px 10px;
+      }
+      .sv-frame {
+        position: relative; overflow: hidden; min-height: 480px;
+        display: flex; align-items: center; background-size: cover; background-position: center;
+      }
+
+      /* ── A: Mevcut / Klasik — sol hizalı, lacivert gradyan overlay ── */
+      .sv-a { background-image: url('./assets/images/course/sem-slider.jpg'); }
+      .sv-a .ov { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,40,85,.85) 0%, rgba(0,40,85,.60) 42%, rgba(0,40,85,.15) 100%); }
+      .sv-a .content { position: relative; z-index: 2; max-width: 620px; color: #fff; padding: 48px; }
+      .sv-a .tag { display:inline-block; background:#00A1AA; color:#fff; font-size:12px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:6px 14px; margin-bottom:18px; }
+      .sv-a h3 { font-size: 40px; font-weight: 800; margin-bottom: 16px; }
+      .sv-a p { font-size: 16px; opacity: .9; margin-bottom: 24px; }
+      .sv-a .btn { display:inline-flex; align-items:center; gap:8px; background:#00A1AA; color:#fff; padding:14px 28px; font-weight:700; text-decoration:none; }
+
+      /* ── B: Ortalanmış / Minimal — düz koyu zemin, ortalı büyük başlık ── */
+      .sv-b { background-image: url('./assets/images/course/course-2.jpg'); }
+      .sv-b .ov { position: absolute; inset: 0; background: rgba(0,40,85,.78); }
+      .sv-b .content { position: relative; z-index: 2; max-width: 720px; margin: 0 auto; color: #fff; text-align: center; padding: 48px; }
+      .sv-b .rule { width: 60px; height: 3px; background: #F2A900; margin: 0 auto 22px; }
+      .sv-b h3 { font-size: 44px; font-weight: 800; margin-bottom: 18px; line-height: 1.15; }
+      .sv-b p { font-size: 17px; opacity: .88; margin-bottom: 28px; }
+      .sv-b .btn { display:inline-flex; align-items:center; gap:8px; background:transparent; border:2px solid #fff; color:#fff; padding:13px 30px; font-weight:700; text-decoration:none; }
+      .sv-b .btn:hover { background:#fff; color:#002855; }
+
+      /* ── C: Split — sol beyaz panel metin, sağ görsel ── */
+      .sv-c { background: none; display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; }
+      .sv-c .panel { background: #fff; display:flex; align-items:center; padding: 56px; }
+      .sv-c .content { max-width: 460px; }
+      .sv-c .eyebrow { color:#00A1AA; font-weight:700; font-size:13px; letter-spacing:.08em; text-transform:uppercase; margin-bottom:14px; }
+      .sv-c h3 { font-size: 34px; font-weight: 800; margin-bottom: 16px; color: #002855; }
+      .sv-c p { font-size: 15px; color: #555; margin-bottom: 26px; }
+      .sv-c .btn { display:inline-flex; align-items:center; gap:8px; background:#002855; color:#fff; padding:14px 28px; font-weight:700; text-decoration:none; }
+      .sv-c .img { background-image: url('./assets/images/course/course-3.jpg'); background-size: cover; background-position: center; min-height: 480px; }
+      @media (max-width: 767px) {
+        .sv-c { grid-template-columns: 1fr; }
+        .sv-c .img { min-height: 240px; order: -1; }
+        .sv-c .panel { padding: 32px 24px; }
+      }
+
+      /* ── D: Alt bilgi şeridi — tam ekran görsel, minimal üst başlık + alt CTA şeridi ── */
+      .sv-d { background-image: url('./assets/images/course/sem-slider.jpg'); align-items: stretch; flex-direction: column; }
+      .sv-d .ov { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,40,85,.55) 0%, rgba(0,40,85,.15) 40%, rgba(0,40,85,.85) 100%); }
+      .sv-d .top { position: relative; z-index: 2; padding: 48px 48px 0; color: #fff; }
+      .sv-d .top .tag { display:inline-block; background:#F2A900; color:#002855; font-size:12px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:6px 14px; margin-bottom:16px; }
+      .sv-d .top h3 { font-size: 36px; font-weight: 800; max-width: 640px; }
+      .sv-d .bottom-bar {
+        position: relative; z-index: 2; margin-top: auto;
+        display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px;
+        background: rgba(255,255,255,.1); backdrop-filter: blur(6px);
+        border-top: 1px solid rgba(255,255,255,.25);
+        padding: 24px 48px; color: #fff;
+      }
+      .sv-d .bottom-bar p { margin: 0; max-width: 480px; font-size: 15px; opacity: .9; }
+      .sv-d .btn { display:inline-flex; align-items:center; gap:8px; background:#00A1AA; color:#fff; padding:14px 28px; font-weight:700; text-decoration:none; white-space: nowrap; }
+
+      .sv-back { display:block; text-align:center; padding-bottom: 40px; }
+      .sv-back a { color: #002855; font-weight: 600; text-decoration: none; }
+    </style>
+  </head>
+  <body>
+    <div class="sv-intro">
+      <h1>Hero Slider — 4 Tasarım Seçeneği</h1>
+      <p>Aşağıda anasayfa hero alanı için 4 farklı yerleşim/stil denemesi var. Aynı görsel ve içerik farklı düzenlerle gösteriliyor — birini seçin, seçileni anasayfaya kalıcı olarak uygulayalım.</p>
+    </div>
+    <div class="sv-wrap">
+
+      <div class="sv-block">
+        <div class="sv-label"><span class="num">A</span><h2>Klasik — sol hizalı, lacivert gradyan</h2><span class="tag">Şu an sitede kullanılan</span></div>
+        <div class="sv-frame sv-a">
+          <div class="ov"></div>
+          <div class="content">
+            <span class="tag">SINAV MERKEZİ</span>
+            <h3>PEMER-MYK-AŞÇI (SEVİYE 4) Sınavı</h3>
+            <p>Adayların mesleki bilgi, beceri ve uygulama yeterliliklerini ölçmeyi amaçlayan profesyonel bir değerlendirme sürecidir.</p>
+            <a class="btn" href="#">Kayıt Ol <i class="feather-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sv-block">
+        <div class="sv-label"><span class="num">B</span><h2>Ortalanmış — düz koyu zemin, büyük başlık</h2><span class="tag">Minimal / dikkat çekici</span></div>
+        <div class="sv-frame sv-b">
+          <div class="ov"></div>
+          <div class="content">
+            <div class="rule"></div>
+            <h3>PEMER-MYK-AŞÇI (SEVİYE 4) Sınavı</h3>
+            <p>Adayların mesleki bilgi, beceri ve uygulama yeterliliklerini ölçmeyi amaçlayan profesyonel bir değerlendirme sürecidir.</p>
+            <a class="btn" href="#">Kayıt Ol <i class="feather-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sv-block">
+        <div class="sv-label"><span class="num">C</span><h2>Split — sol beyaz panel, sağ görsel</h2><span class="tag">Kurumsal / SaaS tarzı</span></div>
+        <div class="sv-frame sv-c">
+          <div class="panel">
+            <div class="content">
+              <div class="eyebrow">Sınav Merkezi</div>
+              <h3>PEMER-MYK-AŞÇI (Seviye 4) Sınavı</h3>
+              <p>Adayların mesleki bilgi, beceri ve uygulama yeterliliklerini ölçmeyi amaçlayan profesyonel bir değerlendirme sürecidir.</p>
+              <a class="btn" href="#">Kayıt Ol <i class="feather-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="img"></div>
+        </div>
+      </div>
+
+      <div class="sv-block">
+        <div class="sv-label"><span class="num">D</span><h2>Alt bilgi şeridi — tam ekran görsel + cam efektli CTA şeridi</h2><span class="tag">Modern / editöryel</span></div>
+        <div class="sv-frame sv-d">
+          <div class="ov"></div>
+          <div class="top">
+            <span class="tag">SINAV MERKEZİ</span>
+            <h3>PEMER-MYK-AŞÇI (Seviye 4) Sınavı</h3>
+          </div>
+          <div class="bottom-bar">
+            <p>Adayların mesleki bilgi, beceri ve uygulama yeterliliklerini ölçmeyi amaçlayan profesyonel bir değerlendirme sürecidir.</p>
+            <a class="btn" href="#">Kayıt Ol <i class="feather-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="sv-back"><a href="anasayfa.html">← Anasayfaya dön</a></div>
+  </body>
+</html>

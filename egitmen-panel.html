@@ -33,6 +33,14 @@
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="stylesheet" href="./assets/css/sem-custom.css">
     <link rel="stylesheet" href="./assets/css/sem-kurumsal.css">
+    <!-- Google Analytics (GA4) — GERÇEK ÖLÇÜM KİMLİĞİ BEKLENİYOR (placeholder: G-XXXXXXXXXX), bkz. README.md -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
 </head>
 
 <body class="sem-detay">
@@ -152,26 +160,9 @@
             <div class="rbt-main-navigation d-none d-xl-block">
               <nav class="mainmenu-nav">
                 <ul class="mainmenu">
-                  <li class="has-dropdown has-menu-child-item">
-                    <a href="#"
-                      >SEM Hakkında <i class="feather-chevron-down"></i
-                    ></a>
-                    <ul class="submenu">
-                      <li>
-                        <a href="sem-hakkinda.html"
-                          >Hakkımızda / Vizyon-Misyon</a
-                        >
-                      </li>
-                      <li><a href="idare.html">İdare</a></li>
-                      <li><a href="ekibimiz.html">Ekibimiz</a></li>
-                      <li><a href="sozlesmeler.html">Yönetmelik</a></li>
-                      <li>
-                        <a href="faaliyet-raporlari.html">Faaliyet Raporları</a>
-                      </li>
-                    </ul>
-                  </li>
                   <li><a href="tum-kurslar.html">Eğitimler</a></li>
                   <li><a href="hizmet-ici-egitimler.html">Hizmet İçi Eğitimler</a></li>
+                  <li><a href="mikro-yeterlilik.html">Mikro Yeterlilik</a></li>
                   <li class="has-dropdown has-menu-child-item">
                     <a href="#"
                       >Sınav Merkezleri <i class="feather-chevron-down"></i
@@ -186,12 +177,15 @@
                         >
                       </li>
                       <li>
-                        <a href="#">Modül Sınav Merkezi</a>
+                        <a href="#">SHGM Sınav Merkezi</a>
                       </li>
                       <li>
                         <a href="egitim-kaynak-saglayici.html"
                           >Eğitim Kaynak Sağlayıcı</a
                         >
+                      </li>
+                      <li>
+                        <a href="pemer.html">PEMER</a>
                       </li>
                     </ul>
                   </li>
@@ -325,7 +319,7 @@
                         <li>
                           <a href="#">
                             <i class="feather-shopping-bag"></i>
-                            <span>Kayıtlı Olduğum Kurslar</span>
+                            <span>Kayıtlı Olduğum Eğitimler</span>
                           </a>
                         </li>
                         <li>
@@ -434,7 +428,7 @@
             <div class="row g-4 pt--30 pb--60">
               <div class="col-lg-12">
                 <div class="section-title">
-                  <h5 class="rbt-title-style-2">Öne Çıkan Kurslar</h5>
+                  <h5 class="rbt-title-style-2">Öne Çıkan Eğitimler</h5>
                 </div>
               </div>
               <!-- Start Single Card  -->
@@ -670,7 +664,7 @@
                   class="rbt-btn btn-border-gradient radius-round btn-sm hover-transform-none w-100 justify-content-center text-center"
                   href="tum-kurslar.html"
                 >
-                  <span>Tüm Kursları Gör</span>
+                  <span>Tüm Eğitimleri Gör</span>
                 </a>
               </div>
             </div>
@@ -704,26 +698,17 @@
         <nav class="mainmenu-nav">
           <ul class="mainmenu">
 
-            <li class="has-dropdown has-menu-child-item">
-              <a href="#">SEM Hakkında</a>
-              <ul class="submenu">
-                <li><a href="sem-hakkinda.html">Hakkımızda / Vizyon-Misyon</a></li>
-                <li><a href="idare.html">İdare</a></li>
-                <li><a href="ekibimiz.html">Ekibimiz</a></li>
-                <li><a href="sozlesmeler.html">Yönetmelik</a></li>
-                <li><a href="faaliyet-raporlari.html">Faaliyet Raporları</a></li>
-              </ul>
-            </li>
-
             <li><a href="tum-kurslar.html">Eğitimler</a></li>
             <li><a href="hizmet-ici-egitimler.html">Hizmet İçi Eğitimler</a></li>
+            <li><a href="mikro-yeterlilik.html">Mikro Yeterlilik</a></li>
 
             <li class="has-dropdown has-menu-child-item">
               <a href="#">Sınav Merkezleri</a>
               <ul class="submenu">
                 <li><a href="https://ilkyardim.kapadokya.edu.tr/" target="_blank" rel="noopener">İlk Yardım Eğitim Merkezi</a></li>
-                <li><a href="#">Modül Sınav Merkezi</a></li>
+                <li><a href="#">SHGM Sınav Merkezi</a></li>
                 <li><a href="egitim-kaynak-saglayici.html">Eğitim Kaynak Sağlayıcı</a></li>
+                <li><a href="pemer.html">PEMER</a></li>
               </ul>
             </li>
 
@@ -908,7 +893,7 @@
                                     <a class="rbt-btn btn-md hover-icon-reverse"
                                         href="sem-kurs-ekleme.html">
                                         <span class="icon-reverse-wrapper">
-                                            <span class="btn-text">Yeni Kurs Oluştur</span>
+                                            <span class="btn-text">Yeni Eğitim Oluştur</span>
                                             <span class="btn-icon"><i class="feather-arrow-right"></i></span>
                                             <span class="btn-icon"><i class="feather-arrow-right"></i></span>
                                         </span>
@@ -942,7 +927,7 @@
                                                     <li><a
                                                             href="#"><i
                                                                 class="feather-book-open"></i><span>Katıldığım
-                                                                Kurslar</span></a></li>
+                                                                Eğitimler</span></a></li>
                                                     <li><a
                                                             href="#"><i
                                                                 class="feather-bookmark"></i><span>İstek
@@ -965,7 +950,7 @@
                                             <nav class="mainmenu-nav">
                                                 <ul class="dashboard-mainmenu rbt-default-sidebar-list">
                                                     <li><a href="egitmen-panel.html"><i
-                                                                class="feather-monitor"></i><span>Kurslarım</span></a>
+                                                                class="feather-monitor"></i><span>Eğitimlerim</span></a>
                                                     </li>
                                                     <li><a
                                                             href="#"><i
@@ -1101,7 +1086,7 @@
                                                             </span>
                                                         </h3>
                                                         <span class="rbt-title-style-2 d-block">Tamamlanan
-                                                            Kurslar</span>
+                                                            Eğitimler</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1175,7 +1160,7 @@
                                                                 </div>
                                                             </span>
                                                         </h3>
-                                                        <span class="rbt-title-style-2 d-block">Toplam Kurslar</span>
+                                                        <span class="rbt-title-style-2 d-block">Toplam Eğitimler</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1243,7 +1228,7 @@
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="section-title">
-                                                <h4 class="rbt-title-style-3">Kurslarım</h4>
+                                                <h4 class="rbt-title-style-3">Eğitimlerim</h4>
                                             </div>
                                         </div>
                                     </div>
@@ -1253,7 +1238,7 @@
                                                 <table class="rbt-table table table-borderless">
                                                     <thead>
                                                         <tr>
-                                                            <th>Kurs Adı</th>
+                                                            <th>Eğitim Adı</th>
                                                             <th>Kayıtlı</th>
                                                         </tr>
                                                     </thead>
@@ -1279,7 +1264,7 @@
                                             </div>
 
                                             <div class="load-more-btn text-center">
-                                                <a class="rbt-btn-link" href="#">Tüm Kursları Göster<i
+                                                <a class="rbt-btn-link" href="#">Tüm Eğitimleri Göster<i
                                                         class="feather-arrow-right"></i></a>
                                             </div>
                                         </div>
@@ -1385,6 +1370,8 @@
                   <li><a href="duyurular.html">Duyurular</a></li>
                   <li><a href="blog.html">Blog</a></li>
                   <li><a href="iletisim.html">İletişim</a></li>
+                  <li><a href="sem-hakkinda.html">SEM Hakkında</a></li>
+                  <li><a href="ekibimiz.html">Ekibimiz</a></li>
                   <li><a href="kvkk.html">KVKK</a></li>
                   <li><a href="sozlesmeler.html">Sözleşmeler</a></li>
                   <li><a href="idare.html">İdare</a></li>
@@ -1399,8 +1386,9 @@
                 <h5 class="ft-title">Sınav Merkezleri</h5>
                 <ul class="ft-link">
                                 <li><a href="https://ilkyardim.kapadokya.edu.tr/" target="_blank" rel="noopener">İlk Yardım Eğitim Merkezi</a></li>
-                                <li><a href="#">Modül Sınav Merkezi</a></li>
+                                <li><a href="#">SHGM Sınav Merkezi</a></li>
                                 <li><a href="egitim-kaynak-saglayici.html">Eğitim Kaynak Sağlayıcı</a></li>
+                                <li><a href="pemer.html">PEMER</a></li>
                             </ul>
               </div>
             </div>

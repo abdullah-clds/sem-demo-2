@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="tr" class=" sizes customelements history pointerevents postmessage webgl websockets cssanimations csscolumns csscolumns-width csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth csscolumns-breakbefore csscolumns-breakafter csscolumns-breakinside flexbox picture srcset webworkers"><head>
+<html lang="tr"><head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Blog Yazısı | Kapadokya Üniversitesi SEM</title>
+    <title>Sürdürülebilir Kalkınma Amaçları — SEM Kapadokya Üniversitesi</title>
     <meta name="robots" content="noindex, follow">
-    <meta name="description" content="Kapadokya Üniversitesi SEM blog yazısı.">
+    <meta name="description" content="Kapadokya Üniversitesi SEM eğitimlerinin katkı sağladığı Birleşmiş Milletler Sürdürülebilir Kalkınma Amaçları (SKA).">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Favicon -->
@@ -644,91 +644,236 @@
         </div>
 
       </div>
-    </div>            
+    </div>
+
+
 
 
     <!-- Page Head -->
-    <section style="background:#f8f9fa; padding:48px 0;" id="ddPageHead">
+    <section style="background:#f8f9fa;padding:48px 0;">
         <div class="container">
             <p style="font-size:15px;font-weight:500;color:#212121;margin-bottom:6px;letter-spacing:.02em;">KAPADOKYA ÜNİVERSİTESİ SEM</p>
-            <h1 id="ddBaslik" style="font-size:clamp(32px,5vw,64px);font-weight:800;color:#212121;line-height:1.1;margin-bottom:18px;letter-spacing:-.02em;">Blog Başlığı</h1>
-            <div style="font-size:14px;color:#6c757d;margin-bottom:12px;">
+            <h1 style="font-size:clamp(44px,7vw,80px);font-weight:800;color:#212121;line-height:1.08;margin-bottom:18px;letter-spacing:-.02em;">Sürdürülebilir Kalkınma Amaçları</h1>
+            <div style="font-size:14px;color:#6c757d;">
                 <a href="anasayfa.html" style="color:#6c757d;text-decoration:none;">Anasayfa</a>
                 <span style="margin:0 6px;">&gt;</span>
-                <a href="blog.html" style="color:#6c757d;text-decoration:none;">Blog</a>
+                <a href="tum-kurslar.html" style="color:#6c757d;text-decoration:none;">Eğitimler</a>
                 <span style="margin:0 6px;">&gt;</span>
-                <span id="bcTitle">Blog</span>
+                <span>Sürdürülebilir Kalkınma Amaçları</span>
             </div>
-            <p style="margin:0;"><span class="sem-blog-kategori" id="ddKategori"></span></p>
-            <p id="ddTarih" style="font-size:14px;color:#6c757d;margin:8px 0 0;"></p>
         </div>
     </section>
     <!-- End Page Head -->
 
-    <!-- Content + Sidebar -->
-    <section style="padding:56px 0 72px;">
+    <!-- SKA İçerik
+         Statik sayfa: her amacın sabit bir çapası var (#amac-1 … #amac-17).
+         Eğitim detay sayfasındaki ikonlar buraya bağlanır: surdurulebilir-kalkinma-amaclari.html#amac-N -->
+    <section class="sem-ska-page" style="padding:56px 0 72px;">
         <div class="container">
-            <div class="row">
-                <!-- Ana İçerik -->
+            <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <div id="ddIcerik" style="font-size:15px;line-height:1.85;color:#2f2f2f;">
-                        İçerik yükleniyor…
-                    </div>
-                </div>
 
-                <!-- Diğer Duyurular Sidebar -->
-                <div class="col-lg-4 mt-5 mt-lg-0 ps-lg-5">
-                    <h5 style="font-size:16px;font-weight:700;color:#212121;margin-bottom:24px;padding-bottom:12px;border-bottom:2px solid #212121;">İlgili Yazılar</h5>
-                    <div id="ddDigerleri"></div>
+                    <div class="sem-ska-intro">
+                        <p>Sürdürülebilir Kalkınma Amaçları (SKA), Birleşmiş Milletler üyesi ülkelerin 2015 yılında kabul ettiği ve 2030 yılına kadar ulaşılması hedeflenen 17 küresel amaçtan oluşur. Yoksulluk, eşitsizlik, iklim değişikliği, çevre, barış ve adalet gibi birbirine bağlı alanlarda daha adil ve yaşanabilir bir dünya için ortak bir yol haritası sunar.</p>
+                        <p>Kapadokya Üniversitesi Sürekli Eğitim Merkezi olarak eğitim programlarımızı bu amaçlarla ilişkilendiriyoruz. Bir eğitimin sayfasında gördüğünüz ikonlar, o programın hangi amaçlara katkı sağladığını gösterir.</p>
+                    </div>
+
+                    <!-- 17 amaç — hızlı geçiş -->
+                    <nav class="sem-ska-nav" aria-label="Amaçlar">
+                        <a href="#amac-1" title="Amaç 1: Yoksulluğa Son"><img src="./assets/images/sdg/SDG-1.svg" alt="Amaç 1: Yoksulluğa Son" loading="lazy"></a>
+                        <a href="#amac-2" title="Amaç 2: Açlığa Son"><img src="./assets/images/sdg/SDG-2.svg" alt="Amaç 2: Açlığa Son" loading="lazy"></a>
+                        <a href="#amac-3" title="Amaç 3: Sağlık ve Kaliteli Yaşam"><img src="./assets/images/sdg/SDG-3.svg" alt="Amaç 3: Sağlık ve Kaliteli Yaşam" loading="lazy"></a>
+                        <a href="#amac-4" title="Amaç 4: Nitelikli Eğitim"><img src="./assets/images/sdg/SDG-4.svg" alt="Amaç 4: Nitelikli Eğitim" loading="lazy"></a>
+                        <a href="#amac-5" title="Amaç 5: Toplumsal Cinsiyet Eşitliği"><img src="./assets/images/sdg/SDG-5.svg" alt="Amaç 5: Toplumsal Cinsiyet Eşitliği" loading="lazy"></a>
+                        <a href="#amac-6" title="Amaç 6: Temiz Su ve Sanitasyon"><img src="./assets/images/sdg/SDG-6.svg" alt="Amaç 6: Temiz Su ve Sanitasyon" loading="lazy"></a>
+                        <a href="#amac-7" title="Amaç 7: Erişilebilir ve Temiz Enerji"><img src="./assets/images/sdg/SDG-7.svg" alt="Amaç 7: Erişilebilir ve Temiz Enerji" loading="lazy"></a>
+                        <a href="#amac-8" title="Amaç 8: İnsana Yakışır İş ve Ekonomik Büyüme"><img src="./assets/images/sdg/SDG-8.svg" alt="Amaç 8: İnsana Yakışır İş ve Ekonomik Büyüme" loading="lazy"></a>
+                        <a href="#amac-9" title="Amaç 9: Sanayi, Yenilikçilik ve Altyapı"><img src="./assets/images/sdg/SDG-9.svg" alt="Amaç 9: Sanayi, Yenilikçilik ve Altyapı" loading="lazy"></a>
+                        <a href="#amac-10" title="Amaç 10: Eşitsizliklerin Azaltılması"><img src="./assets/images/sdg/SDG-10.svg" alt="Amaç 10: Eşitsizliklerin Azaltılması" loading="lazy"></a>
+                        <a href="#amac-11" title="Amaç 11: Sürdürülebilir Şehirler ve Topluluklar"><img src="./assets/images/sdg/SDG-11.svg" alt="Amaç 11: Sürdürülebilir Şehirler ve Topluluklar" loading="lazy"></a>
+                        <a href="#amac-12" title="Amaç 12: Sorumlu Üretim ve Tüketim"><img src="./assets/images/sdg/SDG-12.svg" alt="Amaç 12: Sorumlu Üretim ve Tüketim" loading="lazy"></a>
+                        <a href="#amac-13" title="Amaç 13: İklim Eylemi"><img src="./assets/images/sdg/SDG-13.svg" alt="Amaç 13: İklim Eylemi" loading="lazy"></a>
+                        <a href="#amac-14" title="Amaç 14: Sudaki Yaşam"><img src="./assets/images/sdg/SDG-14.svg" alt="Amaç 14: Sudaki Yaşam" loading="lazy"></a>
+                        <a href="#amac-15" title="Amaç 15: Karasal Yaşam"><img src="./assets/images/sdg/SDG-15.svg" alt="Amaç 15: Karasal Yaşam" loading="lazy"></a>
+                        <a href="#amac-16" title="Amaç 16: Barış, Adalet ve Güçlü Kurumlar"><img src="./assets/images/sdg/SDG-16.svg" alt="Amaç 16: Barış, Adalet ve Güçlü Kurumlar" loading="lazy"></a>
+                        <a href="#amac-17" title="Amaç 17: Amaçlar için Ortaklıklar"><img src="./assets/images/sdg/SDG-17.svg" alt="Amaç 17: Amaçlar için Ortaklıklar" loading="lazy"></a>
+                    </nav>
+
+                    <div class="sem-ska-goal" id="amac-1">
+                        <img src="./assets/images/sdg/SDG-1.svg" alt="Amaç 1: Yoksulluğa Son" loading="lazy">
+                        <div class="sem-ska-goal-body">
+                            <span class="sem-ska-goal-no">Amaç 1</span>
+                            <h2 class="sem-ska-goal-title">Yoksulluğa Son</h2>
+                            <p>Yoksulluğu her biçimiyle ve her yerde sona erdirmeyi; sosyal korumaya ve temel hizmetlere erişimi güçlendirmeyi hedefler.</p>
+                        </div>
+                    </div>
+
+                    <div class="sem-ska-goal" id="amac-2">
+                        <img src="./assets/images/sdg/SDG-2.svg" alt="Amaç 2: Açlığa Son" loading="lazy">
+                        <div class="sem-ska-goal-body">
+                            <span class="sem-ska-goal-no">Amaç 2</span>
+                            <h2 class="sem-ska-goal-title">Açlığa Son</h2>
+                            <p>Açlığı bitirmeyi, gıda güvenliğini ve yeterli beslenmeyi sağlamayı, sürdürülebilir tarımı desteklemeyi hedefler.</p>
+                        </div>
+                    </div>
+
+                    <div class="sem-ska-goal" id="amac-3">
+                        <img src="./assets/images/sdg/SDG-3.svg" alt="Amaç 3: Sağlık ve Kaliteli Yaşam" loading="lazy">
+                        <div class="sem-ska-goal-body">
+                            <span class="sem-ska-goal-no">Amaç 3</span>
+                            <h2 class="sem-ska-goal-title">Sağlık ve Kaliteli Yaşam</h2>
+                            <p>Her yaştan bireyin sağlıklı bir yaşam sürmesini ve refahını güvence altına almayı hedefler.</p>
+                        </div>
+                    </div>
+
+                    <div class="sem-ska-goal" id="amac-4">
+                        <img src="./assets/images/sdg/SDG-4.svg" alt="Amaç 4: Nitelikli Eğitim" loading="lazy">
+                        <div class="sem-ska-goal-body">
+                            <span class="sem-ska-goal-no">Amaç 4</span>
+                            <h2 class="sem-ska-goal-title">Nitelikli Eğitim</h2>
+                            <p>Kapsayıcı, hakkaniyetli ve nitelikli eğitimi ve herkes için yaşam boyu öğrenme fırsatlarını yaygınlaştırmayı hedefler. Sürekli eğitim faaliyetlerinin en doğrudan katkı sunduğu amaçtır.</p>
+                        </div>
+                    </div>
+
+                    <div class="sem-ska-goal" id="amac-5">
+                        <img src="./assets/images/sdg/SDG-5.svg" alt="Amaç 5: Toplumsal Cinsiyet Eşitliği" loading="lazy">
+                        <div class="sem-ska-goal-body">
+                            <span class="sem-ska-goal-no">Amaç 5</span>
+                            <h2 class="sem-ska-goal-title">Toplumsal Cinsiyet Eşitliği</h2>
+                            <p>Kadınların ve kız çocuklarının güçlenmesini, eğitimde ve çalışma hayatında eşit fırsat ve katılımı hedefler.</p>
+                        </div>
+                    </div>
+
+                    <div class="sem-ska-goal" id="amac-6">
+                        <img src="./assets/images/sdg/SDG-6.svg" alt="Amaç 6: Temiz Su ve Sanitasyon" loading="lazy">
+                        <div class="sem-ska-goal-body">
+                            <span class="sem-ska-goal-no">Amaç 6</span>
+                            <h2 class="sem-ska-goal-title">Temiz Su ve Sanitasyon</h2>
+                            <p>Herkesin temiz suya ve sanitasyona erişmesini, su kaynaklarının sürdürülebilir biçimde yönetilmesini hedefler.</p>
+                        </div>
+                    </div>
+
+                    <div class="sem-ska-goal" id="amac-7">
+                        <img src="./assets/images/sdg/SDG-7.svg" alt="Amaç 7: Erişilebilir ve Temiz Enerji" loading="lazy">
+                        <div class="sem-ska-goal-body">
+                            <span class="sem-ska-goal-no">Amaç 7</span>
+                            <h2 class="sem-ska-goal-title">Erişilebilir ve Temiz Enerji</h2>
+                            <p>Herkes için uygun maliyetli, güvenilir, sürdürülebilir ve modern enerjiye erişimi hedefler.</p>
+                        </div>
+                    </div>
+
+                    <div class="sem-ska-goal" id="amac-8">
+                        <img src="./assets/images/sdg/SDG-8.svg" alt="Amaç 8: İnsana Yakışır İş ve Ekonomik Büyüme" loading="lazy">
+                        <div class="sem-ska-goal-body">
+                            <span class="sem-ska-goal-no">Amaç 8</span>
+                            <h2 class="sem-ska-goal-title">İnsana Yakışır İş ve Ekonomik Büyüme</h2>
+                            <p>Kapsayıcı ve sürdürülebilir ekonomik büyümeyi, tam ve üretken istihdamı ve herkes için insana yakışır işi hedefler.</p>
+                        </div>
+                    </div>
+
+                    <div class="sem-ska-goal" id="amac-9">
+                        <img src="./assets/images/sdg/SDG-9.svg" alt="Amaç 9: Sanayi, Yenilikçilik ve Altyapı" loading="lazy">
+                        <div class="sem-ska-goal-body">
+                            <span class="sem-ska-goal-no">Amaç 9</span>
+                            <h2 class="sem-ska-goal-title">Sanayi, Yenilikçilik ve Altyapı</h2>
+                            <p>Dayanıklı altyapıyı, kapsayıcı ve sürdürülebilir sanayileşmeyi ve yenilikçiliğin desteklenmesini hedefler.</p>
+                        </div>
+                    </div>
+
+                    <div class="sem-ska-goal" id="amac-10">
+                        <img src="./assets/images/sdg/SDG-10.svg" alt="Amaç 10: Eşitsizliklerin Azaltılması" loading="lazy">
+                        <div class="sem-ska-goal-body">
+                            <span class="sem-ska-goal-no">Amaç 10</span>
+                            <h2 class="sem-ska-goal-title">Eşitsizliklerin Azaltılması</h2>
+                            <p>Ülkeler içindeki ve ülkeler arasındaki eşitsizlikleri azaltmayı hedefler.</p>
+                        </div>
+                    </div>
+
+                    <div class="sem-ska-goal" id="amac-11">
+                        <img src="./assets/images/sdg/SDG-11.svg" alt="Amaç 11: Sürdürülebilir Şehirler ve Topluluklar" loading="lazy">
+                        <div class="sem-ska-goal-body">
+                            <span class="sem-ska-goal-no">Amaç 11</span>
+                            <h2 class="sem-ska-goal-title">Sürdürülebilir Şehirler ve Topluluklar</h2>
+                            <p>Şehirlerin ve yerleşim yerlerinin kapsayıcı, güvenli, dayanıklı ve sürdürülebilir olmasını hedefler.</p>
+                        </div>
+                    </div>
+
+                    <div class="sem-ska-goal" id="amac-12">
+                        <img src="./assets/images/sdg/SDG-12.svg" alt="Amaç 12: Sorumlu Üretim ve Tüketim" loading="lazy">
+                        <div class="sem-ska-goal-body">
+                            <span class="sem-ska-goal-no">Amaç 12</span>
+                            <h2 class="sem-ska-goal-title">Sorumlu Üretim ve Tüketim</h2>
+                            <p>Sürdürülebilir üretim ve tüketim alışkanlıklarını yaygınlaştırmayı, israfı ve atığı azaltmayı hedefler.</p>
+                        </div>
+                    </div>
+
+                    <div class="sem-ska-goal" id="amac-13">
+                        <img src="./assets/images/sdg/SDG-13.svg" alt="Amaç 13: İklim Eylemi" loading="lazy">
+                        <div class="sem-ska-goal-body">
+                            <span class="sem-ska-goal-no">Amaç 13</span>
+                            <h2 class="sem-ska-goal-title">İklim Eylemi</h2>
+                            <p>İklim değişikliği ve etkileriyle mücadele için acil önlem alınmasını hedefler.</p>
+                        </div>
+                    </div>
+
+                    <div class="sem-ska-goal" id="amac-14">
+                        <img src="./assets/images/sdg/SDG-14.svg" alt="Amaç 14: Sudaki Yaşam" loading="lazy">
+                        <div class="sem-ska-goal-body">
+                            <span class="sem-ska-goal-no">Amaç 14</span>
+                            <h2 class="sem-ska-goal-title">Sudaki Yaşam</h2>
+                            <p>Okyanusların, denizlerin ve deniz kaynaklarının korunmasını ve sürdürülebilir kullanımını hedefler.</p>
+                        </div>
+                    </div>
+
+                    <div class="sem-ska-goal" id="amac-15">
+                        <img src="./assets/images/sdg/SDG-15.svg" alt="Amaç 15: Karasal Yaşam" loading="lazy">
+                        <div class="sem-ska-goal-body">
+                            <span class="sem-ska-goal-no">Amaç 15</span>
+                            <h2 class="sem-ska-goal-title">Karasal Yaşam</h2>
+                            <p>Kara ekosistemlerinin ve ormanların korunmasını, çölleşmeyle mücadeleyi ve biyolojik çeşitlilik kaybının durdurulmasını hedefler.</p>
+                        </div>
+                    </div>
+
+                    <div class="sem-ska-goal" id="amac-16">
+                        <img src="./assets/images/sdg/SDG-16.svg" alt="Amaç 16: Barış, Adalet ve Güçlü Kurumlar" loading="lazy">
+                        <div class="sem-ska-goal-body">
+                            <span class="sem-ska-goal-no">Amaç 16</span>
+                            <h2 class="sem-ska-goal-title">Barış, Adalet ve Güçlü Kurumlar</h2>
+                            <p>Barışçıl ve kapsayıcı toplumları, herkes için adalete erişimi ve etkili, hesap verebilir kurumları hedefler.</p>
+                        </div>
+                    </div>
+
+                    <div class="sem-ska-goal" id="amac-17">
+                        <img src="./assets/images/sdg/SDG-17.svg" alt="Amaç 17: Amaçlar için Ortaklıklar" loading="lazy">
+                        <div class="sem-ska-goal-body">
+                            <span class="sem-ska-goal-no">Amaç 17</span>
+                            <h2 class="sem-ska-goal-title">Amaçlar için Ortaklıklar</h2>
+                            <p>Uygulama araçlarının güçlendirilmesini ve amaçlara ulaşmak için küresel ortaklıkların canlandırılmasını hedefler.</p>
+                        </div>
+                    </div>
+
+                    <div class="sem-ska-cta">
+                        <p>Amaçlar, hedefleri ve göstergeleri hakkında ayrıntılı bilgi Birleşmiş Milletler Türkiye sayfasında yer almaktadır.</p>
+                        <div class="sem-ska-cta-btns">
+                            <a class="sem-ska-cta-main" href="https://turkiye.un.org/tr/sdgs" target="_blank" rel="noopener">
+                                Detaylı Bilgi <i class="feather-external-link"></i>
+                            </a>
+                            <a class="sem-ska-cta-alt" href="tum-kurslar.html">
+                                Eğitimleri İncele <i class="feather-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
     </section>
-    <!-- End Content + Sidebar -->
 
-    <style>
-        .sem-sidebar-item { display:block; padding:16px 0; border-bottom:1px solid #e8e8e8; text-decoration:none; }
-        .sem-sidebar-item:last-child { border-bottom:none; }
-        .sem-sidebar-item:hover .sem-sidebar-arrow { color:#ca2c31; transform:translateX(4px); }
-        .sem-sidebar-arrow { color:#ca2c31; font-size:18px; transition:transform .2s; display:inline-block; }
-    </style>
-
-    <script>
-    'use strict';
-    document.addEventListener('DOMContentLoaded', function () {
-        var BLOG_YAZILARI = [
-            {"id":1,"tarih":"12.06.2026","kategori":"Kariyer","baslik":"Sertifikalı Eğitimler Kariyerinize Nasıl Değer Katar?","ozet":"Sürekli eğitim programlarının iş başvurularında ve terfi süreçlerinde sağladığı somut avantajlara göz atın.","icerik":"Günümüz iş piyasasında sertifikalı eğitimler, adayları rakiplerinden ayıran önemli bir unsur haline gelmiştir. Kapadokya Üniversitesi SEM'in sunduğu sertifikalı programlar, katılımcılara hem teorik bilgi hem de uygulamalı beceri kazandırır.<br><br>İşverenler, e-Devlet onaylı ve akredite sertifikaları değerlendirme süreçlerinde önemli bir kriter olarak görmektedir. Bu nedenle sürekli eğitime yatırım yapmak, uzun vadeli kariyer hedefleri için stratejik bir adımdır.<br><br>Doğru programı seçerken sektörünüzün ihtiyaçlarını ve kendi gelişim alanlarınızı göz önünde bulundurmanız önerilir."},
-            {"id":2,"tarih":"05.06.2026","kategori":"Eğitim","baslik":"Yüz Yüze mi, Online mı? Doğru Eğitim Formatını Seçmek","ozet":"Öğrenme hedeflerinize en uygun eğitim formatını seçerken dikkat etmeniz gereken kriterleri derledik.","icerik":"Eğitim formatı seçimi, öğrenme sürecinizin verimliliğini doğrudan etkiler. Yüz yüze eğitimler, uygulamalı beceri gerektiren alanlarda (gastronomi, arama kurtarma gibi) daha etkili sonuçlar sağlarken; online eğitimler zaman ve mekân esnekliği sunar.<br><br>Hibrit modeller ise her iki yaklaşımın avantajlarını bir araya getirerek, katılımcılara teorik dersleri online, uygulamalı oturumları ise yüz yüze takip etme imkânı tanır.<br><br>Kendi çalışma temponuzu ve öğrenme stilinizi değerlendirerek size en uygun formatı seçebilirsiniz."},
-            {"id":3,"tarih":"28.05.2026","kategori":"Havacılık","baslik":"Havacılıkta Kariyer: SHGM Onaylı Eğitimlerin Önemi","ozet":"Sivil havacılık sektöründe kariyer hedefleyenler için onaylı eğitim ve sertifikasyon süreçleri.","icerik":"Sivil Havacılık Genel Müdürlüğü (SHGM) onaylı eğitim programları, havacılık sektöründe çalışmak isteyenler için olmazsa olmaz bir gerekliliktir. Bu programlar, uluslararası standartlara uygun teorik ve uygulamalı eğitim içerir.<br><br>Kapadokya Üniversitesi SEM bünyesindeki havacılık eğitimleri; meteoroloji, emniyet yönetim sistemleri ve İHA pilotluğu gibi alanlarda uzmanlaşmış eğitmenler eşliğinde yürütülmektedir."},
-            {"id":4,"tarih":"20.05.2026","kategori":"Kişisel Gelişim","baslik":"Zaman Yönetiminde Sık Yapılan 5 Hata","ozet":"Verimliliğinizi artıracak zaman yönetimi tekniklerini ve kaçınılması gereken yaygın hataları inceledik.","icerik":"Etkili zaman yönetimi, hem iş hem de özel hayatta verimliliği artıran temel becerilerden biridir. Önceliklendirme yapmamak, çoklu görev yönetimine aşırı güvenmek ve mola vermemek en sık karşılaşılan hatalar arasındadır.<br><br>Zaman yönetimi eğitimlerimizde katılımcılara pratik teknikler ve araçlar sunularak, günlük iş akışlarını daha verimli hale getirmeleri hedeflenir."},
-            {"id":5,"tarih":"12.05.2026","kategori":"Dil Eğitimi","baslik":"Yabancı Dil Öğreniminde Etkili Yöntemler","ozet":"Mesleki ve akademik yabancı dil gelişiminizi hızlandıracak pratik öneriler ve program tavsiyeleri.","icerik":"Yabancı dil öğrenimi, düzenli pratik ve doğru yöntemlerle çok daha hızlı ilerleyebilir. Mesleki İngilizce gibi alana özel programlar, günlük dil öğreniminden farklı olarak sektörel terminolojiye odaklanır.<br><br>SEM'in dil programları, küçük gruplarla etkileşimli ders formatı sunarak katılımcıların konuşma pratiğini artırmayı hedefler."},
-            {"id":6,"tarih":"02.05.2026","kategori":"Sertifikasyon","baslik":"e-Devlet Onaylı Sertifikalar Hakkında Bilmeniz Gerekenler","ozet":"SEM sertifikalarının e-Devlet entegrasyonu ve işverenler tarafından nasıl doğrulandığı hakkında bilgiler.","icerik":"Kapadokya Üniversitesi SEM'den alınan sertifikalar, mezuniyet işlemleri tamamlandıktan sonra barkodlu olarak e-Devlet sistemine yansır. Bu sayede işverenler ve kurumlar, belgenin doğruluğunu anında teyit edebilir.<br><br>e-Devlet entegrasyonu, sertifikalarınızın güvenilirliğini ve resmi geçerliliğini artıran önemli bir unsurdur."}
-        ];
-
-        var id = Number(new URLSearchParams(window.location.search).get('id')) || 1;
-        var d  = BLOG_YAZILARI.find(function (x) { return x.id === id; }) || BLOG_YAZILARI[0];
-
-        document.title = d.baslik + ' | Kapadokya Üniversitesi SEM';
-        document.getElementById('bcTitle').textContent    = d.baslik;
-        document.getElementById('ddBaslik').textContent   = d.baslik;
-        document.getElementById('ddKategori').textContent = d.kategori;
-        document.getElementById('ddTarih').textContent    = d.tarih;
-        document.getElementById('ddIcerik').innerHTML     = d.icerik;
-
-        document.getElementById('ddDigerleri').innerHTML = BLOG_YAZILARI
-            .filter(function (x) { return x.id !== d.id; })
-            .map(function (x) {
-                return '<a href="blog-detay.html?id=' + x.id + '" class="sem-sidebar-item">' +
-                    '<p style="font-size:12px;color:#6c757d;margin-bottom:6px;">' + x.tarih + '</p>' +
-                    '<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;">' +
-                        '<p style="font-size:14px;font-weight:600;color:#212121;line-height:1.4;margin:0;">' + x.baslik + '</p>' +
-                        '<span class="sem-sidebar-arrow">→</span>' +
-                    '</div>' +
-                '</a>';
-            }).join('');
-    });
-    </script>
-
+                <div class="rbt-progress-parent">
+    <svg class="rbt-back-circle svg-inner" width="100%" height="100%" viewBox="-1 -1 102 102" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
+    </svg>
+</div>            
                 <!-- Start Footer aera -->
     <footer class="rbt-footer footer-style-1 bg-color-darker overflow-hidden">
         <div class="footer-top">

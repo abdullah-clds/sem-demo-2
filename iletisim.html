@@ -454,146 +454,48 @@
           </div>
         </div>
         <!-- Start Search Dropdown  -->
-        <div class="rbt-search-dropdown">
+        <div class="rbt-search-dropdown sem-search-glass">
           <div class="wrapper">
-            <div class="row">
-              <div class="col-lg-12">
-                <form
-                  id="sem-header-search-form"
-                  onsubmit="
-                    event.preventDefault();
-                    var q = document.getElementById('sem-hdr-q').value.trim();
-                    if (q)
-                      window.location =
-                        'tum-kurslar.html?q=' + encodeURIComponent(q);
-                  "
-                >
-                  <input
-                    id="sem-hdr-q"
-                    type="text"
-                    placeholder="Eğitim adı, kategori veya konu ara…"
-                    autocomplete="off"
-                  />
-                  <div class="submit-btn">
-                    <button type="submit">
-                      <i class="feather-search"></i> Ara
-                    </button>
-                  </div>
-                </form>
-              </div>
+            <form
+              id="sem-header-search-form"
+              class="sem-sg-form"
+              role="search"
+              onsubmit="
+                event.preventDefault();
+                var q = document.getElementById('sem-hdr-q').value.trim();
+                if (q)
+                  window.location =
+                    'tum-kurslar.html?q=' + encodeURIComponent(q);
+              "
+            >
+              <i class="feather-search sem-sg-icon" aria-hidden="true"></i>
+              <input
+                id="sem-hdr-q"
+                type="text"
+                placeholder="Eğitim ara"
+                aria-label="Eğitim ara"
+                enterkeyhint="search"
+                spellcheck="false"
+                role="combobox"
+                aria-controls="sem-sg-results"
+                aria-expanded="false"
+                autocomplete="off"
+              />
+              <button type="button" class="sem-sg-esc" aria-label="Temizle / kapat"><span>ESC</span><i class="feather-x"></i></button>
+              <button type="submit" class="sem-sg-submit">
+                <span>Ara</span><i class="feather-arrow-right"></i>
+              </button>
+            </form>
+            <div class="sem-search-cats">
+              <span>Popüler aramalar</span>
+              <a href="tum-kurslar.html?kategori=havacilik">Havacılık</a>
+              <a href="tum-kurslar.html?kategori=gastronomi">Gastronomi</a>
+              <a href="tum-kurslar.html?kategori=turizm">Turizm</a>
+              <a href="tum-kurslar.html?kategori=saglik">Sağlık</a>
+              <a href="tum-kurslar.html?kategori=bilisim">Bilişim</a>
+              <a href="tum-kurslar.html?kategori=pemer-myk">PEMER / MYK</a>
             </div>
-            <div class="rbt-separator-mid">
-              <hr class="rbt-separator m-0" />
-            </div>
-            <div class="row g-4 pt--30 pb--60">
-              <div class="col-lg-12">
-                <div class="section-title">
-                  <h5 class="rbt-title-style-2">Öne Çıkan Eğitimler</h5>
-                </div>
-              </div>
-              <!-- Start Single Card  -->
-              <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                <div class="rbt-card variation-01 rbt-hover">
-                  <div class="rbt-card-img">
-                    <a href="kurs-detay.html">
-                      <img
-                        src="./assets/images/course/course-3.jpg"
-                        alt="Card image"
-                      />
-                    </a>
-                  </div>
-                  <div class="rbt-card-body">
-                    <h5 class="rbt-card-title">
-                      <a href="kurs-detay.html">Meteoroloji Temel Eğitimi</a>
-                    </h5>
-                    <div class="rbt-card-bottom">
-                      <div class="rbt-price">
-                        <span class="current-price">15₺</span>
-                        <span class="off-price">25₺</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- End Single Card  -->
-              <!-- Start Single Card  -->
-              <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                <div class="rbt-card variation-01 rbt-hover">
-                  <div class="rbt-card-img">
-                    <a href="kurs-detay.html">
-                      <img
-                        src="./assets/images/course/arama-kurtarma.jpg"
-                        alt="Card image"
-                      />
-                    </a>
-                  </div>
-                  <div class="rbt-card-body">
-                    <h5 class="rbt-card-title">
-                      <a href="kurs-detay.html">Arama Kurtarma Temel Eğitimi</a>
-                    </h5>
-                    <div class="rbt-card-bottom">
-                      <div class="rbt-price">
-                        <span class="current-price">10₺</span>
-                        <span class="off-price">40₺</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- End Single Card  -->
-              <!-- Start Single Card  -->
-              <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                <div class="rbt-card variation-01 rbt-hover">
-                  <div class="rbt-card-img">
-                    <a href="kurs-detay.html">
-                      <img
-                        src="./assets/images/course/course-7.jpg"
-                        alt="Card image"
-                      />
-                    </a>
-                  </div>
-                  <div class="rbt-card-body">
-                    <h5 class="rbt-card-title">
-                      <a href="kurs-detay.html"
-                        >Emniyet Yönetim Sistemi (SMS) Eğitimi</a
-                      >
-                    </h5>
-                    <div class="rbt-card-bottom">
-                      <div class="rbt-price">
-                        <span class="current-price">10₺</span>
-                        <span class="off-price">20₺</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- End Single Card  -->
-              <!-- Start Single Card  -->
-              <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                <div class="rbt-card variation-01 rbt-hover">
-                  <div class="rbt-card-img">
-                    <a href="kurs-detay.html">
-                      <img
-                        src="./assets/images/course/course-8.jpg"
-                        alt="Card image"
-                      />
-                    </a>
-                  </div>
-                  <div class="rbt-card-body">
-                    <h5 class="rbt-card-title">
-                      <a href="kurs-detay.html">Mesleki İngilizce Eğitimi</a>
-                    </h5>
-                    <div class="rbt-card-bottom">
-                      <div class="rbt-price">
-                        <span class="current-price">20₺</span>
-                        <span class="off-price">40₺</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- End Single Card  -->
-            </div>
+            <div class="sem-sg-results" id="sem-sg-results" role="listbox" aria-label="Arama önizlemesi" hidden></div>
           </div>
         </div>
         <!-- End Search Dropdown  -->

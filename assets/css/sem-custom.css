@@ -5,6 +5,8 @@
 
 /* ── 1. KÜN Renk Paleti ──────────────────────────────────── */
 :root {
+  /* Köşe yumuşatma — tüm kart/buton/form/kutu alanları (tek yerden ayarlanır) */
+  --sem-radius: 2px;
   --sem-primary: #002855; /* derin lacivert — ana */
   --sem-accent: #cb333b; /* kırmızı — vurgu */
   --sem-gold: #c9a84c; /* altın — sertifika/prestij */
@@ -41,7 +43,7 @@ p  { font-size: 16px !important; line-height: 1.6 !important; }
   display: flex;
   flex-direction: column;
   height: 100%;
-  border-radius: 0;
+  border-radius: var(--sem-radius);
   box-shadow: 0 2px 12px rgba(0, 40, 85, 0.1);
   border: 1px solid rgba(0, 40, 85, 0.08);
   overflow: hidden;
@@ -103,7 +105,7 @@ p  { font-size: 16px !important; line-height: 1.6 !important; }
 .sem-status-badge {
   display: inline-block;
   padding: 0.25em 0.75em;
-  border-radius: 0;
+  border-radius: var(--sem-radius);
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 0.02em;
@@ -145,7 +147,7 @@ p  { font-size: 16px !important; line-height: 1.6 !important; }
   background: var(--sem-primary);
   color: #fff !important;
   border: none;
-  border-radius: 0;
+  border-radius: var(--sem-radius);
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
@@ -163,7 +165,7 @@ p  { font-size: 16px !important; line-height: 1.6 !important; }
 #semApplyModal .modal-header {
   background: var(--sem-primary);
   color: #fff;
-  border-radius: 0;
+  border-radius: var(--sem-radius);
 }
 
 /* ── 7. Mobil menü collapse butonu ──────────────────────── */
@@ -193,53 +195,6 @@ p  { font-size: 16px !important; line-height: 1.6 !important; }
   transition: transform 0.2s ease;
 }
 
-/* ── 9. Header Arama Dropdown ───────────────────────────── */
-.rbt-search-dropdown #sem-header-search-form {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: #fff;
-  border: 2px solid rgba(0, 40, 85, 0.15);
-  border-radius: 0;
-  padding: 6px 6px 6px 24px;
-  box-shadow: 0 4px 20px rgba(0, 40, 85, 0.08);
-  transition: border-color 0.2s;
-}
-.rbt-search-dropdown #sem-header-search-form:focus-within {
-  border-color: var(--sem-primary);
-}
-.rbt-search-dropdown #sem-header-search-form input {
-  flex: 1;
-  border: none !important;
-  background: transparent !important;
-  outline: none !important;
-  box-shadow: none !important;
-  font-size: 18px;
-  color: #0f172a;
-  padding: 0;
-}
-.rbt-search-dropdown #sem-header-search-form input::placeholder {
-  color: #94a3b8;
-}
-.rbt-search-dropdown #sem-header-search-form .submit-btn button {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 12px 28px;
-  background: var(--sem-primary);
-  color: #fff;
-  border: none;
-  border-radius: 0;
-  font-size: 16px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background 0.2s;
-  white-space: nowrap;
-}
-.rbt-search-dropdown #sem-header-search-form .submit-btn button:hover {
-  background: var(--sem-navy-light);
-}
-
 /* ── 10. Sınav Merkezleri + Duyurular kart açıklamaları ─── */
 #sem-sinav-merkezleri p.description.mt--10 {
   font-size: 22px !important;
@@ -256,7 +211,7 @@ p  { font-size: 16px !important; line-height: 1.6 !important; }
   display: grid;
   grid-template-columns: 200px 1fr;
   grid-template-rows: 1fr auto;
-  border-radius: 0;
+  border-radius: var(--sem-radius);
 }
 .rbt-course-grid-column.active-list-view .sem-course-card .rbt-card-img {
   grid-column: 1;
@@ -264,7 +219,7 @@ p  { font-size: 16px !important; line-height: 1.6 !important; }
   aspect-ratio: unset !important;
   height: 100%;
   min-height: 150px;
-  border-radius: 0;
+  border-radius: var(--sem-radius);
   overflow: hidden;
 }
 .rbt-course-grid-column.active-list-view .sem-course-card .rbt-card-img img {
@@ -313,7 +268,7 @@ p  { font-size: 16px !important; line-height: 1.6 !important; }
   gap: 6px;
   padding: 9px 22px;
   border: 2px solid rgba(0, 40, 85, 0.18);
-  border-radius: 0;
+  border-radius: var(--sem-radius);
   background: #fff;
   color: #4a5568;
   font-size: 14px;
@@ -337,7 +292,7 @@ p  { font-size: 16px !important; line-height: 1.6 !important; }
 /* Accordion — rem → px override (vendor html:62.5% nedeniyle) */
 .sem-sss-accordion .accordion-item {
   border: none !important;
-  border-radius: 0;
+  border-radius: var(--sem-radius);
   overflow: hidden;
   margin-bottom: 10px;
   box-shadow: 0 2px 16px rgba(0, 40, 85, 0.07);
@@ -419,7 +374,7 @@ p  { font-size: 16px !important; line-height: 1.6 !important; }
 /* SSS CTA band */
 .sem-sss-cta {
   background: linear-gradient(135deg, var(--sem-primary) 0%, #00357a 100%);
-  border-radius: 0;
+  border-radius: var(--sem-radius);
   padding: 40px 36px;
   margin-top: 40px;
   display: flex;
@@ -491,7 +446,7 @@ p  { font-size: 16px !important; line-height: 1.6 !important; }
   display: flex;
   align-items: center;
   background: #f8f9fc;
-  border-radius: 0;
+  border-radius: var(--sem-radius);
   border: 1.5px solid rgba(0,40,85,0.14);
   padding: 5px 5px 5px 18px;
   box-shadow: 0 2px 12px rgba(0,40,85,0.07);
@@ -528,7 +483,7 @@ p  { font-size: 16px !important; line-height: 1.6 !important; }
   background: var(--sem-primary);
   color: #fff;
   border: none;
-  border-radius: 0;
+  border-radius: var(--sem-radius);
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;
@@ -557,7 +512,7 @@ p  { font-size: 16px !important; line-height: 1.6 !important; }
   color: #475569 !important;
   background: #f1f5f9;
   border: 1px solid rgba(0,40,85,0.1);
-  border-radius: 0;
+  border-radius: var(--sem-radius);
   padding: 3px 12px;
   text-decoration: none !important;
   transition: background 0.18s, color 0.18s, border-color 0.18s;
@@ -577,7 +532,7 @@ p  { font-size: 16px !important; line-height: 1.6 !important; }
 /* ── 15. İletişim Sayfası ────────────────────────────────── */
 .sem-contact-card {
   background: #fff;
-  border-radius: 0;
+  border-radius: var(--sem-radius);
   border: 1px solid rgba(0,40,85,0.08);
   box-shadow: 0 2px 16px rgba(0,40,85,0.07);
   padding: 32px 28px;
@@ -620,7 +575,7 @@ p  { font-size: 16px !important; line-height: 1.6 !important; }
 /* Form alanı */
 .sem-contact-form-wrap {
   background: #fff;
-  border-radius: 0;
+  border-radius: var(--sem-radius);
   border: 1px solid rgba(0,40,85,0.08);
   box-shadow: 0 2px 20px rgba(0,40,85,0.07);
   padding: 40px 36px;
@@ -637,7 +592,7 @@ p  { font-size: 16px !important; line-height: 1.6 !important; }
   width: 100%;
   padding: 11px 16px;
   border: 1.5px solid rgba(0,40,85,0.15);
-  border-radius: 0;
+  border-radius: var(--sem-radius);
   font-size: 15px !important;
   color: #0f172a !important;
   background: #f8f9fc !important;
@@ -658,7 +613,7 @@ textarea.sem-form-control { resize: vertical; min-height: 120px; }
   gap: 10px;
   background: rgba(26,122,74,0.1);
   border: 1px solid rgba(26,122,74,0.3);
-  border-radius: 0;
+  border-radius: var(--sem-radius);
   padding: 16px 20px;
   font-size: 15px !important;
   font-weight: 600;
@@ -668,7 +623,7 @@ textarea.sem-form-control { resize: vertical; min-height: 120px; }
 
 /* Harita */
 .sem-map-wrap {
-  border-radius: 0;
+  border-radius: var(--sem-radius);
   overflow: hidden;
   box-shadow: 0 2px 20px rgba(0,40,85,0.1);
   border: 1px solid rgba(0,40,85,0.08);
@@ -682,7 +637,7 @@ textarea.sem-form-control { resize: vertical; min-height: 120px; }
   align-items: center;
   gap: 20px;
   background: linear-gradient(135deg, var(--sem-primary) 0%, #003d7a 100%);
-  border-radius: 0;
+  border-radius: var(--sem-radius);
   padding: 28px 28px;
   flex-wrap: wrap;
 }
@@ -882,7 +837,7 @@ textarea.sem-form-control { resize: vertical; min-height: 120px; }
   justify-content: center;
   gap: 6px;
   padding: 10px 14px;
-  border-radius: 0;
+  border-radius: var(--sem-radius);
   font-size: 13px !important;
   font-weight: 700;
   text-decoration: none !important;
@@ -925,7 +880,7 @@ textarea.sem-form-control { resize: vertical; min-height: 120px; }
 
 /* ── Duyuru kartı (görselli) ─────────────────────────────── */
 .sem-duyuru-kart { background:#f3f3f3; height:100%; text-decoration:none;
-  overflow:hidden; border-radius: 0; transition:box-shadow .2s, transform .2s; }
+  overflow:hidden; border-radius: var(--sem-radius); transition:box-shadow .2s, transform .2s; }
 .sem-duyuru-kart:hover { box-shadow:0 8px 28px rgba(var(--kun-lacivert-rgb, 0,40,85),.15); transform:translateY(-4px); }
 .sem-duyuru-gorsel { aspect-ratio:3/2; overflow:hidden; }
 .sem-duyuru-gorsel img { width:100%; height:100%; object-fit:cover; display:block;
@@ -939,7 +894,7 @@ textarea.sem-form-control { resize: vertical; min-height: 120px; }
 
 /* ── Faaliyet Raporu kartı (v2 — minimal) ────────────────── */
 .sem-rapor-kart-v2 { border:1px solid rgba(var(--kun-lacivert-rgb, 0,40,85),.12);
-  border-radius: 0; padding:28px 24px; background:#fff; transition:.25s;
+  border-radius: var(--sem-radius); padding:28px 24px; background:#fff; transition:.25s;
   display:flex; flex-direction:column; gap:14px; height:100%; }
 .sem-rapor-kart-v2:hover { border-color:var(--kun-mavi, #0072ce);
   box-shadow:0 10px 30px rgba(var(--kun-lacivert-rgb, 0,40,85),.12); transform:translateY(-4px); }
@@ -948,7 +903,7 @@ textarea.sem-form-control { resize: vertical; min-height: 120px; }
 .sem-rapor-etiket { font-size:13px; color:#6c757d; display:block; }
 .sem-rapor-boyut { font-size:12px; color:#9aa0a6; }
 .sem-rapor-indir { display:inline-flex; align-items:center; gap:8px; align-self:flex-start;
-  background:var(--kun-lacivert, #002855); color:#fff; padding:10px 18px; border-radius: 0;
+  background:var(--kun-lacivert, #002855); color:#fff; padding:10px 18px; border-radius: var(--sem-radius);
   font-size:13px; font-weight:600; text-decoration:none; transition:.2s; }
 .sem-rapor-indir:hover { background:var(--kun-mavi, #0072ce); color:#fff; }
 
@@ -982,7 +937,7 @@ textarea.sem-form-control { resize: vertical; min-height: 120px; }
   pointer-events: none;
 }
 .rbt-banner-11 .course-thumbnail img { aspect-ratio:4/5; width:100%;
-  height:100%; object-fit:cover; border-radius: 0;
+  height:100%; object-fit:cover; border-radius: var(--sem-radius);
   box-shadow: 0 30px 60px -18px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.08); }
 
 .rbt-banner-11 .rbt-swiper-arrow,
@@ -1029,7 +984,7 @@ textarea.sem-form-control { resize: vertical; min-height: 120px; }
 .sem-auth-field .sem-auth-optional { font-weight:400; color:#94a3b8; }
 .sem-auth-field input,
 .sem-auth-field select { width:100%; padding:14px 16px; border:1.5px solid #e2e5ea;
-  border-radius: 0; font-size:15px; transition:.2s; background:#fff; color:#212121;
+  border-radius: var(--sem-radius); font-size:15px; transition:.2s; background:#fff; color:#212121;
   font-family:inherit; appearance:none; }
 .sem-auth-field select {
   background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23212121' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
@@ -1051,7 +1006,7 @@ textarea.sem-form-control { resize: vertical; min-height: 120px; }
 .sem-auth-check label::after { content:none !important; }
 .sem-auth-check label { min-width:0; flex:1 1 auto; padding-left:0 !important; }
 .sem-auth-check a { color:var(--kun-mavi, #0072ce); }
-.sem-auth-submit { width:100%; padding:14px; border:none; border-radius: 0;
+.sem-auth-submit { width:100%; padding:14px; border:none; border-radius: var(--sem-radius);
   background:linear-gradient(135deg,var(--kun-lacivert, #002855),var(--kun-mavi, #0072ce));
   color:#fff; font-size:15px; font-weight:700; cursor:pointer; transition:.2s; }
 .sem-auth-submit:hover { opacity:.92; }
@@ -1060,7 +1015,7 @@ textarea.sem-form-control { resize: vertical; min-height: 120px; }
 /* ── Blog kartı ───────────────────────────────────────────── */
 .sem-blog-kategori { display:inline-block; background:rgba(var(--kun-mavi-rgb, 0,114,206),.1);
   color:var(--kun-mavi, #0072ce); font-size:12px; font-weight:700; letter-spacing:.02em;
-  padding:5px 12px; border-radius: 0; margin-bottom:12px; text-transform:uppercase; }
+  padding:5px 12px; border-radius: var(--sem-radius); margin-bottom:12px; text-transform:uppercase; }
 .sem-blog-devamini-oku { display:inline-flex; align-items:center; gap:6px; color:var(--kun-kirmizi, #cb333b);
   font-size:14px; font-weight:600; margin-top:16px; }
 .sem-duyuru-kart:hover .sem-blog-devamini-oku { text-decoration:underline; }
@@ -1103,7 +1058,7 @@ textarea,
 .rbt-btn.btn-border-gradient.radius-round::before,
 .rbt-btn::before,
 .rbt-btn::after {
-  border-radius: 0 !important;
+  border-radius: var(--sem-radius) !important;
 }
 
 /* ── İkincil buton (.btn-border) — kurumsal OUTLINE turkuaz, hover'da dolu ──
@@ -1373,9 +1328,6 @@ body { background: #f8f9fa !important; }
 #sem-populer-egitimler .sem-course-card .rbt-card-img { aspect-ratio: 3 / 2; }
 /* Boşluklar dar ve dengeli (yatay + dikey eşit) */
 #sem-populer-egitimler .row.g-4 { --bs-gutter-x: 12px; --bs-gutter-y: 12px; }
-/* Kartları biraz küçült: bölüm konteynerini daralt (3 sütun + dar boşluk korunur,
-   yan boşluk oluşmadan tüm ızgara orantılı küçülür) */
-#sem-populer-egitimler .container { max-width: 980px; }
 
 /* ── Durum rozetleri — kurumsal solid pill, kart gövdesinde başlığın ÜSTÜNDE
    (görsel üstünde belirsiz kalıyordu; kum şerit de kaldırıldı) ──────────── */
@@ -1385,7 +1337,7 @@ body { background: #f8f9fa !important; }
   width: auto !important; margin: 0 0 10px !important;
   padding: 5px 12px !important;
   font-size: 12px !important; font-weight: 600 !important;
-  border: none !important; border-radius: 0 !important;
+  border: none !important; border-radius: var(--sem-radius) !important;
   color: #fff !important; background: var(--sem-primary, #002855) !important;
 }
 .sem-status-badge::before { display: none !important; }
@@ -1506,10 +1458,396 @@ body.sem-detay { background: #fff !important; }
 .sem-course-top-search { max-width: 640px; margin: 0 auto; }
 .sem-course-top-search input {
   border: 1px solid rgba(0, 40, 85, .16);
-  border-radius: 0;
+  border-radius: var(--sem-radius);
   background: #fff;
 }
 .sem-course-top-search input:focus {
   border-color: var(--sem-primary, #002855);
   outline: none;
+}
+
+/* ── Köşe yumuşatma — iç görseller kartın kendi köşesine kırpılır (çift radius olmasın) ── */
+.sem-course-card .rbt-card-img,
+.rbt-card .rbt-card-img,
+.sem-duyuru-gorsel { border-radius: 0 !important; }
+
+/* ── Anasayfa "Öne Çıkan Eğitimler" — kaydırmalı kart şeridi (carousel).
+   Udemy / Medipol SEM / Antalya Bilim SEM anasayfa deseni: solda başlık, sağda
+   "Tüm Eğitimler" + oklar; tek satırda 4 kompakt dikey kart. Görsel 3:2 aynen korunur. ── */
+#sem-populer-egitimler .sem-featured-head {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  gap: 16px; flex-wrap: wrap; margin-bottom: 24px;
+}
+#sem-populer-egitimler .sem-featured-title .title { margin: 8px 0 0; }
+#sem-populer-egitimler .sem-featured-actions { display: flex; align-items: center; gap: 20px; }
+#sem-populer-egitimler .sem-featured-all {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 15px; font-weight: 600; color: var(--sem-primary, #002855);
+}
+#sem-populer-egitimler .sem-featured-all:hover { color: var(--kun-turkuaz, #00A1AA); }
+#sem-populer-egitimler .sem-featured-nav { display: flex; gap: 8px; }
+#sem-populer-egitimler .sem-featured-nav button {
+  width: 42px; height: 42px; display: inline-flex; align-items: center; justify-content: center;
+  background: #fff; color: var(--sem-primary, #002855);
+  border: 1px solid rgba(0, 40, 85, 0.18); border-radius: var(--sem-radius);
+  font-size: 20px; cursor: pointer; transition: background .2s, color .2s, border-color .2s;
+}
+#sem-populer-egitimler .sem-featured-nav button:hover:not(.swiper-button-disabled) {
+  background: var(--sem-primary, #002855); border-color: var(--sem-primary, #002855); color: #fff;
+}
+#sem-populer-egitimler .sem-featured-nav .swiper-button-disabled { opacity: .35; cursor: default; }
+/* hover'da yukarı kalkan kart + gölge kırpılmasın */
+#sem-populer-egitimler .sem-featured-swiper { padding: 8px 4px 16px; margin: -8px -4px -16px; }
+#sem-populer-egitimler .swiper-slide { height: auto; }
+#sem-populer-egitimler .sem-course-card .rbt-card-img { aspect-ratio: 3 / 2; }
+#sem-populer-egitimler .sem-course-card .card-body { padding: 22px 22px 6px; }
+#sem-populer-egitimler .sem-course-card .card-footer { padding: 14px 22px 20px; }
+#sem-populer-egitimler .sem-course-card .rbt-card-title {
+  font-size: 20px !important; line-height: 1.4 !important; margin-bottom: 8px;
+}
+/* 3'lü geniş kart: kısa açıklama 2 satır */
+#sem-populer-egitimler .sem-course-card .rbt-card-text { font-size: 15px !important; color: #5b6472; margin-bottom: 12px; }
+#sem-populer-egitimler .sem-course-card .rbt-meta li { font-size: 14px; }
+#sem-populer-egitimler .sem-course-card .card-footer .fw-bold { font-size: 17px; }
+#sem-populer-egitimler .sem-course-card .rbt-card-img img { transition: transform .5s ease; }
+#sem-populer-egitimler .sem-course-card:hover .rbt-card-img img { transform: scale(1.04); }
+/* ilerleme çubuğu — şeridin devamı olduğunu gösterir */
+#sem-populer-egitimler .sem-featured-progress {
+  position: relative; height: 3px; margin-top: 28px;
+  background: rgba(0, 40, 85, 0.10); border-radius: var(--sem-radius); overflow: hidden;
+}
+#sem-populer-egitimler .sem-featured-progress .swiper-pagination-progressbar-fill {
+  position: absolute; inset: 0; background: var(--kun-turkuaz, #00A1AA);
+  transform-origin: left top;
+}
+/* durum rozeti görselin sol üst köşesinde (Domestika / Udemy vitrin deseni) */
+#sem-populer-egitimler .sem-course-card { position: relative; }
+#sem-populer-egitimler .sem-course-card .sem-status-badge {
+  position: absolute !important; top: 14px; left: 14px; z-index: 2;
+  margin: 0 !important; padding: 5px 12px !important; font-size: 12px !important;
+  border-radius: var(--sem-radius) !important; box-shadow: 0 2px 6px rgba(0, 0, 0, .18);
+}
+#sem-populer-egitimler .sem-course-card .rbt-card-title.mt-2 { margin-top: 0 !important; }
+#sem-populer-egitimler .sem-course-card .card-footer .gap-3 { gap: 12px !important; }
+@media (max-width: 575px) {
+  #sem-populer-egitimler .sem-featured-all { font-size: 14px; }
+  #sem-populer-egitimler .sem-featured-nav button { width: 36px; height: 36px; font-size: 18px; }
+}
+
+/* ══ Navbar arama — macOS Spotlight tasarımı ═══════════════════════════
+   İkona tıklanınca sayfa arkada HAFİFÇE bulanıklaşır (hâlâ seçilebilir), ortada
+   Spotlight panel açılır. Katman JS ile <body>'ye taşınır (sticky header transform'u
+   fixed'i bozmasın). Sayfa blur'u ::before'da, panelin kendi güçlü blur'u .wrapper'da —
+   ikisi kardeş katman, böylece panel arkasındaki sayfayı ayrıca bulanıklaştırabiliyor.
+   Aç/kapa: vendor main.js (.active + html.side-nav-opened) + sem-custom.js (ESC / dış tık). */
+.rbt-search-dropdown.sem-search-glass {
+  --sg-blue: #0a7aff;                         /* macOS seçim mavisi */
+  --sg-text: #1d1d1f;
+  --sg-muted: rgba(60, 60, 67, .6);
+  --sg-hair: rgba(60, 60, 67, .16);
+  position: fixed !important; inset: 0; top: 0; left: 0; right: 0;
+  z-index: 1060;
+  display: flex; align-items: flex-start; justify-content: center;
+  padding: 28vh 16px 32px;
+  max-height: none !important; overflow-y: auto !important;
+  background: transparent !important;
+  border: 0 !important; border-radius: 0 !important; box-shadow: none !important;
+  clip: auto !important; transform: none !important;
+  visibility: hidden; opacity: 0;
+  transition: opacity .2s ease, visibility 0s linear .2s;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", var(--font-primary, sans-serif);
+}
+/* sayfa: hafif blur + çok hafif ton — arka plan seçilebilir kalır */
+.rbt-search-dropdown.sem-search-glass::before {
+  content: ""; position: fixed; inset: 0; z-index: 0;
+  background: rgba(20, 30, 45, .10);
+  -webkit-backdrop-filter: blur(4px) saturate(120%);
+  backdrop-filter: blur(4px) saturate(120%);
+}
+.rbt-search-dropdown.sem-search-glass.active {
+  visibility: visible; opacity: 1;
+  transition: opacity .2s ease;
+}
+html.side-nav-opened, html.side-nav-opened body { overflow: hidden; }
+
+/* Spotlight panel — vibrancy materyali (daha opak, açık gri cam) */
+.sem-search-glass .wrapper {
+  position: relative; z-index: 1;
+  width: 100%; max-width: 680px; margin: 0 !important;
+  padding: 0 !important; overflow: hidden;
+  background: rgba(242, 242, 245, .82);
+  -webkit-backdrop-filter: blur(40px) saturate(180%);
+  backdrop-filter: blur(40px) saturate(180%);
+  border: .5px solid rgba(255, 255, 255, .55);
+  border-radius: 26px;
+  box-shadow:
+    0 0 0 .5px rgba(0, 0, 0, .12),
+    0 24px 64px rgba(0, 0, 0, .28),
+    inset 0 .5px 0 rgba(255, 255, 255, .8);
+  transform: scale(.985); opacity: .6;
+  transition: transform .22s cubic-bezier(.2,.9,.3,1), opacity .18s ease;
+}
+.sem-search-glass.active .wrapper { transform: none; opacity: 1; }
+
+/* arama çubuğu — tek satır, büyük ve ince yazı, buton yok */
+.sem-search-glass .sem-sg-form {
+  display: flex !important; align-items: center; gap: 12px;
+  margin: 0 !important; padding: 0 18px 0 20px; height: 60px;
+  background: transparent; border: 0; border-radius: 0; box-shadow: none;
+}
+.sem-search-glass .sem-sg-icon { font-size: 22px; color: var(--sg-muted); flex: 0 0 auto; }
+.sem-search-glass .sem-sg-form input#sem-hdr-q {
+  flex: 1 1 auto; min-width: 0; height: 60px !important; line-height: 60px !important;
+  margin: 0 !important; padding: 0 !important;
+  border: 0 !important; border-radius: 0 !important;
+  background: transparent !important; box-shadow: none !important; outline: none !important;
+  font-family: inherit; font-size: 23px !important; font-weight: 300; letter-spacing: -.01em;
+  color: var(--sg-text); caret-color: var(--sg-blue);
+}
+.sem-search-glass .sem-sg-form input#sem-hdr-q::placeholder { color: rgba(60, 60, 67, .45); font-weight: 300; }
+.sem-search-glass .sem-sg-submit { display: none !important; }   /* Spotlight: Enter ile arar */
+.sem-search-glass .sem-sg-esc {
+  flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center;
+  width: 22px; height: 22px; padding: 0; border: 0; border-radius: 50%;
+  background: rgba(60, 60, 67, .28); color: #fff; cursor: pointer;
+  opacity: 0; pointer-events: none; transition: opacity .15s;
+}
+.sem-search-glass .sem-sg-esc span { display: none; }
+.sem-search-glass .sem-sg-esc i { font-size: 13px; line-height: 1; }
+.sem-search-glass .sem-sg-esc:hover { background: rgba(60, 60, 67, .45); }
+.sem-search-glass .wrapper.has-query .sem-sg-esc { opacity: 1; pointer-events: auto; }
+
+/* öneriler (boşken) — Spotlight'ın alt satırdaki küçük kısayolları gibi */
+.sem-search-glass .sem-search-cats {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 6px;
+  margin: 0; padding: 10px 16px 14px;
+  border-top: .5px solid var(--sg-hair);
+}
+.sem-search-glass .sem-search-cats span {
+  width: 100%; margin: 0 4px 2px;
+  font-size: 11px; font-weight: 600; color: var(--sg-muted);
+}
+.sem-search-glass .sem-search-cats a {
+  font-size: 13px; font-weight: 500; line-height: 1;
+  padding: 7px 12px; border-radius: 999px;
+  background: rgba(255, 255, 255, .55); border: .5px solid rgba(0, 0, 0, .08);
+  color: var(--sg-text); transition: background .12s, color .12s;
+}
+.sem-search-glass .sem-search-cats a:hover { background: var(--sg-blue); border-color: var(--sg-blue); color: #fff; }
+
+/* sonuçlar — aynı panelin içinde, ince çizgiyle ayrılır */
+.sem-search-glass .sem-sg-results { border-top: .5px solid var(--sg-hair); padding: 6px 8px 8px; }
+.sem-search-glass .sem-sg-results-head {
+  font-size: 11px; font-weight: 600; color: var(--sg-muted);
+  margin: 8px 12px 4px;
+}
+.sem-search-glass .sem-sg-list {
+  list-style: none; margin: 0; padding: 0;
+  max-height: min(50vh, 420px); overflow-y: auto; overscroll-behavior: contain;
+}
+.sem-search-glass .sem-sg-list li { margin: 0; padding: 0; }
+.sem-search-glass .sem-sg-row {
+  display: flex; align-items: center; gap: 12px;
+  padding: 7px 12px; border-radius: 10px; color: var(--sg-text);
+}
+.sem-search-glass .sem-sg-row:hover { background: rgba(0, 0, 0, .05); }
+.sem-search-glass .sem-sg-row.is-active { background: var(--sg-blue); color: #fff; }
+.sem-search-glass .sem-sg-row img {
+  width: 40px; height: 40px; object-fit: cover; flex: 0 0 auto;
+  border-radius: 9px; background: rgba(0, 0, 0, .06);
+  box-shadow: 0 0 0 .5px rgba(0, 0, 0, .1);
+}
+.sem-search-glass .sem-sg-row-text { display: flex; flex-direction: column; min-width: 0; flex: 1 1 auto; }
+.sem-search-glass .sem-sg-row-text strong {
+  font-size: 15px; font-weight: 500; line-height: 1.3;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.sem-search-glass .sem-sg-row-text mark { background: none; color: inherit; font-weight: 700; padding: 0; }
+.sem-search-glass .sem-sg-row-text small {
+  font-size: 12px; color: var(--sg-muted); margin-top: 1px;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.sem-search-glass .sem-sg-row.is-active small { color: rgba(255, 255, 255, .8); }
+.sem-search-glass .sem-sg-pill {
+  flex: 0 0 auto; font-size: 12px; font-weight: 400; color: var(--sg-muted);
+  background: none; padding: 0;
+}
+.sem-search-glass .sem-sg-row.is-active .sem-sg-pill { color: rgba(255, 255, 255, .85); }
+.sem-search-glass .sem-sg-row-go { display: none; }
+.sem-search-glass .sem-sg-row.is-active .sem-sg-row-go { display: inline; font-size: 16px; color: #fff; }
+.sem-search-glass .sem-sg-all {
+  display: flex; align-items: center; gap: 12px;
+  margin-top: 4px; padding: 9px 12px; border-radius: 10px;
+  font-size: 14px; font-weight: 500; color: var(--sg-text);
+}
+.sem-search-glass .sem-sg-all::before {
+  content: "\e9c1"; font-family: "feather" !important; /* feather-search */
+  width: 40px; text-align: center; font-size: 18px; color: var(--sg-muted);
+}
+.sem-search-glass .sem-sg-all i { display: none; }
+.sem-search-glass .sem-sg-all:hover { background: rgba(0, 0, 0, .05); }
+.sem-search-glass .sem-sg-all.is-active { background: var(--sg-blue); color: #fff; }
+.sem-search-glass .sem-sg-all.is-active::before { color: #fff; }
+.sem-search-glass .sem-sg-empty {
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+  padding: 22px 12px; text-align: center; color: var(--sg-muted); font-size: 13px;
+}
+.sem-search-glass .sem-sg-empty i { display: none; }
+.sem-search-glass .sem-sg-empty strong { color: var(--sg-text); font-size: 15px; font-weight: 500; }
+.sem-search-glass .sem-sg-empty a { color: var(--sg-blue); font-weight: 500; }
+
+@media (max-width: 767px) {
+  .rbt-search-dropdown.sem-search-glass { padding-top: 64px; }
+  .sem-search-glass .wrapper { border-radius: 22px; }
+  .sem-search-glass .sem-sg-form { height: 54px; padding: 0 14px 0 16px; gap: 10px; }
+  .sem-search-glass .sem-sg-icon { font-size: 20px; }
+  .sem-search-glass .sem-sg-form input#sem-hdr-q { height: 54px !important; line-height: 54px !important; font-size: 19px !important; }
+  /* mobilde kapatma her zaman görünür */
+  .sem-search-glass .sem-sg-esc { opacity: 1; pointer-events: auto; width: 26px; height: 26px; }
+  .sem-search-glass .sem-sg-list { max-height: calc(100vh - 200px); }
+  .sem-search-glass .sem-sg-row { padding: 9px 10px; }
+  .sem-search-glass .sem-sg-pill { display: none; }
+}
+
+/* ══ Sürdürülebilir Kalkınma Amaçları (SKA) — eğitim detay sağ bar ═════
+   1–3 amaç → liste (ikon + "Amaç N" + ad); 4+ → ikon ızgarası, ad balonda.
+   Sütun sayısı JS'ten (--ska-cols): 4→4, 5→5, 6→3, 7–8→4, 9–17→5.
+   İkonlar BM'nin resmi Türkçe SKA ikonları (assets/images/sdg/SDG-N.svg). */
+.sem-ska {
+  margin-top: 24px; padding-top: 20px;
+  border-top: 1px solid rgba(0, 40, 85, .08);
+}
+.sem-ska-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.sem-ska-title {
+  margin: 0 !important; font-size: 16px !important; font-weight: 700 !important;
+  color: var(--sem-primary, #002855);
+}
+.sem-ska-info {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 26px; height: 26px; border-radius: 50%;
+  color: rgba(0, 40, 85, .5); font-size: 15px; transition: color .2s, background .2s;
+}
+.sem-ska-info:hover { color: var(--kun-turkuaz, #00A1AA); background: rgba(0, 161, 170, .08); }
+.sem-ska-desc { margin: 4px 0 14px !important; font-size: 13px !important; line-height: 1.5 !important; color: #6b7280; }
+.sem-ska-list { list-style: none; margin: 0; padding: 0; }
+.sem-ska-item { margin: 0; padding: 0; }
+.sem-ska-item a { display: block; position: relative; color: inherit; }
+.sem-ska-item img {
+  display: block; width: 100%; aspect-ratio: 1 / 1; height: auto;
+  border-radius: var(--sem-radius, 2px);
+}
+
+/* — Liste düzeni (1–3 amaç): ikon solda, adı sağda — */
+.sem-ska[data-layout="list"] .sem-ska-list { display: flex; flex-direction: column; gap: 8px; }
+.sem-ska[data-layout="list"] .sem-ska-item a {
+  display: flex; align-items: center; gap: 14px;
+  padding: 8px; border: 1px solid rgba(0, 40, 85, .08); border-radius: var(--sem-radius, 2px);
+  background: #fff; transition: border-color .2s, box-shadow .2s, transform .2s;
+}
+.sem-ska[data-layout="list"] .sem-ska-item a:hover {
+  border-color: rgba(0, 40, 85, .2); box-shadow: 0 4px 14px rgba(0, 40, 85, .08); transform: translateX(2px);
+}
+.sem-ska[data-layout="list"] .sem-ska-item img { width: 64px; flex: 0 0 64px; }
+.sem-ska[data-layout="list"] .sem-ska-text { display: flex; flex-direction: column; min-width: 0; }
+.sem-ska[data-layout="list"] .sem-ska-text small {
+  font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #8a94a3;
+}
+.sem-ska[data-layout="list"] .sem-ska-text strong {
+  font-size: 15px; font-weight: 600; line-height: 1.35; color: var(--sem-primary, #002855);
+}
+/* tek amaç: biraz daha büyük vitrin */
+.sem-ska[data-layout="list"] .sem-ska-list[data-count="1"] .sem-ska-item img { width: 84px; flex-basis: 84px; }
+.sem-ska[data-layout="list"] .sem-ska-list[data-count="1"] .sem-ska-text strong { font-size: 17px; }
+
+/* — Izgara düzeni (4+ amaç) — */
+.sem-ska[data-layout="grid"] .sem-ska-list {
+  display: grid; grid-template-columns: repeat(var(--ska-cols, 4), minmax(0, 1fr)); gap: 6px;
+}
+.sem-ska[data-layout="grid"] .sem-ska-item img { transition: transform .2s ease, box-shadow .2s ease; }
+.sem-ska[data-layout="grid"] .sem-ska-item a:hover img,
+.sem-ska[data-layout="grid"] .sem-ska-item a:focus-visible img {
+  transform: translateY(-2px) scale(1.04); box-shadow: 0 6px 16px rgba(0, 0, 0, .18);
+}
+/* ad balonu */
+.sem-ska[data-layout="grid"] .sem-ska-text {
+  position: absolute; left: 50%; bottom: calc(100% + 8px); z-index: 5;
+  width: max-content; max-width: 180px; padding: 7px 10px;
+  background: var(--sem-primary, #002855); color: #fff; border-radius: 6px;
+  font-size: 12px; line-height: 1.35; text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 20, 50, .25);
+  opacity: 0; visibility: hidden; transform: translate(-50%, 4px);
+  transition: opacity .15s, transform .15s, visibility 0s linear .15s;
+  pointer-events: none;
+}
+.sem-ska[data-layout="grid"] .sem-ska-text::after {
+  content: ""; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+  border: 5px solid transparent; border-top-color: var(--sem-primary, #002855);
+}
+.sem-ska[data-layout="grid"] .sem-ska-text small { display: block; font-size: 10px; opacity: .7; letter-spacing: .05em; text-transform: uppercase; }
+.sem-ska[data-layout="grid"] .sem-ska-text strong { font-weight: 600; }
+.sem-ska[data-layout="grid"] .sem-ska-item a:hover .sem-ska-text,
+.sem-ska[data-layout="grid"] .sem-ska-item a:focus-visible .sem-ska-text {
+  opacity: 1; visibility: visible; transform: translate(-50%, 0);
+  transition: opacity .15s, transform .15s;
+}
+/* kenardaki ikonlarda balon taşmasın (sınıfları JS ekler) */
+.sem-ska[data-layout="grid"] .is-col-first .sem-ska-text { left: 0; transform: translate(0, 4px); }
+.sem-ska[data-layout="grid"] .is-col-last .sem-ska-text { left: auto; right: 0; transform: translate(0, 4px); }
+.sem-ska[data-layout="grid"] .is-col-first a:hover .sem-ska-text,
+.sem-ska[data-layout="grid"] .is-col-last a:hover .sem-ska-text { transform: none; }
+.sem-ska[data-layout="grid"] .is-col-first .sem-ska-text::after { left: 22px; }
+.sem-ska[data-layout="grid"] .is-col-last .sem-ska-text::after { left: auto; right: 12px; transform: none; }
+
+/* ══ SKA sayfası (surdurulebilir-kalkinma-amaclari.html) ═══════════════
+   sozlesmeler.html düzeni: gri Page Head + col-lg-8 içerik + çizgili satırlar. */
+.sem-ska-page { scroll-margin-top: 100px; }
+.sem-ska-intro p { font-size: 16px !important; color: #2f2f2f; line-height: 1.8 !important; margin-bottom: 16px; }
+.sem-ska-nav {
+  display: grid; grid-template-columns: repeat(9, minmax(0, 1fr)); gap: 6px;
+  margin: 32px 0 24px;
+}
+.sem-ska-nav a { display: block; transition: transform .2s, box-shadow .2s; }
+.sem-ska-nav a:hover { transform: translateY(-2px); box-shadow: 0 6px 14px rgba(0, 0, 0, .16); }
+.sem-ska-nav img { display: block; width: 100%; aspect-ratio: 1 / 1; border-radius: var(--sem-radius, 2px); }
+
+.sem-ska-goal {
+  display: flex; align-items: flex-start; gap: 24px;
+  padding: 24px 12px; margin: 0 -12px;
+  border-bottom: 1px solid #e8e8e8;
+  scroll-margin-top: 110px;            /* sticky header altında kalmasın */
+  border-radius: var(--sem-radius, 2px);
+  transition: background .6s ease;
+}
+.sem-ska-goal img { width: 96px; flex: 0 0 96px; aspect-ratio: 1 / 1; border-radius: var(--sem-radius, 2px); }
+.sem-ska-goal-no {
+  display: block; font-size: 12px; font-weight: 700; letter-spacing: .08em;
+  text-transform: uppercase; color: #8a94a3; margin-bottom: 2px;
+}
+.sem-ska-goal-title { font-size: 20px !important; font-weight: 700 !important; color: #212121; margin: 0 0 6px !important; line-height: 1.3 !important; }
+.sem-ska-goal-body p { font-size: 15px !important; color: #555; margin: 0; line-height: 1.7 !important; }
+/* ikondan gelince ilgili amaç kısa süre vurgulanır */
+.sem-ska-goal:target { background: rgba(0, 161, 170, .08); animation: semSkaFlash 2.4s ease forwards; }
+@keyframes semSkaFlash {
+  0%, 60% { background: rgba(0, 161, 170, .12); }
+  100% { background: rgba(0, 161, 170, .04); }
+}
+
+.sem-ska-cta { margin-top: 48px; }
+.sem-ska-cta p { font-size: 15px !important; color: #6c757d; margin-bottom: 16px; }
+.sem-ska-cta-btns { display: flex; flex-wrap: wrap; gap: 12px; }
+.sem-ska-cta-main, .sem-ska-cta-alt {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 28px; font-size: 15px; font-weight: 600; text-decoration: none;
+  border-radius: var(--sem-radius, 2px); transition: background .2s, color .2s, border-color .2s;
+}
+.sem-ska-cta-main { background: #212121; color: #fff; }
+.sem-ska-cta-main:hover { background: var(--kun-turkuaz, #00A1AA); color: #fff; }
+.sem-ska-cta-alt { border: 1px solid #d4d4d4; color: #212121; }
+.sem-ska-cta-alt:hover { border-color: #212121; color: #212121; }
+
+@media (max-width: 767px) {
+  .sem-ska-nav { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .sem-ska-goal { gap: 16px; padding: 20px 8px; margin: 0 -8px; }
+  .sem-ska-goal img { width: 72px; flex-basis: 72px; }
+  .sem-ska-goal-title { font-size: 18px !important; }
 }

@@ -26,6 +26,7 @@ Bu depo, SEM (Sürekli Eğitim Merkezi) web sitesinin **statik HTML/CSS/JS** pro
 | `ekibimiz.html`                | Ekibimiz                                                                                                                                                      | **Gerçek ekip fotoğraf/isim/unvan bekleniyor** (şu an idare.html'in kopyası) |
 | `faaliyet-raporlari.html`      | Yıllık faaliyet raporları (6 kart, 2019–2024)                                                                                                                 | Her kart bir **PDF indirme linki** bekliyor (`href="#"`)                     |
 | `sozlesmeler.html`             | Sözleşme/yönetmelik listesi                                                                                                                                   | Placeholder belgeler                                                         |
+| `surdurulebilir-kalkinma-amaclari.html` | Sürdürülebilir Kalkınma Amaçları — giriş + 17 amaç (ikon, ad, kısa açıklama) | Statik; `#amac-1…17` çapaları, eğitim detayındaki SKA ikonları buraya bağlanır (§5.5) |
 | `kvkk.html`                    | KVKK aydınlatma metni                                                                                                                                         | Statik                                                                       |
 | `sss.html`                     | SSS — 30 soru, 6 sekme (Genel/Kayıt/Süreç/Sertifika/Ödeme/Kurumsal)                                                                                           | Statik accordion                                                             |
 | `iletisim.html`                | İletişim: adres (Nevşehir + İstanbul), harita gömme, form                                                                                                     | Form → bkz. §5.2                                                             |
@@ -159,6 +160,23 @@ Statik olarak şu alanlar var, backend'de kurs modeline karşılık gelmeli:
 - Sertifika ve Belgelendirme bölümü (tür, e-Devlet doğrulama, KÜN mührü — 3 kart)
 - Sidebar başvuru widget'ı (`openApplyModal` butonları) + sabit mobil alt "Başvur" çubuğu
 - Not: Puan/yorum/eğitmen-fotoğrafı gibi alanlar bilinçli olarak kaldırıldı, **eklenmemeli**
+
+#### Sürdürülebilir Kalkınma Amaçları (SKA / SDG) — sidebar, `#sem-ska`
+
+- Eğitime **1–17 arası** BM amacı atanabilir (çoklu seçim, sıra = numara sırası önerilir). Hiç amaç yoksa `#sem-ska` bloğunun **tamamı basılmamalı**.
+- Backend her amaç için yalnızca bir `<li class="sem-ska-item">` basar; düzeni JS (`initSka`) öğe sayısına göre kendisi seçer: **1–3 → liste** (ikon + "Amaç N" + ad), **4+ → ikon ızgarası** (ad, üzerine gelince balonda). Ekstra sınıf/attribute gerekmez.
+- Satır şablonu (`N` = 1–17):
+  ```html
+  <li class="sem-ska-item">
+    <a href="surdurulebilir-kalkinma-amaclari.html#amac-N">
+      <img src="./assets/images/sdg/SDG-N.svg" alt="Amaç N: {ad}" loading="lazy">
+      <span class="sem-ska-text"><small>Amaç N</small><strong>{ad}</strong></span>
+    </a>
+  </li>
+  ```
+- 17 amacın resmi Türkçe adları `assets/js/sem-custom.js` içindeki `SEM_SKA` dizisinde; ikonlar `assets/images/sdg/SDG-1.svg … SDG-17.svg` (BM Türkiye sitesinden alınan resmi Türkçe ikonlar).
+- İkonlar site içindeki statik `surdurulebilir-kalkinma-amaclari.html` sayfasına gider; her amacın sabit çapası var (`#amac-1` … `#amac-17`), tıklanan amaç sayfada vurgulanır. Bu sayfa **statiktir**, backend'den veri beklemez. Dış BM sayfasına yalnızca o sayfanın en altındaki "Detaylı Bilgi" butonu gider.
+- Tasarım önizleme: `kurs-detay.html?ska=4,8,13` — virgülle verilen numaralarla listeyi geçici olarak yeniden çizer (sadece tasarım kontrolü içindir, backend bağlanınca da zararsız).
 
 ---
 

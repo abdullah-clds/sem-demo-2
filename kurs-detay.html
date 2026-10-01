@@ -406,146 +406,48 @@
           </div>
         </div>
         <!-- Start Search Dropdown  -->
-        <div class="rbt-search-dropdown">
+        <div class="rbt-search-dropdown sem-search-glass">
           <div class="wrapper">
-            <div class="row">
-              <div class="col-lg-12">
-                <form
-                  id="sem-header-search-form"
-                  onsubmit="
-                    event.preventDefault();
-                    var q = document.getElementById('sem-hdr-q').value.trim();
-                    if (q)
-                      window.location =
-                        'tum-kurslar.html?q=' + encodeURIComponent(q);
-                  "
-                >
-                  <input
-                    id="sem-hdr-q"
-                    type="text"
-                    placeholder="Eğitim adı, kategori veya konu ara…"
-                    autocomplete="off"
-                  />
-                  <div class="submit-btn">
-                    <button type="submit">
-                      <i class="feather-search"></i> Ara
-                    </button>
-                  </div>
-                </form>
-              </div>
+            <form
+              id="sem-header-search-form"
+              class="sem-sg-form"
+              role="search"
+              onsubmit="
+                event.preventDefault();
+                var q = document.getElementById('sem-hdr-q').value.trim();
+                if (q)
+                  window.location =
+                    'tum-kurslar.html?q=' + encodeURIComponent(q);
+              "
+            >
+              <i class="feather-search sem-sg-icon" aria-hidden="true"></i>
+              <input
+                id="sem-hdr-q"
+                type="text"
+                placeholder="Eğitim ara"
+                aria-label="Eğitim ara"
+                enterkeyhint="search"
+                spellcheck="false"
+                role="combobox"
+                aria-controls="sem-sg-results"
+                aria-expanded="false"
+                autocomplete="off"
+              />
+              <button type="button" class="sem-sg-esc" aria-label="Temizle / kapat"><span>ESC</span><i class="feather-x"></i></button>
+              <button type="submit" class="sem-sg-submit">
+                <span>Ara</span><i class="feather-arrow-right"></i>
+              </button>
+            </form>
+            <div class="sem-search-cats">
+              <span>Popüler aramalar</span>
+              <a href="tum-kurslar.html?kategori=havacilik">Havacılık</a>
+              <a href="tum-kurslar.html?kategori=gastronomi">Gastronomi</a>
+              <a href="tum-kurslar.html?kategori=turizm">Turizm</a>
+              <a href="tum-kurslar.html?kategori=saglik">Sağlık</a>
+              <a href="tum-kurslar.html?kategori=bilisim">Bilişim</a>
+              <a href="tum-kurslar.html?kategori=pemer-myk">PEMER / MYK</a>
             </div>
-            <div class="rbt-separator-mid">
-              <hr class="rbt-separator m-0" />
-            </div>
-            <div class="row g-4 pt--30 pb--60">
-              <div class="col-lg-12">
-                <div class="section-title">
-                  <h5 class="rbt-title-style-2">Öne Çıkan Eğitimler</h5>
-                </div>
-              </div>
-              <!-- Start Single Card  -->
-              <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                <div class="rbt-card variation-01 rbt-hover">
-                  <div class="rbt-card-img">
-                    <a href="kurs-detay.html">
-                      <img
-                        src="./assets/images/course/course-3.jpg"
-                        alt="Card image"
-                      />
-                    </a>
-                  </div>
-                  <div class="rbt-card-body">
-                    <h5 class="rbt-card-title">
-                      <a href="kurs-detay.html">Meteoroloji Temel Eğitimi</a>
-                    </h5>
-                    <div class="rbt-card-bottom">
-                      <div class="rbt-price">
-                        <span class="current-price">15₺</span>
-                        <span class="off-price">25₺</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- End Single Card  -->
-              <!-- Start Single Card  -->
-              <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                <div class="rbt-card variation-01 rbt-hover">
-                  <div class="rbt-card-img">
-                    <a href="kurs-detay.html">
-                      <img
-                        src="./assets/images/course/arama-kurtarma.jpg"
-                        alt="Card image"
-                      />
-                    </a>
-                  </div>
-                  <div class="rbt-card-body">
-                    <h5 class="rbt-card-title">
-                      <a href="kurs-detay.html">Arama Kurtarma Temel Eğitimi</a>
-                    </h5>
-                    <div class="rbt-card-bottom">
-                      <div class="rbt-price">
-                        <span class="current-price">10₺</span>
-                        <span class="off-price">40₺</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- End Single Card  -->
-              <!-- Start Single Card  -->
-              <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                <div class="rbt-card variation-01 rbt-hover">
-                  <div class="rbt-card-img">
-                    <a href="kurs-detay.html">
-                      <img
-                        src="./assets/images/course/course-7.jpg"
-                        alt="Card image"
-                      />
-                    </a>
-                  </div>
-                  <div class="rbt-card-body">
-                    <h5 class="rbt-card-title">
-                      <a href="kurs-detay.html"
-                        >Emniyet Yönetim Sistemi (SMS) Eğitimi</a
-                      >
-                    </h5>
-                    <div class="rbt-card-bottom">
-                      <div class="rbt-price">
-                        <span class="current-price">10₺</span>
-                        <span class="off-price">20₺</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- End Single Card  -->
-              <!-- Start Single Card  -->
-              <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                <div class="rbt-card variation-01 rbt-hover">
-                  <div class="rbt-card-img">
-                    <a href="kurs-detay.html">
-                      <img
-                        src="./assets/images/course/course-8.jpg"
-                        alt="Card image"
-                      />
-                    </a>
-                  </div>
-                  <div class="rbt-card-body">
-                    <h5 class="rbt-card-title">
-                      <a href="kurs-detay.html">Mesleki İngilizce Eğitimi</a>
-                    </h5>
-                    <div class="rbt-card-bottom">
-                      <div class="rbt-price">
-                        <span class="current-price">20₺</span>
-                        <span class="off-price">40₺</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- End Single Card  -->
-            </div>
+            <div class="sem-sg-results" id="sem-sg-results" role="listbox" aria-label="Arama önizlemesi" hidden></div>
           </div>
         </div>
         <!-- End Search Dropdown  -->
@@ -1387,6 +1289,45 @@
                                     </ul>
                                     <div class="rbt-show-more-btn">Daha Fazla</div>
                                 </div>
+
+                                <!-- Start Sürdürülebilir Kalkınma Amaçları (SKA / SDG)
+                                     Backend: eğitime atanmış amaç sayısı kadar <li> basar (1–17).
+                                     data-count'u JS otomatik ayarlar: 1–3 → liste (ikon + ad), 4+ → ikon ızgarası.
+                                     İkonlar: assets/images/sdg/SDG-{no}.svg, link: surdurulebilir-kalkinma-amaclari.html#amac-{no} — hiç amaç yoksa bloğun tamamı basılmaz. -->
+                                <div class="sem-ska" id="sem-ska">
+                                    <div class="sem-ska-head">
+                                        <h6 class="sem-ska-title">Sürdürülebilir Kalkınma Amaçları</h6>
+                                        <a class="sem-ska-info" href="surdurulebilir-kalkinma-amaclari.html" aria-label="Sürdürülebilir Kalkınma Amaçları nedir?" title="SKA nedir?"><i class="feather-info"></i></a>
+                                    </div>
+                                    <p class="sem-ska-desc">Bu eğitim, Birleşmiş Milletler'in aşağıdaki amaçlarına katkı sağlar.</p>
+                                    <ul class="sem-ska-list">
+                                        <li class="sem-ska-item">
+                                            <a href="surdurulebilir-kalkinma-amaclari.html#amac-4">
+                                                <img src="./assets/images/sdg/SDG-4.svg" alt="Amaç 4: Nitelikli Eğitim" loading="lazy">
+                                                <span class="sem-ska-text"><small>Amaç 4</small><strong>Nitelikli Eğitim</strong></span>
+                                            </a>
+                                        </li>
+                                        <li class="sem-ska-item">
+                                            <a href="surdurulebilir-kalkinma-amaclari.html#amac-8">
+                                                <img src="./assets/images/sdg/SDG-8.svg" alt="Amaç 8: İnsana Yakışır İş ve Ekonomik Büyüme" loading="lazy">
+                                                <span class="sem-ska-text"><small>Amaç 8</small><strong>İnsana Yakışır İş ve Ekonomik Büyüme</strong></span>
+                                            </a>
+                                        </li>
+                                        <li class="sem-ska-item">
+                                            <a href="surdurulebilir-kalkinma-amaclari.html#amac-9">
+                                                <img src="./assets/images/sdg/SDG-9.svg" alt="Amaç 9: Sanayi, Yenilikçilik ve Altyapı" loading="lazy">
+                                                <span class="sem-ska-text"><small>Amaç 9</small><strong>Sanayi, Yenilikçilik ve Altyapı</strong></span>
+                                            </a>
+                                        </li>
+                                        <li class="sem-ska-item">
+                                            <a href="surdurulebilir-kalkinma-amaclari.html#amac-13">
+                                                <img src="./assets/images/sdg/SDG-13.svg" alt="Amaç 13: İklim Eylemi" loading="lazy">
+                                                <span class="sem-ska-text"><small>Amaç 13</small><strong>İklim Eylemi</strong></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- End Sürdürülebilir Kalkınma Amaçları -->
 
                                 <div class="social-share-wrapper mt--30 text-center">
                                     <div class="rbt-post-share d-flex align-items-center justify-content-center">

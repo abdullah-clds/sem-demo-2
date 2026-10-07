@@ -1,0 +1,29 @@
+/*
+  DOSYA: assets/css/sem-custom.css — "Öne Çıkan Eğitimler" bölümü
+
+  SİLİNEN kurallar (artık kullanılmıyor):
+    #sem-populer-egitimler .sem-featured-nav { ... }            (ok butonları + hover/disabled)
+    #sem-populer-egitimler .sem-featured-swiper { ... }
+    #sem-populer-egitimler .swiper-slide { height: auto; }
+    #sem-populer-egitimler .sem-featured-progress { ... }        (ilerleme çubuğu + fill)
+    @media (max-width:575px) içindeki .sem-featured-nav button kuralı
+
+  EKLENEN kurallar (eski carousel ile aynı kart genişliği ve aralık):
+*/
+#sem-populer-egitimler .sem-featured-list {
+  display: grid; grid-template-columns: 1fr; gap: 16px;
+}
+@media (min-width: 576px) {
+  #sem-populer-egitimler .sem-featured-list { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+}
+@media (min-width: 992px) {
+  #sem-populer-egitimler .sem-featured-list { grid-template-columns: repeat(3, 1fr); gap: 28px; }
+}
+#sem-populer-egitimler .sem-featured-item { display: flex; }
+#sem-populer-egitimler .sem-featured-item > .sem-course-card { width: 100%; }
+
+/*
+  JS: assets/js/sem-custom.js içindeki "Anasayfa Öne Çıkan Eğitimler kaydırmalı şerit"
+  bloğu (new Swiper('.sem-featured-swiper', ...)) tamamen SİLİNDİ.
+  Hero slider'ın Swiper'ı (main.js, .udemy-affilite-activation) etkilenmedi.
+*/

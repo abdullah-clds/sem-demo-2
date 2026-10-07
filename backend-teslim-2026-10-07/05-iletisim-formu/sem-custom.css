@@ -1,0 +1,10 @@
+/*
+  DOSYA: assets/css/sem-custom.css — iletisim.html "Bize Yazın" formu
+  (.sem-form-control kurallarının hemen altına YENİ eklendi)
+
+  SORUN 1: Karanlık modda tema başlıkları beyaza çekiyor; form kartı beyaz kaldığı için
+           "Bize Yazın" başlığı beyaz üzerine beyaz oluyordu.
+  SORUN 2: "Konu" select'i 47px, diğer alanlar 50px'ti.
+*/
+select.sem-form-control { height: 50px; padding-top: 0; padding-bottom: 0; }
+.sem-contact-form-wrap .title { color: var(--sem-primary, #002855) !important; }

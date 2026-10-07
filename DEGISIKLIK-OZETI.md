@@ -1,6 +1,21 @@
-# Backend Ekibine — Bugünkü Değişiklikler (2026-09-09)
+# Backend Ekibine — Değişiklikler
 
-Bu doküman, siteyi ilk teslim aldığınız versiyona göre **bugün neyin nerede değiştiğini** basit bir dille özetler. Teknik detay/şema için `README.md`'ye bakın — bu dosya sadece "nerede ne değişti" sorusuna hızlı cevap içindir.
+Bu doküman, siteyi ilk teslim aldığınız versiyona göre **neyin nerede değiştiğini** basit bir dille özetler. En yeni tur en üstte. Teknik detay/şema için `README.md`'ye bakın — bu dosya sadece "nerede ne değişti" sorusuna hızlı cevap içindir. Kod parçacıkları (önce/sonra) için ilgili tarihli `backend-teslim-…/` klasörüne bakın.
+
+## 2026-10-07
+
+| Alan / Sayfa | Ne değişti | Backend için not |
+|---|---|---|
+| **Anasayfa — Öne Çıkan Eğitimler** | Yana kayan yapı kaldırıldı; kartlar **aynı boyutta alt alta** diziliyor (masaüstünde satırda 3, tablette 2, mobilde 1). | Kart sayısı arttıkça otomatik yeni satıra geçer; ekstra bir şey gerekmez. |
+| **Footer** (tüm sayfalar) | "Sayfalar" sütunu **"Hızlı Erişim"** ve **"Kurumsal"** olarak ikiye ayrıldı. | — |
+| **Anasayfa slider** | Yükseklik artık **ekran boyuna göre** ayarlanıyor. Windows ölçekleme / tarayıcı zoom'u olan ekranlarda slider tüm ekranı kaplamıyor. | Slider görselleri **en az 1920×900** olmalı — mevcut görseller 710×488 olduğu için bulanık görünüyor. |
+| **Başvuru formu** (açılır pencere, 7 sayfa) | Okunmayan başlık ve karanlık modda kaybolan yazılar düzeltildi; butonlar eşitlendi. **Eksik/hatalı alan uyarısı** ve **"Başvurunuz alındı"** ekranı eklendi. | Form verisi henüz sunucuya gitmiyor. `sem:apply-submit` olayını dinleyip API'ye göndermeniz yeterli — örnek: `backend-teslim-2026-10-07/04-basvuru-modali/aciklama.md`. |
+| **İletişim formu** | Karanlık modda kaybolan "Bize Yazın" başlığı düzeltildi; "Konu" kutusu diğer alanlarla aynı boy. | — |
+| **CSS/JS önbellek** | `sem-custom.css` ve `sem-custom.js` bağlantılarına `?v=20261007` eklendi. | Bu iki dosya her değiştiğinde `?v=` tarihi güncellenmeli. |
+
+---
+
+## 2026-09-09
 
 | Alan / Sayfa | Ne değişti | Backend için not |
 |---|---|---|
@@ -18,7 +33,7 @@ Bu doküman, siteyi ilk teslim aldığınız versiyona göre **bugün neyin nere
 
 ---
 
-## Özetle bekleyen 5 şey
+### O tarihte bekleyen 5 şey
 1. 1500×1000 gerçek eğitim görselleri
 2. Gerçek GA4 Measurement ID
 3. Çerez/Sözleşme/KVKK güncel metni

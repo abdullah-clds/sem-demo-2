@@ -65,7 +65,7 @@ Aşağıdaki tablo, her alanda **CSS'in zorladığı en-boy oranı** ve **öneri
 
 | Alan                                                                    | CSS oranı                                                                                   | Önerilen min. çözünürlük                                                               | Şu anki durum                                                                                                                        |
 | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| **Hero slider** (anasayfa, `.sem-hero-slide`)                           | Sabit yükseklik (masaüstü 640px, mobil 420px), `background-size:cover` — **sabit oran yok** | **1920×900** (geniş, özneyi ortada tutun — kenarlar kırpılabilir)                      | Mevcut görseller yalnızca **710×488**, hedefin çok altında — yenilenmesi önerilir                                                    |
+| **Hero slider** (anasayfa, `.sem-hero-slide`)                           | Ekran yüksekliğine göre: masaüstü `clamp(440px, 68svh, 640px)`, mobil `clamp(380px, 60svh, 460px)`; `background-size:cover` — **sabit oran yok** | **1920×900** (geniş, özneyi ortada tutun — kenarlar kırpılabilir)                      | Mevcut görseller yalnızca **710×488**, hedefin çok altında — yenilenmesi önerilir                                                    |
 | **Eğitim kartı görseli** (`.sem-course-card .rbt-card-img`)        | **3:2 yatay**                                                                               | **1500×1000**                                                                          | 2026-09-09 revizyonunda 4:5 dikeyden 1500×1000 yataya çevrildi (kilitli kararın tersine, kullanıcı onayıyla). Mevcut görseller CSS ile kırpılıyor, gerçek 1500×1000 görseller bekleniyor |
 | **Blog / Duyuru kartı görseli** (`.sem-duyuru-gorsel`)                  | **3:2 yatay**                                                                               | **1200×800**                                                                           | Mevcut `blog-card-01.jpg` 638×330 (oran uyuşmuyor, kırpılıyor)                                                                       |
 | **Ekip / Yönetim Kurulu üye fotoğrafı** (`idare.html`, `ekibimiz.html`) | **4:5 dikey**                                                                               | **900×1125**                                                                           | Stüdyo tipi, tek kişi, baş+omuz kadraj önerilir                                                                                      |
@@ -113,7 +113,7 @@ Kurs/eğitim filtrelemesinde kullanılan `data-kategori` değerleri (bkz. §5.3)
 | `konu`      | select   |
 | `mesaj`     | textarea |
 
-### 5.3 Eğitime Başvuru / Talep Modalı (`#semApplyModal`, `#semApplyForm`) — 6 sayfada ortak
+### 5.3 Eğitime Başvuru / Talep Modalı (`#semApplyModal`, `#semApplyForm`) — 7 sayfada ortak
 
 JS `openApplyModal(mode, courseId, courseName)` ile açılıyor (`assets/js/sem-custom.js`). `mode` üç değer alır ve modal başlığını değiştirir:
 
@@ -134,6 +134,8 @@ Form alanları:
 | `kun_ogrenci` | radio (evet/hayır) — "Kapadokya Üniversitesi öğrencisi misiniz?" | ✓         |
 | `mesaj`       | textarea                                                         | opsiyonel |
 | `kvkk`        | checkbox                                                         | ✓         |
+
+**İstemci doğrulaması ve gönderim (2026-10-07'den itibaren):** "Gönder" alanları doğrular (kategori seçili; ad soyad ≥3 karakter; telefon 10–12 rakam; e-posta `x@y.zz`; öğrenci sorusu ve KVKK işaretli). Hatalı alan kırmızı çerçeve + mesaj alır. Geçerli gönderimde form gizlenip "Başvurunuz alındı" ekranı gösterilir; modal kapanınca form sıfırlanır. **Veri sunucuya gönderilmez** — bunun yerine `document` üzerinde `sem:apply-submit` CustomEvent'i yayınlanır, `e.detail` = `{ mode, course_id, egitim, kategori, ad_soyad, telefon, eposta, kun_ogrenci, mesaj, kvkk }`. Backend bu olayı dinleyip API'ye POST etmeli ve sunucu tarafında aynı doğrulamaları yapmalı (örnek kod: `backend-teslim-2026-10-07/04-basvuru-modali/aciklama.md`). `mode === "kurumsal"` iken `course_id` / `egitim` boş gelir.
 
 ### 5.4 Kurs Kartı Veri Şeması (`tum-kurslar.html`, `hizmet-ici-egitimler.html`, anasayfa "Öne Çıkan Eğitimler")
 
@@ -189,6 +191,8 @@ Statik olarak şu alanlar var, backend'de kurs modeline karşılık gelmeli:
 5. **Faaliyet raporu PDF linkleri (`href="#"`)** gerçek dosyalarla değiştirilmeli.
 6. **`slider.html`** üretim kapsamı dışında tutulmalı; anasayfanın eski/deneme kopyasıdır.
 7. **`egitmen-panel.html`, `sem-kurs-ekleme.html`** tamamen placeholder; gerçek panel akışı backend ile birlikte yeniden tasarlanmalı.
+8. **Başvuru modalı veriyi sunucuya göndermiyor** — `sem:apply-submit` olayı yayınlanıyor (§5.3). Teşekkür ekranı şu an API yanıtı beklenmeden gösteriliyor; entegrasyonda yanıt beklenmeli, hata durumunda mesaj gösterilmeli.
+9. **Önbellek sürümü elle yönetiliyor** — `sem-custom.css` / `sem-custom.js` bağlantılarında `?v=YYYYMMDD` var; dosya her değiştiğinde güncellenmeli. Şablon motoruna geçince dosya hash'iyle otomatik üretilmesi önerilir.
 
 ---
 
@@ -209,6 +213,28 @@ Statik olarak şu alanlar var, backend'de kurs modeline karşılık gelmeli:
 ## 8. Değişiklik Günlüğü
 
 Her revizyon turu burada tarihli olarak listelenir: hangi dosyada ne değişti, backend'i nasıl etkiler. Yeni bir tur geldiğinde en üste eklenir.
+
+### 2026-10-07 — Dokuzuncu revizyon turu
+
+Önce/sonra kod parçacıkları: `backend-teslim-2026-10-07/`. Commit'ler: `697cd8b`, `b0f6240`.
+
+**Tasarımsal:**
+- **Anasayfa "Öne Çıkan Eğitimler" carousel'den ızgaraya çevrildi** — Swiper kaldırıldı; `.swiper.sem-featured-swiper > .swiper-wrapper > .swiper-slide` yapısı `.sem-featured-grid > .sem-featured-list > .sem-featured-item` oldu. Kart boyutu değişmedi (masaüstü 3 sütun / 28px aralık, tablet 2, mobil 1). Ok butonları (`.sem-featured-nav`), ilerleme çubuğu (`.sem-featured-progress`), ilgili CSS ve `sem-custom.js`'teki Swiper başlatma kodu silindi.
+- **Footer "Sayfalar" sütunu "Hızlı Erişim" (5 link) + "Kurumsal" (6 link) olarak bölündü** — 25 sayfa; logo sütunu `col-lg-4` → `col-lg-3`.
+- **Hero slider yüksekliği ekran yüksekliğine bağlandı** — sabit 640px yerine `clamp(440px, 68svh, 640px)` (mobil `clamp(380px, 60svh, 460px)`, `vh` yedekli). Sebep: Windows %125/%150 ölçekleme ve tarayıcı zoom'unda görünür alan küçülünce 640px slider tüm ekranı kaplıyordu (§3 güncellendi).
+
+**Formlar:**
+- **Başvuru modalı (`#semApplyModal`)** — başlık lacivert zeminde koyu lacivertti (tema `h5` rengi) → beyaz. Karanlık modda placeholder'lar ve "Vazgeç" beyaz zeminde beyazdı → modal renkleri açıkça sabitlendi. "Vazgeç" 10px'ten 48px/15px butona çıkarıldı; alanlar 48px eşit; `modal-dialog-scrollable` eklendi (7 sayfa).
+- **Başvuru modalına doğrulama + teşekkür ekranı + `sem:apply-submit` olayı eklendi** (§5.3). Önceden "Gönder" hiçbir şey yapmıyordu. Kurumsal talepte önceki eğitim adının gizli alanda kalması düzeltildi.
+- **İletişim formu** — karanlık modda "Bize Yazın" başlığı beyaz kartta beyazdı → lacivert sabit; "Konu" select'i 50px.
+
+**Genel / Teknik:**
+- **26 sayfada `sem-custom.css?v=20261007` / `sem-custom.js?v=20261007`** — tarayıcı önbelleği yüzünden güncel CSS'in görünmemesi sorununa karşı (§6 madde 9).
+
+**Bekleyen maddeler:**
+- Slider için en az 1920×900 görseller (mevcut 710×488).
+- Başvuru modalının API'ye bağlanması (backend).
+- Karanlık modda formlar dışındaki alanlarda da renk uyumsuzlukları var (ör. anasayfa "KAYITLAR AÇIK" etiketi) — ayrı bir turda ele alınacak.
 
 ### 2026-09-09 — Yedinci revizyon turu
 

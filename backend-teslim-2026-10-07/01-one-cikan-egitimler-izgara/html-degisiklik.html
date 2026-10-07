@@ -1,0 +1,39 @@
+<!--
+  NEREDE: anasayfa.html → "Öne Çıkan Eğitimler" bölümü (#sem-populer-egitimler)
+
+  NE DEĞİŞTİ: Yana kayan Swiper carousel kaldırıldı. Kartlar AYNI BOYUTTA
+  alt alta diziliyor (masaüstü 3, tablet 2, mobil 1 sütun). Ok butonları ve
+  alttaki ilerleme çubuğu silindi. Kartların içi (.sem-course-card) DEĞİŞMEDİ —
+  sadece onları saran 3 div'in class'ı değişti.
+-->
+
+<!-- ═══ ÖNCESİ ═══
+<div class="sem-featured-actions">
+  <a class="sem-featured-all" href="tum-kurslar.html">Tüm Eğitimler <i class="feather-arrow-right"></i></a>
+  <div class="sem-featured-nav">
+    <button type="button" class="sem-featured-prev" aria-label="Önceki"><i class="feather-chevron-left"></i></button>
+    <button type="button" class="sem-featured-next" aria-label="Sonraki"><i class="feather-chevron-right"></i></button>
+  </div>
+</div>
+...
+<div class="swiper sem-featured-swiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"> ...kart... </div>
+    ...
+  </div>
+</div>
+<div class="sem-featured-progress"></div>
+════════════════ -->
+
+<!-- ═══ SONRASI ═══ -->
+<div class="sem-featured-actions">
+  <a class="sem-featured-all" href="tum-kurslar.html">Tüm Eğitimler <i class="feather-arrow-right"></i></a>
+</div>
+...
+<div class="sem-featured-grid">
+  <div class="sem-featured-list">
+    <div class="sem-featured-item"> ...kart (değişmedi)... </div>
+    <!-- her kart için bir .sem-featured-item; şu an 6 kart = 2 satır -->
+  </div>
+</div>
+<!-- .sem-featured-progress satırı kaldırıldı -->

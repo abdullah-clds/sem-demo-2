@@ -1,0 +1,31 @@
+/*
+  DOSYA: assets/css/sem-custom.css — anasayfa hero slider (.sem-hero-slide)
+
+  SORUN: "Aynı inç ekranda farklı tarayıcı/cihazda slider daha büyük görünüyor."
+  SEBEP: Yükseklik sabit 640px'ti. Windows ekran ölçekleme (%125/%150), tarayıcı
+  zoom'u ve araç çubukları sayfanın görünür yüksekliğini küçültüyor (ör. 15,6"
+  dizüstü %125'te ~600-650px). Bu ekranlarda 640px'lik slider tüm ekranı kaplıyordu.
+
+  ÇÖZÜM: Yükseklik ekran YÜKSEKLİĞİNE göre ölçekleniyor; büyük ekranda görünüm aynı.
+  İki satır yazılması bilinçli: svh desteklemeyen eski tarayıcı vh satırını kullanır.
+*/
+
+/* ÖNCESİ:  min-height: 640px; */
+.sem-hero-slide {
+  position: relative;
+  min-height: clamp(440px, 68vh, 640px);    /* SONRASI — yedek */
+  min-height: clamp(440px, 68svh, 640px);   /* SONRASI */
+  /* ... diğer özellikler değişmedi ... */
+}
+
+@media (max-width: 767px) {
+  /* ÖNCESİ:  .sem-hero-slide { min-height: 420px; } */
+  .sem-hero-slide { min-height: clamp(380px, 60vh, 460px); min-height: clamp(380px, 60svh, 460px); }
+}
+
+/*
+  İÇERİK NOTU: Slider görselleri şu an 710×488. Tam genişlikte 2,5-3 kat büyütülüp
+  kırpıldığı için bulanık/"yakınlaştırılmış" görünüyor — bu CSS ile çözülemez.
+  README §3'teki ölçü geçerli: en az 1920×900 yatay görsel; yazılar solda durduğu için
+  görselin ana öğesi orta-sağda olmalı.
+*/

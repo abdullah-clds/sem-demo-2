@@ -1,0 +1,47 @@
+<!--
+  HANGİ SAYFALAR: tum-kurslar.html VE hizmet-ici-egitimler.html (ikisinde de birebir aynı değişiklik)
+
+  NE DEĞİŞTİ: Arama kutusu, sol taraftaki filtre menüsünün içinden çıkarılıp
+  sayfanın en üstüne (sıralama/filtre araç çubuğunun hemen üzerine) taşındı.
+-->
+
+<!-- ═══ ÖNCESİ: Arama kutusu, sol filtre sidebar'ının İÇİNDE bir widget'tı ═══
+<div class="rbt-course-top-wrapper mt--40">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      ... sıralama/filtre araç çubuğu ...
+    </div>
+    <div class="collapse d-lg-block" id="semFilterCollapse">
+    <aside class="rbt-sidebar-widget-wrapper">
+
+        <!-- Start Widget Area  -->
+        <div class="rbt-single-widget rbt-widget-search">
+            <div class="inner">
+                <form action="#" class="rbt-search-style-1">
+                    <input type="text" id="sem-search-input" placeholder="Kurs Ara...">
+                    <button class="search-btn"><i class="feather-search"></i></button>
+                </form>
+            </div>
+        </div>
+        <!-- End Widget Area  -->
+
+        <!-- diğer filtre widget'ları devam eder -->
+════════════════════════════════════════════════════════════════ -->
+
+<!-- ═══ SONRASI: Arama kutusu artık en üstte, kendi satırında ═══ -->
+<div class="rbt-course-top-wrapper mt--40">
+  <div class="container">
+    <div class="row mb--30">
+      <div class="col-12">
+        <form action="#" class="rbt-search-style-1 sem-course-top-search">
+          <input type="text" id="sem-search-input" placeholder="Eğitim Ara...">
+          <button class="search-btn" type="submit"><i class="feather-search"></i></button>
+        </form>
+      </div>
+    </div>
+    <div class="row g-5 align-items-center">
+      <!-- ... sıralama/filtre araç çubuğu (değişmedi) ... -->
+    </div>
+    <div class="collapse d-lg-block" id="semFilterCollapse">
+    <aside class="rbt-sidebar-widget-wrapper">
+        <!-- Arama widget'ı buradan kaldırıldı, diğer filtre widget'ları (kategori vb.) olduğu gibi kaldı -->

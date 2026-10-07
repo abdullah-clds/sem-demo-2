@@ -1,0 +1,35 @@
+/*
+  DOSYA: assets/css/sem-custom.css (dosya sonuna eklendi)
+  NE DEĞİŞTİ: "Yakında" veya "Kayıtlar Kapandı" durumundaki eğitim kartları
+  artık soluk/gri görünüyor, aktif kartlardan görsel olarak ayrışıyor.
+
+  NASIL ÇALIŞIYOR: Kart HTML'inde zaten var olan data-durum="yakinda" /
+  data-durum="kapandi" attribute'una göre otomatik tetikleniyor.
+  BACKEND NOTU: Yeni bir eğitim "yakında" veya "kapandı" olarak işaretlenirse
+  (data-durum attribute'u ile) otomatik bu görünümü alır, ekstra CSS/JS
+  eklemeye gerek yok.
+*/
+
+.sem-course-card[data-durum="yakinda"] .rbt-card-img,
+.sem-course-card[data-durum="kapandi"] .rbt-card-img {
+  position: relative;
+}
+.sem-course-card[data-durum="yakinda"] .rbt-card-img img,
+.sem-course-card[data-durum="kapandi"] .rbt-card-img img {
+  filter: grayscale(70%);
+  opacity: .75;
+}
+.sem-course-card[data-durum="yakinda"] .rbt-card-title,
+.sem-course-card[data-durum="kapandi"] .rbt-card-title {
+  opacity: .75;
+}
+.sem-course-card[data-durum="yakinda"] .sem-apply-btn,
+.sem-course-card[data-durum="kapandi"] .sem-apply-btn {
+  background: var(--kun-gri, #53565a) !important;
+  background-image: none !important;
+  opacity: .85;
+}
+.sem-course-card[data-durum="yakinda"] .sem-apply-btn:hover,
+.sem-course-card[data-durum="kapandi"] .sem-apply-btn:hover {
+  opacity: 1;
+}

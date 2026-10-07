@@ -607,6 +607,10 @@ p  { font-size: 16px !important; line-height: 1.6 !important; }
 }
 .sem-form-control::placeholder { color: #94a3b8 !important; }
 textarea.sem-form-control { resize: vertical; min-height: 120px; }
+/* select diğer alanlarla aynı boyda */
+select.sem-form-control { height: 50px; padding-top: 0; padding-bottom: 0; }
+/* Form kartı her zaman beyaz: karanlık modda tema başlığı beyaza çekiyordu (beyaz üzerine beyaz) */
+.sem-contact-form-wrap .title { color: var(--sem-primary, #002855) !important; }
 
 .sem-contact-success {
   align-items: center;
@@ -1173,6 +1177,96 @@ textarea,
 .sem-modal-check label { min-width: 0; flex: 1 1 auto; padding-left:0 !important; }
 .sem-modal-check a { color: var(--kun-mavi, #0072ce); }
 
+/* ── Başvuru Modalı — renk/ölçü sabitleme ─────────────────────────────
+   Tema h5'e koyu lacivert (#192335) veriyor → lacivert başlıkta başlık görünmüyordu;
+   karanlık modda ise placeholder ve "Vazgeç" beyaz oluyor, beyaz zeminde kayboluyordu.
+   Modal kendi renklerini açıkça taşır: açık / karanlık modda aynı görünür. */
+#semApplyModal .modal-content {
+  background: #fff !important; color: #334155; border: 0;
+  border-radius: var(--sem-radius); overflow: hidden;
+  box-shadow: 0 24px 60px -12px rgba(0, 20, 45, .45);
+}
+#semApplyModal .modal-header {
+  padding: 18px 24px; border-bottom: 0;
+  border-radius: 0; align-items: center;
+}
+#semApplyModal .modal-title {
+  color: #fff !important; font-size: 19px; font-weight: 700; line-height: 1.3; margin: 0;
+}
+#semApplyModal .btn-close { opacity: .8; box-shadow: none; }
+#semApplyModal .btn-close:hover { opacity: 1; }
+#semApplyModal .modal-body { color: #334155; }
+#semApplyModal .sem-modal-field label { color: #1e293b !important; }
+#semApplyModal .sem-modal-field input:not([type="radio"]),
+#semApplyModal .sem-modal-field select {
+  height: 48px; line-height: normal; padding-top: 0; padding-bottom: 0;
+  border-radius: var(--sem-radius);
+}
+#semApplyModal .sem-modal-field textarea { min-height: 96px; padding: 12px 14px; border-radius: var(--sem-radius); }
+#semApplyModal .sem-modal-field input:not([type="radio"]),
+#semApplyModal .sem-modal-field select,
+#semApplyModal .sem-modal-field textarea {
+  background-color: #fff !important; color: #1e293b !important; border-color: #d5dae1;
+}
+#semApplyModal .sem-modal-field input[readonly] {
+  background-color: #f1f5f9 !important; color: #475569 !important; cursor: default;
+}
+#semApplyModal ::placeholder { color: #94a3b8 !important; opacity: 1; }
+/* "Seçiniz" henüz seçilmemişken placeholder tonunda */
+#semApplyModal .sem-modal-field select:invalid { color: #94a3b8 !important; }
+#semApplyModal .sem-modal-field select option { color: #1e293b; }
+#semApplyModal .sem-modal-radio { color: #1e293b !important; font-size: 15px; }
+#semApplyModal .sem-modal-radio input[type="radio"],
+#semApplyModal .sem-modal-check input[type="checkbox"] {
+  width: 18px; height: 18px; accent-color: var(--kun-turkuaz, #00A1AA);
+}
+#semApplyModal .sem-modal-check { color: #475569; font-size: 14px; }
+#semApplyModal .sem-modal-check label { color: #475569 !important; }
+#semApplyModal .sem-modal-check a { color: var(--kun-mavi, #0072ce) !important; text-decoration: underline; }
+#semApplyModal .text-danger { color: var(--sem-accent, #cb333b) !important; }
+
+/* Alt butonlar — aynı yükseklik, okunur "Vazgeç" (önceki hali 10px ve soluktu) */
+#semApplyModal .modal-footer {
+  background: #fff !important; border-top: 1px solid #e8ecf1;
+  padding: 14px 24px; gap: 10px;
+}
+#semApplyModal .modal-footer > * { margin: 0; }
+#semApplyModal .modal-footer .btn-outline-secondary {
+  height: 48px; padding: 0 22px; font-size: 15px; font-weight: 600;
+  color: var(--sem-primary, #002855) !important; background: #fff !important;
+  border: 1.5px solid #cbd2db !important; border-radius: var(--sem-radius);
+}
+#semApplyModal .modal-footer .btn-outline-secondary:hover {
+  background: #f1f5f9 !important; border-color: var(--sem-primary, #002855) !important;
+}
+#semApplyModal #semApplySubmit { height: 48px; line-height: 48px; padding: 0 26px; font-size: 15px; }
+#semApplyModal #semApplySubmit[disabled] { opacity: .7; cursor: wait; }
+
+/* Doğrulama — hatalı alan kırmızı çerçeve + altında kısa mesaj */
+#semApplyModal .sem-modal-error { display: none; color: var(--sem-accent, #cb333b); font-size: 13px; margin-top: 6px; }
+#semApplyModal .is-invalid > .sem-modal-error { display: block; }
+#semApplyModal .is-invalid input:not([type="radio"]):not([type="checkbox"]),
+#semApplyModal .is-invalid select,
+#semApplyModal .is-invalid textarea { border-color: var(--sem-accent, #cb333b) !important; }
+#semApplyModal .sem-modal-check.is-invalid label { color: var(--sem-accent, #cb333b) !important; }
+#semApplyModal .sem-modal-check { flex-wrap: wrap; }
+#semApplyModal .sem-modal-check > .sem-modal-error { flex-basis: 100%; margin-top: 2px; }
+
+/* Gönderim sonrası teşekkür ekranı */
+#semApplyModal .sem-modal-success { text-align: center; padding: 24px 8px 12px; color: #334155; }
+#semApplyModal .sem-modal-success i {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 64px; height: 64px; border-radius: 50%; font-size: 30px;
+  background: rgba(0, 161, 170, .12); color: var(--kun-turkuaz, #00A1AA); margin-bottom: 16px;
+}
+#semApplyModal .sem-modal-success h4 { color: var(--sem-primary, #002855) !important; font-size: 20px; margin: 0 0 8px; }
+#semApplyModal .sem-modal-success p { margin: 0; font-size: 15px; color: #475569; }
+@media (max-width: 575px) {
+  #semApplyModal .modal-header,
+  #semApplyModal .modal-footer { padding-left: 18px; padding-right: 18px; }
+  #semApplyModal .modal-body { padding: 18px !important; }
+}
+
 /* ── Anasayfa — section aralarındaki fazla boşluğu azalt ─── */
 .sem-home .rbt-banner-area.ptb--100 { padding: 60px 0 !important; }
 .sem-home .rbt-section-gap { padding: 64px 0; }
@@ -1355,9 +1449,14 @@ body { background: #f8f9fa !important; }
 .sem-hero-slider .swiper,
 .sem-hero-slider .swiper-wrapper,
 .sem-hero-slider .swiper-slide { height: auto; }
+/* Yükseklik ekran YÜKSEKLİĞİNE göre ölçeklenir: aynı inç ekranda Windows ölçekleme
+   (%125/%150), tarayıcı zoom'u veya araç çubukları görünür alanı küçülttüğünde
+   sabit 640px hero tüm ekranı kaplıyordu. Üst sınır 640px, alt sınır 440px.
+   svh desteklemeyen tarayıcı bir önceki vh satırını kullanır. */
 .sem-hero-slide {
   position: relative;
-  min-height: 640px;
+  min-height: clamp(440px, 68vh, 640px);
+  min-height: clamp(440px, 68svh, 640px);
   display: flex;
   align-items: center;
   background-size: cover;
@@ -1401,7 +1500,7 @@ body { background: #f8f9fa !important; }
 /* okları görselin üstünde belirgin tut */
 .sem-hero-slider .rbt-swiper-arrow { z-index: 5; }
 @media (max-width: 767px) {
-  .sem-hero-slide { min-height: 420px; }
+  .sem-hero-slide { min-height: clamp(380px, 60vh, 460px); min-height: clamp(380px, 60svh, 460px); }
   .sem-hero-overlay { background: linear-gradient(90deg, rgba(0,40,85,.88) 0%, rgba(0,40,85,.72) 100%); }
 }
 

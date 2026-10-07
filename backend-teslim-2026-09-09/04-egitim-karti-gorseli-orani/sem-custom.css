@@ -1,0 +1,21 @@
+/*
+  DOSYA: assets/css/sem-custom.css
+  NE DEĞİŞTİ: Tüm eğitim kartı görsellerinin oranı dikeyden (4:5, Instagram post)
+  yataya (3:2, 1500x1000) çevrildi. Bu tek CSS kuralı site genelindeki TÜM
+  eğitim kartlarını (Tüm Eğitimler, Hizmet İçi Eğitimler, Anasayfa) etkiliyor.
+
+  BACKEND NOTU: Yeni eğitim görseli eklerken 1500x1000 boyutunda, yatay olmalı.
+*/
+
+/* ── ÖNCESİ: Görsel oranı — 4:5 dikey (Instagram post) ───
+.sem-course-card .rbt-card-img,
+.rbt-card.variation-01 .rbt-card-img { aspect-ratio: 4 / 5; overflow: hidden; }
+──────────────────────────────────────────────────────── */
+
+/* ── SONRASI: Görsel oranı — 1500x1000 yatay (3:2) ─── */
+.sem-course-card .rbt-card-img,
+.rbt-card.variation-01 .rbt-card-img { aspect-ratio: 3 / 2; overflow: hidden; }
+.sem-course-card .rbt-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* Anasayfa "Öne Çıkan Eğitimler" bölümü de aynı orana geçirildi (önceden ayrı 4:5 idi) */
+#sem-populer-egitimler .sem-course-card .rbt-card-img { aspect-ratio: 3 / 2; }

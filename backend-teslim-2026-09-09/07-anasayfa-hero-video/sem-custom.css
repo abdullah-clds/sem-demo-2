@@ -1,0 +1,29 @@
+/*
+  DOSYA: assets/css/sem-custom.css
+  Hero video için gerekli stiller. Ayrıca hero alanının min-height'i
+  540px'ten 640px'e çıkarıldı (video ile daha iyi orantı için).
+*/
+
+/* ÖNCESİ: min-height: 540px; */
+.sem-hero-slide {
+  position: relative;
+  min-height: 640px; /* SONRASI */
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.sem-hero-overlay {
+  position: absolute; inset: 0; z-index: 1; /* z-index: 1 eklendi, video'nun üstünde kalması için */
+  background: linear-gradient(90deg, rgba(0,40,85,.85) 0%, rgba(0,40,85,.60) 42%, rgba(0,40,85,.15) 100%);
+}
+
+/* YENİ — Video arka plan — mobil/masaüstü ayrı kaynak, gerçek video dosyası gelene kadar
+   poster (mevcut hero görseli) fallback olarak görünür, yükleme başarısız olursa
+   sem-hero-slide'ın kendi background-image'ı zaten arkada durduğu için sayfa bozulmaz. */
+.sem-hero-video {
+  position: absolute; inset: 0; z-index: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+}

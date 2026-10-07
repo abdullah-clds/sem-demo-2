@@ -1,0 +1,28 @@
+<!--
+  SAYFA: anasayfa.html — hero (kayan görsel/slider) alanı, 1. slayt
+
+  NE DEĞİŞTİ: Mobil/masaüstü için ayrı video oynatma altyapısı eklendi.
+  Şu an GERÇEK VİDEO DOSYASI YOK — <source> etiketleri assets/videos/ klasöründe
+  olmayan dosyalara işaret ediyor, video yüklenemezse tarayıcı otomatik olarak
+  arka planda duran background-image (poster) görselini gösterir, sayfa BOZULMAZ.
+
+  BACKEND İÇİN YAPILACAK: Gerçek tanıtım videosu geldiğinde, aşağıdaki 2 dosyayı
+  assets/videos/ klasörüne eklemeniz yeterli — kod değişikliği GEREKMEZ:
+    - assets/videos/sem-hero-mobile.mp4   (767px ve altı ekranlar için)
+    - assets/videos/sem-hero-desktop.mp4  (768px ve üzeri ekranlar için)
+-->
+
+<!-- ═══ ÖNCESİ ═══
+<div class="sem-hero-slide" style="background-image:url('./assets/images/course/sem-slider.jpg')">
+  <div class="sem-hero-overlay"></div>
+  ...
+════════════════ -->
+
+<!-- ═══ SONRASI ═══ -->
+<div class="sem-hero-slide sem-hero-slide--video" style="background-image:url('./assets/images/course/sem-slider.jpg')">
+  <video class="sem-hero-video" poster="./assets/images/course/sem-slider.jpg" autoplay muted loop playsinline preload="none">
+    <source src="./assets/videos/sem-hero-mobile.mp4" type="video/mp4" media="(max-width: 767px)">
+    <source src="./assets/videos/sem-hero-desktop.mp4" type="video/mp4">
+  </video>
+  <div class="sem-hero-overlay"></div>
+  <!-- ... (içerik aynı) ... -->

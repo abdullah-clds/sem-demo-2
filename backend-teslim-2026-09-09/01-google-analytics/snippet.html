@@ -1,0 +1,18 @@
+<!--
+  NEREYE EKLENDİ: Tüm sayfaların <head> içine, </head> etiketinden hemen önce
+  (sem-kurumsal.css link'inden sonra).
+
+  DURUM: PLACEHOLDER Ölçüm Kimliği kullanılıyor (G-XXXXXXXXXX).
+  YAPILACAK: Gerçek GA4 Measurement ID geldiğinde, aşağıdaki bloktaki
+  G-XXXXXXXXXX ifadesinin HER İKİ geçtiği yer (script src'de ve gtag('config', ...) içinde)
+  gerçek ID ile değiştirilmeli. Tüm sayfalarda birebir aynı blok olduğu için
+  toplu bul-değiştir (find & replace) ile tek seferde yapılabilir.
+-->
+<!-- Google Analytics (GA4) — GERÇEK ÖLÇÜM KİMLİĞİ BEKLENİYOR (placeholder: G-XXXXXXXXXX) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>

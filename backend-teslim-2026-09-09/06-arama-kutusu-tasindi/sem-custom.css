@@ -1,0 +1,14 @@
+/*
+  DOSYA: assets/css/sem-custom.css
+  Yeni üst arama kutusunun stili (id: .sem-course-top-search — 06/html-degisiklik.html'deki forma ait)
+*/
+.sem-course-top-search { max-width: 640px; margin: 0 auto; }
+.sem-course-top-search input {
+  border: 1px solid rgba(0, 40, 85, .16);
+  border-radius: 0;
+  background: #fff;
+}
+.sem-course-top-search input:focus {
+  border-color: var(--sem-primary, #002855);
+  outline: none;
+}

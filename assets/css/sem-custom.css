@@ -1471,9 +1471,9 @@ body.sem-detay { background: #fff !important; }
 .rbt-card .rbt-card-img,
 .sem-duyuru-gorsel { border-radius: 0 !important; }
 
-/* ── Anasayfa "Öne Çıkan Eğitimler" — kaydırmalı kart şeridi (carousel).
-   Udemy / Medipol SEM / Antalya Bilim SEM anasayfa deseni: solda başlık, sağda
-   "Tüm Eğitimler" + oklar; tek satırda 4 kompakt dikey kart. Görsel 3:2 aynen korunur. ── */
+/* ── Anasayfa "Öne Çıkan Eğitimler" — alt alta dizilen kart ızgarası.
+   Solda başlık, sağda "Tüm Eğitimler"; satırda 3 kart (eski carousel ile aynı
+   kart genişliği ve 28px aralık), tablette 2, mobilde 1. Görsel 3:2 aynen korunur. ── */
 #sem-populer-egitimler .sem-featured-head {
   display: flex; align-items: flex-end; justify-content: space-between;
   gap: 16px; flex-wrap: wrap; margin-bottom: 24px;
@@ -1485,20 +1485,17 @@ body.sem-detay { background: #fff !important; }
   font-size: 15px; font-weight: 600; color: var(--sem-primary, #002855);
 }
 #sem-populer-egitimler .sem-featured-all:hover { color: var(--kun-turkuaz, #00A1AA); }
-#sem-populer-egitimler .sem-featured-nav { display: flex; gap: 8px; }
-#sem-populer-egitimler .sem-featured-nav button {
-  width: 42px; height: 42px; display: inline-flex; align-items: center; justify-content: center;
-  background: #fff; color: var(--sem-primary, #002855);
-  border: 1px solid rgba(0, 40, 85, 0.18); border-radius: var(--sem-radius);
-  font-size: 20px; cursor: pointer; transition: background .2s, color .2s, border-color .2s;
+#sem-populer-egitimler .sem-featured-list {
+  display: grid; grid-template-columns: 1fr; gap: 16px;
 }
-#sem-populer-egitimler .sem-featured-nav button:hover:not(.swiper-button-disabled) {
-  background: var(--sem-primary, #002855); border-color: var(--sem-primary, #002855); color: #fff;
+@media (min-width: 576px) {
+  #sem-populer-egitimler .sem-featured-list { grid-template-columns: repeat(2, 1fr); gap: 20px; }
 }
-#sem-populer-egitimler .sem-featured-nav .swiper-button-disabled { opacity: .35; cursor: default; }
-/* hover'da yukarı kalkan kart + gölge kırpılmasın */
-#sem-populer-egitimler .sem-featured-swiper { padding: 8px 4px 16px; margin: -8px -4px -16px; }
-#sem-populer-egitimler .swiper-slide { height: auto; }
+@media (min-width: 992px) {
+  #sem-populer-egitimler .sem-featured-list { grid-template-columns: repeat(3, 1fr); gap: 28px; }
+}
+#sem-populer-egitimler .sem-featured-item { display: flex; }
+#sem-populer-egitimler .sem-featured-item > .sem-course-card { width: 100%; }
 #sem-populer-egitimler .sem-course-card .rbt-card-img { aspect-ratio: 3 / 2; }
 #sem-populer-egitimler .sem-course-card .card-body { padding: 22px 22px 6px; }
 #sem-populer-egitimler .sem-course-card .card-footer { padding: 14px 22px 20px; }
@@ -1511,15 +1508,6 @@ body.sem-detay { background: #fff !important; }
 #sem-populer-egitimler .sem-course-card .card-footer .fw-bold { font-size: 17px; }
 #sem-populer-egitimler .sem-course-card .rbt-card-img img { transition: transform .5s ease; }
 #sem-populer-egitimler .sem-course-card:hover .rbt-card-img img { transform: scale(1.04); }
-/* ilerleme çubuğu — şeridin devamı olduğunu gösterir */
-#sem-populer-egitimler .sem-featured-progress {
-  position: relative; height: 3px; margin-top: 28px;
-  background: rgba(0, 40, 85, 0.10); border-radius: var(--sem-radius); overflow: hidden;
-}
-#sem-populer-egitimler .sem-featured-progress .swiper-pagination-progressbar-fill {
-  position: absolute; inset: 0; background: var(--kun-turkuaz, #00A1AA);
-  transform-origin: left top;
-}
 /* durum rozeti görselin sol üst köşesinde (Domestika / Udemy vitrin deseni) */
 #sem-populer-egitimler .sem-course-card { position: relative; }
 #sem-populer-egitimler .sem-course-card .sem-status-badge {
@@ -1531,7 +1519,6 @@ body.sem-detay { background: #fff !important; }
 #sem-populer-egitimler .sem-course-card .card-footer .gap-3 { gap: 12px !important; }
 @media (max-width: 575px) {
   #sem-populer-egitimler .sem-featured-all { font-size: 14px; }
-  #sem-populer-egitimler .sem-featured-nav button { width: 36px; height: 36px; font-size: 18px; }
 }
 
 /* ══ Navbar arama — macOS Spotlight tasarımı ═══════════════════════════

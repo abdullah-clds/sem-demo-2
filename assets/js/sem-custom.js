@@ -349,28 +349,6 @@ document.addEventListener('DOMContentLoaded', function () {
       if (listBtn) listBtn.classList.add('active');
     }
 
-    // Anasayfa "Öne Çıkan Eğitimler" kaydırmalı şerit
-    var featured = document.querySelector('.sem-featured-swiper');
-    if (featured && typeof Swiper !== 'undefined') {
-      new Swiper(featured, {
-        slidesPerView: 1.15,
-        spaceBetween: 16,
-        watchOverflow: true,
-        navigation: {
-          nextEl: '#sem-populer-egitimler .sem-featured-next',
-          prevEl: '#sem-populer-egitimler .sem-featured-prev'
-        },
-        pagination: {
-          el: '#sem-populer-egitimler .sem-featured-progress',
-          type: 'progressbar'
-        },
-        breakpoints: {
-          576: { slidesPerView: 2, spaceBetween: 20 },
-          992: { slidesPerView: 3, spaceBetween: 28 }
-        }
-      });
-    }
-
     // Navbar arama — Apple glass katmanı
     // Katman <body>'ye taşınır: sticky header'daki transform, position:fixed'i
     // header'a hapsetmesin. Aç/kapa sınıfları vendor main.js ile aynı.

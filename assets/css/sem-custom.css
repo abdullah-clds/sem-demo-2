@@ -1500,11 +1500,50 @@ body { background: #f8f9fa !important; }
   transition: background .2s, color .2s;
 }
 .sem-hero-btn:hover { background: var(--kun-sari, #F2A900); color: var(--sem-primary, #002855) !important; }
-/* okları görselin üstünde belirgin tut */
-.sem-hero-slider .rbt-swiper-arrow { z-index: 5; }
+/* okları görselin üstünde belirgin tut — tema hover'a kadar opacity:0 veriyor,
+   dokunmatikte hover olmadığı için oklar hiç görünmüyordu. Her zaman koyu turuncu. */
+.sem-hero-slider .rbt-swiper-arrow,
+.sem-hero-slider .rbt-swiper-arrow.swiper-button-disabled {
+  z-index: 5;
+  opacity: 1 !important;
+  background-color: #d97706 !important;
+  border-color: #d97706 !important;
+  backdrop-filter: none;
+  box-shadow: 0 6px 18px rgba(0,0,0,.28);
+}
+.sem-hero-slider .rbt-swiper-arrow::after { background-color: #d97706 !important; }
+.sem-hero-slider .rbt-swiper-arrow i.rbt-icon,
+.sem-hero-slider .rbt-swiper-arrow i.rbt-icon-top { color: #fff !important; }
+.sem-hero-slider .rbt-swiper-arrow:hover,
+.sem-hero-slider .rbt-swiper-arrow:hover::after {
+  background-color: #b45309 !important;
+  border-color: #b45309 !important;
+}
+.sem-hero-slider .rbt-swiper-arrow:hover i.rbt-icon,
+.sem-hero-slider .rbt-swiper-arrow:hover i.rbt-icon-top { color: #fff !important; }
+/* masaüstünde sol ok metnin üstüne binmesin */
+@media (min-width: 768px) {
+  .sem-hero-slider .sem-hero-content { padding-left: 48px; }
+}
 @media (max-width: 767px) {
-  .sem-hero-slide { min-height: clamp(380px, 60vh, 460px); min-height: clamp(380px, 60svh, 460px); }
+  /* mobilde de yatay dikdörtgen kalsın (kareye/dikeye düşmesin) */
+  .sem-hero-slide {
+    min-height: 0;
+    aspect-ratio: 16 / 10;
+    padding: 18px 0 16px;
+  }
   .sem-hero-overlay { background: linear-gradient(90deg, rgba(0,40,85,.88) 0%, rgba(0,40,85,.72) 100%); }
+  .sem-hero-tag { font-size: 10px; padding: 4px 10px; margin-bottom: 8px; }
+  .sem-hero-title { font-size: 20px; line-height: 1.2; }
+  .sem-hero-desc { display: none; }
+  .sem-hero-btn { margin-top: 12px; font-size: 13px; padding: 9px 18px; }
+  /* oklar küçülüp sağ alta alınır, metnin üstüne binmesin */
+  .sem-hero-slider .rbt-swiper-arrow {
+    width: 38px; height: 38px;
+    top: auto; bottom: 14px; transform: none;
+  }
+  .sem-hero-slider .rbt-swiper-arrow.rbt-arrow-left { left: auto; right: 62px; }
+  .sem-hero-slider .rbt-swiper-arrow.rbt-arrow-right { right: 16px; }
 }
 
 /* ══ İçerik şablonu (.sem-icerik) — CMS'ten gelen düz metin/HTML otomatik

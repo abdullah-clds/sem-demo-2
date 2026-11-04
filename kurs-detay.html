@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="./assets/css/plugins/jodit.min.css">
 
     <link rel="stylesheet" href="./assets/css/styles.css">
-    <link rel="stylesheet" href="./assets/css/sem-custom.css?v=20261026">
+    <link rel="stylesheet" href="./assets/css/sem-custom.css?v=20261104">
     <link rel="stylesheet" href="./assets/css/sem-kurumsal.css">
     <!-- Google Analytics (GA4) — GERÇEK ÖLÇÜM KİMLİĞİ BEKLENİYOR (placeholder: G-XXXXXXXXXX), bkz. README.md -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -697,13 +697,7 @@
                                         <a href="#ogrenecekleriniz">Öğrenecekleriniz</a>
                                     </li>
                                     <li>
-                                        <a href="#overview">Genel Bakış</a>
-                                    </li>
-                                    <li>
                                         <a href="#coursecontent">Eğitim İçeriği</a>
-                                    </li>
-                                    <li>
-                                        <a href="#details">Eğitim Takvimi</a>
                                     </li>
                                     <li>
                                         <a href="#intructor">Eğitmen</a>
@@ -1129,52 +1123,56 @@
 
                                 <div class="col-lg-12">
                                 <h4 class="rbt-title-style-3">Eğitim Takvimi</h4>
-                                    <table width="835">
-                                        <tbody>
-                                            <tr>
-                                                <td width="111">&nbsp;</td>
-                                                <td width="194" style="font-size:17px"><strong>Eğitim Başlangıç Tarihi</strong> </td>
-                                                <td width="194" style="font-size:17px"><strong>Eğitim Bitiş Tarihi</strong> </td>
-                                                <td width="170" style="font-size:17px"><strong>Son Kayıt Tarihi</strong> </td>
-                                                <td width="166" style="font-size:17px"><strong>Son İptal Tarihi</strong> </td>
-                                            </tr>
-                                            <tr>
-                                                <td width="111" style="font-size:15px;">1. Eğitim Grubu&nbsp;</td>
-                                                <td width="194" style="font-size:15px;">17 Ekim 2025 Cuma</td>
-                                                <td width="194" style="font-size:15px;">16 Kasım 2025 Pazar</td>
-                                                <td width="170" style="font-size:15px;">15 Ekim 2025 Çarşamba</td>
-                                                <td width="166" style="font-size:15px;">16 Ekim 2025 Perşembe</td>
-                                            </tr>
-                                            <tr>
-                                                <td width="111" style="font-size:15px;">2. Eğitim Grubu&nbsp;</td>
-                                                <td width="194" style="font-size:15px;">5 Kasım 2025 Çarşamba</td>
-                                                <td width="194" style="font-size:15px;">5 Aralık 2025 Cuma</td>
-                                                <td width="170" style="font-size:15px;">3 Kasım 2025 Pazartesi</td>
-                                                <td width="166" style="font-size:15px;">4 Kasım 2025 Salı</td>
-                                            </tr>
-                                            <tr>
-                                                <td width="111" style="font-size:15px;">3. Eğitim Grubu&nbsp;</td>
-                                                <td width="194" style="font-size:15px;">19 Kasım 2025 Çarşamba</td>
-                                                <td width="194" style="font-size:15px;">19 Aralık 2025 Cuma</td>
-                                                <td width="170" style="font-size:15px;">17 Kasım 2025 Pazartesi</td>
-                                                <td width="166" style="font-size:15px;">18 Kasım 2025 Salı</td>
-                                            </tr>
-                                            <tr>
-                                                <td width="111" style="font-size:15px;">4. Eğitim<br>Grubu</td>
-                                                <td width="194" style="font-size:15px;">26 Kasım 2025 Çarşamba</td>
-                                                <td width="194" style="font-size:15px;">26 Aralık 2025 Cuma</td>
-                                                <td width="170" style="font-size:15px;">24 Kasım 2025 Pazartesi</td>
-                                                <td width="166" style="font-size:15px;">25 Kasım 2025 Salı</td>
-                                            </tr>   
-                                            <tr>
-                                                <td width="111" style="font-size:15px;">5. Eğitim&nbsp;<br>Grubu</td>
-                                                <td width="194" style="font-size:15px;">19 Aralık 2025 Cuma</td>
-                                                <td width="194" style="font-size:15px;">31 Aralık 2025 Çarşamba</td>
-                                                <td width="170" style="font-size:15px;">29 Aralık 2025<br>Pazartesi</td>
-                                                <td width="166" style="font-size:15px;">30 Aralık 2025<br>Salı</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                    <div class="sem-takvim-wrap">
+                                        <table class="sem-takvim-table">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Grup</th>
+                                                    <th scope="col">Başlangıç Tarihi</th>
+                                                    <th scope="col">Bitiş Tarihi</th>
+                                                    <th scope="col">Son Kayıt Tarihi</th>
+                                                    <th scope="col">Son İptal Tarihi</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row" data-label="Grup">1. Eğitim Grubu</th>
+                                                    <td data-label="Başlangıç Tarihi">17 Ekim 2025 Cuma</td>
+                                                    <td data-label="Bitiş Tarihi">16 Kasım 2025 Pazar</td>
+                                                    <td data-label="Son Kayıt Tarihi">15 Ekim 2025 Çarşamba</td>
+                                                    <td data-label="Son İptal Tarihi">16 Ekim 2025 Perşembe</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" data-label="Grup">2. Eğitim Grubu</th>
+                                                    <td data-label="Başlangıç Tarihi">5 Kasım 2025 Çarşamba</td>
+                                                    <td data-label="Bitiş Tarihi">5 Aralık 2025 Cuma</td>
+                                                    <td data-label="Son Kayıt Tarihi">3 Kasım 2025 Pazartesi</td>
+                                                    <td data-label="Son İptal Tarihi">4 Kasım 2025 Salı</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" data-label="Grup">3. Eğitim Grubu</th>
+                                                    <td data-label="Başlangıç Tarihi">19 Kasım 2025 Çarşamba</td>
+                                                    <td data-label="Bitiş Tarihi">19 Aralık 2025 Cuma</td>
+                                                    <td data-label="Son Kayıt Tarihi">17 Kasım 2025 Pazartesi</td>
+                                                    <td data-label="Son İptal Tarihi">18 Kasım 2025 Salı</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" data-label="Grup">4. Eğitim Grubu</th>
+                                                    <td data-label="Başlangıç Tarihi">26 Kasım 2025 Çarşamba</td>
+                                                    <td data-label="Bitiş Tarihi">26 Aralık 2025 Cuma</td>
+                                                    <td data-label="Son Kayıt Tarihi">24 Kasım 2025 Pazartesi</td>
+                                                    <td data-label="Son İptal Tarihi">25 Kasım 2025 Salı</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" data-label="Grup">5. Eğitim Grubu</th>
+                                                    <td data-label="Başlangıç Tarihi">19 Aralık 2025 Cuma</td>
+                                                    <td data-label="Bitiş Tarihi">31 Aralık 2025 Çarşamba</td>
+                                                    <td data-label="Son Kayıt Tarihi">29 Aralık 2025 Pazartesi</td>
+                                                    <td data-label="Son İptal Tarihi">30 Aralık 2025 Salı</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                     
                                 </div>
                                 <!-- End Feture Box  -->

@@ -1979,3 +1979,102 @@ html.side-nav-opened, html.side-nav-opened body { overflow: hidden; }
   .sem-ska-goal img { width: 72px; flex-basis: 72px; }
   .sem-ska-goal-title { font-size: 18px !important; }
 }
+
+/* ===== Kurs detay — Eğitim Takvimi tablosu ===== */
+.sem-takvim-wrap {
+  margin-top: 16px;
+  border: 1px solid rgba(0, 40, 85, 0.12);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.sem-takvim-table {
+  width: 100%;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+.sem-takvim-table thead th {
+  background: var(--sem-primary);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  padding: 14px 16px;
+  border: 0;
+  text-align: left;
+  white-space: nowrap;
+}
+.sem-takvim-table tbody th,
+.sem-takvim-table tbody td {
+  padding: 13px 16px;
+  border: 0;
+  border-top: 1px solid rgba(0, 40, 85, 0.08);
+  text-align: left;
+  vertical-align: middle;
+  color: var(--sem-text);
+}
+.sem-takvim-table tbody th {
+  font-weight: 600;
+  color: var(--sem-primary);
+  white-space: nowrap;
+}
+.sem-takvim-table tbody tr:nth-child(even) {
+  background: var(--sem-bg-2);
+}
+.sem-takvim-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+.sem-takvim-table tbody tr:hover {
+  background: rgba(0, 40, 85, 0.05);
+}
+.sem-takvim-table tbody td:nth-child(4),
+.sem-takvim-table tbody td:nth-child(5) {
+  color: var(--sem-accent);
+  font-weight: 500;
+}
+@media (max-width: 767px) {
+  .sem-takvim-wrap {
+    border: 0;
+    border-radius: 0;
+    overflow: visible;
+  }
+  .sem-takvim-table thead {
+    display: none;
+  }
+  .sem-takvim-table,
+  .sem-takvim-table tbody,
+  .sem-takvim-table tr,
+  .sem-takvim-table th,
+  .sem-takvim-table td {
+    display: block;
+    width: 100%;
+  }
+  .sem-takvim-table tbody tr {
+    border: 1px solid rgba(0, 40, 85, 0.12);
+    border-radius: 8px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    background: #fff !important;
+  }
+  .sem-takvim-table tbody th {
+    background: var(--sem-primary);
+    color: #fff;
+    border-top: 0;
+    padding: 10px 14px;
+  }
+  .sem-takvim-table tbody td {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 14px;
+  }
+  .sem-takvim-table tbody td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #64748b;
+    font-size: 13px;
+  }
+  .sem-takvim-table tbody td:nth-of-type(1) {
+    border-top: 0;
+  }
+}

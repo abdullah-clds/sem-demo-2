@@ -1,0 +1,69 @@
+/* ── Hizmet içi eğitimler — personel girişi penceresi ── */
+.sem-personel-modal .modal-content {
+  border: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  color: var(--sem-text);
+  box-shadow: 0 24px 60px rgba(0, 26, 58, .28);
+}
+body.sem-personel-kilit .modal-backdrop.show { opacity: .72; }
+body.sem-personel-kilit .modal-backdrop { background: var(--sem-footer-bg); backdrop-filter: blur(4px); }
+.sem-personel-ust {
+  background: var(--sem-primary);
+  padding: 22px 24px 46px;
+  text-align: center;
+}
+.sem-personel-logo { max-height: 48px; width: auto; }
+.sem-personel-govde {
+  padding: 30px 32px 28px;
+  text-align: center;
+}
+.sem-personel-ikon {
+  width: 56px; height: 56px;
+  margin: -58px auto 14px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--sem-primary);
+  font-size: 22px;
+  box-shadow: 0 6px 18px rgba(0, 40, 85, .18);
+  position: relative;
+}
+.sem-personel-baslik {
+  font-size: 21px !important;
+  font-weight: 700;
+  color: var(--sem-primary) !important;
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+.sem-personel-metin {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #475569;
+  margin-bottom: 22px;
+}
+.sem-personel-giris {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 13px 20px;
+  border-radius: var(--sem-radius);
+  background: var(--sem-primary);
+  color: #fff !important;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color .2s ease;
+}
+.sem-personel-giris:hover { background: var(--sem-navy-light); }
+.sem-personel-vazgec {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 14px;
+  color: #64748b !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.sem-personel-vazgec:hover { color: var(--sem-primary) !important; }

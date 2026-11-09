@@ -1,6 +1,6 @@
 # Backend Ekibine — Değişiklikler (2026-11-09)
 
-Bu klasör sitenin kopyası **DEĞİLDİR**. Yalnızca bu turda eklenen 2 alanın kod
+Bu klasör sitenin kopyası **DEĞİLDİR**. Yalnızca bu turda eklenen 3 alanın kod
 parçacıklarıdır. Her klasörde: `html-degisiklik.html` (nereye ne basılacak) +
 `sem-custom.css` / `sem-custom.js` (dosyanın SONUNA eklenecek blok).
 
@@ -8,6 +8,7 @@ parçacıklarıdır. Her klasörde: `html-degisiklik.html` (nereye ne basılacak
 |---|---|---|---|
 | [01](01-egitim-karti-tarih-rozeti/) | Eğitim kartı | "Kayıtlar Açık" rozetinin yanına aynı ölçüde, mavi **tarih rozeti** eklendi (anasayfa vitrininde görselin sağ üstünde). | `<time datetime="YYYY-MM-DD">` içine en yakın grubun başlangıç tarihini basmak. |
 | [02](02-egitim-takvimi/) | Eğitim detay → Eğitim Takvimi | Tablo kaldırıldı. Solda **aylık takvim**, sağda **grup detayları** var. | Her grup için bir `<li class="sem-takvim-grup">` basmak. **Takvim JS ile otomatik çizilir.** |
+| [03](03-hizmet-ici-personel-girisi/) | Hizmet İçi Eğitimler | Sayfa açılınca **"Kapadokya Üniversitesi personeli misiniz?"** penceresi çıkıyor. | Personel girişi yapmış kullanıcıya modal bloğunu **basmamak**. |
 
 ---
 
@@ -32,6 +33,16 @@ parçacıklarıdır. Her klasörde: `html-degisiklik.html` (nereye ne basılacak
 
 ---
 
+## 03 — Personel girişi penceresi
+- **En kolay yol:** Kullanıcı personel olarak giriş yaptıysa `#semPersonelModal` bloğunu basmayın. Başka bir şey gerekmez.
+- Alternatif: Bloğu hep basın ve personel için `<script>window.__semPersonel = true;</script>` ekleyin (`window.__semAuth` ile aynı mantık).
+- "Personel Girişi Yap" linkinin `href`'ini gerçek personel giriş adresinizle (SSO vb.) değiştirin. `returnUrl` ile bu sayfaya dönülür.
+- "Personel değilim" linki `/egitimler`'e gider.
+- JS: `03/sem-custom.js` bloğu da `02` ile aynı yere eklenir; `initRevizyon()` içinde `initPersonelModal()` çağrılır.
+- ⚠️ Pencere yalnızca arayüzdür. **Asıl yetki kontrolü sunucuda yapılmalı.**
+
+---
+
 ## Taslak (semtaslak.kapadokya.edu.tr) ile eşitleme
 Statik depo bu turda canlı taslağa göre eşitlendi, yani **tasarım ekibinin elindeki hal artık sizin taslağınızla aynı**:
 - Header, menüler, kategoriler, gerçek eğitim/duyuru içerikleri, SSS, KVKK, Hakkımızda ve iletişim formu taslaktan alındı.
@@ -39,4 +50,4 @@ Statik depo bu turda canlı taslağa göre eşitlendi, yani **tasarım ekibinin 
 - **Taslakta henüz olmayan önceki teslimlerimiz korunuyor, lütfen uygulayın:**
   - Footer "Hızlı Erişim" + "Kurumsal" sütunları (2026-10-07 / 02). Blog linki ve Twitter ikonu bu turda kaldırıldı.
   - Eğitim detay yan menüsü (tarih/kontenjan alanları) ve kapak altı gezinme menüsünün kaldırılması (2026-11-04).
-- Önbellek sürümü: `?v=202611092`. Sizde zaten hash ile otomatik üretiliyor, işlem gerekmez.
+- Önbellek sürümü: `?v=202611093`. Sizde zaten hash ile otomatik üretiliyor, işlem gerekmez.

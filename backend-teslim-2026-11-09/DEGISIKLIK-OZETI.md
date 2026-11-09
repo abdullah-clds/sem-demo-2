@@ -38,7 +38,6 @@ parçacıklarıdır. Her klasörde: `html-degisiklik.html` (nereye ne basılacak
 - **En kolay yol:** Kullanıcı personel olarak giriş yaptıysa `#semPersonelModal` bloğunu basmayın. Başka bir şey gerekmez.
 - Alternatif: Bloğu hep basın ve personel için `<script>window.__semPersonel = true;</script>` ekleyin (`window.__semAuth` ile aynı mantık).
 - "Personel Girişi Yap" linkinin `href`'ini gerçek personel giriş adresinizle (SSO vb.) değiştirin. `returnUrl` ile bu sayfaya dönülür.
-- "Personel değilim" linki `/egitimler`'e gider.
 - JS: `03/sem-custom.js` bloğu da `02` ile aynı yere eklenir; `initRevizyon()` içinde `initPersonelModal()` çağrılır.
 - ⚠️ Pencere yalnızca arayüzdür. **Asıl yetki kontrolü sunucuda yapılmalı.**
 
@@ -51,4 +50,4 @@ Statik depo bu turda canlı taslağa göre eşitlendi, yani **tasarım ekibinin 
 - **Taslakta henüz olmayan önceki teslimlerimiz korunuyor, lütfen uygulayın:**
   - Footer "Hızlı Erişim" + "Kurumsal" sütunları (2026-10-07 / 02). Blog linki ve Twitter ikonu bu turda kaldırıldı.
   - Eğitim detay yan menüsü (tarih/kontenjan alanları) ve kapak altı gezinme menüsünün kaldırılması (2026-11-04).
-- Önbellek sürümü: `?v=202611094`. Sizde zaten hash ile otomatik üretiliyor, işlem gerekmez.
+- Önbellek sürümü: `?v=202611095`. Sizde zaten hash ile otomatik üretiliyor, işlem gerekmez.

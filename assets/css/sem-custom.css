@@ -2361,12 +2361,3 @@ body.sem-personel-kilit .modal-backdrop { background: var(--sem-footer-bg); back
   transition: background-color .2s ease;
 }
 .sem-personel-giris:hover { background: var(--sem-navy-light); }
-.sem-personel-vazgec {
-  display: inline-block;
-  margin-top: 14px;
-  font-size: 14px;
-  color: #64748b !important;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-.sem-personel-vazgec:hover { color: var(--sem-primary) !important; }

@@ -1,0 +1,25 @@
+/* ── Eğitim kartı: durum + tarih rozetleri yan yana ──
+   Backend: <time datetime="YYYY-MM-DD"> içine eğitimin (en yakın grubun) başlangıç tarihini basar. */
+.sem-card-badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+.sem-course-card .sem-card-badges .sem-status-badge { align-self: auto; }
+.sem-date-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .45em;
+  padding: .2em .7em;
+  border-radius: var(--sem-radius);
+  background: rgba(0, 40, 85, .06);
+  border: 1px solid rgba(0, 40, 85, .12);
+  color: var(--sem-primary);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+.sem-date-badge i { font-size: 12px; opacity: .8; }
+

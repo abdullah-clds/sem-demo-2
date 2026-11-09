@@ -60,13 +60,31 @@ p  { font-size: 16px !important; line-height: 1.6 !important; }
 
 .sem-course-card .rbt-card-img,
 .rbt-card.variation-01 .rbt-card-img {
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 3 / 2;
   overflow: hidden;
 }
 .sem-course-card .rbt-card-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
+}
+
+/* Gorseli olmayan egitimlerde jenerik placeholder yerine kurumsal logo gosterilir */
+.sem-course-img-placeholder {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 3 / 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--sem-primary) 0%, var(--sem-navy-light) 100%);
+}
+.sem-course-img-placeholder img {
+  width: 45% !important;
+  max-width: 220px;
+  height: auto !important;
+  object-fit: contain !important;
   display: block;
 }
 
@@ -101,6 +119,33 @@ p  { font-size: 16px !important; line-height: 1.6 !important; }
   font-size: 14px;
 }
 
+/* ── 2c. Eğitim Kartı — pasif durum (Yakında / Kayıtlar Kapandı) ──────────
+   data-durum attribute'una göre otomatik tetiklenir, kart HTML'inde zaten
+   mevcut. Yeni bir kod/JS eklemeye gerek yok. ────────────────────────── */
+.sem-course-card[data-durum="yakinda"] .rbt-card-img,
+.sem-course-card[data-durum="kapandi"] .rbt-card-img {
+  position: relative;
+}
+.sem-course-card[data-durum="yakinda"] .rbt-card-img img,
+.sem-course-card[data-durum="kapandi"] .rbt-card-img img {
+  filter: grayscale(70%);
+  opacity: .75;
+}
+.sem-course-card[data-durum="yakinda"] .rbt-card-title,
+.sem-course-card[data-durum="kapandi"] .rbt-card-title {
+  opacity: .75;
+}
+.sem-course-card[data-durum="yakinda"] .sem-apply-btn,
+.sem-course-card[data-durum="kapandi"] .sem-apply-btn {
+  background: var(--kun-gri, #53565a) !important;
+  background-image: none !important;
+  opacity: .85;
+}
+.sem-course-card[data-durum="yakinda"] .sem-apply-btn:hover,
+.sem-course-card[data-durum="kapandi"] .sem-apply-btn:hover {
+  opacity: 1;
+}
+
 /* ── 3. Durum Etiketleri ─────────────────────────────────── */
 .sem-status-badge {
   display: inline-block;
@@ -111,6 +156,8 @@ p  { font-size: 16px !important; line-height: 1.6 !important; }
   letter-spacing: 0.02em;
   line-height: 1.4;
 }
+/* Kart gövdesi flex olduğu için rozet satır boyunca uzamasın */
+.sem-course-card .sem-status-badge { align-self: flex-start; }
 
 .sem-status-badge--acik {
   background: rgba(26, 122, 74, 0.12);
@@ -193,6 +240,18 @@ p  { font-size: 16px !important; line-height: 1.6 !important; }
 }
 .feather-chevron-down {
   transition: transform 0.2s ease;
+}
+
+/* ── 9b. Eğitim listesi üst arama kutusu (tüm-kurslar / hizmet-içi) ───── */
+.sem-course-top-search { max-width: 640px; margin: 0 auto; }
+.sem-course-top-search input {
+  border: 1px solid rgba(0, 40, 85, .16);
+  border-radius: var(--sem-radius);
+  background: #fff;
+}
+.sem-course-top-search input:focus {
+  border-color: var(--sem-primary, #002855);
+  outline: none;
 }
 
 /* ── 10. Sınav Merkezleri + Duyurular kart açıklamaları ─── */
@@ -732,8 +791,20 @@ select.sem-form-control { height: 50px; padding-top: 0; padding-bottom: 0; }
   .rbt-course-grid-column.active-list-view .sem-course-card {
     grid-template-columns: 150px 1fr;
   }
+  /* Görsel kart boyunca dar bir şerit gibi uzamasın; butonlar tam genişlik alsın */
   .rbt-course-grid-column.active-list-view .sem-course-card .rbt-card-img {
-    min-height: 120px;
+    grid-row: 1;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 1 / 1 !important;
+    align-self: start;
+  }
+  .rbt-course-grid-column.active-list-view .sem-course-card .rbt-card-img > a {
+    display: block;
+    height: 100%;
+  }
+  .rbt-course-grid-column.active-list-view .sem-course-card .card-footer {
+    grid-column: 1 / -1;
   }
 }
 @media (max-width: 576px) {
@@ -775,7 +846,11 @@ select.sem-form-control { height: 50px; padding-top: 0; padding-bottom: 0; }
 /* ── Tüm kurslar: filtre sidebar ─────────────────────────── */
 @media (max-width: 991px) {
   #semFilterCollapse { margin-bottom: 24px; }
+  /* Uzun kategori listesinde sonuç düğmesi ekranın altında görünür kalır */
+  .sem-filtre-uygula { position: sticky; bottom: 12px; z-index: 5; margin-top: 12px; }
 }
+[aria-expanded="true"] > .sem-filtre-goster,
+[aria-expanded="false"] > .sem-filtre-gizle { display: none; }
 
 /* ── Mobile popup menu ───────────────────────────────────── */
 /* Marka renk override */
@@ -1003,6 +1078,13 @@ select.sem-form-control { height: 50px; padding-top: 0; padding-bottom: 0; }
 .sem-auth-field input:focus,
 .sem-auth-field select:focus { border-color:var(--kun-mavi, #0072ce); outline:none;
   box-shadow:0 0 0 3px rgba(var(--kun-mavi-rgb, 0,114,206),.15); }
+/* bootstrap-select, site genelinde her <select>'i JS ile bir <button>'a çeviriyor;
+   o buton Bootstrap'in varsayılan .btn{font-size:1rem} kuralını miras alıyor —
+   bu şablonda 1rem=10px olduğundan (bkz. üstteki tipografi notu) yazı küçük kalıyor. */
+.bootstrap-select .btn.dropdown-toggle { font-size:15px; }
+/* _SemApplyModal.cshtml'deki "Vazgeç" butonu site-özel bir sınıf (rbt-btn vb.) taşımadığından
+   aynı 1rem=10px sorunundan etkileniyor, yanındaki "Gönder" butonuyla tutarsız görünüyor. */
+#semApplyModal .btn { font-size:15px; }
 @media (max-width:520px) { .sem-auth-row { grid-template-columns:1fr; gap:0; } }
 .sem-auth-check { display:flex; align-items:flex-start; gap:8px; margin-bottom:24px; font-size:13px; color:#555; }
 .sem-auth-check input[type="checkbox"] {
@@ -1306,11 +1388,6 @@ textarea,
 }
 .sem-course-card .rbt-meta { min-height: 1.6em; margin-bottom: 0; }
 
-/* ── Görsel oranı — 1500x1000 yatay (3:2) ─── */
-.sem-course-card .rbt-card-img,
-.rbt-card.variation-01 .rbt-card-img { aspect-ratio: 3 / 2; overflow: hidden; }
-.sem-course-card .rbt-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
-
 /* ── Kart kontrastı — beyaz kart, gri (#f8f9fa) zemin üzerinde net ayrışma
    Kurumsal: ince lacivert hairline + yumuşak nötr gölge (kum kaldırıldı) ── */
 .sem-course-card {
@@ -1419,9 +1496,8 @@ a.rbt-btn:hover, button.rbt-btn:hover, .rbt-btn.btn-gradient:hover {
 body { background: #f8f9fa !important; }
 
 /* ── Anasayfa "Öne Çıkan Eğitimler" — kapadokya.edu.tr etkinlik kartı ölçüsü feyzi:
-   kart kolonu doldurur (yan boşluk yok). */
+   kart kolonu doldurur (yan boşluk yok), görsel site geneliyle aynı oranda (3:2, 1500x1000). */
 #sem-populer-egitimler .sem-course-card { max-width: none; margin: 0; }
-/* Görsel YATAY (3:2) — kullanıcının 1500x1000 varlıklarıyla uyumlu, site geneliyle aynı oran */
 #sem-populer-egitimler .sem-course-card .rbt-card-img { aspect-ratio: 3 / 2; }
 /* Boşluklar dar ve dengeli (yatay + dikey eşit) */
 #sem-populer-egitimler .row.g-4 { --bs-gutter-x: 12px; --bs-gutter-y: 12px; }
@@ -1462,17 +1538,24 @@ body { background: #f8f9fa !important; }
   min-height: clamp(440px, 68svh, 640px);
   display: flex;
   align-items: center;
+  /* Görsel yüklenemezse beyaz başlık beyaz zeminde kaybolmasın */
+  background-color: var(--sem-primary);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 .sem-hero-overlay {
-  position: absolute; inset: 0; z-index: 1;
-  background: linear-gradient(90deg, rgba(0,40,85,.85) 0%, rgba(0,40,85,.60) 42%, rgba(0,40,85,.15) 100%);
+  display: none;
 }
-/* Video arka plan — mobil/masaüstü ayrı kaynak, gerçek video dosyası gelene kadar
-   poster (mevcut hero görseli) fallback olarak görünür, yükleme başarısız olursa
-   sem-hero-slide'ın kendi background-image'ı zaten arkada durduğu için sayfa bozulmaz. */
+/* Metin okunabilirliği için hafif gölge (mavi kaplama kaldırıldı) */
+.sem-hero-title,
+.sem-hero-desc,
+.sem-hero-tag {
+  text-shadow: 0 2px 18px rgba(0, 0, 0, .45);
+}
+/* Hero arka plan videosu — gerçek video dosyası gelene kadar poster (mevcut
+   hero görseli) fallback görünür; yükleme başarısız olursa sem-hero-slide'ın
+   kendi background-image'ı zaten arkada durduğu için sayfa bozulmaz. */
 .sem-hero-video {
   position: absolute; inset: 0; z-index: 0;
   width: 100%; height: 100%;
@@ -1532,7 +1615,6 @@ body { background: #f8f9fa !important; }
     aspect-ratio: 16 / 10;
     padding: 18px 0 16px;
   }
-  .sem-hero-overlay { background: linear-gradient(90deg, rgba(0,40,85,.88) 0%, rgba(0,40,85,.72) 100%); }
   .sem-hero-tag { font-size: 10px; padding: 4px 10px; margin-bottom: 8px; }
   .sem-hero-title { font-size: 20px; line-height: 1.2; }
   .sem-hero-desc { display: none; }
@@ -1570,42 +1652,9 @@ body { background: #f8f9fa !important; }
    korur; içerik/yazı alanı beyaz zeminde durur. ══ */
 body.sem-detay { background: #fff !important; }
 
-/* ══ Eğitimler sayfası — pasif kartlar (Yakında / Kayıtlar Kapandı) soluk görünüm ══ */
-.sem-course-card[data-durum="yakinda"] .rbt-card-img,
-.sem-course-card[data-durum="kapandi"] .rbt-card-img {
-  position: relative;
-}
-.sem-course-card[data-durum="yakinda"] .rbt-card-img img,
-.sem-course-card[data-durum="kapandi"] .rbt-card-img img {
-  filter: grayscale(70%);
-  opacity: .75;
-}
-.sem-course-card[data-durum="yakinda"] .rbt-card-title,
-.sem-course-card[data-durum="kapandi"] .rbt-card-title {
-  opacity: .75;
-}
-.sem-course-card[data-durum="yakinda"] .sem-apply-btn,
-.sem-course-card[data-durum="kapandi"] .sem-apply-btn {
-  background: var(--kun-gri, #53565a) !important;
-  background-image: none !important;
-  opacity: .85;
-}
-.sem-course-card[data-durum="yakinda"] .sem-apply-btn:hover,
-.sem-course-card[data-durum="kapandi"] .sem-apply-btn:hover {
-  opacity: 1;
-}
-
-/* ══ Eğitimler sayfası — arama kutusu filtreden ayrılıp toolbar üstüne taşındı ══ */
-.sem-course-top-search { max-width: 640px; margin: 0 auto; }
-.sem-course-top-search input {
-  border: 1px solid rgba(0, 40, 85, .16);
-  border-radius: var(--sem-radius);
-  background: #fff;
-}
-.sem-course-top-search input:focus {
-  border-color: var(--sem-primary, #002855);
-  outline: none;
-}
+/* auth/contact textarea */
+.sem-auth-field textarea{width:100%;padding:14px 16px;border:1.5px solid #e2e5ea;border-radius:8px;font-size:15px;resize:vertical;min-height:120px;}
+.sem-auth-field textarea:focus{border-color:var(--kun-mavi,#0072ce);outline:none;}
 
 /* ── Köşe yumuşatma — iç görseller kartın kendi köşesine kırpılır (çift radius olmasın) ── */
 .sem-course-card .rbt-card-img,
@@ -1960,6 +2009,19 @@ html.side-nav-opened, html.side-nav-opened body { overflow: hidden; }
   100% { background: rgba(0, 161, 170, .04); }
 }
 
+/* SKA sayfası — amaca bağlı eğitimlerimiz (admin'de eğitime atanan amaçlardan) */
+.sem-ska-goal-trainings { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 12px; }
+.sem-ska-goal-trainings span {
+  width: 100%; font-size: 11px; font-weight: 700; letter-spacing: .06em;
+  text-transform: uppercase; color: #8a94a3;
+}
+.sem-ska-goal-trainings a {
+  font-size: 13px; font-weight: 500; line-height: 1.3; padding: 6px 12px;
+  border: 1px solid rgba(0, 40, 85, .14); border-radius: var(--sem-radius, 2px);
+  color: var(--sem-primary, #002855); background: #fff; transition: border-color .2s, color .2s;
+}
+.sem-ska-goal-trainings a:hover { border-color: var(--kun-turkuaz, #00A1AA); color: var(--kun-turkuaz, #00A1AA); }
+
 .sem-ska-cta { margin-top: 48px; }
 .sem-ska-cta p { font-size: 15px !important; color: #6c757d; margin-bottom: 16px; }
 .sem-ska-cta-btns { display: flex; flex-wrap: wrap; gap: 12px; }
@@ -1980,101 +2042,302 @@ html.side-nav-opened, html.side-nav-opened body { overflow: hidden; }
   .sem-ska-goal-title { font-size: 18px !important; }
 }
 
-/* ===== Kurs detay — Eğitim Takvimi tablosu ===== */
-.sem-takvim-wrap {
-  margin-top: 16px;
-  border: 1px solid rgba(0, 40, 85, 0.12);
-  border-radius: 8px;
-  overflow: hidden;
+/* ── Profil: salt okunur e-posta / telefon / TC alanları + "Değiştir" butonu.
+   Tema input[disabled]'ı gizlediğinden (styles.css) bu alanlar readonly'dir. ── */
+.sem-profil-readonly { position: relative; }
+.sem-auth-field .sem-profil-readonly input[readonly] { background: #f3f4f6; color: #475569; cursor: default; }
+.sem-auth-field .sem-profil-readonly input[readonly]:focus { border-color: #e2e5ea; box-shadow: none; }
+.sem-auth-field .sem-profil-readonly input { padding-right: 96px; text-overflow: ellipsis; }
+.sem-profil-degistir {
+  position: absolute; top: 50%; right: 8px; transform: translateY(-50%);
+  padding: 6px 12px; border: 1px solid var(--kun-mavi, #0072ce); border-radius: 6px;
+  background: #fff; color: var(--kun-mavi, #0072ce); font-size: 13px; font-weight: 600; line-height: 1.4;
 }
-.sem-takvim-table {
-  width: 100%;
-  margin: 0;
-  border-collapse: collapse;
-  font-size: 15px;
+.sem-profil-degistir:hover { background: var(--kun-mavi, #0072ce); color: #fff; }
+#iletisimModal .modal-title { font-size: 18px; font-weight: 700; }
+
+/* ===== 2026-11 revizyonu ================================================= */
+
+/* ── Eğitim kartı: durum + tarih rozetleri yan yana ──
+   Backend: <time datetime="YYYY-MM-DD"> içine eğitimin (en yakın grubun) başlangıç tarihini basar. */
+.sem-card-badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
 }
-.sem-takvim-table thead th {
-  background: var(--sem-primary);
-  color: #fff;
-  font-size: 14px;
+.sem-course-card .sem-card-badges .sem-status-badge { align-self: auto; }
+.sem-date-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .45em;
+  padding: .2em .7em;
+  border-radius: var(--sem-radius);
+  background: rgba(0, 40, 85, .06);
+  border: 1px solid rgba(0, 40, 85, .12);
+  color: var(--sem-primary);
+  font-size: 12px;
   font-weight: 600;
-  letter-spacing: 0.2px;
-  padding: 14px 16px;
-  border: 0;
-  text-align: left;
+  line-height: 1.4;
   white-space: nowrap;
 }
-.sem-takvim-table tbody th,
-.sem-takvim-table tbody td {
-  padding: 13px 16px;
-  border: 0;
-  border-top: 1px solid rgba(0, 40, 85, 0.08);
-  text-align: left;
-  vertical-align: middle;
+.sem-date-badge i { font-size: 12px; opacity: .8; }
+
+/* ── Kurs detay — Eğitim Takvimi: solda aylık takvim, sağda grup detayları ── */
+.sem-takvim {
+  display: grid;
+  grid-template-columns: minmax(260px, 320px) 1fr;
+  gap: 28px;
+  margin-top: 20px;
+  align-items: start;
+}
+.sem-takvim-cal {
+  background: #fff;
+  border: 1px solid rgba(0, 40, 85, .10);
+  border-radius: 12px;
+  padding: 18px 16px 14px;
   color: var(--sem-text);
 }
-.sem-takvim-table tbody th {
+.sem-takvim:not(.is-hazir) .sem-takvim-cal { display: none; }
+.sem-takvim:not(.is-hazir) { grid-template-columns: 1fr; }
+
+.sem-cal-ust {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.sem-cal-ay {
+  font-size: 17px;
   font-weight: 600;
   color: var(--sem-primary);
-  white-space: nowrap;
+  letter-spacing: .2px;
 }
-.sem-takvim-table tbody tr:nth-child(even) {
-  background: var(--sem-bg-2);
+.sem-cal-ay small { font-size: 14px; font-weight: 400; color: #64748b; margin-left: 2px; }
+.sem-cal-ok {
+  width: 32px; height: 32px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 1px solid rgba(0, 40, 85, .12);
+  border-radius: 50%;
+  background: #fff;
+  color: var(--sem-primary);
+  font-size: 15px;
+  padding: 0;
+  transition: background-color .2s ease, color .2s ease;
 }
-.sem-takvim-table tbody tr {
-  transition: background-color 0.2s ease;
+.sem-cal-ok:hover { background: var(--sem-primary); color: #fff; }
+
+.sem-cal-izgara {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  row-gap: 4px;
 }
-.sem-takvim-table tbody tr:hover {
-  background: rgba(0, 40, 85, 0.05);
+.sem-cal-hg {
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .4px;
+  text-transform: uppercase;
+  color: #94a3b8;
+  padding-bottom: 6px;
 }
-.sem-takvim-table tbody td:nth-child(4),
-.sem-takvim-table tbody td:nth-child(5) {
-  color: var(--sem-accent);
-  font-weight: 500;
+.sem-cal-gun {
+  position: relative;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #334155;
 }
-@media (max-width: 767px) {
-  .sem-takvim-wrap {
-    border: 0;
-    border-radius: 0;
-    overflow: visible;
-  }
-  .sem-takvim-table thead {
-    display: none;
-  }
-  .sem-takvim-table,
-  .sem-takvim-table tbody,
-  .sem-takvim-table tr,
-  .sem-takvim-table th,
-  .sem-takvim-table td {
-    display: block;
-    width: 100%;
-  }
-  .sem-takvim-table tbody tr {
-    border: 1px solid rgba(0, 40, 85, 0.12);
-    border-radius: 8px;
-    margin-bottom: 12px;
-    overflow: hidden;
-    background: #fff !important;
-  }
-  .sem-takvim-table tbody th {
-    background: var(--sem-primary);
-    color: #fff;
-    border-top: 0;
-    padding: 10px 14px;
-  }
-  .sem-takvim-table tbody td {
-    display: flex;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 10px 14px;
-  }
-  .sem-takvim-table tbody td::before {
-    content: attr(data-label);
-    font-weight: 600;
-    color: #64748b;
-    font-size: 13px;
-  }
-  .sem-takvim-table tbody td:nth-of-type(1) {
-    border-top: 0;
-  }
+.sem-cal-gun > span {
+  position: relative;
+  z-index: 1;
+  width: 32px; height: 32px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 50%;
 }
+/* eğitim aralığı: ince lacivert şerit, başlangıç/bitiş dolu daire */
+.sem-cal-gun.is-egitim::before {
+  content: "";
+  position: absolute;
+  top: 2px; bottom: 2px; left: 0; right: 0;
+  background: rgba(0, 40, 85, .08);
+}
+.sem-cal-gun.is-bas::before,
+.sem-cal-gun.is-hafta-bas::before { left: 50%; margin-left: -16px; border-radius: 16px 0 0 16px; }
+.sem-cal-gun.is-bit::before,
+.sem-cal-gun.is-hafta-son::before { right: 50%; margin-right: -16px; border-radius: 0 16px 16px 0; }
+.sem-cal-gun.is-bas.is-bit::before,
+.sem-cal-gun.is-bas.is-hafta-son::before,
+.sem-cal-gun.is-hafta-bas.is-bit::before { border-radius: 16px; }
+.sem-cal-gun.is-egitim > span { color: var(--sem-primary); font-weight: 600; }
+.sem-cal-gun.is-bas > span,
+.sem-cal-gun.is-bit > span {
+  background: var(--sem-primary);
+  color: #fff;
+  box-shadow: 0 3px 10px rgba(0, 40, 85, .25);
+}
+/* son kayıt günü: altında küçük kırmızı nokta */
+.sem-cal-gun.is-kayit > span { box-shadow: inset 0 0 0 1px rgba(203, 51, 59, .45); color: var(--sem-accent); font-weight: 600; }
+.sem-cal-gun.is-kayit::after {
+  content: "";
+  position: absolute;
+  bottom: 1px; left: 50%;
+  width: 4px; height: 4px; margin-left: -2px;
+  border-radius: 50%;
+  background: var(--sem-accent);
+}
+.sem-cal-gun.is-bugun > span { text-decoration: underline; text-underline-offset: 3px; }
+
+.sem-cal-lejant {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(0, 40, 85, .08);
+  font-size: 12px;
+  color: #64748b;
+}
+.sem-cal-lejant span { display: inline-flex; align-items: center; gap: 6px; }
+.sem-cal-lejant i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; }
+.sem-lej-egitim { background: var(--sem-primary); }
+.sem-lej-kayit { background: var(--sem-accent); }
+
+/* grup listesi */
+.sem-takvim-gruplar {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.sem-takvim-grup {
+  margin: 0;
+  border: 1px solid rgba(0, 40, 85, .10);
+  border-radius: 12px;
+  background: #fff;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.sem-takvim-grup.is-aktif {
+  border-color: rgba(0, 40, 85, .35);
+  box-shadow: 0 6px 20px rgba(0, 40, 85, .08);
+}
+.sem-takvim-grup-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  padding: 14px 18px;
+  background: none;
+  border: 0;
+  text-align: left;
+  color: var(--sem-text);
+  font-size: 15px;
+  cursor: pointer;
+}
+.sem-takvim-grup-ad {
+  font-weight: 600;
+  color: var(--sem-primary);
+  min-width: 64px;
+}
+.sem-takvim-grup-aralik { color: #475569; flex: 1; }
+.sem-takvim-detay {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 24px;
+  margin: 0;
+  padding: 4px 18px 18px;
+}
+.sem-takvim.is-hazir .sem-takvim-grup:not(.is-aktif) .sem-takvim-detay { display: none; }
+.sem-takvim-detay > div { margin: 0; }
+.sem-takvim-detay dt {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  color: #94a3b8;
+  margin-bottom: 2px;
+}
+.sem-takvim-detay dd { margin: 0; font-size: 15px; color: var(--sem-text); }
+
+@media (max-width: 991px) {
+  .sem-takvim { grid-template-columns: 1fr; }
+  .sem-takvim-cal { max-width: 360px; width: 100%; margin: 0 auto; }
+}
+@media (max-width: 480px) {
+  .sem-takvim-detay { grid-template-columns: 1fr; gap: 10px; }
+}
+
+/* ── Hizmet içi eğitimler — personel girişi penceresi ── */
+.sem-personel-modal .modal-content {
+  border: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  color: var(--sem-text);
+  box-shadow: 0 24px 60px rgba(0, 26, 58, .28);
+}
+body.sem-personel-kilit .modal-backdrop.show { opacity: .72; }
+body.sem-personel-kilit .modal-backdrop { background: var(--sem-footer-bg); backdrop-filter: blur(4px); }
+.sem-personel-ust {
+  background: var(--sem-primary);
+  padding: 22px 24px 46px;
+  text-align: center;
+}
+.sem-personel-logo { max-height: 48px; width: auto; }
+.sem-personel-govde {
+  padding: 30px 32px 28px;
+  text-align: center;
+}
+.sem-personel-ikon {
+  width: 56px; height: 56px;
+  margin: -58px auto 14px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--sem-primary);
+  font-size: 22px;
+  box-shadow: 0 6px 18px rgba(0, 40, 85, .18);
+  position: relative;
+}
+.sem-personel-baslik {
+  font-size: 21px !important;
+  font-weight: 700;
+  color: var(--sem-primary) !important;
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+.sem-personel-metin {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #475569;
+  margin-bottom: 22px;
+}
+.sem-personel-giris {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 13px 20px;
+  border-radius: var(--sem-radius);
+  background: var(--sem-primary);
+  color: #fff !important;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color .2s ease;
+}
+.sem-personel-giris:hover { background: var(--sem-navy-light); }
+.sem-personel-vazgec {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 14px;
+  color: #64748b !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.sem-personel-vazgec:hover { color: var(--sem-primary) !important; }

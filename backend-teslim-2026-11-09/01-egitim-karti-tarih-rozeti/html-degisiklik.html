@@ -1,0 +1,17 @@
+<!-- Eğitim kartı (anasayfa, tum-kurslar, hizmet-ici-egitimler, mikro-yeterlilik)
+     ÖNCE:  <span class="sem-status-badge sem-status-badge--acik">Kayıtlar Açık</span>
+     SONRA: durum rozeti + tarih rozeti aynı satırda bir sarmalayıcı içinde -->
+<div class="sem-card-badges">
+  <span class="sem-status-badge sem-status-badge--acik">Kayıtlar Açık</span>
+  <!-- Backend: eğitimin başlangıç tarihi (en yakın grup) -->
+  <span class="sem-date-badge"><i class="feather-calendar"></i><time datetime="2026-12-14">14 Aralık 2026</time></span>
+</div>
+
+<!-- Razor örneği:
+<div class="sem-card-badges">
+  <span class="sem-status-badge sem-status-badge--@durum">@durumMetni</span>
+  @if (enYakinGrup != null) {
+    <span class="sem-date-badge"><i class="feather-calendar"></i><time datetime="@enYakinGrup.Baslangic.ToString("yyyy-MM-dd")">@enYakinGrup.Baslangic.ToString("d MMMM yyyy", new CultureInfo("tr-TR"))</time></span>
+  }
+</div>
+Tarih yoksa <span class="sem-date-badge"> hiç basılmasın; rozet satırı yalnız durumla kalır. -->

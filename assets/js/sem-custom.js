@@ -1,6 +1,6 @@
 /* ============================================================
    SEM Custom Scripts — Kapadokya Üniversitesi SEM
-   Sadece vanilla JS. fetch yok. file:// ile de çalışır.
+   Sadece vanilla JS.
    ============================================================ */
 
 (function () {
@@ -43,12 +43,20 @@
         }
       });
 
-      card.classList.toggle('sem-hidden', !show);
+      /* .sem-course-card, grid/liste hücresini saran .course-grid-3 icinde yer alir;
+         gizlemeyi sadece karta uygulamak bos hucreyi (33% genislik) akista birakip
+         diger kartlarin duzensiz bosluklarla kaymasina yol aciyordu (bkz. destek talebi) */
+      var target = card.closest('.course-grid-3') || card;
+      target.classList.toggle('sem-hidden', !show);
       if (show) visible++;
     });
 
     var noResult = document.getElementById('sem-no-result');
     if (noResult) noResult.classList.toggle('sem-hidden', visible > 0);
+
+    document.querySelectorAll('.sem-sonuc-sayisi').forEach(function (el) {
+      el.textContent = visible;
+    });
   }
 
   /* ── 3. openApplyModal() ─────────────────────────────── */
@@ -96,47 +104,43 @@
   }
 
   /* ── 5. Event bağlama ────────────────────────────────── */
-  /* Arama önizleme dizini — tum-kurslar / mikro-yeterlilik / hizmet-ici / anasayfa kartlarından
-     üretildi (site statik, fetch yok). Backend bağlanınca bu dizi API sonucuyla değişecek.
-     t: başlık, k: kategori, f: format, g: grup, d: durum, i: görsel, u: link */
-  var SEM_SEARCH_INDEX = [
-    {"t": "Dijital Pazarlama ve Sosyal Medya Yönetimi", "k": "Bilişim", "f": "Online", "g": "Eğitim", "d": "acik", "i": "./assets/images/course/course-10.jpg", "u": "kurs-detay.html"},
-    {"t": "İHA-2 Uçuş Eğitimi", "k": "Havacılık", "f": "Yüz Yüze", "g": "Eğitim", "d": "son", "i": "./assets/images/course/course-3.jpg", "u": "kurs-detay.html"},
-    {"t": "Gastronomi ve Mutfak Uygulamaları", "k": "Gastronomi", "f": "Yüz Yüze", "g": "Eğitim", "d": "son", "i": "./assets/images/course/course-8.jpg", "u": "tum-kurslar.html?kategori=gastronomi"},
-    {"t": "Turist Rehberliği Eğitim Programı", "k": "Turizm", "f": "Yüz Yüze", "g": "Eğitim", "d": "son", "i": "./assets/images/course/course-9.jpg", "u": "tum-kurslar.html?kategori=turizm"},
-    {"t": "Sanal Gerçeklik Terapisi Eğitimi", "k": "Sağlık", "f": "Hibrit", "g": "Eğitim", "d": "acik", "i": "./assets/images/course/egitim5.jpg", "u": "tum-kurslar.html?kategori=saglik"},
-    {"t": "İşaret Dili Eğitimi", "k": "Kişisel Gelişim", "f": "Yüz Yüze", "g": "Eğitim", "d": "acik", "i": "./assets/images/course/course-11.jpg", "u": "tum-kurslar.html?kategori=kisisel-gelisim"},
-    {"t": "Meteoroloji Temel Eğitimi", "k": "Havacılık", "f": "Yüz Yüze", "g": "Eğitim", "d": "acik", "i": "./assets/images/course/course-3.jpg", "u": "kurs-detay.html"},
-    {"t": "Arama Kurtarma Temel Eğitimi", "k": "Havacılık", "f": "Yüz Yüze", "g": "Eğitim", "d": "son", "i": "./assets/images/course/arama-kurtarma.jpg", "u": "kurs-detay.html"},
-    {"t": "Emniyet Yönetim Sistemi (SMS) Eğitimi", "k": "Havacılık", "f": "Yüz Yüze", "g": "Eğitim", "d": "yakinda", "i": "./assets/images/course/course-7.jpg", "u": "kurs-detay.html"},
-    {"t": "Mesleki İngilizce Eğitimi", "k": "Dil", "f": "Online", "g": "Eğitim", "d": "acik", "i": "./assets/images/course/course-8.jpg", "u": "kurs-detay.html"},
-    {"t": "Stres ve Zaman Yönetimi Eğitimi", "k": "Kişisel Gelişim", "f": "Online", "g": "Eğitim", "d": "acik", "i": "./assets/images/course/course-9.jpg", "u": "kurs-detay.html"},
-    {"t": "Psikolojik Sağlamlık Temel Eğitimi", "k": "Sağlık", "f": "Yüz Yüze", "g": "Eğitim", "d": "kapandi", "i": "./assets/images/course/course-10.jpg", "u": "kurs-detay.html"},
-    {"t": "Motivasyon Temel Eğitimi", "k": "Kişisel Gelişim", "f": "Online", "g": "Eğitim", "d": "acik", "i": "./assets/images/course/course-11.jpg", "u": "kurs-detay.html"},
-    {"t": "Profesyonel Aşçılık Temel Eğitimi", "k": "Gastronomi", "f": "Yüz Yüze", "g": "Eğitim", "d": "acik", "i": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=180&h=120&fit=crop&q=80", "u": "kurs-detay.html"},
-    {"t": "Sürdürülebilir Turizm Eğitimi", "k": "Turizm", "f": "Online", "g": "Eğitim", "d": "acik", "i": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=180&h=120&fit=crop&q=80", "u": "kurs-detay.html"},
-    {"t": "Siber Güvenlik Temel Eğitimi", "k": "Bilişim", "f": "Online", "g": "Eğitim", "d": "yakinda", "i": "https://images.unsplash.com/photo-1518818608552-195ed130cdf4?w=180&h=120&fit=crop&q=80", "u": "kurs-detay.html"},
-    {"t": "Montessori Eğiticinin Eğitimi", "k": "Eğitim Bilimleri", "f": "Yüz Yüze", "g": "Eğitim", "d": "son", "i": "./assets/images/course/course-7.jpg", "u": "kurs-detay.html"},
-    {"t": "PEMER-MYK Aşçı Seviye 4 Sınavı", "k": "PEMER / MYK", "f": "Yüz Yüze", "g": "Eğitim", "d": "son", "i": "./assets/images/course/sem-slider.jpg", "u": "kurs-detay.html"},
-    {"t": "Dijital Pazarlama Mikro Yeterlilik Sertifikası", "k": "Bilişim", "f": "Online", "g": "Mikro Yeterlilik", "d": "acik", "i": "./assets/images/course/course-01.jpg", "u": "kurs-detay.html"},
-    {"t": "Etkili İletişim Mikro Yeterlilik Sertifikası", "k": "Kişisel Gelişim", "f": "Hibrit", "g": "Mikro Yeterlilik", "d": "acik", "i": "./assets/images/course/course-02.jpg", "u": "kurs-detay.html"},
-    {"t": "Temel Aşçılık Mikro Yeterlilik Sertifikası", "k": "Gastronomi", "f": "Yüz Yüze", "g": "Mikro Yeterlilik", "d": "son", "i": "./assets/images/course/course-03.jpg", "u": "kurs-detay.html"},
-    {"t": "Turist Rehberliği Mikro Yeterlilik Sertifikası", "k": "Turizm", "f": "Yüz Yüze", "g": "Mikro Yeterlilik", "d": "acik", "i": "./assets/images/course/course-04.jpg", "u": "kurs-detay.html"},
-    {"t": "İlk Yardım Mikro Yeterlilik Sertifikası", "k": "Sağlık", "f": "Yüz Yüze", "g": "Mikro Yeterlilik", "d": "yakinda", "i": "./assets/images/course/course-05.jpg", "u": "kurs-detay.html"},
-    {"t": "İngilizce Konuşma Pratiği Mikro Yeterlilik Sertifikası", "k": "Dil", "f": "Online", "g": "Mikro Yeterlilik", "d": "acik", "i": "./assets/images/course/course-06.jpg", "u": "kurs-detay.html"},
-    {"t": "Akademik Yazım ve Etik Eğitimi", "k": "", "f": "Yüz Yüze", "g": "Hizmet İçi Eğitim", "d": "acik", "i": "./assets/images/course/course-3.jpg", "u": "kurs-detay.html"},
-    {"t": "Uzaktan Eğitim (LMS) Kullanım Eğitimi", "k": "", "f": "Yüz Yüze", "g": "Hizmet İçi Eğitim", "d": "son", "i": "./assets/images/course/arama-kurtarma.jpg", "u": "kurs-detay.html"},
-    {"t": "İş Sağlığı ve Güvenliği Oryantasyon Eğitimi", "k": "", "f": "Yüz Yüze", "g": "Hizmet İçi Eğitim", "d": "yakinda", "i": "./assets/images/course/course-7.jpg", "u": "kurs-detay.html"},
-    {"t": "Akademik İngilizce Gelişim Programı", "k": "", "f": "Online", "g": "Hizmet İçi Eğitim", "d": "acik", "i": "./assets/images/course/course-8.jpg", "u": "kurs-detay.html"},
-    {"t": "Zaman Yönetimi ve Verimlilik Eğitimi", "k": "", "f": "Online", "g": "Hizmet İçi Eğitim", "d": "acik", "i": "./assets/images/course/course-9.jpg", "u": "kurs-detay.html"},
-    {"t": "Stres Yönetimi ve Psikolojik Dayanıklılık Eğitimi", "k": "", "f": "Yüz Yüze", "g": "Hizmet İçi Eğitim", "d": "kapandi", "i": "./assets/images/course/course-10.jpg", "u": "kurs-detay.html"},
-    {"t": "Kurum Kültürü ve Motivasyon Semineri", "k": "", "f": "Online", "g": "Hizmet İçi Eğitim", "d": "acik", "i": "./assets/images/course/course-11.jpg", "u": "kurs-detay.html"},
-    {"t": "Ofis Yazılımları (MS Office) Eğitimi", "k": "", "f": "Yüz Yüze", "g": "Hizmet İçi Eğitim", "d": "acik", "i": "https://images.unsplash.com/photo-1563172218-cc4b58795905?w=180&h=120&fit=crop&q=80", "u": "kurs-detay.html"},
-    {"t": "Etkili İletişim ve Sunum Teknikleri Eğitimi", "k": "", "f": "Online", "g": "Hizmet İçi Eğitim", "d": "acik", "i": "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=180&h=120&fit=crop&q=80", "u": "kurs-detay.html"},
-    {"t": "Siber Güvenlik Farkındalık Eğitimi", "k": "", "f": "Online", "g": "Hizmet İçi Eğitim", "d": "yakinda", "i": "https://images.unsplash.com/photo-1518818608552-195ed130cdf4?w=180&h=120&fit=crop&q=80", "u": "kurs-detay.html"},
-    {"t": "Eğiticinin Eğitimi Sertifika Programı", "k": "", "f": "Yüz Yüze", "g": "Hizmet İçi Eğitim", "d": "son", "i": "./assets/images/course/course-7.jpg", "u": "kurs-detay.html"},
-    {"t": "KVKK Farkındalık Eğitimi", "k": "", "f": "Yüz Yüze", "g": "Hizmet İçi Eğitim", "d": "son", "i": "./assets/images/course/sem-slider.jpg", "u": "kurs-detay.html"}
-  ];
+  /* Arama önizleme dizini — /api/arama-dizini'nden (aktif eğitimler) ilk açılışta bir kez yüklenir.
+     t: başlık, k: kategori, g: grup, d: durum, i: görsel, u: link */
+  var SEM_SEARCH_INDEX = [];
+  var semIndexState = 'idle'; // idle | loading | ready
+  var semIndexWaiting = [];
+  function loadSearchIndex(done) {
+    if (semIndexState === 'ready') { done(); return; }
+    if (semIndexWaiting.indexOf(done) === -1) semIndexWaiting.push(done);
+    if (semIndexState === 'loading') return;
+    semIndexState = 'loading';
+    fetch('/api/arama-dizini', { headers: { 'Accept': 'application/json' } })
+      .then(function (r) { return r.ok ? r.json() : []; })
+      .then(function (data) { SEM_SEARCH_INDEX = Array.isArray(data) ? data : []; })
+      .catch(function () { SEM_SEARCH_INDEX = []; })
+      .then(function () {
+        // API yoksa (statik prototip) sayfadaki kartlardan dizin kurulur
+        if (!SEM_SEARCH_INDEX.length) SEM_SEARCH_INDEX = indexFromCards();
+        semIndexState = 'ready';
+        var waiting = semIndexWaiting; semIndexWaiting = [];
+        waiting.forEach(function (fn) { fn(); });
+      });
+  }
+
+  function indexFromCards() {
+    return Array.prototype.map.call(document.querySelectorAll('.sem-course-card'), function (c) {
+      var a = c.querySelector('.rbt-card-title a');
+      var img = c.querySelector('.rbt-card-img img');
+      var tag = c.querySelector('.rbt-meta .feather-tag');
+      return {
+        t: a ? a.textContent.trim() : (c.dataset.ad || ''),
+        k: tag ? tag.parentNode.textContent.trim() : '',
+        g: 'Eğitim', d: c.dataset.durum || '',
+        i: img ? img.getAttribute('src') : '',
+        u: a ? a.getAttribute('href') : 'kurs-detay.html'
+      };
+    });
+  }
 
   /* ── Arama önizleme (yazdıkça liste) ─────────────────── */
   var SEM_DURUM = {
@@ -213,10 +217,11 @@
         input.setAttribute('aria-expanded', 'false');
         return;
       }
+      if (semIndexState !== 'ready') return;   // dizin yüklenince render yeniden çağrılır
       var tokens = semNorm(q).split(/\s+/).filter(Boolean);
       var hits = SEM_SEARCH_INDEX.map(function (c) {
         var title = semNorm(c.t);
-        var hay = title + ' ' + semNorm(c.k + ' ' + c.f + ' ' + c.g);
+        var hay = title + ' ' + semNorm([c.k, c.f, c.g].join(' '));
         if (!tokens.every(function (t) { return hay.indexOf(t) > -1; })) return null;
         // başlıkta / başlık başında eşleşenler üste
         var score = 0;
@@ -251,7 +256,8 @@
       if (hits.length) setActive(0, false);   // Spotlight: en iyi eşleşme seçili gelir
     }
 
-    input.addEventListener('input', render);
+    input.addEventListener('input', function () { loadSearchIndex(render); });
+    input.addEventListener('focus', function () { loadSearchIndex(render); });
     input.addEventListener('keydown', function (e) {
       var items = rows();
       if (e.key === 'ArrowDown') { e.preventDefault(); setActive(active + 1, true); }
@@ -275,7 +281,7 @@
         if (!a) return;
         e.preventDefault();
         input.value = a.textContent.trim();
-        render();
+        loadSearchIndex(render);
         input.focus();
       });
     }
@@ -283,32 +289,13 @@
   }
 
   /* ── Sürdürülebilir Kalkınma Amaçları (SKA) — eğitim detay sağ bar ──
-     Backend sadece <li class="sem-ska-item"> basar; düzeni öğe sayısına göre burası seçer:
-     1–3 → liste (ikon + amaç adı), 4+ → ikon ızgarası (ad, üzerine gelince balon).
-     Tasarım önizlemesi: kurs-detay.html?ska=1,4,13  (virgülle 1–17 arası numaralar) */
-  var SEM_SKA = ['', 'Yoksulluğa Son', 'Açlığa Son', 'Sağlık ve Kaliteli Yaşam', 'Nitelikli Eğitim',
-    'Toplumsal Cinsiyet Eşitliği', 'Temiz Su ve Sanitasyon', 'Erişilebilir ve Temiz Enerji',
-    'İnsana Yakışır İş ve Ekonomik Büyüme', 'Sanayi, Yenilikçilik ve Altyapı', 'Eşitsizliklerin Azaltılması',
-    'Sürdürülebilir Şehirler ve Topluluklar', 'Sorumlu Üretim ve Tüketim', 'İklim Eylemi', 'Sudaki Yaşam',
-    'Karasal Yaşam', 'Barış, Adalet ve Güçlü Kurumlar', 'Amaçlar için Ortaklıklar'];
-
+     Sunucu sadece <li class="sem-ska-item"> basar; düzeni öğe sayısına göre burası seçer:
+     1–3 → liste (ikon + amaç adı), 4+ → ikon ızgarası (ad, üzerine gelince balon). */
   function initSka() {
     var box = document.getElementById('sem-ska');
     if (!box) return;
     var list = box.querySelector('.sem-ska-list');
     if (!list) return;
-
-    var demo = getParam('ska');
-    if (demo) {
-      var nums = demo.split(',').map(function (n) { return parseInt(n, 10); })
-        .filter(function (n, i, a) { return n >= 1 && n <= 17 && a.indexOf(n) === i; });
-      list.innerHTML = nums.map(function (n) {
-        var name = SEM_SKA[n];
-        return '<li class="sem-ska-item"><a href="surdurulebilir-kalkinma-amaclari.html#amac-' + n + '">' +
-          '<img src="./assets/images/sdg/SDG-' + n + '.svg" alt="Amaç ' + n + ': ' + name + '" loading="lazy">' +
-          '<span class="sem-ska-text"><small>Amaç ' + n + '</small><strong>' + name + '</strong></span></a></li>';
-      }).join('');
-    }
 
     var count = list.querySelectorAll('.sem-ska-item').length;
     if (!count) { box.hidden = true; return; }
@@ -333,20 +320,28 @@ document.addEventListener('DOMContentLoaded', function () {
       cb.addEventListener('change', filterCards);
     });
 
+    /* Kategori seçili açılan sayfada sadece o kategorinin kartları gelir;
+       başka kategoriye geçmek ya da seçimi kaldırmak listeyi yeniden yükler */
+    var sunucuFiltreli = document.querySelector('.categories-list-check[data-sunucu-filtreli="1"]');
+    if (sunucuFiltreli) {
+      sunucuFiltreli.addEventListener('change', function (e) {
+        var cb = e.target;
+        window.location.href = cb.checked
+          ? 'tum-kurslar.html?kategori=' + encodeURIComponent(cb.value)
+          : 'tum-kurslar.html';
+      });
+    }
+
     applyUrlParams();
     initNavAuth();
 
-    /* Mobil: sayfa açılışında liste görünümü varsayılan */
-    if (window.innerWidth < 768) {
-      var col = document.querySelector('.rbt-course-grid-column');
-      if (col) {
-        col.classList.remove('active-grid-view');
-        col.classList.add('active-list-view');
-      }
-      var gridBtn = document.querySelector('.rbt-grid-view');
-      var listBtn = document.querySelector('.rbt-list-view');
-      if (gridBtn) gridBtn.classList.remove('active');
-      if (listBtn) listBtn.classList.add('active');
+    /* Mobil: filtre paneli kapanınca sayfa kartların başına gelsin (üstte sabit header payı) */
+    var filtrePanel = document.getElementById('semFilterCollapse');
+    if (filtrePanel) {
+      filtrePanel.addEventListener('hidden.bs.collapse', function () {
+        var sonuclar = document.querySelector('.sem-course-grid-col');
+        if (sonuclar) window.scrollTo(0, sonuclar.getBoundingClientRect().top + window.scrollY - 100);
+      });
     }
 
     // Navbar arama — Apple glass katmanı
@@ -439,9 +434,10 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /* ── Başvuru modalı: doğrulama + teşekkür ekranı ─────── */
-  /* Site statik: form verisi sunucuya gönderilmez. Backend bağlanınca
-     'sem:apply-submit' olayını dinleyip e.detail'i API'ye post etmesi yeterli
-     (detail: mode, course_id, egitim, kategori, ad_soyad, telefon, eposta, kun_ogrenci, mesaj, kvkk). */
+  /* Doğrulama burada; gönderim sem-site.js'teki window.semApplySend ile /api/on-basvuru'ya
+     yapılır (Promise döner, hata olursa kendisi uyarı gösterip reddeder). Yine de
+     'sem:apply-submit' olayı yayınlanır (detail: mode, course_id, egitim, kategori,
+     ad_soyad, telefon, eposta, kun_ogrenci, mesaj, kvkk). */
   function initApplyForm() {
     var modalEl = document.getElementById('semApplyModal');
     var form    = document.getElementById('semApplyForm');
@@ -513,19 +509,27 @@ document.addEventListener('DOMContentLoaded', function () {
       return !first;
     }
 
-    function handleSubmit(e) {
-      if (e) e.preventDefault();
-      if (!validate()) return;
-
-      var data = { mode: modalEl.dataset.mode || 'basvuru' };
-      new FormData(form).forEach(function (v, k) { data[k] = v; });
-      document.dispatchEvent(new CustomEvent('sem:apply-submit', { detail: data }));
-
+    function showSuccess() {
       form.style.display = 'none';
       success.style.display = '';
       submit.style.display = 'none';
       var cancel = footer && footer.querySelector('[data-bs-dismiss="modal"]');
       if (cancel) cancel.textContent = 'Kapat';
+    }
+
+    function handleSubmit(e) {
+      if (e) e.preventDefault();
+      if (submit.disabled || !validate()) return;
+
+      var data = { mode: modalEl.dataset.mode || 'basvuru' };
+      new FormData(form).forEach(function (v, k) { data[k] = v; });
+      document.dispatchEvent(new CustomEvent('sem:apply-submit', { detail: data }));
+
+      if (typeof window.semApplySend !== 'function') { showSuccess(); return; }
+      submit.disabled = true;
+      Promise.resolve(window.semApplySend(form, data))
+        .then(showSuccess, function () { /* hata mesajı semApplySend'de gösterildi */ })
+        .then(function () { submit.disabled = false; });
     }
 
     submit.addEventListener('click', handleSubmit);
@@ -560,14 +564,128 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  /* ── Eğitim Takvimi (kurs-detay) ──────────────────────────
+     Backend yalnızca <li class="sem-takvim-grup" data-baslangic data-bitis data-son-kayit>
+     listesini basar. Soldaki aylık takvim bu listeden burada çizilir. */
+  var SEM_AYLAR = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz',
+    'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'];
+
+  function semTarih(str) {           // 'YYYY-MM-DD' → yerel tarih (saat dilimi kaymasız)
+    var p = (str || '').split('-');
+    return p.length === 3 ? new Date(+p[0], +p[1] - 1, +p[2]) : null;
+  }
+  function ayniGun(a, b) {
+    return a && b && a.getFullYear() === b.getFullYear() &&
+      a.getMonth() === b.getMonth() && a.getDate() === b.getDate();
+  }
+
+  function initTakvim(root) {
+    var cal = root.querySelector('.sem-takvim-cal');
+    var gruplar = Array.prototype.slice.call(root.querySelectorAll('.sem-takvim-grup'));
+    if (!cal || !gruplar.length) return;
+
+    var secili, ay;
+
+    function ciz() {
+      var bas = semTarih(secili.dataset.baslangic);
+      var bit = semTarih(secili.dataset.bitis) || bas;
+      var kayit = semTarih(secili.dataset.sonKayit);
+      var bugun = new Date();
+      var ilk = new Date(ay.getFullYear(), ay.getMonth(), 1);
+      var bosluk = (ilk.getDay() + 6) % 7;            // Pazartesi ile başlayan hafta
+      var gunSayisi = new Date(ay.getFullYear(), ay.getMonth() + 1, 0).getDate();
+
+      var h = '<div class="sem-cal-ust">' +
+        '<button type="button" class="sem-cal-ok" data-yon="-1" aria-label="Önceki ay"><i class="feather-chevron-left"></i></button>' +
+        '<span class="sem-cal-ay">' + SEM_AYLAR[ay.getMonth()] + ' <small>' + ay.getFullYear() + '</small></span>' +
+        '<button type="button" class="sem-cal-ok" data-yon="1" aria-label="Sonraki ay"><i class="feather-chevron-right"></i></button>' +
+        '</div><div class="sem-cal-izgara">';
+      ['Pt', 'Sa', 'Ça', 'Pe', 'Cu', 'Ct', 'Pz'].forEach(function (g) {
+        h += '<span class="sem-cal-hg">' + g + '</span>';
+      });
+      for (var i = 0; i < bosluk; i++) h += '<span class="sem-cal-gun is-bos"></span>';
+      for (var d = 1; d <= gunSayisi; d++) {
+        var t = new Date(ay.getFullYear(), ay.getMonth(), d);
+        var c = ['sem-cal-gun'];
+        if (bas && t >= bas && t <= bit) {
+          c.push('is-egitim');
+          if (ayniGun(t, bas)) c.push('is-bas');
+          if (ayniGun(t, bit)) c.push('is-bit');
+          var hg = (t.getDay() + 6) % 7;
+          if (hg === 0) c.push('is-hafta-bas');
+          if (hg === 6) c.push('is-hafta-son');
+        }
+        if (ayniGun(t, kayit)) c.push('is-kayit');
+        if (ayniGun(t, bugun)) c.push('is-bugun');
+        h += '<span class="' + c.join(' ') + '"><span>' + d + '</span></span>';
+      }
+      h += '</div><div class="sem-cal-lejant">' +
+        '<span><i class="sem-lej-egitim"></i>Eğitim günleri</span>' +
+        '<span><i class="sem-lej-kayit"></i>Son kayıt</span></div>';
+      cal.innerHTML = h;
+    }
+
+    function sec(li) {
+      secili = li;
+      gruplar.forEach(function (g) {
+        var aktif = g === li;
+        g.classList.toggle('is-aktif', aktif);
+        var btn = g.querySelector('.sem-takvim-grup-btn');
+        if (btn) btn.setAttribute('aria-expanded', aktif ? 'true' : 'false');
+      });
+      var b = semTarih(li.dataset.baslangic) || new Date();
+      ay = new Date(b.getFullYear(), b.getMonth(), 1);
+      ciz();
+    }
+
+    cal.addEventListener('click', function (e) {
+      var ok = e.target.closest('.sem-cal-ok');
+      if (!ok) return;
+      ay = new Date(ay.getFullYear(), ay.getMonth() + (+ok.dataset.yon), 1);
+      ciz();
+    });
+    gruplar.forEach(function (g) {
+      var btn = g.querySelector('.sem-takvim-grup-btn');
+      if (btn) btn.addEventListener('click', function () { sec(g); });
+    });
+
+    // varsayılan: kayıtları açık ilk grup, yoksa ilk grup
+    var acik = gruplar.filter(function (g) { return g.querySelector('.sem-status-badge--acik, .sem-status-badge--son'); })[0];
+    root.classList.add('is-hazir');
+    sec(acik || gruplar[0]);
+  }
+
+  /* ── Hizmet içi eğitimler: personel girişi penceresi ──────
+     #semPersonelModal sayfada varsa ve window.__semPersonel true değilse açılır.
+     Backend personel girişli kullanıcıya modal bloğunu basmazsa hiçbir şey olmaz. */
+  function initPersonelModal() {
+    var el = document.getElementById('semPersonelModal');
+    if (!el || window.__semPersonel === true) return;
+    if (typeof bootstrap !== 'undefined' && bootstrap.Modal) {
+      document.body.classList.add('sem-personel-kilit');
+      bootstrap.Modal.getOrCreateInstance(el).show();
+    }
+  }
+
+  function initRevizyon() {
+    document.querySelectorAll('[data-sem-takvim]').forEach(initTakvim);
+    initPersonelModal();
+  }
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initApplyForm);
+    document.addEventListener('DOMContentLoaded', initRevizyon);
   } else {
     initApplyForm();
+    initRevizyon();
   }
 
   /* ── Global erişim ───────────────────────────────────── */
   window.semFilterCards = filterCards;
   window.openApplyModal = openApplyModal;
+  /* Statik prototip yedeği — canlıda sem-site.js (sonra yüklenir) gerçek sepeteEkle ile ezer */
+  if (typeof window.sepeteEkle !== 'function') {
+    window.sepeteEkle = function () { window.location.href = 'giris.html'; };
+  }
 
 }());

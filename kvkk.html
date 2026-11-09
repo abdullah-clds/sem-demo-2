@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="./assets/css/plugins/jodit.min.css">
 
     <link rel="stylesheet" href="./assets/css/styles.css">
-    <link rel="stylesheet" href="./assets/css/sem-custom.css?v=20261104">
+    <link rel="stylesheet" href="./assets/css/sem-custom.css?v=20261109">
     <link rel="stylesheet" href="./assets/css/sem-kurumsal.css">
     <!-- Google Analytics (GA4) — GERÇEK ÖLÇÜM KİMLİĞİ BEKLENİYOR (placeholder: G-XXXXXXXXXX), bkz. README.md -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -59,9 +59,9 @@
                 <!-- Start Header Area -->
 <header class="rbt-header rbt-header-10">
       <div class="rbt-sticky-placeholder"></div>
-      <!-- Start Header Top  -->
+      <!-- Start Header Top: içeriği (sosyal medya, telefon) yalnızca geniş ekranda var; altında boş kalmasın diye gizli -->
       <div
-        class="rbt-header-top rbt-header-top-1 header-space-betwween bg-not-transparent bg-color-darker top-expended-activation"
+        class="rbt-header-top rbt-header-top-1 header-space-betwween bg-not-transparent bg-color-darker top-expended-activation d-none d-xl-flex"
       >
         <div class="container-fluid">
           <div class="top-expended-wrapper">
@@ -71,18 +71,18 @@
                   <!-- Start Header Information List  -->
                   <div class="header-info">
                     <ul class="rbt-information-list">
+                        <li>
+                          <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+                            <i class="fab fa-instagram"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+                            <i class="fab fa-facebook-f"></i>
+                          </a>
+                        </li>
                       <li>
-                        <a href="#">
-                          <i class="fab fa-instagram"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fab fa-facebook-square"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
+                        <a href="tel:+903843535009">
                           <i class="feather-phone"></i>
                           +90 384 353 50 09
                         </a>
@@ -113,36 +113,19 @@
                 >
                   <div class="header-info d-none d-xl-block">
                     <ul class="social-share-transparent">
-                      <li>
-                        <a href="#">
-                          <i class="fab fa-facebook-f"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fab fa-twitter"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fab fa-linkedin-in"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fab fa-instagram"></i>
-                        </a>
-                      </li>
+                        <li>
+                          <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+                            <i class="fab fa-instagram"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+                            <i class="fab fa-facebook-f"></i>
+                          </a>
+                        </li>
                     </ul>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="header-info">
-              <div class="top-bar-expended d-block d-lg-none">
-                <button class="topbar-expend-button rbt-round-btn">
-                  <i class="feather-plus"></i>
-                </button>
               </div>
             </div>
           </div>
@@ -172,36 +155,19 @@
             <div class="rbt-main-navigation d-none d-xl-block">
               <nav class="mainmenu-nav">
                 <ul class="mainmenu">
-                  <li><a href="tum-kurslar.html">Eğitimler</a></li>
-                  <li><a href="hizmet-ici-egitimler.html">Hizmet İçi Eğitimler</a></li>
-                  <li><a href="mikro-yeterlilik.html">Mikro Yeterlilik</a></li>
-                  <li class="has-dropdown has-menu-child-item">
-                    <a href="#"
-                      >Sınav Merkezleri <i class="feather-chevron-down"></i
-                    ></a>
-                    <ul class="submenu">
-                      <li>
-                        <a
-                          href="https://ilkyardim.kapadokya.edu.tr/"
-                          target="_blank"
-                          rel="noopener"
-                          >İlk Yardım Eğitim Merkezi</a
-                        >
+                      <li><a href="tum-kurslar.html">Eğitimler</a></li>
+                      <li><a href="hizmet-ici-egitimler.html">Hizmet İçi Eğitimler</a></li>
+                      <li><a href="mikro-yeterlilik.html">Mikro Yeterlilik</a></li>
+                      <li class="has-dropdown has-menu-child-item">
+                        <a href="#">Sınav Merkezleri <i class="feather-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="https://ilkyardim.kapadokya.edu.tr/" target="_blank">İlk Yardım Eğitim Merkezi</a></li>
+                            <li><a href="#">SHGM Sınav Merkezi</a></li>
+                            <li><a href="egitim-kaynak-saglayici.html">Eğitim Kaynak Sağlayıcı</a></li>
+                            <li><a href="pemer.html">PEMER</a></li>
+                        </ul>
                       </li>
-                      <li>
-                        <a href="#">SHGM Sınav Merkezi</a>
-                      </li>
-                      <li>
-                        <a href="egitim-kaynak-saglayici.html"
-                          >Eğitim Kaynak Sağlayıcı</a
-                        >
-                      </li>
-                      <li>
-                        <a href="pemer.html">PEMER</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li><a href="iletisim.html">İletişim</a></li>
+                      <li><a href="iletisim.html">İletişim</a></li>
                 </ul>
               </nav>
             </div>
@@ -214,175 +180,29 @@
                   </a>
                 </li>
                 <li class="account-access rbt-user-wrapper d-none d-xl-block">
-                  <a href="#">
+                  <a href="giris.html">
                     <i class="feather-user"></i>
                     Hesabım
                   </a>
                   <div class="rbt-user-menu-list-wrapper">
                     <div class="inner">
-                      <div class="rbt-admin-profile">
-                        <div class="admin-thumbnail">
-                          <img src="./assets/images/team/avatar.jpg" alt="Kullanıcı">
-                        </div>
-                        <div class="admin-info">
-                          <span class="name">Ahmet Demir</span>
-                          <a class="rbt-btn-link color-primary" href="egitmen-panel.html">Profili Görüntüle</a>
-                        </div>
-                      </div>
-                      <ul class="user-list-wrapper">
-                        <li>
-                          <a href="egitmen-panel.html">
-                            <i class="feather-home"></i>
-                            <span>Kontrol Panelim</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-bookmark"></i>
-                            <span>Favoriler</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-shopping-bag"></i>
-                            <span>Kayıtlı Dersler</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-heart"></i>
-                            <span>İstek Listesi</span>
-                          </a>
-                        </li>
-<li>
-                          <a href="#">
-                            <i class="feather-list"></i>
-                            <span>Sınav Denemelerim</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-clock"></i>
-                            <span>Sipariş Geçmişi</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-message-square"></i>
-                            <span>Soru &amp; Cevap</span>
-                          </a>
-                        </li>
-                      </ul>
-                      <hr class="mt--10 mb--10">
-                      <ul class="user-list-wrapper">
-                        <li>
-                          <a href="#">
-                            <i class="feather-book-open"></i>
-                            <span>Başlarken</span>
-                          </a>
-                        </li>
-                      </ul>
-                      <hr class="mt--10 mb--10">
-                      <ul class="user-list-wrapper">
-                        <li>
-                          <a href="egitmen-panel.html">
-                            <i class="feather-settings"></i>
-                            <span>Ayarlar</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-log-out"></i>
-                            <span>Çıkış Yap</span>
-                          </a>
-                        </li>
-                      </ul>
+                        <ul class="user-list-wrapper">
+                          <li><a href="giris.html"><i class="feather-log-in"></i><span>Giriş Yap</span></a></li>
+                          <li><a href="kayit-ol.html"><i class="feather-user-plus"></i><span>Kayıt Ol</span></a></li>
+                        </ul>
                     </div>
                   </div>
                 </li>
                 <li class="access-icon rbt-user-wrapper d-block d-xl-none">
-                  <a class="rbt-round-btn" href="#">
+                  <a class="rbt-round-btn" href="giris.html">
                     <i class="feather-user"></i>
                   </a>
                   <div class="rbt-user-menu-list-wrapper">
                     <div class="inner">
-                      <div class="rbt-admin-profile">
-                        <div class="admin-thumbnail">
-                          <img src="./assets/images/team/avatar.jpg" alt="Kullanıcı">
-                        </div>
-                        <div class="admin-info">
-                          <span class="name">Ahmet Demir</span>
-                          <a class="rbt-btn-link color-primary" href="egitmen-panel.html">Profilimi Görüntüle</a>
-                        </div>
-                      </div>
-                      <ul class="user-list-wrapper">
-                        <li>
-                          <a href="egitmen-panel.html">
-                            <i class="feather-home"></i>
-                            <span>Kontrol Panelim</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-bookmark"></i>
-                            <span>Favoriler</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-shopping-bag"></i>
-                            <span>Kayıtlı Olduğum Eğitimler</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-heart"></i>
-                            <span>İstek Listesi</span>
-                          </a>
-                        </li>
-<li>
-                          <a href="#">
-                            <i class="feather-list"></i>
-                            <span>Sınav Denemelerim</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-clock"></i>
-                            <span>Sipariş Geçmişi</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-message-square"></i>
-                            <span>Soru &amp; Cevap</span>
-                          </a>
-                        </li>
-                      </ul>
-                      <hr class="mt--10 mb--10">
-                      <ul class="user-list-wrapper">
-                        <li>
-                          <a href="#">
-                            <i class="feather-book-open"></i>
-                            <span>Başlarken</span>
-                          </a>
-                        </li>
-                      </ul>
-                      <hr class="mt--10 mb--10">
-                      <ul class="user-list-wrapper">
-                        <li>
-                          <a href="egitmen-panel.html">
-                            <i class="feather-settings"></i>
-                            <span>Ayarlar</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-log-out"></i>
-                            <span>Çıkış Yap</span>
-                          </a>
-                        </li>
-                      </ul>
+                        <ul class="user-list-wrapper">
+                          <li><a href="giris.html"><i class="feather-log-in"></i><span>Giriş Yap</span></a></li>
+                          <li><a href="kayit-ol.html"><i class="feather-user-plus"></i><span>Kayıt Ol</span></a></li>
+                        </ul>
                     </div>
                   </div>
                 </li>
@@ -408,21 +228,17 @@
         <!-- Start Search Dropdown  -->
         <div class="rbt-search-dropdown sem-search-glass">
           <div class="wrapper">
-            <form
-              id="sem-header-search-form"
-              class="sem-sg-form"
-              role="search"
-              onsubmit="
+            <form id="sem-header-search-form" class="sem-sg-form" role="search" action="tum-kurslar.html" method="get" onsubmit="
                 event.preventDefault();
                 var q = document.getElementById('sem-hdr-q').value.trim();
                 if (q)
                   window.location =
-                    'tum-kurslar.html?q=' + encodeURIComponent(q);
-              "
-            >
+                    '/egitimler?q=' + encodeURIComponent(q);
+              ">
               <i class="feather-search sem-sg-icon" aria-hidden="true"></i>
               <input
                 id="sem-hdr-q"
+                name="q"
                 type="text"
                 placeholder="Eğitim ara"
                 aria-label="Eğitim ara"
@@ -440,12 +256,12 @@
             </form>
             <div class="sem-search-cats">
               <span>Popüler aramalar</span>
-              <a href="tum-kurslar.html?kategori=havacilik">Havacılık</a>
-              <a href="tum-kurslar.html?kategori=gastronomi">Gastronomi</a>
-              <a href="tum-kurslar.html?kategori=turizm">Turizm</a>
-              <a href="tum-kurslar.html?kategori=saglik">Sağlık</a>
-              <a href="tum-kurslar.html?kategori=bilisim">Bilişim</a>
-              <a href="tum-kurslar.html?kategori=pemer-myk">PEMER / MYK</a>
+              <a href="tum-kurslar.html?kategori=modul-sinav-kurslari">Modül Sınav Kursları</a>
+              <a href="tum-kurslar.html?kategori=ascilik-egitimleri">Aşçılık Eğitimi</a>
+              <a href="tum-kurslar.html?kategori=iha-egitimleri">İHA Eğitimleri</a>
+              <a href="tum-kurslar.html?kategori=kirsal-kalkinma">Kırsal Kalkınma</a>
+              <a href="tum-kurslar.html?kategori=cocuklar-icin-ingilizce-egitimleri">Çocuklar İçin İngilizce Eğitimi</a>
+              <a href="tum-kurslar.html?kategori=baloncuk-sektor-egitimleri">Balonculuk Sektör Eğitimleri</a>
             </div>
             <div class="sem-sg-results" id="sem-sg-results" role="listbox" aria-label="Arama önizlemesi" hidden></div>
           </div>
@@ -474,7 +290,7 @@
                     <h3 class="rbt-short-title">Programlar</h3>
                     <ul class="rbt-vertical-nav-list-wrapper">
                       <li>
-                        <a href="kurs-detay.html">Meteoroloji Temel Eğitimi</a>
+                        <a href="tum-kurslar.html">Meteoroloji Temel Eğitimi</a>
                       </li>
                       <li>
                         <a href="tum-kurslar.html?kategori=havacilik"
@@ -597,7 +413,7 @@
           <div class="content">
             <div class="logo">
               <a href="anasayfa.html">
-                <img src="./assets/images/logo/sem-logo-byz.png" alt="Kapadokya Üniversitesi SEM" style="max-height:40px;">
+                <img src="./assets/images/logo/sem-logo.png" alt="Kapadokya Üniversitesi SEM" style="max-height:40px;">
               </a>
             </div>
             <div class="rbt-btn-close">
@@ -611,35 +427,31 @@
         <!-- Navigasyon -->
         <nav class="mainmenu-nav">
           <ul class="mainmenu">
-
-            <li><a href="tum-kurslar.html">Eğitimler</a></li>
-            <li><a href="hizmet-ici-egitimler.html">Hizmet İçi Eğitimler</a></li>
-            <li><a href="mikro-yeterlilik.html">Mikro Yeterlilik</a></li>
-
-            <li class="has-dropdown has-menu-child-item">
-              <a href="#">Sınav Merkezleri</a>
-              <ul class="submenu">
-                <li><a href="https://ilkyardim.kapadokya.edu.tr/" target="_blank" rel="noopener">İlk Yardım Eğitim Merkezi</a></li>
-                <li><a href="#">SHGM Sınav Merkezi</a></li>
-                <li><a href="egitim-kaynak-saglayici.html">Eğitim Kaynak Sağlayıcı</a></li>
-                <li><a href="pemer.html">PEMER</a></li>
-              </ul>
-            </li>
-
-            <li><a href="iletisim.html">İletişim</a></li>
-
+                <li><a href="tum-kurslar.html">Eğitimler</a></li>
+                <li><a href="hizmet-ici-egitimler.html">Hizmet İçi Eğitimler</a></li>
+                <li><a href="mikro-yeterlilik.html">Mikro Yeterlilik</a></li>
+                <li class="has-dropdown has-menu-child-item">
+                  <a href="#">Sınav Merkezleri</a>
+                  <ul class="submenu">
+                      <li><a href="https://ilkyardim.kapadokya.edu.tr/" target="_blank">İlk Yardım Eğitim Merkezi</a></li>
+                      <li><a href="#">SHGM Sınav Merkezi</a></li>
+                      <li><a href="egitim-kaynak-saglayici.html">Eğitim Kaynak Sağlayıcı</a></li>
+                      <li><a href="pemer.html">PEMER</a></li>
+                  </ul>
+                </li>
+                <li><a href="iletisim.html">İletişim</a></li>
           </ul>
         </nav>
 
         <!-- Alt: İletişim + Auth -->
         <div class="sem-mob-footer">
           <div class="sem-mob-contact">
-            <a href="tel:+903843535009"><i class="feather-phone"></i> (384) 353 50 09</a>
+            <a href="tel:+903843535009"><i class="feather-phone"></i> +90 384 353 50 09</a>
             <a href="mailto:sem@kapadokya.edu.tr"><i class="feather-mail"></i> sem@kapadokya.edu.tr</a>
           </div>
           <div class="sem-mob-auth">
-            <a href="giris.html" class="sem-mob-btn sem-mob-btn--outline">Giriş Yap</a>
-            <a href="kayit-ol.html" class="sem-mob-btn sem-mob-btn--solid">Kayıt Ol</a>
+              <a href="giris.html" class="sem-mob-btn sem-mob-btn--outline">Giriş Yap</a>
+              <a href="kayit-ol.html" class="sem-mob-btn sem-mob-btn--solid">Kayıt Ol</a>
           </div>
         </div>
 
@@ -647,72 +459,517 @@
     </div>
 
 
+    <main id="main-content">
+        
 
-
-    <!-- Page Head -->
-    <section style="background:#f8f9fa;padding:48px 0;">
-        <div class="container">
-            <p style="font-size:15px;font-weight:500;color:#212121;margin-bottom:6px;letter-spacing:.02em;">KAPADOKYA ÜNİVERSİTESİ SEM</p>
-            <h1 style="font-size:clamp(44px,7vw,80px);font-weight:800;color:#212121;line-height:1.08;margin-bottom:18px;letter-spacing:-.02em;">KVKK Aydınlatma Metni</h1>
-            <div style="font-size:14px;color:#6c757d;">
-                <a href="anasayfa.html" style="color:#6c757d;text-decoration:none;">Anasayfa</a>
-                <span style="margin:0 6px;">&gt;</span>
-                <span>KVKK</span>
-            </div>
-        </div>
-    </section>
-    <!-- End Page Head -->
-
-    <!-- KVKK İçerik -->
-    <section style="padding:56px 0 72px;">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-
-                    <p style="font-size:13px;color:#6c757d;margin-bottom:48px;">Son güncelleme: Ocak 2025</p>
-
-                    <div style="margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid #e8e8e8;">
-                        <h5 style="font-size:17px;font-weight:700;color:#212121;margin-bottom:12px;">1. Veri Sorumlusu</h5>
-                        <p style="font-size:15px;color:#2f2f2f;line-height:1.8;margin:0;">Kapadokya Üniversitesi Sürekli Eğitim Uygulama ve Araştırma Merkezi (SEM), 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında veri sorumlusu sıfatıyla hareket etmektedir.</p>
-                    </div>
-
-                    <div style="margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid #e8e8e8;">
-                        <h5 style="font-size:17px;font-weight:700;color:#212121;margin-bottom:12px;">2. İşlenen Kişisel Veriler</h5>
-                        <p style="font-size:15px;color:#2f2f2f;line-height:1.8;margin-bottom:16px;">SEM, eğitim başvurusu, kayıt ve sertifika süreçlerinde aşağıdaki kişisel verileri işlemektedir:</p>
-                        <ul style="font-size:15px;color:#2f2f2f;line-height:1.8;padding-left:20px;margin:0;">
-                            <li>Ad, soyad ve T.C. kimlik numarası</li>
-                            <li>İletişim bilgileri (telefon, e-posta, adres)</li>
-                            <li>Öğrenim durumu ve iş bilgileri</li>
-                            <li>Ödeme bilgileri (kart/havale kaydı)</li>
-                            <li>Eğitim katılım ve başarı verileri</li>
+<div class="rbt-page-banner-wrapper">
+    <div class="rbt-banner-image">
+        <img src="./assets/images/banner/sem-egitim-motif.svg" alt="" aria-hidden="true" class="banner-motif">
+    </div>
+    <div class="rbt-banner-content">
+        <div class="rbt-banner-content-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="page-list">
+                            <li class="rbt-breadcrumb-item"><a href="anasayfa.html">Anasayfa</a></li>
+                            <li>
+                                <div class="icon-right"><i class="feather-chevron-right"></i></div>
+                            </li>
+                            <li class="rbt-breadcrumb-item active">KVKK Aydınlatma Metni</li>
                         </ul>
+                        <div class="title-wrapper">
+                            <h1 class="title mb--0">KVKK Aydınlatma Metni</h1>
+                        </div>
                     </div>
-
-                    <div style="margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid #e8e8e8;">
-                        <h5 style="font-size:17px;font-weight:700;color:#212121;margin-bottom:12px;">3. İşleme Amaçları</h5>
-                        <p style="font-size:15px;color:#2f2f2f;line-height:1.8;margin:0;">Kişisel verileriniz; eğitim kayıt ve takip, sertifika düzenleme, e-Devlet bildirimi, iletişim ve bilgilendirme, yasal yükümlülüklerin yerine getirilmesi amaçlarıyla işlenmektedir.</p>
-                    </div>
-
-                    <div style="margin-bottom:48px;">
-                        <h5 style="font-size:17px;font-weight:700;color:#212121;margin-bottom:12px;">4. Haklarınız</h5>
-                        <p style="font-size:15px;color:#2f2f2f;line-height:1.8;margin:0;">KVKK'nın 11. maddesi kapsamında kişisel verilerinize ilişkin haklar için <a href="mailto:sem@kapadokya.edu.tr" style="color:#ca2c31;text-decoration:none;font-weight:600;">sem@kapadokya.edu.tr</a> adresine başvurabilirsiniz.</p>
-                    </div>
-
-                    <a href="iletisim.html" style="display:inline-flex;align-items:center;gap:8px;background:#212121;color:#fff;padding:14px 28px;font-size:15px;font-weight:600;text-decoration:none;letter-spacing:.01em;">
-                        <i class="feather-mail"></i> Veri Başvurusu Yap
-                    </a>
-
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</div>
 
-                <div class="rbt-progress-parent">
-    <svg class="rbt-back-circle svg-inner" width="100%" height="100%" viewBox="-1 -1 102 102" xmlns="http://www.w3.org/2000/svg">
-        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
-    </svg>
-</div>            
-                <!-- Start Footer aera -->
+
+<div class="rbt-section-gapBottom">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="rbt-shadow-box rbt-course-feature-box">
+
+<div style="width:100%;max-width:1100px;margin:0 auto;color:#2f2f2f;line-height:1.85;">
+
+    <!-- SAYFA BAŞLIĞI -->
+    <div style="padding-bottom:30px;margin-bottom:34px;border-bottom:1px solid #e8e8e8;">
+
+        <div style="display:inline-block;background:#f3f3f3;color:#6c757d;font-size:12px;font-weight:600;letter-spacing:1px;padding:6px 12px;margin-bottom:18px;">
+            KİŞİSEL VERİLERİN KORUNMASI
+        </div>
+
+        <h2 style="font-size:27px;font-weight:700;color:#212121;line-height:1.4;margin:0 0 22px 0;">
+            Kapadokya Üniversitesi İnternet Sitesi Üyelik Aydınlatma Metni
+        </h2>
+
+        <div style="background:#f7f8fa;border-left:3px solid #ca2c31;padding:18px 22px;margin-bottom:24px;">
+            <p style="font-size:14px;line-height:1.8;margin:0 0 7px 0;">
+                <strong style="color:#212121;">VERİ SORUMLUSU:</strong>
+                Kapadokya Üniversitesi
+            </p>
+            <p style="font-size:14px;line-height:1.8;margin:0;">
+                <strong style="color:#212121;">İLGİLİ KİŞİ:</strong>
+                İnternet Sitesi Üyeleri / Üye Kullanıcılar
+            </p>
+        </div>
+
+        <p style="font-size:15px;line-height:1.95;margin:0 0 18px 0;">
+            6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”) ile
+            Aydınlatma Yükümlülüğünün Yerine Getirilmesinde Uyulacak Usul ve
+            Esaslar Hakkında Tebliğ uyarınca, veri sorumlusu sıfatıyla
+            Kapadokya Üniversitesi (“Üniversite”) tarafından, internet sitesi
+            üzerinden üyelik tesis eden kullanıcıların kişisel verilerinin
+            işlenmesine ilişkin olarak işbu Aydınlatma Metni düzenlenmiştir.
+        </p>
+
+        <p style="font-size:15px;line-height:1.95;margin:0;">
+            Kişisel Verileri Koruma Kurulu’nun yerleşik kararlarında
+            vurgulandığı üzere,
+            <em>"aydınlatma yükümlülüğünün gerek açık rızadan gerekse de
+            Kanun’daki diğer kişisel veri işleme şartlarından bağımsız olarak
+            yerine getirilmesi gereken bir yükümlülük olduğu"</em>
+            (KVKK Kararları, K. 2023/1461, T. 24.08.2023) esastır.
+            Bu kapsamda Üniversitemiz, internet sitesi üyelik sürecinde
+            toplanan verilere dair aydınlatma yükümlülüğünü şeffaflık,
+            belirlilik ve hesap verebilirlik ilkeleri doğrultusunda
+            ifa etmektedir.
+        </p>
+
+    </div>
+
+    <!-- BÖLÜM 1 -->
+    <div style="margin-bottom:36px;padding-bottom:32px;border-bottom:1px solid #e8e8e8;">
+
+        <h3 style="font-size:19px;font-weight:700;color:#212121;line-height:1.5;margin:0 0 16px 0;">
+            1. Veri Sorumlusunun Kimliği
+        </h3>
+
+        <p style="font-size:15px;line-height:1.95;margin:0;">
+            KVKK’nın 10. maddesinin birinci fıkrasının (a) bendi uyarınca,
+            web sitesi üyelik işlemleri kapsamında işlenen kişisel veriler
+            bakımından veri sorumlusu, tüzel kişiliği haiz yükseköğretim
+            kurumu niteliğindeki
+            <strong>Kapadokya Üniversitesi</strong>’dir.
+        </p>
+
+    </div>
+
+    <!-- BÖLÜM 2 -->
+    <div style="margin-bottom:36px;padding-bottom:32px;border-bottom:1px solid #e8e8e8;">
+
+        <h3 style="font-size:19px;font-weight:700;color:#212121;line-height:1.5;margin:0 0 16px 0;">
+            2. İşlenen Kişisel Veri Kategorileri, İşleme Amaçları ve Hukuki Sebepleri
+        </h3>
+
+        <p style="font-size:15px;line-height:1.95;margin:0 0 16px 0;">
+            Kurul içtihadında ifade edildiği üzere,
+            <em>"Aydınlatma yükümlülüğü kapsamında açıklanacak kişisel veri
+            işleme amacının belirli, açık ve meşru olması gerekir. Aydınlatma
+            yükümlülüğü yerine getirilirken, genel nitelikte ve muğlak
+            ifadelere yer verilmemelidir."</em>
+            (KVKK Kararları, K. 2021/333, T. 05.04.2021).
+        </p>
+
+        <p style="font-size:15px;line-height:1.95;margin:0 0 16px 0;">
+            Ayrıca dijital süreçlerde
+            <em>"ilgili kişilere, yaptıkları işlem bazında, söz konusu işlem
+            dahilinde kullanılan kişisel verilerine ilişkin bilgilendirme
+            sağlamasının beklendiği"</em>
+            (KVKK Kararları, K. 2021/85, T. 03.02.2021)
+            kabul edilmektedir.
+        </p>
+
+        <p style="font-size:15px;line-height:1.95;margin:0 0 24px 0;">
+            Bu doğrultuda, internet sitesi üyeliği tesisi ve ifası aşamalarında
+            işlenen kişisel veri kategorileri, bunların işlenme amaçları ve
+            dayandıkları kanuni işleme şartları aşağıda açıkça ve belirli
+            bir biçimde eşleştirilerek gösterilmiştir:
+        </p>
+
+        <!-- MOBİL UYUMLU TABLO -->
+        <div style="width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid #e8e8e8;">
+
+            <table style="width:100%;min-width:850px;border-collapse:collapse;text-align:left;font-size:13px;line-height:1.75;">
+
+                <thead>
+                    <tr style="background:#f3f3f3;">
+                        <th scope="col" style="padding:15px 14px;border-bottom:2px solid #dedede;color:#212121;font-weight:700;width:15%;vertical-align:top;">
+                            Veri Kategorisi
+                        </th>
+                        <th scope="col" style="padding:15px 14px;border-bottom:2px solid #dedede;color:#212121;font-weight:700;width:27%;vertical-align:top;">
+                            İşlenen Kişisel Veriler
+                        </th>
+                        <th scope="col" style="padding:15px 14px;border-bottom:2px solid #dedede;color:#212121;font-weight:700;width:33%;vertical-align:top;">
+                            İşleme Amaçları
+                        </th>
+                        <th scope="col" style="padding:15px 14px;border-bottom:2px solid #dedede;color:#212121;font-weight:700;width:25%;vertical-align:top;">
+                            Hukuki Sebep (KVKK m. 5/2)
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <!-- KİMLİK -->
+                    <tr>
+                        <td style="padding:17px 14px;border-bottom:1px solid #e8e8e8;vertical-align:top;font-weight:700;color:#212121;">
+                            Kimlik
+                        </td>
+                        <td style="padding:17px 14px;border-bottom:1px solid #e8e8e8;vertical-align:top;">
+                            Ad, soyad, T.C. kimlik numarası
+                            (veya yabancı kimlik / pasaport numarası)
+                        </td>
+                        <td style="padding:17px 14px;border-bottom:1px solid #e8e8e8;vertical-align:top;">
+                            Web sitesi üyelik kaydının tesis edilmesi,
+                            üye hesabının açılması, kullanıcının tekil
+                            olarak tanımlanması ve üyelik sözleşmesinin
+                            akdedilmesi
+                        </td>
+                        <td style="padding:17px 14px;border-bottom:1px solid #e8e8e8;vertical-align:top;">
+                            Bir sözleşmenin kurulması veya ifasıyla
+                            doğrudan doğruya ilgili olması kaydıyla,
+                            sözleşmenin taraflarına ait kişisel verilerin
+                            işlenmesinin gerekli olması
+                            <strong>(m. 5/2-c)</strong>
+                        </td>
+                    </tr>
+
+                    <!-- İLETİŞİM -->
+                    <tr style="background:#fafafa;">
+                        <td style="padding:17px 14px;border-bottom:1px solid #e8e8e8;vertical-align:top;font-weight:700;color:#212121;">
+                            İletişim
+                        </td>
+                        <td style="padding:17px 14px;border-bottom:1px solid #e8e8e8;vertical-align:top;">
+                            E-posta adresi, telefon numarası
+                        </td>
+                        <td style="padding:17px 14px;border-bottom:1px solid #e8e8e8;vertical-align:top;">
+                            Üyelik doğrulama kodlarının ve aktivasyon
+                            iletilerinin gönderilmesi, üyelik hesabına
+                            dair zorunlu bildirimlerin iletilmesi ve
+                            üyelik işlemlerinin yürütülmesi
+                        </td>
+                        <td style="padding:17px 14px;border-bottom:1px solid #e8e8e8;vertical-align:top;">
+                            Bir sözleşmenin kurulması veya ifasıyla
+                            doğrudan doğruya ilgili olması kaydıyla,
+                            sözleşmenin taraflarına ait kişisel verilerin
+                            işlenmesinin gerekli olması
+                            <strong>(m. 5/2-c)</strong>
+                        </td>
+                    </tr>
+
+                    <!-- İŞLEM GÜVENLİĞİ -->
+                    <tr>
+                        <td style="padding:17px 14px;border-bottom:1px solid #e8e8e8;vertical-align:top;font-weight:700;color:#212121;">
+                            İşlem Güvenliği
+                        </td>
+                        <td style="padding:17px 14px;border-bottom:1px solid #e8e8e8;vertical-align:top;">
+                            IP adresi, kullanıcı adı ve şifre kayıtları,
+                            internet sitesi giriş-çıkış logları,
+                            erişim tarih ve saat bilgileri
+                        </td>
+                        <td style="padding:17px 14px;border-bottom:1px solid #e8e8e8;vertical-align:top;">
+                            5651 sayılı Kanun uyarınca trafik
+                            kayıtlarının tutulması ve saklanması,
+                            bilgi ve sistem güvenliğinin sağlanması,
+                            yetkisiz erişim veya işlemlerin engellenmesi
+                        </td>
+                        <td style="padding:17px 14px;border-bottom:1px solid #e8e8e8;vertical-align:top;">
+                            Kanunlarda açıkça öngörülmesi
+                            <strong>(m. 5/2-a)</strong> ile veri
+                            sorumlusunun hukuki yükümlülüğünü
+                            yerine getirebilmesi için zorunlu olması
+                            <strong>(m. 5/2-ç)</strong>
+                        </td>
+                    </tr>
+
+                    <!-- KULLANICI İŞLEM -->
+                    <tr style="background:#fafafa;">
+                        <td style="padding:17px 14px;vertical-align:top;font-weight:700;color:#212121;">
+                            Kullanıcı İşlem Verisi
+                        </td>
+                        <td style="padding:17px 14px;vertical-align:top;">
+                            Üyelik başlangıç ve güncelleme kayıtları,
+                            sistem üzerindeki işlem hareketleri ve
+                            tercih kayıtları
+                        </td>
+                        <td style="padding:17px 14px;vertical-align:top;">
+                            Üyelik hesabının ve profilinin yönetilmesi,
+                            kullanıcı talep ve destek süreçlerinin takibi,
+                            platformun teknik işleyişinin ve
+                            sürekliliğinin temini
+                        </td>
+                        <td style="padding:17px 14px;vertical-align:top;">
+                            İlgili kişinin temel hak ve özgürlüklerine
+                            zarar vermemek kaydıyla, veri sorumlusunun
+                            meşru menfaatleri için veri işlenmesinin
+                            zorunlu olması
+                            <strong>(m. 5/2-f)</strong>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+
+        <p style="font-size:12px;color:#8a8f98;line-height:1.7;margin:10px 0 0 0;">
+            Tabloyu mobil cihazlarda sağa ve sola kaydırarak inceleyebilirsiniz.
+        </p>
+
+    </div>
+
+    <!-- BÖLÜM 3 -->
+    <div style="margin-bottom:36px;padding-bottom:32px;border-bottom:1px solid #e8e8e8;">
+
+        <h3 style="font-size:19px;font-weight:700;color:#212121;line-height:1.5;margin:0 0 16px 0;">
+            3. Kişisel Veri Toplamanın Yöntemi
+        </h3>
+
+        <p style="font-size:15px;line-height:1.95;margin:0;">
+            Kişisel verileriniz; internet sitesinde yer alan üyelik başvuru
+            alanlarının elektronik ortamda doldurulması, üyelik sözleşmesinin
+            elektronik kanallar üzerinden onaylanması, üye girişi yapılarak
+            sitenin kullanılması ve ilgili bilgi işlem altyapısının sağladığı
+            teknik vasıtalar aracılığıyla tamamen veya kısmen otomatik
+            yollarla toplanmaktadır.
+        </p>
+
+    </div>
+
+    <!-- BÖLÜM 4 -->
+    <div style="margin-bottom:36px;padding-bottom:32px;border-bottom:1px solid #e8e8e8;">
+
+        <h3 style="font-size:19px;font-weight:700;color:#212121;line-height:1.5;margin:0 0 16px 0;">
+            4. İşlenen Kişisel Verilerin Aktarılması ve Aktarım Amaçları
+        </h3>
+
+        <p style="font-size:15px;line-height:1.95;margin:0 0 22px 0;">
+            Üyelik faaliyeti kapsamında elde edilen kişisel veriler,
+            KVKK’nın 8. maddesinde yer alan kişisel verilerin aktarılmasına
+            ilişkin şartlar çerçevesinde ve aşağıda belirtilen amaçlarla
+            sınırlı olmak üzere üçüncü taraflarla paylaşılabilecektir:
+        </p>
+
+        <div style="padding:20px 0;border-bottom:1px solid #e8e8e8;">
+            <h4 style="font-size:16px;font-weight:700;color:#212121;margin:0 0 10px 0;">
+                1. Yetkili Kamu Kurum ve Kuruluşları
+            </h4>
+            <p style="font-size:15px;line-height:1.95;margin:0;">
+                Yürürlükteki mevzuattan kaynaklanan yasal bildirim
+                yükümlülüklerinin ifası ile yetkili idari, denetleyici
+                veya adli makamlarca usulüne uygun olarak talep edilmesi
+                hâlinde, KVKK m. 8/2-a atfıyla Kanun’un 5/2-ç bendi
+                (hukuki yükümlülüğün yerine getirilmesi zorunluluğu)
+                uyarınca kanunen yetkili mercilere,
+            </p>
+        </div>
+
+        <div style="padding:20px 0;">
+            <h4 style="font-size:16px;font-weight:700;color:#212121;margin:0 0 10px 0;">
+                2. Hizmet Sağlayıcılar / Tedarikçiler
+            </h4>
+            <p style="font-size:15px;line-height:1.95;margin:0;">
+                İnternet sitesinin teknik altyapısının işletilmesi,
+                bilgi güvenliği tedbirlerinin sürdürülmesi, veri tabanı
+                barındırma ve sunucu hizmetlerinin yürütülmesi amaçlarıyla,
+                KVKK m. 5/2-c (sözleşmenin kurulması veya ifası) ve
+                m. 5/2-f (meşru menfaat) hükümleri doğrultusunda
+                Üniversitemize hizmet sağlayan yurt içindeki bilgi
+                teknolojileri tedarikçilerine aktarılabilmektedir.
+            </p>
+        </div>
+
+        <div style="background:#f7f8fa;border-left:3px solid #ca2c31;padding:18px 22px;margin-top:12px;">
+            <p style="font-size:14px;color:#444;line-height:1.9;margin:0;">
+                <em>
+                    Kanun’da öngörülen istisnai düzenlemeler veya ilgili
+                    kişinin yürürlükteki mevzuata uygun açık rızası
+                    bulunmaksızın yurt dışına veri aktarımı
+                    gerçekleştirilmemektedir.
+                </em>
+            </p>
+        </div>
+
+    </div>
+
+    <!-- BÖLÜM 5 -->
+    <div style="margin-bottom:36px;padding-bottom:32px;border-bottom:1px solid #e8e8e8;">
+
+        <h3 style="font-size:19px;font-weight:700;color:#212121;line-height:1.5;margin:0 0 16px 0;">
+            5. İlgili Kişinin 6698 Sayılı Kanun’un 11. Maddesindeki Hakları
+        </h3>
+
+        <p style="font-size:15px;line-height:1.95;margin:0 0 18px 0;">
+            KVKK’nın 11. maddesi uyarınca veri sahibi üyeler,
+            veri sorumlusuna başvurarak kendileriyle ilgili;
+        </p>
+
+        <ul style="font-size:15px;color:#2f2f2f;line-height:1.95;padding-left:23px;margin:0;">
+
+            <li style="margin-bottom:9px;">
+                Kişisel veri işlenip işlenmediğini öğrenme,
+            </li>
+
+            <li style="margin-bottom:9px;">
+                Kişisel verileri işlenmişse buna ilişkin bilgi talep etme,
+            </li>
+
+            <li style="margin-bottom:9px;">
+                Kişisel verilerin işlenme amacını ve bunların amacına uygun
+                kullanılıp kullanılmadığını öğrenme,
+            </li>
+
+            <li style="margin-bottom:9px;">
+                Yurt içinde veya yurt dışında kişisel verilerin aktarıldığı
+                üçüncü kişileri bilme,
+            </li>
+
+            <li style="margin-bottom:9px;">
+                Kişisel verilerin eksik veya yanlış işlenmiş olması hâlinde
+                bunların düzeltilmesini isteme,
+            </li>
+
+            <li style="margin-bottom:9px;">
+                KVKK m. 7’de öngörülen şartlar çerçevesinde kişisel verilerin
+                silinmesini veya yok edilmesini isteme,
+            </li>
+
+            <li style="margin-bottom:9px;">
+                Düzeltme, silme ve yok edilme talepleri doğrultusunda yapılan
+                işlemlerin, kişisel verilerin aktarıldığı üçüncü kişilere
+                bildirilmesini isteme,
+            </li>
+
+            <li style="margin-bottom:9px;">
+                İşlenen verilerin münhasıran otomatik sistemler vasıtasıyla
+                analiz edilmesi suretiyle kişinin kendisi aleyhine bir
+                sonucun ortaya çıkmasına itiraz etme,
+            </li>
+
+            <li>
+                Kişisel verilerin kanuna aykırı olarak işlenmesi sebebiyle
+                zarara uğraması hâlinde zararın giderilmesini talep etme
+                haklarına sahiptir.
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- BÖLÜM 6 -->
+    <div style="margin-bottom:38px;">
+
+        <h3 style="font-size:19px;font-weight:700;color:#212121;line-height:1.5;margin:0 0 16px 0;">
+            6. Başvuru Usul ve Esasları
+        </h3>
+
+        <p style="font-size:15px;line-height:1.95;margin:0 0 20px 0;">
+            Kişisel veri sahipleri, Kanun’un 11. maddesinde belirtilen
+            haklarına ilişkin taleplerini, Veri Sorumlusuna Başvuru
+            Usul ve Esasları Hakkında Tebliğ hükümlerine uygun olarak;
+        </p>
+
+        <ul style="font-size:15px;color:#2f2f2f;line-height:1.95;padding-left:23px;margin:0 0 25px 0;">
+
+            <li style="margin-bottom:12px;">
+                Kapadokya Üniversitesi’nin resmî adresine kimliğini
+                tevsik edici belgeler ile şahsen ıslak imzalı yazılı
+                başvuru yaparak,
+            </li>
+
+            <li style="margin-bottom:12px;">
+                Noter kanalıyla tebligat göndererek,
+            </li>
+
+            <li style="margin-bottom:12px;">
+                Üniversitenin kayıtlı elektronik posta (KEP) adresine
+                güvenli elektronik imza veya mobil imza kullanmak
+                suretiyle ileterek,
+            </li>
+
+            <li>
+                Üniversitemize daha önce bildirilen ve sistemlerimizde
+                kayıtlı bulunan elektronik posta adresini kullanmak
+                suretiyle Üniversitenin veri sorumlusu irtibat
+                e-posta adresine göndererek iletebilirler.
+            </li>
+
+        </ul>
+
+        <div style="background:#f7f8fa;border:1px solid #e8e8e8;padding:22px 24px;margin:0 0 24px 0;">
+
+            <h4 style="font-size:16px;font-weight:700;color:#212121;margin:0 0 12px 0;">
+                Başvuruda Bulunması Gereken Bilgiler
+            </h4>
+
+            <p style="font-size:14px;line-height:1.95;margin:0;">
+                Başvuruda; ad, soyad, imza (yazılı başvurularda),
+                T.C. kimlik numarası (veya yabancılar için uyruk,
+                pasaport no veya varsa yabancı kimlik no),
+                tebligata esas yerleşim yeri veya iş yeri adresi,
+                varsa bildirime esas elektronik posta adresi,
+                telefon numarası ve talep konusunun açıkça
+                belirtilmesi zorunludur.
+            </p>
+
+        </div>
+
+        <div style="border-left:3px solid #212121;padding:12px 20px;margin-bottom:0;">
+
+            <p style="font-size:15px;line-height:1.95;margin:0;">
+                Kapadokya Üniversitesi, talebin niteliğine göre başvuruyu
+                en kısa sürede ve en geç
+                <strong>otuz (30) gün</strong> içinde ücretsiz olarak
+                sonuçlandıracaktır. Ancak işlemin ayrıca bir maliyet
+                gerektirmesi hâlinde, Kişisel Verileri Koruma Kurulu
+                tarafından belirlenen tarifedeki ücret tahsil edilebilir.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- İLETİŞİM -->
+    <div style="margin-top:44px;padding-top:30px;border-top:1px solid #e8e8e8;">
+
+        <h4 style="font-size:17px;font-weight:700;color:#212121;margin:0 0 10px 0;">
+            Kişisel Verilere İlişkin Başvurular
+        </h4>
+
+        <p style="font-size:14px;color:#6c757d;line-height:1.9;margin:0 0 20px 0;">
+            Kişisel verilerinizin korunmasına ilişkin bilgi almak
+            veya başvuru kanalları hakkında iletişime geçmek için
+            iletişim sayfamızı ziyaret edebilirsiniz.
+        </p>
+
+        <a href="iletisim.html" style="display:inline-flex;align-items:center;gap:8px;background:#212121;color:#ffffff;padding:14px 28px;font-size:14px;font-weight:600;text-decoration:none;letter-spacing:.01em;">
+            <i class="feather-mail"></i>
+            İletişime Geç →
+        </a>
+
+    </div>
+
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </main>
+
+    <div class="rbt-progress-parent">
+        <svg class="rbt-back-circle svg-inner" width="100%" height="100%" viewBox="-1 -1 102 102" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
+        </svg>
+    </div>
+
     <footer class="rbt-footer footer-style-1 bg-color-darker overflow-hidden">
         <div class="footer-top">
             <div class="container">
@@ -737,10 +994,6 @@
                             <ul class="social-icon social-default justify-content-start">
                                 <li><a href="https://www.facebook.com/">
                                         <i class="feather-facebook"></i>
-                                    </a>
-                                </li>
-                                <li><a href="https://www.twitter.com">
-                                        <i class="feather-twitter"></i>
                                     </a>
                                 </li>
                                 <li><a href="https://www.instagram.com/">
@@ -772,7 +1025,6 @@
                   <li><a href="anasayfa.html">Ana Sayfa</a></li>
                   <li><a href="tum-kurslar.html">Eğitimler</a></li>
                   <li><a href="duyurular.html">Duyurular</a></li>
-                  <li><a href="blog.html">Blog</a></li>
                   <li><a href="iletisim.html">İletişim</a></li>
                 </ul>
               </div>
@@ -807,7 +1059,7 @@
                         <div class="footer-widget">
                             <h5 class="ft-title">İletişime Geçin</h5>
                             <ul class="ft-link">
-                                <li><span>Telefon:</span> <a href="#">+90 384 353 50 09</a></li>
+                                <li><span>Telefon:</span> <a href="tel:+903843535009">+90 384 353 50 09</a></li>
                                 <li><span>E-posta:</span> <a href="mailto:sem@kapadokya.edu.tr">sem@kapadokya.edu.tr</a></li>
                             </ul>
 
@@ -889,5 +1141,5 @@
     <script src="./assets/js/vendor/Sortable.min.js"></script>
     <!-- Main JS -->
     <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/sem-custom.js?v=20261007"></script>
+    <script src="./assets/js/sem-custom.js?v=20261109"></script>
 </body><div></div></html>

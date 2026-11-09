@@ -1,0 +1,189 @@
+/* ── Kurs detay — Eğitim Takvimi: solda aylık takvim, sağda grup detayları ── */
+.sem-takvim {
+  display: grid;
+  grid-template-columns: minmax(260px, 320px) 1fr;
+  gap: 28px;
+  margin-top: 20px;
+  align-items: start;
+}
+.sem-takvim-cal {
+  background: #fff;
+  border: 1px solid rgba(0, 40, 85, .10);
+  border-radius: 12px;
+  padding: 18px 16px 14px;
+  color: var(--sem-text);
+}
+.sem-takvim:not(.is-hazir) .sem-takvim-cal { display: none; }
+.sem-takvim:not(.is-hazir) { grid-template-columns: 1fr; }
+
+.sem-cal-ust {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.sem-cal-ay {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--sem-primary);
+  letter-spacing: .2px;
+}
+.sem-cal-ay small { font-size: 14px; font-weight: 400; color: #64748b; margin-left: 2px; }
+.sem-cal-ok {
+  width: 32px; height: 32px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 1px solid rgba(0, 40, 85, .12);
+  border-radius: 50%;
+  background: #fff;
+  color: var(--sem-primary);
+  font-size: 15px;
+  padding: 0;
+  transition: background-color .2s ease, color .2s ease;
+}
+.sem-cal-ok:hover { background: var(--sem-primary); color: #fff; }
+
+.sem-cal-izgara {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  row-gap: 4px;
+}
+.sem-cal-hg {
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .4px;
+  text-transform: uppercase;
+  color: #94a3b8;
+  padding-bottom: 6px;
+}
+.sem-cal-gun {
+  position: relative;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #334155;
+}
+.sem-cal-gun > span {
+  position: relative;
+  z-index: 1;
+  width: 32px; height: 32px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+}
+/* eğitim aralığı: ince lacivert şerit, başlangıç/bitiş dolu daire */
+.sem-cal-gun.is-egitim::before {
+  content: "";
+  position: absolute;
+  top: 2px; bottom: 2px; left: 0; right: 0;
+  background: rgba(0, 40, 85, .08);
+}
+.sem-cal-gun.is-bas::before,
+.sem-cal-gun.is-hafta-bas::before { left: 50%; margin-left: -16px; border-radius: 16px 0 0 16px; }
+.sem-cal-gun.is-bit::before,
+.sem-cal-gun.is-hafta-son::before { right: 50%; margin-right: -16px; border-radius: 0 16px 16px 0; }
+.sem-cal-gun.is-bas.is-bit::before,
+.sem-cal-gun.is-bas.is-hafta-son::before,
+.sem-cal-gun.is-hafta-bas.is-bit::before { border-radius: 16px; }
+.sem-cal-gun.is-egitim > span { color: var(--sem-primary); font-weight: 600; }
+.sem-cal-gun.is-bas > span,
+.sem-cal-gun.is-bit > span {
+  background: var(--sem-primary);
+  color: #fff;
+  box-shadow: 0 3px 10px rgba(0, 40, 85, .25);
+}
+/* son kayıt günü: altında küçük kırmızı nokta */
+.sem-cal-gun.is-kayit > span { box-shadow: inset 0 0 0 1px rgba(203, 51, 59, .45); color: var(--sem-accent); font-weight: 600; }
+.sem-cal-gun.is-kayit::after {
+  content: "";
+  position: absolute;
+  bottom: 1px; left: 50%;
+  width: 4px; height: 4px; margin-left: -2px;
+  border-radius: 50%;
+  background: var(--sem-accent);
+}
+.sem-cal-gun.is-bugun > span { text-decoration: underline; text-underline-offset: 3px; }
+
+.sem-cal-lejant {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(0, 40, 85, .08);
+  font-size: 12px;
+  color: #64748b;
+}
+.sem-cal-lejant span { display: inline-flex; align-items: center; gap: 6px; }
+.sem-cal-lejant i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; }
+.sem-lej-egitim { background: var(--sem-primary); }
+.sem-lej-kayit { background: var(--sem-accent); }
+
+/* grup listesi */
+.sem-takvim-gruplar {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.sem-takvim-grup {
+  margin: 0;
+  border: 1px solid rgba(0, 40, 85, .10);
+  border-radius: 12px;
+  background: #fff;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.sem-takvim-grup.is-aktif {
+  border-color: rgba(0, 40, 85, .35);
+  box-shadow: 0 6px 20px rgba(0, 40, 85, .08);
+}
+.sem-takvim-grup-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  padding: 14px 18px;
+  background: none;
+  border: 0;
+  text-align: left;
+  color: var(--sem-text);
+  font-size: 15px;
+  cursor: pointer;
+}
+.sem-takvim-grup-ad {
+  font-weight: 600;
+  color: var(--sem-primary);
+  min-width: 64px;
+}
+.sem-takvim-grup-aralik { color: #475569; flex: 1; }
+.sem-takvim-detay {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 24px;
+  margin: 0;
+  padding: 4px 18px 18px;
+}
+.sem-takvim.is-hazir .sem-takvim-grup:not(.is-aktif) .sem-takvim-detay { display: none; }
+.sem-takvim-detay > div { margin: 0; }
+.sem-takvim-detay dt {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  color: #94a3b8;
+  margin-bottom: 2px;
+}
+.sem-takvim-detay dd { margin: 0; font-size: 15px; color: var(--sem-text); }
+
+@media (max-width: 991px) {
+  .sem-takvim { grid-template-columns: 1fr; }
+  .sem-takvim-cal { max-width: 360px; width: 100%; margin: 0 auto; }
+}
+@media (max-width: 480px) {
+  .sem-takvim-detay { grid-template-columns: 1fr; gap: 10px; }
+}
+

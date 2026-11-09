@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="./assets/css/plugins/jodit.min.css">
 
     <link rel="stylesheet" href="./assets/css/styles.css">
-    <link rel="stylesheet" href="./assets/css/sem-custom.css?v=20261104">
+    <link rel="stylesheet" href="./assets/css/sem-custom.css?v=20261109">
     <link rel="stylesheet" href="./assets/css/sem-kurumsal.css">
     <script id="browser-logger-active">
         (function () {
@@ -236,9 +236,9 @@
     <!-- Start Header Area -->
     <header class="rbt-header rbt-header-10">
       <div class="rbt-sticky-placeholder"></div>
-      <!-- Start Header Top  -->
+      <!-- Start Header Top: içeriği (sosyal medya, telefon) yalnızca geniş ekranda var; altında boş kalmasın diye gizli -->
       <div
-        class="rbt-header-top rbt-header-top-1 header-space-betwween bg-not-transparent bg-color-darker top-expended-activation"
+        class="rbt-header-top rbt-header-top-1 header-space-betwween bg-not-transparent bg-color-darker top-expended-activation d-none d-xl-flex"
       >
         <div class="container-fluid">
           <div class="top-expended-wrapper">
@@ -248,18 +248,18 @@
                   <!-- Start Header Information List  -->
                   <div class="header-info">
                     <ul class="rbt-information-list">
+                        <li>
+                          <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+                            <i class="fab fa-instagram"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+                            <i class="fab fa-facebook-f"></i>
+                          </a>
+                        </li>
                       <li>
-                        <a href="#">
-                          <i class="fab fa-instagram"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fab fa-facebook-square"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
+                        <a href="tel:+903843535009">
                           <i class="feather-phone"></i>
                           +90 384 353 50 09
                         </a>
@@ -290,36 +290,19 @@
                 >
                   <div class="header-info d-none d-xl-block">
                     <ul class="social-share-transparent">
-                      <li>
-                        <a href="#">
-                          <i class="fab fa-facebook-f"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fab fa-twitter"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fab fa-linkedin-in"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fab fa-instagram"></i>
-                        </a>
-                      </li>
+                        <li>
+                          <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+                            <i class="fab fa-instagram"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+                            <i class="fab fa-facebook-f"></i>
+                          </a>
+                        </li>
                     </ul>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="header-info">
-              <div class="top-bar-expended d-block d-lg-none">
-                <button class="topbar-expend-button rbt-round-btn">
-                  <i class="feather-plus"></i>
-                </button>
               </div>
             </div>
           </div>
@@ -349,36 +332,19 @@
             <div class="rbt-main-navigation d-none d-xl-block">
               <nav class="mainmenu-nav">
                 <ul class="mainmenu">
-                  <li><a href="tum-kurslar.html">Eğitimler</a></li>
-                  <li><a href="hizmet-ici-egitimler.html">Hizmet İçi Eğitimler</a></li>
-                  <li><a href="mikro-yeterlilik.html">Mikro Yeterlilik</a></li>
-                  <li class="has-dropdown has-menu-child-item">
-                    <a href="#"
-                      >Sınav Merkezleri <i class="feather-chevron-down"></i
-                    ></a>
-                    <ul class="submenu">
-                      <li>
-                        <a
-                          href="https://ilkyardim.kapadokya.edu.tr/"
-                          target="_blank"
-                          rel="noopener"
-                          >İlk Yardım Eğitim Merkezi</a
-                        >
+                      <li><a href="tum-kurslar.html">Eğitimler</a></li>
+                      <li><a href="hizmet-ici-egitimler.html">Hizmet İçi Eğitimler</a></li>
+                      <li><a href="mikro-yeterlilik.html">Mikro Yeterlilik</a></li>
+                      <li class="has-dropdown has-menu-child-item">
+                        <a href="#">Sınav Merkezleri <i class="feather-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="https://ilkyardim.kapadokya.edu.tr/" target="_blank">İlk Yardım Eğitim Merkezi</a></li>
+                            <li><a href="#">SHGM Sınav Merkezi</a></li>
+                            <li><a href="egitim-kaynak-saglayici.html">Eğitim Kaynak Sağlayıcı</a></li>
+                            <li><a href="pemer.html">PEMER</a></li>
+                        </ul>
                       </li>
-                      <li>
-                        <a href="#">SHGM Sınav Merkezi</a>
-                      </li>
-                      <li>
-                        <a href="egitim-kaynak-saglayici.html"
-                          >Eğitim Kaynak Sağlayıcı</a
-                        >
-                      </li>
-                      <li>
-                        <a href="pemer.html">PEMER</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li><a href="iletisim.html">İletişim</a></li>
+                      <li><a href="iletisim.html">İletişim</a></li>
                 </ul>
               </nav>
             </div>
@@ -391,175 +357,29 @@
                   </a>
                 </li>
                 <li class="account-access rbt-user-wrapper d-none d-xl-block">
-                  <a href="#">
+                  <a href="giris.html">
                     <i class="feather-user"></i>
                     Hesabım
                   </a>
                   <div class="rbt-user-menu-list-wrapper">
                     <div class="inner">
-                      <div class="rbt-admin-profile">
-                        <div class="admin-thumbnail">
-                          <img src="./assets/images/team/avatar.jpg" alt="Kullanıcı">
-                        </div>
-                        <div class="admin-info">
-                          <span class="name">Ahmet Demir</span>
-                          <a class="rbt-btn-link color-primary" href="egitmen-panel.html">Profili Görüntüle</a>
-                        </div>
-                      </div>
-                      <ul class="user-list-wrapper">
-                        <li>
-                          <a href="egitmen-panel.html">
-                            <i class="feather-home"></i>
-                            <span>Kontrol Panelim</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-bookmark"></i>
-                            <span>Favoriler</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-shopping-bag"></i>
-                            <span>Kayıtlı Dersler</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-heart"></i>
-                            <span>İstek Listesi</span>
-                          </a>
-                        </li>
-<li>
-                          <a href="#">
-                            <i class="feather-list"></i>
-                            <span>Sınav Denemelerim</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-clock"></i>
-                            <span>Sipariş Geçmişi</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-message-square"></i>
-                            <span>Soru &amp; Cevap</span>
-                          </a>
-                        </li>
-                      </ul>
-                      <hr class="mt--10 mb--10">
-                      <ul class="user-list-wrapper">
-                        <li>
-                          <a href="#">
-                            <i class="feather-book-open"></i>
-                            <span>Başlarken</span>
-                          </a>
-                        </li>
-                      </ul>
-                      <hr class="mt--10 mb--10">
-                      <ul class="user-list-wrapper">
-                        <li>
-                          <a href="egitmen-panel.html">
-                            <i class="feather-settings"></i>
-                            <span>Ayarlar</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-log-out"></i>
-                            <span>Çıkış Yap</span>
-                          </a>
-                        </li>
-                      </ul>
+                        <ul class="user-list-wrapper">
+                          <li><a href="giris.html"><i class="feather-log-in"></i><span>Giriş Yap</span></a></li>
+                          <li><a href="kayit-ol.html"><i class="feather-user-plus"></i><span>Kayıt Ol</span></a></li>
+                        </ul>
                     </div>
                   </div>
                 </li>
                 <li class="access-icon rbt-user-wrapper d-block d-xl-none">
-                  <a class="rbt-round-btn" href="#">
+                  <a class="rbt-round-btn" href="giris.html">
                     <i class="feather-user"></i>
                   </a>
                   <div class="rbt-user-menu-list-wrapper">
                     <div class="inner">
-                      <div class="rbt-admin-profile">
-                        <div class="admin-thumbnail">
-                          <img src="./assets/images/team/avatar.jpg" alt="Kullanıcı">
-                        </div>
-                        <div class="admin-info">
-                          <span class="name">Ahmet Demir</span>
-                          <a class="rbt-btn-link color-primary" href="egitmen-panel.html">Profilimi Görüntüle</a>
-                        </div>
-                      </div>
-                      <ul class="user-list-wrapper">
-                        <li>
-                          <a href="egitmen-panel.html">
-                            <i class="feather-home"></i>
-                            <span>Kontrol Panelim</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-bookmark"></i>
-                            <span>Favoriler</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-shopping-bag"></i>
-                            <span>Kayıtlı Olduğum Eğitimler</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-heart"></i>
-                            <span>İstek Listesi</span>
-                          </a>
-                        </li>
-<li>
-                          <a href="#">
-                            <i class="feather-list"></i>
-                            <span>Sınav Denemelerim</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-clock"></i>
-                            <span>Sipariş Geçmişi</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-message-square"></i>
-                            <span>Soru &amp; Cevap</span>
-                          </a>
-                        </li>
-                      </ul>
-                      <hr class="mt--10 mb--10">
-                      <ul class="user-list-wrapper">
-                        <li>
-                          <a href="#">
-                            <i class="feather-book-open"></i>
-                            <span>Başlarken</span>
-                          </a>
-                        </li>
-                      </ul>
-                      <hr class="mt--10 mb--10">
-                      <ul class="user-list-wrapper">
-                        <li>
-                          <a href="egitmen-panel.html">
-                            <i class="feather-settings"></i>
-                            <span>Ayarlar</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-log-out"></i>
-                            <span>Çıkış Yap</span>
-                          </a>
-                        </li>
-                      </ul>
+                        <ul class="user-list-wrapper">
+                          <li><a href="giris.html"><i class="feather-log-in"></i><span>Giriş Yap</span></a></li>
+                          <li><a href="kayit-ol.html"><i class="feather-user-plus"></i><span>Kayıt Ol</span></a></li>
+                        </ul>
                     </div>
                   </div>
                 </li>
@@ -585,21 +405,17 @@
         <!-- Start Search Dropdown  -->
         <div class="rbt-search-dropdown sem-search-glass">
           <div class="wrapper">
-            <form
-              id="sem-header-search-form"
-              class="sem-sg-form"
-              role="search"
-              onsubmit="
+            <form id="sem-header-search-form" class="sem-sg-form" role="search" action="tum-kurslar.html" method="get" onsubmit="
                 event.preventDefault();
                 var q = document.getElementById('sem-hdr-q').value.trim();
                 if (q)
                   window.location =
-                    'tum-kurslar.html?q=' + encodeURIComponent(q);
-              "
-            >
+                    '/egitimler?q=' + encodeURIComponent(q);
+              ">
               <i class="feather-search sem-sg-icon" aria-hidden="true"></i>
               <input
                 id="sem-hdr-q"
+                name="q"
                 type="text"
                 placeholder="Eğitim ara"
                 aria-label="Eğitim ara"
@@ -617,12 +433,12 @@
             </form>
             <div class="sem-search-cats">
               <span>Popüler aramalar</span>
-              <a href="tum-kurslar.html?kategori=havacilik">Havacılık</a>
-              <a href="tum-kurslar.html?kategori=gastronomi">Gastronomi</a>
-              <a href="tum-kurslar.html?kategori=turizm">Turizm</a>
-              <a href="tum-kurslar.html?kategori=saglik">Sağlık</a>
-              <a href="tum-kurslar.html?kategori=bilisim">Bilişim</a>
-              <a href="tum-kurslar.html?kategori=pemer-myk">PEMER / MYK</a>
+              <a href="tum-kurslar.html?kategori=modul-sinav-kurslari">Modül Sınav Kursları</a>
+              <a href="tum-kurslar.html?kategori=ascilik-egitimleri">Aşçılık Eğitimi</a>
+              <a href="tum-kurslar.html?kategori=iha-egitimleri">İHA Eğitimleri</a>
+              <a href="tum-kurslar.html?kategori=kirsal-kalkinma">Kırsal Kalkınma</a>
+              <a href="tum-kurslar.html?kategori=cocuklar-icin-ingilizce-egitimleri">Çocuklar İçin İngilizce Eğitimi</a>
+              <a href="tum-kurslar.html?kategori=baloncuk-sektor-egitimleri">Balonculuk Sektör Eğitimleri</a>
             </div>
             <div class="sem-sg-results" id="sem-sg-results" role="listbox" aria-label="Arama önizlemesi" hidden></div>
           </div>
@@ -651,7 +467,7 @@
                     <h3 class="rbt-short-title">Programlar</h3>
                     <ul class="rbt-vertical-nav-list-wrapper">
                       <li>
-                        <a href="kurs-detay.html">Meteoroloji Temel Eğitimi</a>
+                        <a href="tum-kurslar.html">Meteoroloji Temel Eğitimi</a>
                       </li>
                       <li>
                         <a href="tum-kurslar.html?kategori=havacilik"
@@ -774,7 +590,7 @@
           <div class="content">
             <div class="logo">
               <a href="anasayfa.html">
-                <img src="./assets/images/logo/sem-logo-byz.png" alt="Kapadokya Üniversitesi SEM" style="max-height:40px;">
+                <img src="./assets/images/logo/sem-logo.png" alt="Kapadokya Üniversitesi SEM" style="max-height:40px;">
               </a>
             </div>
             <div class="rbt-btn-close">
@@ -788,140 +604,156 @@
         <!-- Navigasyon -->
         <nav class="mainmenu-nav">
           <ul class="mainmenu">
-
-            <li><a href="tum-kurslar.html">Eğitimler</a></li>
-            <li><a href="hizmet-ici-egitimler.html">Hizmet İçi Eğitimler</a></li>
-            <li><a href="mikro-yeterlilik.html">Mikro Yeterlilik</a></li>
-
-            <li class="has-dropdown has-menu-child-item">
-              <a href="#">Sınav Merkezleri</a>
-              <ul class="submenu">
-                <li><a href="https://ilkyardim.kapadokya.edu.tr/" target="_blank" rel="noopener">İlk Yardım Eğitim Merkezi</a></li>
-                <li><a href="#">SHGM Sınav Merkezi</a></li>
-                <li><a href="egitim-kaynak-saglayici.html">Eğitim Kaynak Sağlayıcı</a></li>
-                <li><a href="pemer.html">PEMER</a></li>
-              </ul>
-            </li>
-
-            <li><a href="iletisim.html">İletişim</a></li>
-
+                <li><a href="tum-kurslar.html">Eğitimler</a></li>
+                <li><a href="hizmet-ici-egitimler.html">Hizmet İçi Eğitimler</a></li>
+                <li><a href="mikro-yeterlilik.html">Mikro Yeterlilik</a></li>
+                <li class="has-dropdown has-menu-child-item">
+                  <a href="#">Sınav Merkezleri</a>
+                  <ul class="submenu">
+                      <li><a href="https://ilkyardim.kapadokya.edu.tr/" target="_blank">İlk Yardım Eğitim Merkezi</a></li>
+                      <li><a href="#">SHGM Sınav Merkezi</a></li>
+                      <li><a href="egitim-kaynak-saglayici.html">Eğitim Kaynak Sağlayıcı</a></li>
+                      <li><a href="pemer.html">PEMER</a></li>
+                  </ul>
+                </li>
+                <li><a href="iletisim.html">İletişim</a></li>
           </ul>
         </nav>
 
         <!-- Alt: İletişim + Auth -->
         <div class="sem-mob-footer">
           <div class="sem-mob-contact">
-            <a href="tel:+903843535009"><i class="feather-phone"></i> (384) 353 50 09</a>
+            <a href="tel:+903843535009"><i class="feather-phone"></i> +90 384 353 50 09</a>
             <a href="mailto:sem@kapadokya.edu.tr"><i class="feather-mail"></i> sem@kapadokya.edu.tr</a>
           </div>
           <div class="sem-mob-auth">
-            <a href="giris.html" class="sem-mob-btn sem-mob-btn--outline">Giriş Yap</a>
-            <a href="kayit-ol.html" class="sem-mob-btn sem-mob-btn--solid">Kayıt Ol</a>
+              <a href="giris.html" class="sem-mob-btn sem-mob-btn--outline">Giriş Yap</a>
+              <a href="kayit-ol.html" class="sem-mob-btn sem-mob-btn--solid">Kayıt Ol</a>
           </div>
         </div>
 
       </div>
     </div>
-    <!-- Mobile Menu Section -->
 
-    
-    <a class="close_side_menu" href="javascript:void(0);"></a>
 
-    <!-- Kayıt Ol — modern iki kolonlu arayüz -->
-    <div class="sem-auth-wrap">
-        <div class="sem-auth-visual">
-            <img class="sem-auth-logo" src="./assets/images/logo/sem-logo-byz.png" alt="Kapadokya Üniversitesi SEM">
-            <h2>Kapadokya Üniversitesi SEM'e hoş geldiniz</h2>
-            <p>Sertifikalı eğitim programlarımıza kayıt olun, kariyerinize değer katın.</p>
-            <ul class="sem-auth-perks">
-                <li><i class="feather-check-circle"></i> Alanında uzman eğitmen kadrosu</li>
-                <li><i class="feather-check-circle"></i> e-Devlet onaylı, barkodlu sertifikalar</li>
-                <li><i class="feather-check-circle"></i> Yüz yüze, online ve hibrit eğitim seçenekleri</li>
-                <li><i class="feather-check-circle"></i> Kayıt sonrası hızlı başvuru takibi</li>
-            </ul>
-        </div>
-        <div class="sem-auth-form-col">
-            <div class="sem-auth-form">
-                <h3>Kayıt Ol</h3>
-                <p>Zaten hesabın var mı? <a href="giris.html">Giriş yap</a></p>
-                <form method="POST" action="./kayit-ol">
-                    <input type="hidden" name="_token" value="5kCOxkaSDHYreKAQAvU1hxNZ0HJBiGnrKjQMcedC"
-                        autocomplete="off">
+    <main id="main-content">
+        
 
+<div class="sem-auth-wrap">
+    <div class="sem-auth-visual">
+        <img class="sem-auth-logo" src="./assets/images/logo/sem-logo-byz.png" alt="Kapadokya Üniversitesi SEM">
+        <h2>SEM ailesine katılın</h2>
+        <p>Hesap oluşturarak eğitimlere başvurun, başvurularınızı takip edin.</p>
+        <ul class="sem-auth-perks">
+            <li><i class="feather-check-circle"></i> Alanında uzman eğitmen kadrosu</li>
+            <li><i class="feather-check-circle"></i> e-Devlet onaylı, barkodlu sertifikalar</li>
+            <li><i class="feather-check-circle"></i> Yüz yüze, online ve hibrit eğitim seçenekleri</li>
+            <li><i class="feather-check-circle"></i> Kayıt sonrası hızlı başvuru takibi</li>
+        </ul>
+    </div>
+    <div class="sem-auth-form-col">
+        <div class="sem-auth-form">
+            <h3>Kayıt Ol</h3>
+            <p>Hesabın var mı? <a href="giris.html">Giriş yap</a></p>
+
+            <form method="post" id="registerForm" action="kayit-ol.html">
+                <input type="hidden" id="ReturnUrl" name="ReturnUrl" value="" />
+                
+
+                <div class="sem-auth-row">
                     <div class="sem-auth-field">
-                        <label for="sem-auth-name">Ad Soyad *</label>
-                        <input id="sem-auth-name" name="name" type="text" autocomplete="name" required>
+                        <label for="FirstName">Ad *</label>
+                        <input autocomplete="given-name" type="text" data-val="true" data-val-required="Ad zorunludur" id="FirstName" name="FirstName" value="" />
+                        <span class="text-danger field-validation-valid" data-valmsg-for="FirstName" data-valmsg-replace="true"></span>
                     </div>
-
-                    <div class="sem-auth-row">
-                        <div class="sem-auth-field">
-                            <label for="sem-auth-dogumtarihi">Doğum Tarihi *</label>
-                            <input id="sem-auth-dogumtarihi" name="dogum_tarihi" type="date" required>
-                        </div>
-                        <div class="sem-auth-field">
-                            <label for="sem-auth-cinsiyet">Cinsiyet *</label>
-                            <select id="sem-auth-cinsiyet" name="cinsiyet" required>
-                                <option value="" selected disabled>Seçiniz</option>
-                                <option value="kadin">Kadın</option>
-                                <option value="erkek">Erkek</option>
-                                <option value="belirtmek-istemiyorum">Belirtmek istemiyorum</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="sem-auth-row">
-                        <div class="sem-auth-field">
-                            <label for="sem-auth-vatandaslik">Vatandaşlık *</label>
-                            <select id="sem-auth-vatandaslik" name="vatandaslik" required
-                                onchange="
-                                    document.getElementById('sem-auth-kimlik-label').textContent = this.value === 'yabanci' ? 'Pasaport Numarası *' : 'T.C. Kimlik Numarası *';
-                                    document.getElementById('sem-auth-kimlik').placeholder = this.value === 'yabanci' ? 'Pasaport numaranız' : '11 haneli T.C. kimlik numaranız';
-                                ">
-                                <option value="tc" selected>T.C. Vatandaşı</option>
-                                <option value="yabanci">Yabancı Uyruklu</option>
-                            </select>
-                        </div>
-                        <div class="sem-auth-field">
-                            <label id="sem-auth-kimlik-label" for="sem-auth-kimlik">T.C. Kimlik Numarası *</label>
-                            <input id="sem-auth-kimlik" name="kimlik_no" type="text" inputmode="numeric" maxlength="20"
-                                placeholder="11 haneli T.C. kimlik numaranız" required>
-                        </div>
-                    </div>
-
                     <div class="sem-auth-field">
-                        <label for="sem-auth-email">E-posta *</label>
-                        <input id="sem-auth-email" name="email" type="email" autocomplete="email" required>
+                        <label for="LastName">Soyad *</label>
+                        <input autocomplete="family-name" type="text" data-val="true" data-val-required="Soyad zorunludur" id="LastName" name="LastName" value="" />
+                        <span class="text-danger field-validation-valid" data-valmsg-for="LastName" data-valmsg-replace="true"></span>
                     </div>
+                </div>
 
+                <div class="sem-auth-row">
                     <div class="sem-auth-field">
-                        <label for="sem-auth-ogrenci-no">Öğrenci Numarası <span class="sem-auth-optional">(varsa)</span></label>
-                        <input id="sem-auth-ogrenci-no" name="ogrenci_no" type="text" placeholder="Kapadokya Üniversitesi öğrenci numaranız">
+                        <label for="DogumTarihi">Doğum Tarihi *</label>
+                        <input type="date" id="DogumTarihi" name="DogumTarihi" value="" />
+                        <span class="text-danger field-validation-valid" data-valmsg-for="DogumTarihi" data-valmsg-replace="true"></span>
                     </div>
-
                     <div class="sem-auth-field">
-                        <label for="sem-auth-password">Şifre *</label>
-                        <input id="sem-auth-password" name="password" type="password" autocomplete="new-password" required>
+                        <label for="Cinsiyet">Cinsiyet *</label>
+                        <select id="Cinsiyet" name="Cinsiyet">
+                            <option value="">Seçiniz</option>
+                            <option value="E">Erkek</option>
+                            <option value="K">Kadın</option>
+                        </select>
+                        <span class="text-danger field-validation-valid" data-valmsg-for="Cinsiyet" data-valmsg-replace="true"></span>
                     </div>
+                </div>
 
+                <div class="sem-auth-row">
                     <div class="sem-auth-field">
-                        <label for="sem-auth-password-confirm">Şifre Tekrar *</label>
-                        <input id="sem-auth-password-confirm" name="password_confirmation" type="password"
-                            autocomplete="new-password" required>
+                        <label>Vatandaşlık *</label>
+                        <select id="sem-auth-vatandaslik" data-val="true" data-val-required="Vatandaşlık Tipi zorunludur" name="CitizenType">
+                            <option value="TR" selected>T.C.</option>
+                            <option value="OTHER">Yabancı</option>
+                        </select>
                     </div>
-
-                    <div class="sem-auth-check">
-                        <input id="sem-auth-kvkk" type="checkbox" required>
-                        <label for="sem-auth-kvkk"><a href="kvkk.html" target="_blank">KVKK Aydınlatma Metni'ni</a> okudum, kabul ediyorum.</label>
+                    <div class="sem-auth-field" id="citizenIdSection">
+                        <label id="sem-auth-kimlik-label" for="CitizenId">T.C. Kimlik No *</label>
+                        <input id="CitizenId" maxlength="11" inputmode="numeric" type="text" data-val="true" data-val-length="TC Kimlik No 11 haneli olmalıdır" data-val-length-max="11" data-val-length-min="11" name="CitizenId" value="" />
+                        <span class="text-danger field-validation-valid" data-valmsg-for="CitizenId" data-valmsg-replace="true"></span>
                     </div>
+                    <div class="sem-auth-field" id="passportSection" style="display:none;">
+                        <label for="PassportNumber">Pasaport No *</label>
+                        <input id="PassportNumber" type="text" name="PassportNumber" value="" />
+                        <span class="text-danger field-validation-valid" data-valmsg-for="PassportNumber" data-valmsg-replace="true"></span>
+                    </div>
+                </div>
 
-                    <button type="submit" class="sem-auth-submit">Kayıt Ol</button>
-                </form>
-            </div>
+                <div class="sem-auth-row">
+                    <div class="sem-auth-field">
+                        <label for="Email">E-posta *</label>
+                        <input type="email" autocomplete="email" data-val="true" data-val-email="Geçerli bir e-posta giriniz" data-val-required="E-posta zorunludur" id="Email" name="Email" value="" />
+                        <span class="text-danger field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+                    </div>
+                    <div class="sem-auth-field">
+                        <label for="PhoneNumber">Telefon *</label>
+                        <input placeholder="5XXXXXXXXX" maxlength="10" type="text" data-val="true" data-val-regex="Telefon 5 ile başlamalı ve 10 hane olmalıdır" data-val-regex-pattern="^5\d{9}$" data-val-required="Telefon numarası zorunludur" id="PhoneNumber" name="PhoneNumber" value="" />
+                        <span class="text-danger field-validation-valid" data-valmsg-for="PhoneNumber" data-valmsg-replace="true"></span>
+                    </div>
+                </div>
+
+                <div class="sem-auth-row">
+                    <div class="sem-auth-field">
+                        <label for="Password">Şifre *</label>
+                        <input type="password" autocomplete="new-password" data-val="true" data-val-length="Şifre en az 8 karakter olmalıdır" data-val-length-max="100" data-val-length-min="8" data-val-required="Şifre zorunludur" id="Password" maxlength="100" name="Password" />
+                        <span class="text-danger field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+                    </div>
+                    <div class="sem-auth-field">
+                        <label for="ConfirmPassword">Şifre Tekrar *</label>
+                        <input type="password" autocomplete="new-password" data-val="true" data-val-equalto="Şifreler eşleşmiyor" data-val-equalto-other="*.Password" data-val-required="Şifre tekrar zorunludur" id="ConfirmPassword" name="ConfirmPassword" />
+                        <span class="text-danger field-validation-valid" data-valmsg-for="ConfirmPassword" data-valmsg-replace="true"></span>
+                    </div>
+                </div>
+
+                <div class="sem-auth-check">
+                    <input type="checkbox" id="acceptTerms" data-val="true" data-val-required="The Üyelik Sözleşmesini Kabul Ediyorum field is required." name="AcceptTerms" value="true" />
+                    <label for="acceptTerms">
+                        <a href="sozlesmeler.html" target="_blank">Üyelik Sözleşmesi</a> ve
+                        <a href="kvkk.html" target="_blank">KVKK Aydınlatma Metni</a>'ni okudum, kabul ediyorum.
+                    </label>
+                </div>
+                <span class="text-danger d-block mb-3 field-validation-valid" data-valmsg-for="AcceptTerms" data-valmsg-replace="true"></span>
+
+                <button type="submit" class="sem-auth-submit">Kayıt Ol</button><input name="AcceptTerms" type="hidden" value="false" /></form>
         </div>
     </div>
+</div>
 
 
-          <!-- Start Footer aera -->
+
+    </main>
+
     <footer class="rbt-footer footer-style-1 bg-color-darker overflow-hidden">
       <div class="footer-top">
         <div class="container">
@@ -953,11 +785,6 @@
                   <li>
                     <a href="https://www.facebook.com/">
                       <i class="feather-facebook"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.twitter.com">
-                      <i class="feather-twitter"></i>
                     </a>
                   </li>
                   <li>
@@ -996,7 +823,6 @@
                   <li><a href="anasayfa.html">Ana Sayfa</a></li>
                   <li><a href="tum-kurslar.html">Eğitimler</a></li>
                   <li><a href="duyurular.html">Duyurular</a></li>
-                  <li><a href="blog.html">Blog</a></li>
                   <li><a href="iletisim.html">İletişim</a></li>
                 </ul>
               </div>
@@ -1031,7 +857,7 @@
                 <ul class="ft-link">
                   <li>
                     <span>Telefon:</span>
-                    <a href="#">+90 384 353 50 09</a>
+                    <a href="tel:+903843535009">+90 384 353 50 09</a>
                   </li>
                   <li>
                     <span>E-posta:</span>

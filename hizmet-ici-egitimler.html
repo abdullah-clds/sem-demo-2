@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="./assets/css/plugins/jodit.min.css">
 
     <link rel="stylesheet" href="./assets/css/styles.css">
-    <link rel="stylesheet" href="./assets/css/sem-custom.css?v=20261104">
+    <link rel="stylesheet" href="./assets/css/sem-custom.css?v=20261109">
     <link rel="stylesheet" href="./assets/css/sem-kurumsal.css">
     <!-- Google Analytics (GA4) — GERÇEK ÖLÇÜM KİMLİĞİ BEKLENİYOR (placeholder: G-XXXXXXXXXX), bkz. README.md -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -59,9 +59,9 @@
                 <!-- Start Header Area -->
 <header class="rbt-header rbt-header-10">
       <div class="rbt-sticky-placeholder"></div>
-      <!-- Start Header Top  -->
+      <!-- Start Header Top: içeriği (sosyal medya, telefon) yalnızca geniş ekranda var; altında boş kalmasın diye gizli -->
       <div
-        class="rbt-header-top rbt-header-top-1 header-space-betwween bg-not-transparent bg-color-darker top-expended-activation"
+        class="rbt-header-top rbt-header-top-1 header-space-betwween bg-not-transparent bg-color-darker top-expended-activation d-none d-xl-flex"
       >
         <div class="container-fluid">
           <div class="top-expended-wrapper">
@@ -71,18 +71,18 @@
                   <!-- Start Header Information List  -->
                   <div class="header-info">
                     <ul class="rbt-information-list">
+                        <li>
+                          <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+                            <i class="fab fa-instagram"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+                            <i class="fab fa-facebook-f"></i>
+                          </a>
+                        </li>
                       <li>
-                        <a href="#">
-                          <i class="fab fa-instagram"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fab fa-facebook-square"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
+                        <a href="tel:+903843535009">
                           <i class="feather-phone"></i>
                           +90 384 353 50 09
                         </a>
@@ -113,36 +113,19 @@
                 >
                   <div class="header-info d-none d-xl-block">
                     <ul class="social-share-transparent">
-                      <li>
-                        <a href="#">
-                          <i class="fab fa-facebook-f"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fab fa-twitter"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fab fa-linkedin-in"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fab fa-instagram"></i>
-                        </a>
-                      </li>
+                        <li>
+                          <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+                            <i class="fab fa-instagram"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+                            <i class="fab fa-facebook-f"></i>
+                          </a>
+                        </li>
                     </ul>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="header-info">
-              <div class="top-bar-expended d-block d-lg-none">
-                <button class="topbar-expend-button rbt-round-btn">
-                  <i class="feather-plus"></i>
-                </button>
               </div>
             </div>
           </div>
@@ -172,36 +155,19 @@
             <div class="rbt-main-navigation d-none d-xl-block">
               <nav class="mainmenu-nav">
                 <ul class="mainmenu">
-                  <li><a href="tum-kurslar.html">Eğitimler</a></li>
-                  <li><a href="hizmet-ici-egitimler.html">Hizmet İçi Eğitimler</a></li>
-                  <li><a href="mikro-yeterlilik.html">Mikro Yeterlilik</a></li>
-                  <li class="has-dropdown has-menu-child-item">
-                    <a href="#"
-                      >Sınav Merkezleri <i class="feather-chevron-down"></i
-                    ></a>
-                    <ul class="submenu">
-                      <li>
-                        <a
-                          href="https://ilkyardim.kapadokya.edu.tr/"
-                          target="_blank"
-                          rel="noopener"
-                          >İlk Yardım Eğitim Merkezi</a
-                        >
+                      <li><a href="tum-kurslar.html">Eğitimler</a></li>
+                      <li><a href="hizmet-ici-egitimler.html">Hizmet İçi Eğitimler</a></li>
+                      <li><a href="mikro-yeterlilik.html">Mikro Yeterlilik</a></li>
+                      <li class="has-dropdown has-menu-child-item">
+                        <a href="#">Sınav Merkezleri <i class="feather-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="https://ilkyardim.kapadokya.edu.tr/" target="_blank">İlk Yardım Eğitim Merkezi</a></li>
+                            <li><a href="#">SHGM Sınav Merkezi</a></li>
+                            <li><a href="egitim-kaynak-saglayici.html">Eğitim Kaynak Sağlayıcı</a></li>
+                            <li><a href="pemer.html">PEMER</a></li>
+                        </ul>
                       </li>
-                      <li>
-                        <a href="#">SHGM Sınav Merkezi</a>
-                      </li>
-                      <li>
-                        <a href="egitim-kaynak-saglayici.html"
-                          >Eğitim Kaynak Sağlayıcı</a
-                        >
-                      </li>
-                      <li>
-                        <a href="pemer.html">PEMER</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li><a href="iletisim.html">İletişim</a></li>
+                      <li><a href="iletisim.html">İletişim</a></li>
                 </ul>
               </nav>
             </div>
@@ -214,175 +180,29 @@
                   </a>
                 </li>
                 <li class="account-access rbt-user-wrapper d-none d-xl-block">
-                  <a href="#">
+                  <a href="giris.html">
                     <i class="feather-user"></i>
                     Hesabım
                   </a>
                   <div class="rbt-user-menu-list-wrapper">
                     <div class="inner">
-                      <div class="rbt-admin-profile">
-                        <div class="admin-thumbnail">
-                          <img src="./assets/images/team/avatar.jpg" alt="Kullanıcı">
-                        </div>
-                        <div class="admin-info">
-                          <span class="name">Ahmet Demir</span>
-                          <a class="rbt-btn-link color-primary" href="egitmen-panel.html">Profili Görüntüle</a>
-                        </div>
-                      </div>
-                      <ul class="user-list-wrapper">
-                        <li>
-                          <a href="egitmen-panel.html">
-                            <i class="feather-home"></i>
-                            <span>Kontrol Panelim</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-bookmark"></i>
-                            <span>Favoriler</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-shopping-bag"></i>
-                            <span>Kayıtlı Dersler</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-heart"></i>
-                            <span>İstek Listesi</span>
-                          </a>
-                        </li>
-<li>
-                          <a href="#">
-                            <i class="feather-list"></i>
-                            <span>Sınav Denemelerim</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-clock"></i>
-                            <span>Sipariş Geçmişi</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-message-square"></i>
-                            <span>Soru &amp; Cevap</span>
-                          </a>
-                        </li>
-                      </ul>
-                      <hr class="mt--10 mb--10">
-                      <ul class="user-list-wrapper">
-                        <li>
-                          <a href="#">
-                            <i class="feather-book-open"></i>
-                            <span>Başlarken</span>
-                          </a>
-                        </li>
-                      </ul>
-                      <hr class="mt--10 mb--10">
-                      <ul class="user-list-wrapper">
-                        <li>
-                          <a href="egitmen-panel.html">
-                            <i class="feather-settings"></i>
-                            <span>Ayarlar</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-log-out"></i>
-                            <span>Çıkış Yap</span>
-                          </a>
-                        </li>
-                      </ul>
+                        <ul class="user-list-wrapper">
+                          <li><a href="giris.html"><i class="feather-log-in"></i><span>Giriş Yap</span></a></li>
+                          <li><a href="kayit-ol.html"><i class="feather-user-plus"></i><span>Kayıt Ol</span></a></li>
+                        </ul>
                     </div>
                   </div>
                 </li>
                 <li class="access-icon rbt-user-wrapper d-block d-xl-none">
-                  <a class="rbt-round-btn" href="#">
+                  <a class="rbt-round-btn" href="giris.html">
                     <i class="feather-user"></i>
                   </a>
                   <div class="rbt-user-menu-list-wrapper">
                     <div class="inner">
-                      <div class="rbt-admin-profile">
-                        <div class="admin-thumbnail">
-                          <img src="./assets/images/team/avatar.jpg" alt="Kullanıcı">
-                        </div>
-                        <div class="admin-info">
-                          <span class="name">Ahmet Demir</span>
-                          <a class="rbt-btn-link color-primary" href="egitmen-panel.html">Profilimi Görüntüle</a>
-                        </div>
-                      </div>
-                      <ul class="user-list-wrapper">
-                        <li>
-                          <a href="egitmen-panel.html">
-                            <i class="feather-home"></i>
-                            <span>Kontrol Panelim</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-bookmark"></i>
-                            <span>Favoriler</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-shopping-bag"></i>
-                            <span>Kayıtlı Olduğum Eğitimler</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-heart"></i>
-                            <span>İstek Listesi</span>
-                          </a>
-                        </li>
-<li>
-                          <a href="#">
-                            <i class="feather-list"></i>
-                            <span>Sınav Denemelerim</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-clock"></i>
-                            <span>Sipariş Geçmişi</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-message-square"></i>
-                            <span>Soru &amp; Cevap</span>
-                          </a>
-                        </li>
-                      </ul>
-                      <hr class="mt--10 mb--10">
-                      <ul class="user-list-wrapper">
-                        <li>
-                          <a href="#">
-                            <i class="feather-book-open"></i>
-                            <span>Başlarken</span>
-                          </a>
-                        </li>
-                      </ul>
-                      <hr class="mt--10 mb--10">
-                      <ul class="user-list-wrapper">
-                        <li>
-                          <a href="egitmen-panel.html">
-                            <i class="feather-settings"></i>
-                            <span>Ayarlar</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-log-out"></i>
-                            <span>Çıkış Yap</span>
-                          </a>
-                        </li>
-                      </ul>
+                        <ul class="user-list-wrapper">
+                          <li><a href="giris.html"><i class="feather-log-in"></i><span>Giriş Yap</span></a></li>
+                          <li><a href="kayit-ol.html"><i class="feather-user-plus"></i><span>Kayıt Ol</span></a></li>
+                        </ul>
                     </div>
                   </div>
                 </li>
@@ -408,21 +228,17 @@
         <!-- Start Search Dropdown  -->
         <div class="rbt-search-dropdown sem-search-glass">
           <div class="wrapper">
-            <form
-              id="sem-header-search-form"
-              class="sem-sg-form"
-              role="search"
-              onsubmit="
+            <form id="sem-header-search-form" class="sem-sg-form" role="search" action="tum-kurslar.html" method="get" onsubmit="
                 event.preventDefault();
                 var q = document.getElementById('sem-hdr-q').value.trim();
                 if (q)
                   window.location =
-                    'tum-kurslar.html?q=' + encodeURIComponent(q);
-              "
-            >
+                    '/egitimler?q=' + encodeURIComponent(q);
+              ">
               <i class="feather-search sem-sg-icon" aria-hidden="true"></i>
               <input
                 id="sem-hdr-q"
+                name="q"
                 type="text"
                 placeholder="Eğitim ara"
                 aria-label="Eğitim ara"
@@ -440,12 +256,12 @@
             </form>
             <div class="sem-search-cats">
               <span>Popüler aramalar</span>
-              <a href="tum-kurslar.html?kategori=havacilik">Havacılık</a>
-              <a href="tum-kurslar.html?kategori=gastronomi">Gastronomi</a>
-              <a href="tum-kurslar.html?kategori=turizm">Turizm</a>
-              <a href="tum-kurslar.html?kategori=saglik">Sağlık</a>
-              <a href="tum-kurslar.html?kategori=bilisim">Bilişim</a>
-              <a href="tum-kurslar.html?kategori=pemer-myk">PEMER / MYK</a>
+              <a href="tum-kurslar.html?kategori=modul-sinav-kurslari">Modül Sınav Kursları</a>
+              <a href="tum-kurslar.html?kategori=ascilik-egitimleri">Aşçılık Eğitimi</a>
+              <a href="tum-kurslar.html?kategori=iha-egitimleri">İHA Eğitimleri</a>
+              <a href="tum-kurslar.html?kategori=kirsal-kalkinma">Kırsal Kalkınma</a>
+              <a href="tum-kurslar.html?kategori=cocuklar-icin-ingilizce-egitimleri">Çocuklar İçin İngilizce Eğitimi</a>
+              <a href="tum-kurslar.html?kategori=baloncuk-sektor-egitimleri">Balonculuk Sektör Eğitimleri</a>
             </div>
             <div class="sem-sg-results" id="sem-sg-results" role="listbox" aria-label="Arama önizlemesi" hidden></div>
           </div>
@@ -474,7 +290,7 @@
                     <h3 class="rbt-short-title">Programlar</h3>
                     <ul class="rbt-vertical-nav-list-wrapper">
                       <li>
-                        <a href="kurs-detay.html">Meteoroloji Temel Eğitimi</a>
+                        <a href="tum-kurslar.html">Meteoroloji Temel Eğitimi</a>
                       </li>
                       <li>
                         <a href="tum-kurslar.html?kategori=havacilik"
@@ -597,7 +413,7 @@
           <div class="content">
             <div class="logo">
               <a href="anasayfa.html">
-                <img src="./assets/images/logo/sem-logo-byz.png" alt="Kapadokya Üniversitesi SEM" style="max-height:40px;">
+                <img src="./assets/images/logo/sem-logo.png" alt="Kapadokya Üniversitesi SEM" style="max-height:40px;">
               </a>
             </div>
             <div class="rbt-btn-close">
@@ -611,35 +427,31 @@
         <!-- Navigasyon -->
         <nav class="mainmenu-nav">
           <ul class="mainmenu">
-
-            <li><a href="tum-kurslar.html">Eğitimler</a></li>
-            <li><a href="hizmet-ici-egitimler.html">Hizmet İçi Eğitimler</a></li>
-            <li><a href="mikro-yeterlilik.html">Mikro Yeterlilik</a></li>
-
-            <li class="has-dropdown has-menu-child-item">
-              <a href="#">Sınav Merkezleri</a>
-              <ul class="submenu">
-                <li><a href="https://ilkyardim.kapadokya.edu.tr/" target="_blank" rel="noopener">İlk Yardım Eğitim Merkezi</a></li>
-                <li><a href="#">SHGM Sınav Merkezi</a></li>
-                <li><a href="egitim-kaynak-saglayici.html">Eğitim Kaynak Sağlayıcı</a></li>
-                <li><a href="pemer.html">PEMER</a></li>
-              </ul>
-            </li>
-
-            <li><a href="iletisim.html">İletişim</a></li>
-
+                <li><a href="tum-kurslar.html">Eğitimler</a></li>
+                <li><a href="hizmet-ici-egitimler.html">Hizmet İçi Eğitimler</a></li>
+                <li><a href="mikro-yeterlilik.html">Mikro Yeterlilik</a></li>
+                <li class="has-dropdown has-menu-child-item">
+                  <a href="#">Sınav Merkezleri</a>
+                  <ul class="submenu">
+                      <li><a href="https://ilkyardim.kapadokya.edu.tr/" target="_blank">İlk Yardım Eğitim Merkezi</a></li>
+                      <li><a href="#">SHGM Sınav Merkezi</a></li>
+                      <li><a href="egitim-kaynak-saglayici.html">Eğitim Kaynak Sağlayıcı</a></li>
+                      <li><a href="pemer.html">PEMER</a></li>
+                  </ul>
+                </li>
+                <li><a href="iletisim.html">İletişim</a></li>
           </ul>
         </nav>
 
         <!-- Alt: İletişim + Auth -->
         <div class="sem-mob-footer">
           <div class="sem-mob-contact">
-            <a href="tel:+903843535009"><i class="feather-phone"></i> (384) 353 50 09</a>
+            <a href="tel:+903843535009"><i class="feather-phone"></i> +90 384 353 50 09</a>
             <a href="mailto:sem@kapadokya.edu.tr"><i class="feather-mail"></i> sem@kapadokya.edu.tr</a>
           </div>
           <div class="sem-mob-auth">
-            <a href="giris.html" class="sem-mob-btn sem-mob-btn--outline">Giriş Yap</a>
-            <a href="kayit-ol.html" class="sem-mob-btn sem-mob-btn--solid">Kayıt Ol</a>
+              <a href="giris.html" class="sem-mob-btn sem-mob-btn--outline">Giriş Yap</a>
+              <a href="kayit-ol.html" class="sem-mob-btn sem-mob-btn--solid">Kayıt Ol</a>
           </div>
         </div>
 
@@ -647,675 +459,391 @@
     </div>
 
 
-
-    <div class="rbt-page-banner-wrapper">
-        <!-- Start Banner BG Image  -->
-        <div class="rbt-banner-image">
-            <img src="./assets/images/banner/sem-egitim-motif.svg" alt="" aria-hidden="true" class="banner-motif">
-        </div>
-        <!-- End Banner BG Image  -->
-        <div class="rbt-banner-content">
-            <!-- Start Banner Content Top  -->
-            <div class="rbt-banner-content-top">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <!-- Start Breadcrumb Area  -->
-                            <ul class="page-list">
-                                <li class="rbt-breadcrumb-item"><a href="anasayfa.html">Anasayfa</a></li>
-                                <li>
-                                    <div class="icon-right"><i class="feather-chevron-right"></i></div>
-                                </li>
-                                <li class="rbt-breadcrumb-item active">Hizmet İçi Eğitimler</li>
-                            </ul>
-                            <!-- End Breadcrumb Area  -->
-
-                            <div class=" title-wrapper">
-                                <h1 class="title mb--0">Hizmet İçi Eğitimler</h1>
-
-                            </div>
-
-                            <p class="description">Alanında uzman eğitmenlerle güncel eğitim programlarını keşfedin.</p>
-
-                            <div class="alert alert-info d-flex align-items-center gap-2 mt--20" style="background:rgba(0,114,206,.08);border:1px solid rgba(0,114,206,.25);border-radius:10px;padding:14px 18px;color:var(--kun-lacivert);font-size:14px;">
-                                <i class="feather-info"></i>
-                                <span>Bu eğitimler yalnızca Kapadokya Üniversitesi personeline yöneliktir.</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Banner Content Top  -->
-        </div>
+    <main id="main-content">
+        
+<div class="rbt-page-banner-wrapper">
+    <div class="rbt-banner-image">
+        <img src="./assets/images/banner/sem-egitim-motif.svg" alt="" aria-hidden="true" class="banner-motif">
     </div>
-
-    <!-- Start Course Top  -->
-    <div class="rbt-course-top-wrapper mt--40">
-        <div class="container">
-            <div class="row mb--30">
-                <div class="col-12">
-                    <form action="#" class="rbt-search-style-1 sem-course-top-search">
-                        <input type="text" id="sem-search-input" placeholder="Eğitim Ara...">
-                        <button class="search-btn" type="submit"><i class="feather-search"></i></button>
-                    </form>
-                </div>
-            </div>
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-5 col-md-12">
-                    <div class="rbt-sorting-list d-flex flex-wrap align-items-center">
-                        <div class="rbt-short-item switch-layout-container">
-                            <ul class="course-switch-layout">
-                                <li class="course-switch-item"><button class="rbt-grid-view active" title="Grid Layout"><i class="feather-grid"></i> <span class="text">Izgara</span></button></li>
-                                <li class="course-switch-item"><button class="rbt-list-view" title="List Layout"><i class="feather-list"></i> <span class="text">Liste</span></button></li>
-                            </ul>
+    <div class="rbt-banner-content">
+        <div class="rbt-banner-content-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="page-list">
+                            <li class="rbt-breadcrumb-item"><a href="anasayfa.html">Anasayfa</a></li>
+                            <li>
+                                <div class="icon-right"><i class="feather-chevron-right"></i></div>
+                            </li>
+                            <li class="rbt-breadcrumb-item active">Hizmet İçi Eğitimler</li>
+                        </ul>
+                        <div class="title-wrapper">
+                            <h1 class="title mb--0">Hizmet İçi Eğitimler</h1>
                         </div>
-                        <div class="rbt-short-item">
-                            <span class="course-index">1-9 / 19 Sonuç Gösteriliyor</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-7 col-md-12">
-                    <div class="rbt-sorting-list d-flex flex-wrap align-items-center justify-content-start justify-content-lg-end">
-                        <div class="rbt-short-item">
-                            <div class="filter-select">
-                                <span class="select-label d-block">Sıralama</span>
-                                <div class="filter-select rbt-modern-select search-by-category">
-                                    <select class="form-select form-select-sm" style="border-radius:6px;border:1px solid #dde;min-width:160px;">
-                                        <option>Normal</option>
-                                        <option>Yaklaşan</option>
-                                        <option>En Son</option>
-                                        <option>Popülerlik</option>
-                                        <option>Fiyat: Düşükten Yükseğe</option>
-                                        <option>Fiyat: Yüksekten Düşüğe</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
+                        <p class="description">Hizmet İçi Eğitimler kategorisindeki eğitim programlarını keşfedin.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- End Course Top  -->
+</div>
 
-    <!-- Start Card Style -->
-    <div class="rbt-section-overlayping-top rbt-section-gapBottom">
-        <div class="container">
-            <!-- Mobil Filtre Butonu -->
-            <div class="d-lg-none mb-3">
-                <button class="rbt-btn btn-gradient w-100"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#semFilterCollapse"
-                        aria-expanded="false"
-                        aria-controls="semFilterCollapse">
-                    <i class="feather-sliders me-2"></i>Filtreleri Göster
-                </button>
+<div class="rbt-course-top-wrapper mt--40">
+    <div class="container">
+        <div class="row mb--30">
+            <div class="col-12">
+                <form action="tum-kurslar.html" method="get" class="rbt-search-style-1 sem-course-top-search" id="sem-egitim-search-form">
+                    <input type="text" id="sem-search-input" name="q" value="" placeholder="Eğitim Ara..." autocomplete="off">
+                    <button type="submit" class="search-btn"><i class="feather-search"></i></button>
+                </form>
             </div>
+        </div>
+        <div class="row g-5 align-items-center">
+            <div class="col-12">
+                <div class="rbt-sorting-list d-flex flex-wrap align-items-center">
+                    <div class="rbt-short-item switch-layout-container">
+                        <ul class="course-switch-layout">
+                            <li class="course-switch-item">
+                                <button type="button" class="rbt-grid-view active" title="Grid Layout">
+                                    <i class="feather-grid"></i> <span class="text">Izgara</span>
+                                </button>
+                            </li>
+                            <li class="course-switch-item">
+                                <button type="button" class="rbt-list-view" title="List Layout">
+                                    <i class="feather-list"></i> <span class="text">Liste</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="rbt-short-item">
+                        <span class="course-index"><span class="sem-sonuc-sayisi">4</span> sonuç</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-            <div class="row row--30 gy-5">
-                <div class="col-lg-3 col-xl-2 order-2 order-lg-1 sem-course-sidebar-col">
-                    <div class="collapse d-lg-block" id="semFilterCollapse">
+<div class="rbt-section-overlayping-top rbt-section-gapBottom">
+    <div class="container">
+        <div class="d-lg-none mb-3">
+            <button class="rbt-btn btn-gradient w-100"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#semFilterCollapse"
+                    aria-expanded="false"
+                    aria-controls="semFilterCollapse">
+                <i class="feather-sliders me-2"></i><span class="sem-filtre-goster">Filtreleri Göster</span><span class="sem-filtre-gizle">Filtreleri Gizle</span>
+            </button>
+        </div>
+
+        <div class="row row--30 gy-5">
+            <div class="col-lg-3 col-xl-2 sem-course-sidebar-col">
+                <div class="collapse d-lg-block" id="semFilterCollapse">
                     <aside class="rbt-sidebar-widget-wrapper">
-
-                        <!-- Start Widget Area  -->
-                        <div class="rbt-single-widget rbt-widget-categories has-show-more">
+                        <div class="rbt-single-widget rbt-widget-categories has-show-more active">
                             <div class="inner">
                                 <h4 class="rbt-widget-title">Kategoriler</h4>
-                                <ul class="rbt-sidebar-list-wrapper categories-list-check has-show-more-inner-content">
-                                    <li class="rbt-check-group">
-                                        <input id="flt-havacilik" type="checkbox" data-filter="kategori" value="havacilik">
-                                        <label for="flt-havacilik">Havacılık</label>
-                                    </li>
-                                    <li class="rbt-check-group">
-                                        <input id="flt-gastronomi" type="checkbox" data-filter="kategori" value="gastronomi">
-                                        <label for="flt-gastronomi">Gastronomi &amp; Aşçılık</label>
-                                    </li>
-                                    <li class="rbt-check-group">
-                                        <input id="flt-turizm" type="checkbox" data-filter="kategori" value="turizm">
-                                        <label for="flt-turizm">Turizm</label>
-                                    </li>
-                                    <li class="rbt-check-group">
-                                        <input id="flt-saglik" type="checkbox" data-filter="kategori" value="saglik">
-                                        <label for="flt-saglik">Sağlık &amp; Spor</label>
-                                    </li>
-                                    <li class="rbt-check-group">
-                                        <input id="flt-dil" type="checkbox" data-filter="kategori" value="dil">
-                                        <label for="flt-dil">Yabancı Dil</label>
-                                    </li>
-                                    <li class="rbt-check-group">
-                                        <input id="flt-bilisim" type="checkbox" data-filter="kategori" value="bilisim">
-                                        <label for="flt-bilisim">Bilgi Teknolojileri</label>
-                                    </li>
-                                    <li class="rbt-check-group">
-                                        <input id="flt-kisisel" type="checkbox" data-filter="kategori" value="kisisel-gelisim">
-                                        <label for="flt-kisisel">Kişisel Gelişim &amp; Sanat</label>
-                                    </li>
-                                    <li class="rbt-check-group">
-                                        <input id="flt-egitim" type="checkbox" data-filter="kategori" value="egitim">
-                                        <label for="flt-egitim">Montessori &amp; Eğiticinin Eğitimi</label>
-                                    </li>
-                                    <li class="rbt-check-group">
-                                        <input id="flt-pemer" type="checkbox" data-filter="kategori" value="pemer-myk">
-                                        <label for="flt-pemer">PEMER / MYK Sınavları</label>
-                                    </li>
+                                <ul class="rbt-sidebar-list-wrapper categories-list-check has-show-more-inner-content"
+                                    data-sunucu-filtreli="1">
+                                        <li class="rbt-check-group">
+                                            <input id="flt-cat-1" type="checkbox" data-filter="kategori" value="modul-sinav-kurslari" >
+                                            <label for="flt-cat-1">Modül Sınav Kursları</label>
+                                        </li>
+                                        <li class="rbt-check-group">
+                                            <input id="flt-cat-2" type="checkbox" data-filter="kategori" value="ascilik-egitimleri" >
+                                            <label for="flt-cat-2">Aşçılık Eğitimi</label>
+                                        </li>
+                                        <li class="rbt-check-group">
+                                            <input id="flt-cat-3" type="checkbox" data-filter="kategori" value="iha-egitimleri" >
+                                            <label for="flt-cat-3">İHA Eğitimleri</label>
+                                        </li>
+                                        <li class="rbt-check-group">
+                                            <input id="flt-cat-30" type="checkbox" data-filter="kategori" value="kirsal-kalkinma" >
+                                            <label for="flt-cat-30">Kırsal Kalkınma</label>
+                                        </li>
+                                        <li class="rbt-check-group">
+                                            <input id="flt-cat-4" type="checkbox" data-filter="kategori" value="cocuklar-icin-ingilizce-egitimleri" >
+                                            <label for="flt-cat-4">Çocuklar İçin İngilizce Eğitimi</label>
+                                        </li>
+                                        <li class="rbt-check-group">
+                                            <input id="flt-cat-5" type="checkbox" data-filter="kategori" value="baloncuk-sektor-egitimleri" >
+                                            <label for="flt-cat-5">Balonculuk Sektör Eğitimleri</label>
+                                        </li>
+                                        <li class="rbt-check-group">
+                                            <input id="flt-cat-6" type="checkbox" data-filter="kategori" value="kisisel-gelisim-egitimleri" >
+                                            <label for="flt-cat-6">Kişisel Gelişim Eğitimleri</label>
+                                        </li>
+                                        <li class="rbt-check-group">
+                                            <input id="flt-cat-7" type="checkbox" data-filter="kategori" value="montessori-egiticinin-egitimi" >
+                                            <label for="flt-cat-7">Montessori Eğiticinin Eğitimi</label>
+                                        </li>
+                                        <li class="rbt-check-group">
+                                            <input id="flt-cat-8" type="checkbox" data-filter="kategori" value="saglik-spor-ve-ilk-yardim-egitimleri" >
+                                            <label for="flt-cat-8">Sağlık, Spor ve İlk Yardım Eğitimleri</label>
+                                        </li>
+                                        <li class="rbt-check-group">
+                                            <input id="flt-cat-9" type="checkbox" data-filter="kategori" value="sivil-havacilik-egitimleri" >
+                                            <label for="flt-cat-9">SHGM KDM- ORG Sivil Havacılık Eğitimleri̇</label>
+                                        </li>
+                                        <li class="rbt-check-group">
+                                            <input id="flt-cat-10" type="checkbox" data-filter="kategori" value="turizm-egitimleri" >
+                                            <label for="flt-cat-10">Turizm Eğitimleri</label>
+                                        </li>
+                                        <li class="rbt-check-group">
+                                            <input id="flt-cat-25" type="checkbox" data-filter="kategori" value="pemer--myk-sinavlari" >
+                                            <label for="flt-cat-25">PEMER- MYK Sınavları</label>
+                                        </li>
+                                        <li class="rbt-check-group">
+                                            <input id="flt-cat-11" type="checkbox" data-filter="kategori" value="yabanci-dil-egitimleri" >
+                                            <label for="flt-cat-11">Yabancı Dil Eğitimleri</label>
+                                        </li>
+                                        <li class="rbt-check-group">
+                                            <input id="flt-cat-12" type="checkbox" data-filter="kategori" value="yoga-egitimleri" >
+                                            <label for="flt-cat-12">Yoga Eğitimleri</label>
+                                        </li>
+                                        <li class="rbt-check-group">
+                                            <input id="flt-cat-13" type="checkbox" data-filter="kategori" value="sanat-egitimleri" >
+                                            <label for="flt-cat-13">Sanat Eğitimleri</label>
+                                        </li>
+                                        <li class="rbt-check-group">
+                                            <input id="flt-cat-17" type="checkbox" data-filter="kategori" value="isaret-dili-egitimleri" >
+                                            <label for="flt-cat-17">İşaret Dili Eğitimleri</label>
+                                        </li>
+                                        <li class="rbt-check-group">
+                                            <input id="flt-cat-26" type="checkbox" data-filter="kategori" value="bilgi-teknolojileri-egitimleri" >
+                                            <label for="flt-cat-26">Bilgi Teknolojileri Eğitimleri</label>
+                                        </li>
+                                        <li class="rbt-check-group">
+                                            <input id="flt-cat-18" type="checkbox" data-filter="kategori" value="egiticinin-egitimi" >
+                                            <label for="flt-cat-18">Eğiticinin Eğitimi</label>
+                                        </li>
+                                        <li class="rbt-check-group">
+                                            <input id="flt-cat-19" type="checkbox" data-filter="kategori" value="kuresel-surdurulebilir-turizm-konseyi-onayli-egitimler" >
+                                            <label for="flt-cat-19">Küresel Sürdürülebilir Turizm Konseyi (GSTC) Onaylı Eğitimler</label>
+                                        </li>
+                                        <li class="rbt-check-group">
+                                            <input id="flt-cat-20" type="checkbox" data-filter="kategori" value="profesyonellere-yonelik-surdurulebilir-turizm-egitimleri" >
+                                            <label for="flt-cat-20">Profesyonellere Yönelik Sürdürülebilir Turizm Eğitimleri</label>
+                                        </li>
+                                        <li class="rbt-check-group">
+                                            <input id="flt-cat-27" type="checkbox" data-filter="kategori" value="turist-rehberligi-uygulama-egitim-gezisi" >
+                                            <label for="flt-cat-27">Turist Rehberliği Uygulama Eğitim Gezisi</label>
+                                        </li>
+                                        <li class="rbt-check-group">
+                                            <input id="flt-cat-28" type="checkbox" data-filter="kategori" value="turist-rehberligi-egitim-programi" >
+                                            <label for="flt-cat-28">Turist Rehberliği Eğitim Programı</label>
+                                        </li>
+                                        <li class="rbt-check-group">
+                                            <input id="flt-cat-29" type="checkbox" data-filter="kategori" value="yamac-parasut-pilotlugu-kisisel-gelisim-egitimleri" >
+                                            <label for="flt-cat-29">Yamaç Paraşüt Pilotluğu Kişisel Gelişim Eğitimleri</label>
+                                        </li>
+                                        <li class="rbt-check-group">
+                                            <input id="flt-cat-31" type="checkbox" data-filter="kategori" value="kirsal-kalkinma_egitimleri" >
+                                            <label for="flt-cat-31">Kırsal Kalkınma</label>
+                                        </li>
+                                        <li class="rbt-check-group">
+                                            <input id="flt-cat-32" type="checkbox" data-filter="kategori" value="turkce-hazirlik-programi" >
+                                            <label for="flt-cat-32">Türkçe Hazırlık Programı</label>
+                                        </li>
+                                        <li class="rbt-check-group">
+                                            <input id="flt-cat-33" type="checkbox" data-filter="kategori" value="mikro-yeterlilik" >
+                                            <label for="flt-cat-33">Mikro Yeterlilik</label>
+                                        </li>
+                                        <li class="rbt-check-group">
+                                            <input id="flt-cat-34" type="checkbox" data-filter="kategori" value="hizmet-ici-egitimler" checked>
+                                            <label for="flt-cat-34">Hizmet İçi Eğitimler</label>
+                                        </li>
                                 </ul>
                             </div>
-                            <div class="rbt-show-more-btn">Daha Fazla</div>
+                            <div class="rbt-show-more-btn active">Daha Az Göster</div>
                         </div>
-                        <!-- End Widget Area  -->
-
-                        <!-- Start Widget Area  -->
-                        <div class="rbt-single-widget">
-                            <div class="inner">
-                                <h4 class="rbt-widget-title">Eğitimler</h4>
-                                <ul class="rbt-sidebar-list-wrapper prices-list-check">
-                                    <li class="rbt-check-group">
-                                        <input id="flt-yuzyuze" type="checkbox" data-filter="format" value="yuz-yuze">
-                                        <label for="flt-yuzyuze">Yüz Yüze</label>
-                                    </li>
-                                    <li class="rbt-check-group">
-                                        <input id="flt-online" type="checkbox" data-filter="format" value="online">
-                                        <label for="flt-online">Online</label>
-                                    </li>
-                                    <li class="rbt-check-group">
-                                        <input id="flt-hibrit" type="checkbox" data-filter="format" value="hibrit">
-                                        <label for="flt-hibrit">Hibrit</label>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- End Widget Area  -->
-
                     </aside>
-                    </div><!-- /collapse -->
+                    <div class="d-lg-none sem-filtre-uygula">
+                        <button type="button" class="rbt-btn btn-gradient w-100"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#semFilterCollapse">
+                            Sonuçları Göster (<span class="sem-sonuc-sayisi">4</span>)
+                        </button>
+                    </div>
                 </div>
-                <div class="col-lg-9 col-xl-10 order-1 order-lg-2 sem-course-grid-col">
-                    <div class="rbt-course-grid-column active-grid-view">
+            </div>
 
-                        <!-- Start Single Card  -->
-                        <div class="course-grid-3">
-                            <div class="sem-course-card"
-                                 data-ad="Akademik Yazım ve Etik Eğitimi"
-                                 data-gun="haftaici"
-                                 data-kategori="havacilik"
-                                 data-format="yuz-yuze"
-                                 data-ucret="ucretli"
-                                 data-durum="acik">
-                                <div class="rbt-card-img">
-                                    <a href="kurs-detay.html">
-                                        <img src="./assets/images/course/course-3.jpg" alt="Akademik Yazım ve Etik Eğitimi">
-                                    </a>
-                                </div>
-                                <div class="card-body">
-                                    <span class="sem-status-badge sem-status-badge--acik">Kayıtlar Açık</span>
-                                    <h4 class="rbt-card-title mt-2">
-                                        <a href="kurs-detay.html">Akademik Yazım ve Etik Eğitimi</a>
-                                    </h4>
-                                    <ul class="rbt-meta">
-                                        <li><i class="feather-map-pin"></i>Yüz Yüze</li>
-                                        <li><i class="feather-tag"></i>Akademik</li>
-                                        <li><i class="feather-clock"></i>Hafta İçi</li>
-                                    </ul>
-                                </div>
-                                <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <button class="sem-apply-btn"
-                                            onclick="openApplyModal('basvuru','meteoroloji','Akademik Yazım ve Etik Eğitimi')">
-                                        Başvur <i class="feather-arrow-right"></i>
-                                    </button>
-                                    <a class="rbt-btn-link" href="kurs-detay.html">Detaylar <i class="feather-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Card  -->
+            <div class="col-lg-9 col-xl-10 sem-course-grid-col">
+                <div class="rbt-course-grid-column active-grid-view">
+<div class="course-grid-3">
+    <div class="sem-course-card"
+         data-ad="İdari İşlerde Yapay Zekâ ile Verimli Çalışma Atölyesi"
+         data-gun="haftaici"
+         data-kategori="hizmet-ici-egitimler"
+         data-ucret="ucretsiz"
+         data-durum="kapandi">
+        <div class="rbt-card-img">
+            <a href="kurs-detay.html">
+                    <img src="./assets/images/uploads/226b51c498e19147.jpg" alt="İdari İşlerde Yapay Zekâ ile Verimli Çalışma Atölyesi" loading="lazy">
+            </a>
+        </div>
+        <div class="card-body">
+            <div class="sem-card-badges">
+              <span class="sem-status-badge sem-status-badge--kapandi">Kayıtlar Kapandı</span>
+              <!-- Backend: eğitimin başlangıç tarihi (en yakın grup) -->
+              <span class="sem-date-badge"><i class="feather-calendar"></i><time datetime="2027-03-10">10 Mart 2027</time></span>
+            </div>
+            <h4 class="rbt-card-title mt-2"><a href="kurs-detay.html">İdari İşlerde Yapay Zekâ ile Verimli Çalışma Atölyesi</a></h4>
+            <p class="rbt-card-text">İdari süreçlerde yapay zekâ araçlarının sunduğu olanakları, verimli çalışma yöntemlerini ve dijital teknolojilerin iş...</p>
+            <ul class="rbt-meta">
+                <li><i class="feather-tag"></i>Hizmet İçi Eğitimler</li>
+                <li><i class="feather-clock"></i>Hafta İçi</li>
+            </ul>
+        </div>
+        <div class="card-footer d-flex align-items-center justify-content-between">
+            <button type="button" class="sem-apply-btn"
+                    onclick='openApplyModal("basvuru", &quot;i-dari-i-slerde-yapay-zek-ile-verimli-calisma-atolyesi&quot;, &quot;\u0130dari \u0130\u015Flerde Yapay Zek\u00E2 ile Verimli \u00C7al\u0131\u015Fma At\u00F6lyesi&quot;)'>
+                Başvur <i class="feather-arrow-right"></i>
+            </button>
+            <a class="rbt-btn-link" href="kurs-detay.html">Detaylar <i class="feather-arrow-right"></i></a>
+        </div>
+    </div>
+</div>
+<div class="course-grid-3">
+    <div class="sem-course-card"
+         data-ad="Kurumsal Sürdürülebilirlik ve atık Yönetimi Eğitimi"
+         data-gun="haftaici"
+         data-kategori="hizmet-ici-egitimler"
+         data-ucret="ucretsiz"
+         data-durum="kapandi">
+        <div class="rbt-card-img">
+            <a href="kurs-detay.html">
+                    <img src="./assets/images/uploads/a677a7611a692bb6.jpg" alt="Kurumsal Sürdürülebilirlik ve atık Yönetimi Eğitimi" loading="lazy">
+            </a>
+        </div>
+        <div class="card-body">
+            <div class="sem-card-badges">
+              <span class="sem-status-badge sem-status-badge--kapandi">Kayıtlar Kapandı</span>
+              <!-- Backend: eğitimin başlangıç tarihi (en yakın grup) -->
+              <span class="sem-date-badge"><i class="feather-calendar"></i><time datetime="2027-03-09">9 Mart 2027</time></span>
+            </div>
+            <h4 class="rbt-card-title mt-2"><a href="kurs-detay.html">Kurumsal Sürdürülebilirlik ve atık Yönetimi Eğitimi</a></h4>
+            <p class="rbt-card-text">Akademik ve idari personelimize yönelik eğitimde kaynakların bilinçli kullanımı, doğru atık yönetimi ve çevresel sürd...</p>
+            <ul class="rbt-meta">
+                <li><i class="feather-tag"></i>Hizmet İçi Eğitimler</li>
+                <li><i class="feather-clock"></i>Hafta İçi</li>
+            </ul>
+        </div>
+        <div class="card-footer d-flex align-items-center justify-content-between">
+            <button type="button" class="sem-apply-btn"
+                    onclick='openApplyModal("basvuru", &quot;kurumsal-surdurulebilirlik-ve-atik-yonetimi-egitimi&quot;, &quot;Kurumsal S\u00FCrd\u00FCr\u00FClebilirlik ve at\u0131k Y\u00F6netimi E\u011Fitimi&quot;)'>
+                Başvur <i class="feather-arrow-right"></i>
+            </button>
+            <a class="rbt-btn-link" href="kurs-detay.html">Detaylar <i class="feather-arrow-right"></i></a>
+        </div>
+    </div>
+</div>
+<div class="course-grid-3">
+    <div class="sem-course-card"
+         data-ad="Üretken Yapay Zekânın Etik, Güvenli ve Etkili Kullanımı Eğitimi"
+         data-gun="haftaici"
+         data-kategori="hizmet-ici-egitimler"
+         data-ucret="ucretsiz"
+         data-durum="kapandi">
+        <div class="rbt-card-img">
+            <a href="kurs-detay.html">
+                    <img src="./assets/images/uploads/8432a2743c97ca7e.jpg" alt="Üretken Yapay Zekânın Etik, Güvenli ve Etkili Kullanımı Eğitimi" loading="lazy">
+            </a>
+        </div>
+        <div class="card-body">
+            <div class="sem-card-badges">
+              <span class="sem-status-badge sem-status-badge--kapandi">Kayıtlar Kapandı</span>
+              <!-- Backend: eğitimin başlangıç tarihi (en yakın grup) -->
+              <span class="sem-date-badge"><i class="feather-calendar"></i><time datetime="2027-02-01">1 Şubat 2027</time></span>
+            </div>
+            <h4 class="rbt-card-title mt-2"><a href="kurs-detay.html">Üretken Yapay Zekânın Etik, Güvenli ve Etkili Kullanımı Eğitimi</a></h4>
+            <p class="rbt-card-text">Akademik ve idari personelimizin üretken yapay zekâ teknolojilerini etik, güvenli ve etkili biçimde kullanmasına yöne...</p>
+            <ul class="rbt-meta">
+                <li><i class="feather-tag"></i>Hizmet İçi Eğitimler</li>
+                <li><i class="feather-clock"></i>Hafta İçi</li>
+            </ul>
+        </div>
+        <div class="card-footer d-flex align-items-center justify-content-between">
+            <button type="button" class="sem-apply-btn"
+                    onclick='openApplyModal("basvuru", &quot;uretken-yapay-zek-nin-etik-guvenli-ve-etkili-kullanimi-egitimi&quot;, &quot;\u00DCretken Yapay Zek\u00E2n\u0131n Etik, G\u00FCvenli ve Etkili Kullan\u0131m\u0131 E\u011Fitimi&quot;)'>
+                Başvur <i class="feather-arrow-right"></i>
+            </button>
+            <a class="rbt-btn-link" href="kurs-detay.html">Detaylar <i class="feather-arrow-right"></i></a>
+        </div>
+    </div>
+</div>
+<div class="course-grid-3">
+    <div class="sem-course-card"
+         data-ad="Yeni Başlayanlar İçin Kurumsal Uyum ve İş Akışları Eğitimi"
+         data-gun="haftaici"
+         data-kategori="hizmet-ici-egitimler"
+         data-ucret="ucretsiz"
+         data-durum="kapandi">
+        <div class="rbt-card-img">
+            <a href="kurs-detay.html">
+                    <img src="./assets/images/uploads/b3a87fdeb99befa7.jpg" alt="Yeni Başlayanlar İçin Kurumsal Uyum ve İş Akışları Eğitimi" loading="lazy">
+            </a>
+        </div>
+        <div class="card-body">
+            <div class="sem-card-badges">
+              <span class="sem-status-badge sem-status-badge--kapandi">Kayıtlar Kapandı</span>
+              <!-- Backend: eğitimin başlangıç tarihi (en yakın grup) -->
+              <span class="sem-date-badge"><i class="feather-calendar"></i><time datetime="2027-03-07">7 Mart 2027</time></span>
+            </div>
+            <h4 class="rbt-card-title mt-2"><a href="kurs-detay.html">Yeni Başlayanlar İçin Kurumsal Uyum ve İş Akışları Eğitimi</a></h4>
+            <p class="rbt-card-text">Üniversitemize yeni katılan çalışma arkadaşlarımızın kurumsal yapıyı ve iş süreçlerini tanımalarını destekleyen bir u...</p>
+            <ul class="rbt-meta">
+                <li><i class="feather-tag"></i>Hizmet İçi Eğitimler</li>
+                <li><i class="feather-clock"></i>Hafta İçi</li>
+            </ul>
+        </div>
+        <div class="card-footer d-flex align-items-center justify-content-between">
+            <button type="button" class="sem-apply-btn"
+                    onclick='openApplyModal("basvuru", &quot;yeni-baslayanlar-i-cin-kurumsal-uyum-ve-i-s-akislari-egitimi&quot;, &quot;Yeni Ba\u015Flayanlar \u0130\u00E7in Kurumsal Uyum ve \u0130\u015F Ak\u0131\u015Flar\u0131 E\u011Fitimi&quot;)'>
+                Başvur <i class="feather-arrow-right"></i>
+            </button>
+            <a class="rbt-btn-link" href="kurs-detay.html">Detaylar <i class="feather-arrow-right"></i></a>
+        </div>
+    </div>
+</div>
 
-                        <!-- Start Single Card  -->
-                        <div class="course-grid-3">
-                            <div class="sem-course-card"
-                                 data-ad="Uzaktan Eğitim (LMS) Kullanım Eğitimi"
-                                 data-gun="haftasonu"
-                                 data-kategori="havacilik"
-                                 data-format="yuz-yuze"
-                                 data-ucret="ucretli"
-                                 data-durum="son">
-                                <div class="rbt-card-img">
-                                    <a href="kurs-detay.html">
-                                        <img src="./assets/images/course/arama-kurtarma.jpg" alt="Uzaktan Eğitim (LMS) Kullanım Eğitimi">
-                                    </a>
-                                </div>
-                                <div class="card-body">
-                                    <span class="sem-status-badge sem-status-badge--son">Son Kontenjanlar</span>
-                                    <h4 class="rbt-card-title mt-2">
-                                        <a href="kurs-detay.html">Uzaktan Eğitim (LMS) Kullanım Eğitimi
-                                        </a>
-                                    </h4>
-                                    <ul class="rbt-meta">
-                                        <li><i class="feather-map-pin"></i>Yüz Yüze</li>
-                                        <li><i class="feather-tag"></i>Dijital Beceri</li>
-                                        <li><i class="feather-sun"></i>Hafta Sonu</li>
-                                    </ul>
-                                </div>
-                                <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <button class="sem-apply-btn"
-                                            onclick="openApplyModal('basvuru','arama-kurtarma','Uzaktan Eğitim (LMS) Kullanım Eğitimi')">
-                                        Başvur <i class="feather-arrow-right"></i>
-                                    </button>
-                                    <a class="rbt-btn-link" href="kurs-detay.html">Detaylar <i class="feather-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Card  -->
-
-                        <!-- Start Single Card  -->
-                        <div class="course-grid-3">
-                            <div class="sem-course-card"
-                                 data-ad="İş Sağlığı ve Güvenliği Oryantasyon Eğitimi"
-                                 data-gun="haftaici"
-                                 data-kategori="havacilik"
-                                 data-format="yuz-yuze"
-                                 data-ucret="ucretli"
-                                 data-durum="yakinda">
-                                <div class="rbt-card-img">
-                                    <a href="kurs-detay.html">
-                                        <img src="./assets/images/course/course-7.jpg" alt="İş Sağlığı ve Güvenliği Oryantasyon Eğitimi">
-                                    </a>
-                                </div>
-                                <div class="card-body">
-                                    <span class="sem-status-badge sem-status-badge--yakinda">Yakında</span>
-                                    <h4 class="rbt-card-title mt-2">
-                                        <a href="kurs-detay.html">İş Sağlığı ve Güvenliği Oryantasyon Eğitimi</a>
-                                    </h4>
-                                    <ul class="rbt-meta">
-                                        <li><i class="feather-map-pin"></i>Yüz Yüze</li>
-                                        <li><i class="feather-tag"></i>İSG</li>
-                                        <li><i class="feather-clock"></i>Hafta İçi</li>
-                                    </ul>
-                                </div>
-                                <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <button class="sem-apply-btn"
-                                            onclick="openApplyModal('talep','sms-egitimi','İş Sağlığı ve Güvenliği Oryantasyon Eğitimi')">
-                                        Talep Bırak <i class="feather-arrow-right"></i>
-                                    </button>
-                                    <a class="rbt-btn-link" href="kurs-detay.html">Detaylar <i class="feather-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Card  -->
-
-                        <!-- Start Single Card  -->
-                        <div class="course-grid-3">
-                            <div class="sem-course-card"
-                                 data-ad="Akademik İngilizce Gelişim Programı"
-                                 data-gun="haftaici"
-                                 data-kategori="dil"
-                                 data-format="online"
-                                 data-ucret="ucretli"
-                                 data-durum="acik">
-                                <div class="rbt-card-img">
-                                    <a href="kurs-detay.html">
-                                        <img src="./assets/images/course/course-8.jpg" alt="Akademik İngilizce Gelişim Programı">
-                                    </a>
-                                </div>
-                                <div class="card-body">
-                                    <span class="sem-status-badge sem-status-badge--acik">Kayıtlar Açık</span>
-                                    <h4 class="rbt-card-title mt-2">
-                                        <a href="kurs-detay.html">Akademik İngilizce Gelişim Programı</a>
-                                    </h4>
-                                    <ul class="rbt-meta">
-                                        <li><i class="feather-monitor"></i>Online</li>
-                                        <li><i class="feather-tag"></i>Yabancı Dil</li>
-                                        <li><i class="feather-clock"></i>Hafta İçi</li>
-                                    </ul>
-                                </div>
-                                <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <button class="sem-apply-btn"
-                                            onclick="openApplyModal('basvuru','mesleki-ingilizce','Akademik İngilizce Gelişim Programı')">
-                                        Başvur <i class="feather-arrow-right"></i>
-                                    </button>
-                                    <a class="rbt-btn-link" href="kurs-detay.html">Detaylar <i class="feather-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Card  -->
-
-                        <!-- Start Single Card  -->
-                        <div class="course-grid-3">
-                            <div class="sem-course-card"
-                                 data-ad="Zaman Yönetimi ve Verimlilik Eğitimi"
-                                 data-gun="haftasonu"
-                                 data-kategori="kisisel-gelisim"
-                                 data-format="online"
-                                 data-ucret="ucretli"
-                                 data-durum="acik">
-                                <div class="rbt-card-img">
-                                    <a href="kurs-detay.html">
-                                        <img src="./assets/images/course/course-9.jpg" alt="Zaman Yönetimi ve Verimlilik Eğitimi">
-                                    </a>
-                                </div>
-                                <div class="card-body">
-                                    <span class="sem-status-badge sem-status-badge--acik">Kayıtlar Açık</span>
-                                    <h4 class="rbt-card-title mt-2">
-                                        <a href="kurs-detay.html">Zaman Yönetimi ve Verimlilik Eğitimi</a>
-                                    </h4>
-                                    <ul class="rbt-meta">
-                                        <li><i class="feather-monitor"></i>Online</li>
-                                        <li><i class="feather-tag"></i>Kişisel Gelişim</li>
-                                        <li><i class="feather-sun"></i>Hafta Sonu</li>
-                                    </ul>
-                                </div>
-                                <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <button class="sem-apply-btn"
-                                            onclick="openApplyModal('basvuru','stres-zaman','Zaman Yönetimi ve Verimlilik Eğitimi')">
-                                        Başvur <i class="feather-arrow-right"></i>
-                                    </button>
-                                    <a class="rbt-btn-link" href="kurs-detay.html">Detaylar <i class="feather-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Card  -->
-
-                        <!-- Start Single Card  -->
-                        <div class="course-grid-3">
-                            <div class="sem-course-card"
-                                 data-ad="Stres Yönetimi ve Psikolojik Dayanıklılık Eğitimi"
-                                 data-gun="haftasonu"
-                                 data-kategori="saglik"
-                                 data-format="yuz-yuze"
-                                 data-ucret="ucretli"
-                                 data-durum="kapandi">
-                                <div class="rbt-card-img">
-                                    <a href="kurs-detay.html">
-                                        <img src="./assets/images/course/course-10.jpg" alt="Stres Yönetimi ve Psikolojik Dayanıklılık Eğitimi">
-                                    </a>
-                                </div>
-                                <div class="card-body">
-                                    <span class="sem-status-badge sem-status-badge--kapandi">Kayıtlar Kapandı</span>
-                                    <h4 class="rbt-card-title mt-2">
-                                        <a href="kurs-detay.html">Stres Yönetimi ve Psikolojik Dayanıklılık Eğitimi</a>
-                                    </h4>
-                                    <ul class="rbt-meta">
-                                        <li><i class="feather-map-pin"></i>Yüz Yüze</li>
-                                        <li><i class="feather-tag"></i>Kişisel Gelişim</li>
-                                        <li><i class="feather-sun"></i>Hafta Sonu</li>
-                                    </ul>
-                                </div>
-                                <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <button class="sem-apply-btn"
-                                            onclick="openApplyModal('talep','psikolojik-saglamlik','Stres Yönetimi ve Psikolojik Dayanıklılık Eğitimi')">
-                                        Sonraki Döneme Talep <i class="feather-arrow-right"></i>
-                                    </button>
-                                    <a class="rbt-btn-link" href="kurs-detay.html">Detaylar <i class="feather-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Card  -->
-
-                        <!-- Start Single Card  -->
-                        <div class="course-grid-3">
-                            <div class="sem-course-card"
-                                 data-ad="Kurum Kültürü ve Motivasyon Semineri"
-                                 data-gun="haftaici"
-                                 data-kategori="kisisel-gelisim"
-                                 data-format="online"
-                                 data-ucret="ucretsiz"
-                                 data-durum="acik">
-                                <div class="rbt-card-img">
-                                    <a href="kurs-detay.html">
-                                        <img src="./assets/images/course/course-11.jpg" alt="Kurum Kültürü ve Motivasyon Semineri">
-                                    </a>
-                                </div>
-                                <div class="card-body">
-                                    <span class="sem-status-badge sem-status-badge--acik">Kayıtlar Açık</span>
-                                    <h4 class="rbt-card-title mt-2">
-                                        <a href="kurs-detay.html">Kurum Kültürü ve Motivasyon Semineri</a>
-                                    </h4>
-                                    <ul class="rbt-meta">
-                                        <li><i class="feather-monitor"></i>Online</li>
-                                        <li><i class="feather-tag"></i>Kurum Kültürü</li>
-                                        <li><i class="feather-clock"></i>Hafta İçi</li>
-                                    </ul>
-                                </div>
-                                <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <button class="sem-apply-btn"
-                                            onclick="openApplyModal('basvuru','motivasyon','Kurum Kültürü ve Motivasyon Semineri')">
-                                        Başvur <i class="feather-arrow-right"></i>
-                                    </button>
-                                    <a class="rbt-btn-link" href="kurs-detay.html">Detaylar <i class="feather-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Card  -->
-
-                        <!-- Start Single Card  -->
-                        <div class="course-grid-3">
-                            <div class="sem-course-card"
-                                 data-ad="Ofis Yazılımları (MS Office) Eğitimi"
-                                 data-gun="haftasonu"
-                                 data-kategori="gastronomi"
-                                 data-format="yuz-yuze"
-                                 data-ucret="ucretli"
-                                 data-durum="acik">
-                                <div class="rbt-card-img">
-                                    <a href="kurs-detay.html">
-                                        <img src="https://images.unsplash.com/photo-1563172218-cc4b58795905?w=1080&h=1350&fit=crop&q=80" alt="Ofis Yazılımları (MS Office) Eğitimi">
-                                    </a>
-                                </div>
-                                <div class="card-body">
-                                    <span class="sem-status-badge sem-status-badge--acik">Kayıtlar Açık</span>
-                                    <h4 class="rbt-card-title mt-2">
-                                        <a href="kurs-detay.html">Ofis Yazılımları (MS Office) Eğitimi</a>
-                                    </h4>
-                                    <ul class="rbt-meta">
-                                        <li><i class="feather-map-pin"></i>Yüz Yüze</li>
-                                        <li><i class="feather-tag"></i>Ofis Becerileri</li>
-                                        <li><i class="feather-sun"></i>Hafta Sonu</li>
-                                    </ul>
-                                </div>
-                                <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <button class="sem-apply-btn"
-                                            onclick="openApplyModal('basvuru','ascilik','Ofis Yazılımları (MS Office) Eğitimi')">
-                                        Başvur <i class="feather-arrow-right"></i>
-                                    </button>
-                                    <a class="rbt-btn-link" href="kurs-detay.html">Detaylar <i class="feather-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Card  -->
-
-                        <!-- Start Single Card  -->
-                        <div class="course-grid-3">
-                            <div class="sem-course-card"
-                                 data-ad="Etkili İletişim ve Sunum Teknikleri Eğitimi"
-                                 data-gun="haftaici"
-                                 data-kategori="turizm"
-                                 data-format="online"
-                                 data-ucret="ucretli"
-                                 data-durum="acik">
-                                <div class="rbt-card-img">
-                                    <a href="kurs-detay.html">
-                                        <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=1080&h=1350&fit=crop&q=80" alt="Etkili İletişim ve Sunum Teknikleri Eğitimi">
-                                    </a>
-                                </div>
-                                <div class="card-body">
-                                    <span class="sem-status-badge sem-status-badge--acik">Kayıtlar Açık</span>
-                                    <h4 class="rbt-card-title mt-2">
-                                        <a href="kurs-detay.html">Etkili İletişim ve Sunum Teknikleri Eğitimi</a>
-                                    </h4>
-                                    <ul class="rbt-meta">
-                                        <li><i class="feather-monitor"></i>Online</li>
-                                        <li><i class="feather-tag"></i>İletişim</li>
-                                        <li><i class="feather-clock"></i>Hafta İçi</li>
-                                    </ul>
-                                </div>
-                                <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <button class="sem-apply-btn"
-                                            onclick="openApplyModal('basvuru','surdurulebilir-turizm','Etkili İletişim ve Sunum Teknikleri Eğitimi')">
-                                        Başvur <i class="feather-arrow-right"></i>
-                                    </button>
-                                    <a class="rbt-btn-link" href="kurs-detay.html">Detaylar <i class="feather-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Card  -->
-
-                        <!-- Start Single Card  -->
-                        <div class="course-grid-3">
-                            <div class="sem-course-card"
-                                 data-ad="Siber Güvenlik Farkındalık Eğitimi"
-                                 data-gun="haftasonu"
-                                 data-kategori="bilisim"
-                                 data-format="online"
-                                 data-ucret="ucretli"
-                                 data-durum="yakinda">
-                                <div class="rbt-card-img">
-                                    <a href="kurs-detay.html">
-                                        <img src="https://images.unsplash.com/photo-1518818608552-195ed130cdf4?w=1080&h=1350&fit=crop&q=80" alt="Siber Güvenlik Farkındalık Eğitimi">
-                                    </a>
-                                </div>
-                                <div class="card-body">
-                                    <span class="sem-status-badge sem-status-badge--yakinda">Yakında</span>
-                                    <h4 class="rbt-card-title mt-2">
-                                        <a href="kurs-detay.html">Siber Güvenlik Farkındalık Eğitimi</a>
-                                    </h4>
-                                    <ul class="rbt-meta">
-                                        <li><i class="feather-monitor"></i>Online</li>
-                                        <li><i class="feather-tag"></i>Bilgi Teknolojileri</li>
-                                        <li><i class="feather-sun"></i>Hafta Sonu</li>
-                                    </ul>
-                                </div>
-                                <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <button class="sem-apply-btn"
-                                            onclick="openApplyModal('talep','siber-guvenlik','Siber Güvenlik Farkındalık Eğitimi')">
-                                        Talep Bırak <i class="feather-arrow-right"></i>
-                                    </button>
-                                    <a class="rbt-btn-link" href="kurs-detay.html">Detaylar <i class="feather-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Card  -->
-
-                        <!-- Start Single Card  -->
-                        <div class="course-grid-3">
-                            <div class="sem-course-card"
-                                 data-ad="Eğiticinin Eğitimi Sertifika Programı"
-                                 data-gun="haftasonu"
-                                 data-kategori="egitim"
-                                 data-format="yuz-yuze"
-                                 data-ucret="ucretli"
-                                 data-durum="son">
-                                <div class="rbt-card-img">
-                                    <a href="kurs-detay.html">
-                                        <img src="./assets/images/course/course-7.jpg" alt="Eğiticinin Eğitimi Sertifika Programı">
-                                    </a>
-                                </div>
-                                <div class="card-body">
-                                    <span class="sem-status-badge sem-status-badge--son">Son Kontenjanlar</span>
-                                    <h4 class="rbt-card-title mt-2">
-                                        <a href="kurs-detay.html">Eğiticinin Eğitimi Sertifika Programı</a>
-                                    </h4>
-                                    <ul class="rbt-meta">
-                                        <li><i class="feather-map-pin"></i>Yüz Yüze</li>
-                                        <li><i class="feather-tag"></i>Eğitim</li>
-                                        <li><i class="feather-sun"></i>Hafta Sonu</li>
-                                    </ul>
-                                </div>
-                                <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <button class="sem-apply-btn"
-                                            onclick="openApplyModal('basvuru','montessori','Eğiticinin Eğitimi Sertifika Programı')">
-                                        Başvur <i class="feather-arrow-right"></i>
-                                    </button>
-                                    <a class="rbt-btn-link" href="kurs-detay.html">Detaylar <i class="feather-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Card  -->
-
-                        <!-- Start Single Card  -->
-                        <div class="course-grid-3">
-                            <div class="sem-course-card"
-                                 data-ad="KVKK Farkındalık Eğitimi"
-                                 data-gun="haftasonu"
-                                 data-kategori="pemer-myk"
-                                 data-format="yuz-yuze"
-                                 data-ucret="ucretli"
-                                 data-durum="son">
-                                <div class="rbt-card-img">
-                                    <a href="kurs-detay.html">
-                                        <img src="./assets/images/course/sem-slider.jpg" alt="KVKK Farkındalık Eğitimi">
-                                    </a>
-                                </div>
-                                <div class="card-body">
-                                    <span class="sem-status-badge sem-status-badge--son">Son Başvuru</span>
-                                    <h4 class="rbt-card-title mt-2">
-                                        <a href="kurs-detay.html">KVKK Farkındalık Eğitimi</a>
-                                    </h4>
-                                    <ul class="rbt-meta">
-                                        <li><i class="feather-map-pin"></i>Yüz Yüze</li>
-                                        <li><i class="feather-tag"></i>KVKK</li>
-                                        <li><i class="feather-sun"></i>Hafta Sonu</li>
-                                    </ul>
-                                </div>
-                                <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <button class="sem-apply-btn"
-                                            onclick="openApplyModal('basvuru','pemer-asci','KVKK Farkındalık Eğitimi')">
-                                        Başvur <i class="feather-arrow-right"></i>
-                                    </button>
-                                    <a class="rbt-btn-link" href="kurs-detay.html">Detaylar <i class="feather-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Card  -->
-
-                        <div id="sem-no-result" class="sem-hidden text-center py-5 w-100">
-                            <i class="feather-search" style="font-size:2.5rem;color:var(--sem-muted)"></i>
+                    <div id="sem-no-result" class="sem-hidden text-center py-5 w-100">
+                        <i class="feather-search" style="font-size:2.5rem;color:var(--sem-muted)"></i>
                             <h5 class="mt-3">Sonuç bulunamadı</h5>
                             <p class="text-muted mb-4">Seçtiğiniz filtrelerle eşleşen eğitim bulunamadı.</p>
-                            <div class="d-flex flex-wrap gap-3 justify-content-center mb-4">
-                                <button class="rbt-btn btn-border btn-sm"
-                                        onclick="document.querySelectorAll('input[data-filter]').forEach(function(c){c.checked=false;}); document.getElementById('sem-search-input').value=''; if(window.filterCards) filterCards();">
+                        <div class="d-flex flex-wrap gap-3 justify-content-center mb-4">
+                                <button type="button" class="rbt-btn btn-border btn-sm"
+                                        onclick="document.querySelectorAll('input[data-filter]').forEach(function(c){c.checked=false;}); var s=document.getElementById('sem-search-input'); if(s)s.value=''; if(window.semFilterCards) semFilterCards();">
                                     <i class="feather-x me-1"></i>Filtreleri Temizle
                                 </button>
-                                <button class="sem-apply-btn"
-                                        onclick="openApplyModal('talep','','')">
-                                    <i class="feather-mail me-1"></i>Talep Bırak
-                                </button>
-                            </div>
-                            <p class="text-muted" style="font-size:.85rem;">İstediğiniz eğitim burada yoksa talep bırakın, SEM koordinatörü sizinle iletişime geçsin.</p>
+                            <button type="button" class="sem-apply-btn"
+                                    onclick="openApplyModal('talep','','')">
+                                <i class="feather-mail me-1"></i>Talep Bırak
+                            </button>
                         </div>
-
+                        <p class="text-muted" style="font-size:.85rem;">İstediğiniz eğitim burada yoksa talep bırakın, SEM koordinatörü sizinle iletişime geçsin.</p>
                     </div>
-
-                    <div class="row">
-                        <div class="col-lg-12 mt--60">
-                            <nav>
-                                <ul class="rbt-pagination">
-                                    <li><a href="#" aria-label="Previous"><i class="feather-chevron-left"></i></a></li>
-                                    <li><a href="#">1</a></li>
-                                    <li class="active"><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#" aria-label="Next"><i class="feather-chevron-right"></i></a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>
     </div>
-    <!-- End Card Style -->
+</div>
 
-    <div class="rbt-separator-mid">
+<div class="rbt-separator-mid">
     <div class="container">
         <hr class="rbt-separator m-0">
     </div>
 </div>
 
-                <div class="rbt-progress-parent">
-    <svg class="rbt-back-circle svg-inner" width="100%" height="100%" viewBox="-1 -1 102 102" xmlns="http://www.w3.org/2000/svg">
-        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
-    </svg>
-</div>            
-                <!-- Start Footer aera -->
+    </main>
+
+    <div class="rbt-progress-parent">
+        <svg class="rbt-back-circle svg-inner" width="100%" height="100%" viewBox="-1 -1 102 102" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
+        </svg>
+    </div>
+
     <footer class="rbt-footer footer-style-1 bg-color-darker overflow-hidden">
         <div class="footer-top">
             <div class="container">
@@ -1340,10 +868,6 @@
                             <ul class="social-icon social-default justify-content-start">
                                 <li><a href="https://www.facebook.com/">
                                         <i class="feather-facebook"></i>
-                                    </a>
-                                </li>
-                                <li><a href="https://www.twitter.com">
-                                        <i class="feather-twitter"></i>
                                     </a>
                                 </li>
                                 <li><a href="https://www.instagram.com/">
@@ -1375,7 +899,6 @@
                   <li><a href="anasayfa.html">Ana Sayfa</a></li>
                   <li><a href="tum-kurslar.html">Eğitimler</a></li>
                   <li><a href="duyurular.html">Duyurular</a></li>
-                  <li><a href="blog.html">Blog</a></li>
                   <li><a href="iletisim.html">İletişim</a></li>
                 </ul>
               </div>
@@ -1410,7 +933,7 @@
                         <div class="footer-widget">
                             <h5 class="ft-title">İletişime Geçin</h5>
                             <ul class="ft-link">
-                                <li><span>Telefon:</span> <a href="#">+90 384 353 50 09</a></li>
+                                <li><span>Telefon:</span> <a href="tel:+903843535009">+90 384 353 50 09</a></li>
                                 <li><span>E-posta:</span> <a href="mailto:sem@kapadokya.edu.tr">sem@kapadokya.edu.tr</a></li>
                             </ul>
 
@@ -1591,7 +1114,34 @@
     </div>
     <!-- ── /semApplyModal ── -->
 
-    <script src="./assets/js/sem-custom.js?v=20261007"></script>
+    <!-- ── semPersonelModal: Hizmet içi eğitimler yalnızca KÜN personeline açık ──
+         BACKEND (en kolay yol): Personel girişi yapmış kullanıcıya bu bloğu HİÇ BASMAYIN — başka bir şey gerekmez.
+         Alternatif: bloğu her zaman basıp sayfaya <script>window.__semPersonel = true;</script> eklerseniz pencere açılmaz.
+         "Personel Girişi Yap" linkinin href'ini personel giriş adresinize (SSO vb.) çevirin; returnUrl ile bu sayfaya dönülür.
+         Not: Bu pencere yalnızca arayüzdür, asıl yetki kontrolü sunucuda yapılmalıdır. -->
+    <div class="modal fade sem-personel-modal" id="semPersonelModal" tabindex="-1"
+         data-bs-backdrop="static" data-bs-keyboard="false"
+         aria-labelledby="semPersonelModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="sem-personel-ust">
+            <img src="./assets/images/logo/sem-logo-byz.png" alt="Kapadokya Üniversitesi SEM" class="sem-personel-logo">
+          </div>
+          <div class="sem-personel-govde">
+            <span class="sem-personel-ikon" aria-hidden="true"><i class="feather-briefcase"></i></span>
+            <h5 class="sem-personel-baslik" id="semPersonelModalLabel">Kapadokya Üniversitesi personeli misiniz?</h5>
+            <p class="sem-personel-metin">Hizmet içi eğitimler akademik ve idari personelimize özeldir. Eğitimleri görüntülemek ve başvurmak için personel hesabınızla giriş yapın.</p>
+            <a class="sem-personel-giris" href="giris.html?returnUrl=hizmet-ici-egitimler.html">
+              <i class="feather-log-in"></i> Personel Girişi Yap
+            </a>
+            <a class="sem-personel-vazgec" href="tum-kurslar.html">Personel değilim, tüm eğitimlere göz at</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ── /semPersonelModal ── -->
+
+    <script src="./assets/js/sem-custom.js?v=20261109"></script>
     <script>
     'use strict';
     (function () {

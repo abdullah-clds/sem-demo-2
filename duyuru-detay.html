@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="./assets/css/plugins/jodit.min.css">
 
     <link rel="stylesheet" href="./assets/css/styles.css">
-    <link rel="stylesheet" href="./assets/css/sem-custom.css?v=20261104">
+    <link rel="stylesheet" href="./assets/css/sem-custom.css?v=20261109">
     <link rel="stylesheet" href="./assets/css/sem-kurumsal.css">
     <!-- Google Analytics (GA4) — GERÇEK ÖLÇÜM KİMLİĞİ BEKLENİYOR (placeholder: G-XXXXXXXXXX), bkz. README.md -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -59,9 +59,9 @@
                 <!-- Start Header Area -->
 <header class="rbt-header rbt-header-10">
       <div class="rbt-sticky-placeholder"></div>
-      <!-- Start Header Top  -->
+      <!-- Start Header Top: içeriği (sosyal medya, telefon) yalnızca geniş ekranda var; altında boş kalmasın diye gizli -->
       <div
-        class="rbt-header-top rbt-header-top-1 header-space-betwween bg-not-transparent bg-color-darker top-expended-activation"
+        class="rbt-header-top rbt-header-top-1 header-space-betwween bg-not-transparent bg-color-darker top-expended-activation d-none d-xl-flex"
       >
         <div class="container-fluid">
           <div class="top-expended-wrapper">
@@ -71,18 +71,18 @@
                   <!-- Start Header Information List  -->
                   <div class="header-info">
                     <ul class="rbt-information-list">
+                        <li>
+                          <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+                            <i class="fab fa-instagram"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+                            <i class="fab fa-facebook-f"></i>
+                          </a>
+                        </li>
                       <li>
-                        <a href="#">
-                          <i class="fab fa-instagram"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fab fa-facebook-square"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
+                        <a href="tel:+903843535009">
                           <i class="feather-phone"></i>
                           +90 384 353 50 09
                         </a>
@@ -113,36 +113,19 @@
                 >
                   <div class="header-info d-none d-xl-block">
                     <ul class="social-share-transparent">
-                      <li>
-                        <a href="#">
-                          <i class="fab fa-facebook-f"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fab fa-twitter"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fab fa-linkedin-in"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fab fa-instagram"></i>
-                        </a>
-                      </li>
+                        <li>
+                          <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+                            <i class="fab fa-instagram"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+                            <i class="fab fa-facebook-f"></i>
+                          </a>
+                        </li>
                     </ul>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="header-info">
-              <div class="top-bar-expended d-block d-lg-none">
-                <button class="topbar-expend-button rbt-round-btn">
-                  <i class="feather-plus"></i>
-                </button>
               </div>
             </div>
           </div>
@@ -172,36 +155,19 @@
             <div class="rbt-main-navigation d-none d-xl-block">
               <nav class="mainmenu-nav">
                 <ul class="mainmenu">
-                  <li><a href="tum-kurslar.html">Eğitimler</a></li>
-                  <li><a href="hizmet-ici-egitimler.html">Hizmet İçi Eğitimler</a></li>
-                  <li><a href="mikro-yeterlilik.html">Mikro Yeterlilik</a></li>
-                  <li class="has-dropdown has-menu-child-item">
-                    <a href="#"
-                      >Sınav Merkezleri <i class="feather-chevron-down"></i
-                    ></a>
-                    <ul class="submenu">
-                      <li>
-                        <a
-                          href="https://ilkyardim.kapadokya.edu.tr/"
-                          target="_blank"
-                          rel="noopener"
-                          >İlk Yardım Eğitim Merkezi</a
-                        >
+                      <li><a href="tum-kurslar.html">Eğitimler</a></li>
+                      <li><a href="hizmet-ici-egitimler.html">Hizmet İçi Eğitimler</a></li>
+                      <li><a href="mikro-yeterlilik.html">Mikro Yeterlilik</a></li>
+                      <li class="has-dropdown has-menu-child-item">
+                        <a href="#">Sınav Merkezleri <i class="feather-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="https://ilkyardim.kapadokya.edu.tr/" target="_blank">İlk Yardım Eğitim Merkezi</a></li>
+                            <li><a href="#">SHGM Sınav Merkezi</a></li>
+                            <li><a href="egitim-kaynak-saglayici.html">Eğitim Kaynak Sağlayıcı</a></li>
+                            <li><a href="pemer.html">PEMER</a></li>
+                        </ul>
                       </li>
-                      <li>
-                        <a href="#">SHGM Sınav Merkezi</a>
-                      </li>
-                      <li>
-                        <a href="egitim-kaynak-saglayici.html"
-                          >Eğitim Kaynak Sağlayıcı</a
-                        >
-                      </li>
-                      <li>
-                        <a href="pemer.html">PEMER</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li><a href="iletisim.html">İletişim</a></li>
+                      <li><a href="iletisim.html">İletişim</a></li>
                 </ul>
               </nav>
             </div>
@@ -214,175 +180,29 @@
                   </a>
                 </li>
                 <li class="account-access rbt-user-wrapper d-none d-xl-block">
-                  <a href="#">
+                  <a href="giris.html">
                     <i class="feather-user"></i>
                     Hesabım
                   </a>
                   <div class="rbt-user-menu-list-wrapper">
                     <div class="inner">
-                      <div class="rbt-admin-profile">
-                        <div class="admin-thumbnail">
-                          <img src="./assets/images/team/avatar.jpg" alt="Kullanıcı">
-                        </div>
-                        <div class="admin-info">
-                          <span class="name">Ahmet Demir</span>
-                          <a class="rbt-btn-link color-primary" href="egitmen-panel.html">Profili Görüntüle</a>
-                        </div>
-                      </div>
-                      <ul class="user-list-wrapper">
-                        <li>
-                          <a href="egitmen-panel.html">
-                            <i class="feather-home"></i>
-                            <span>Kontrol Panelim</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-bookmark"></i>
-                            <span>Favoriler</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-shopping-bag"></i>
-                            <span>Kayıtlı Dersler</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-heart"></i>
-                            <span>İstek Listesi</span>
-                          </a>
-                        </li>
-<li>
-                          <a href="#">
-                            <i class="feather-list"></i>
-                            <span>Sınav Denemelerim</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-clock"></i>
-                            <span>Sipariş Geçmişi</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-message-square"></i>
-                            <span>Soru &amp; Cevap</span>
-                          </a>
-                        </li>
-                      </ul>
-                      <hr class="mt--10 mb--10">
-                      <ul class="user-list-wrapper">
-                        <li>
-                          <a href="#">
-                            <i class="feather-book-open"></i>
-                            <span>Başlarken</span>
-                          </a>
-                        </li>
-                      </ul>
-                      <hr class="mt--10 mb--10">
-                      <ul class="user-list-wrapper">
-                        <li>
-                          <a href="egitmen-panel.html">
-                            <i class="feather-settings"></i>
-                            <span>Ayarlar</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-log-out"></i>
-                            <span>Çıkış Yap</span>
-                          </a>
-                        </li>
-                      </ul>
+                        <ul class="user-list-wrapper">
+                          <li><a href="giris.html"><i class="feather-log-in"></i><span>Giriş Yap</span></a></li>
+                          <li><a href="kayit-ol.html"><i class="feather-user-plus"></i><span>Kayıt Ol</span></a></li>
+                        </ul>
                     </div>
                   </div>
                 </li>
                 <li class="access-icon rbt-user-wrapper d-block d-xl-none">
-                  <a class="rbt-round-btn" href="#">
+                  <a class="rbt-round-btn" href="giris.html">
                     <i class="feather-user"></i>
                   </a>
                   <div class="rbt-user-menu-list-wrapper">
                     <div class="inner">
-                      <div class="rbt-admin-profile">
-                        <div class="admin-thumbnail">
-                          <img src="./assets/images/team/avatar.jpg" alt="Kullanıcı">
-                        </div>
-                        <div class="admin-info">
-                          <span class="name">Ahmet Demir</span>
-                          <a class="rbt-btn-link color-primary" href="egitmen-panel.html">Profilimi Görüntüle</a>
-                        </div>
-                      </div>
-                      <ul class="user-list-wrapper">
-                        <li>
-                          <a href="egitmen-panel.html">
-                            <i class="feather-home"></i>
-                            <span>Kontrol Panelim</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-bookmark"></i>
-                            <span>Favoriler</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-shopping-bag"></i>
-                            <span>Kayıtlı Olduğum Eğitimler</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-heart"></i>
-                            <span>İstek Listesi</span>
-                          </a>
-                        </li>
-<li>
-                          <a href="#">
-                            <i class="feather-list"></i>
-                            <span>Sınav Denemelerim</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-clock"></i>
-                            <span>Sipariş Geçmişi</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-message-square"></i>
-                            <span>Soru &amp; Cevap</span>
-                          </a>
-                        </li>
-                      </ul>
-                      <hr class="mt--10 mb--10">
-                      <ul class="user-list-wrapper">
-                        <li>
-                          <a href="#">
-                            <i class="feather-book-open"></i>
-                            <span>Başlarken</span>
-                          </a>
-                        </li>
-                      </ul>
-                      <hr class="mt--10 mb--10">
-                      <ul class="user-list-wrapper">
-                        <li>
-                          <a href="egitmen-panel.html">
-                            <i class="feather-settings"></i>
-                            <span>Ayarlar</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-log-out"></i>
-                            <span>Çıkış Yap</span>
-                          </a>
-                        </li>
-                      </ul>
+                        <ul class="user-list-wrapper">
+                          <li><a href="giris.html"><i class="feather-log-in"></i><span>Giriş Yap</span></a></li>
+                          <li><a href="kayit-ol.html"><i class="feather-user-plus"></i><span>Kayıt Ol</span></a></li>
+                        </ul>
                     </div>
                   </div>
                 </li>
@@ -408,21 +228,17 @@
         <!-- Start Search Dropdown  -->
         <div class="rbt-search-dropdown sem-search-glass">
           <div class="wrapper">
-            <form
-              id="sem-header-search-form"
-              class="sem-sg-form"
-              role="search"
-              onsubmit="
+            <form id="sem-header-search-form" class="sem-sg-form" role="search" action="tum-kurslar.html" method="get" onsubmit="
                 event.preventDefault();
                 var q = document.getElementById('sem-hdr-q').value.trim();
                 if (q)
                   window.location =
-                    'tum-kurslar.html?q=' + encodeURIComponent(q);
-              "
-            >
+                    '/egitimler?q=' + encodeURIComponent(q);
+              ">
               <i class="feather-search sem-sg-icon" aria-hidden="true"></i>
               <input
                 id="sem-hdr-q"
+                name="q"
                 type="text"
                 placeholder="Eğitim ara"
                 aria-label="Eğitim ara"
@@ -440,12 +256,12 @@
             </form>
             <div class="sem-search-cats">
               <span>Popüler aramalar</span>
-              <a href="tum-kurslar.html?kategori=havacilik">Havacılık</a>
-              <a href="tum-kurslar.html?kategori=gastronomi">Gastronomi</a>
-              <a href="tum-kurslar.html?kategori=turizm">Turizm</a>
-              <a href="tum-kurslar.html?kategori=saglik">Sağlık</a>
-              <a href="tum-kurslar.html?kategori=bilisim">Bilişim</a>
-              <a href="tum-kurslar.html?kategori=pemer-myk">PEMER / MYK</a>
+              <a href="tum-kurslar.html?kategori=modul-sinav-kurslari">Modül Sınav Kursları</a>
+              <a href="tum-kurslar.html?kategori=ascilik-egitimleri">Aşçılık Eğitimi</a>
+              <a href="tum-kurslar.html?kategori=iha-egitimleri">İHA Eğitimleri</a>
+              <a href="tum-kurslar.html?kategori=kirsal-kalkinma">Kırsal Kalkınma</a>
+              <a href="tum-kurslar.html?kategori=cocuklar-icin-ingilizce-egitimleri">Çocuklar İçin İngilizce Eğitimi</a>
+              <a href="tum-kurslar.html?kategori=baloncuk-sektor-egitimleri">Balonculuk Sektör Eğitimleri</a>
             </div>
             <div class="sem-sg-results" id="sem-sg-results" role="listbox" aria-label="Arama önizlemesi" hidden></div>
           </div>
@@ -474,7 +290,7 @@
                     <h3 class="rbt-short-title">Programlar</h3>
                     <ul class="rbt-vertical-nav-list-wrapper">
                       <li>
-                        <a href="kurs-detay.html">Meteoroloji Temel Eğitimi</a>
+                        <a href="tum-kurslar.html">Meteoroloji Temel Eğitimi</a>
                       </li>
                       <li>
                         <a href="tum-kurslar.html?kategori=havacilik"
@@ -597,7 +413,7 @@
           <div class="content">
             <div class="logo">
               <a href="anasayfa.html">
-                <img src="./assets/images/logo/sem-logo-byz.png" alt="Kapadokya Üniversitesi SEM" style="max-height:40px;">
+                <img src="./assets/images/logo/sem-logo.png" alt="Kapadokya Üniversitesi SEM" style="max-height:40px;">
               </a>
             </div>
             <div class="rbt-btn-close">
@@ -611,123 +427,110 @@
         <!-- Navigasyon -->
         <nav class="mainmenu-nav">
           <ul class="mainmenu">
-
-            <li><a href="tum-kurslar.html">Eğitimler</a></li>
-            <li><a href="hizmet-ici-egitimler.html">Hizmet İçi Eğitimler</a></li>
-            <li><a href="mikro-yeterlilik.html">Mikro Yeterlilik</a></li>
-
-            <li class="has-dropdown has-menu-child-item">
-              <a href="#">Sınav Merkezleri</a>
-              <ul class="submenu">
-                <li><a href="https://ilkyardim.kapadokya.edu.tr/" target="_blank" rel="noopener">İlk Yardım Eğitim Merkezi</a></li>
-                <li><a href="#">SHGM Sınav Merkezi</a></li>
-                <li><a href="egitim-kaynak-saglayici.html">Eğitim Kaynak Sağlayıcı</a></li>
-                <li><a href="pemer.html">PEMER</a></li>
-              </ul>
-            </li>
-
-            <li><a href="iletisim.html">İletişim</a></li>
-
+                <li><a href="tum-kurslar.html">Eğitimler</a></li>
+                <li><a href="hizmet-ici-egitimler.html">Hizmet İçi Eğitimler</a></li>
+                <li><a href="mikro-yeterlilik.html">Mikro Yeterlilik</a></li>
+                <li class="has-dropdown has-menu-child-item">
+                  <a href="#">Sınav Merkezleri</a>
+                  <ul class="submenu">
+                      <li><a href="https://ilkyardim.kapadokya.edu.tr/" target="_blank">İlk Yardım Eğitim Merkezi</a></li>
+                      <li><a href="#">SHGM Sınav Merkezi</a></li>
+                      <li><a href="egitim-kaynak-saglayici.html">Eğitim Kaynak Sağlayıcı</a></li>
+                      <li><a href="pemer.html">PEMER</a></li>
+                  </ul>
+                </li>
+                <li><a href="iletisim.html">İletişim</a></li>
           </ul>
         </nav>
 
         <!-- Alt: İletişim + Auth -->
         <div class="sem-mob-footer">
           <div class="sem-mob-contact">
-            <a href="tel:+903843535009"><i class="feather-phone"></i> (384) 353 50 09</a>
+            <a href="tel:+903843535009"><i class="feather-phone"></i> +90 384 353 50 09</a>
             <a href="mailto:sem@kapadokya.edu.tr"><i class="feather-mail"></i> sem@kapadokya.edu.tr</a>
           </div>
           <div class="sem-mob-auth">
-            <a href="giris.html" class="sem-mob-btn sem-mob-btn--outline">Giriş Yap</a>
-            <a href="kayit-ol.html" class="sem-mob-btn sem-mob-btn--solid">Kayıt Ol</a>
+              <a href="giris.html" class="sem-mob-btn sem-mob-btn--outline">Giriş Yap</a>
+              <a href="kayit-ol.html" class="sem-mob-btn sem-mob-btn--solid">Kayıt Ol</a>
           </div>
         </div>
 
       </div>
-    </div>            
+    </div>
 
 
-    <!-- Page Head -->
-    <section style="background:#f8f9fa; padding:48px 0;" id="ddPageHead">
-        <div class="container">
-            <p style="font-size:15px;font-weight:500;color:#212121;margin-bottom:6px;letter-spacing:.02em;">KAPADOKYA ÜNİVERSİTESİ SEM</p>
-            <h1 id="ddBaslik" style="font-size:clamp(32px,5vw,64px);font-weight:800;color:#212121;line-height:1.1;margin-bottom:18px;letter-spacing:-.02em;">Duyuru Başlığı</h1>
-            <div style="font-size:14px;color:#6c757d;margin-bottom:12px;">
-                <a href="anasayfa.html" style="color:#6c757d;text-decoration:none;">Anasayfa</a>
-                <span style="margin:0 6px;">&gt;</span>
-                <a href="duyurular.html" style="color:#6c757d;text-decoration:none;">Duyurular</a>
-                <span style="margin:0 6px;">&gt;</span>
-                <span id="bcTitle">Duyuru</span>
-            </div>
-            <p id="ddTarih" style="font-size:14px;color:#6c757d;margin:0;"></p>
-        </div>
-    </section>
-    <!-- End Page Head -->
+    <main id="main-content">
+        
 
-    <!-- Content + Sidebar -->
-    <section style="padding:56px 0 72px;">
-        <div class="container">
-            <div class="row">
-                <!-- Ana İçerik -->
-                <div class="col-lg-8">
-                    <div id="ddIcerik" style="font-size:15px;line-height:1.85;color:#2f2f2f;">
-                        İçerik yükleniyor…
+
+<div class="rbt-page-banner-wrapper">
+    <div class="rbt-banner-image">
+        <img src="./assets/images/banner/sem-egitim-motif.svg" alt="" aria-hidden="true" class="banner-motif">
+    </div>
+    <div class="rbt-banner-content">
+        <div class="rbt-banner-content-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="page-list">
+                            <li class="rbt-breadcrumb-item"><a href="anasayfa.html">Anasayfa</a></li>
+                            <li>
+                                <div class="icon-right"><i class="feather-chevron-right"></i></div>
+                            </li>
+                            <li class="rbt-breadcrumb-item active">Japon Kaligrafisiyle Kanji’yi Deneyimleme Atölyesi Gerçekleştirildi</li>
+                        </ul>
+                        <div class="title-wrapper">
+                            <h1 class="title mb--0">Japon Kaligrafisiyle Kanji’yi Deneyimleme Atölyesi Gerçekleştirildi</h1>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Diğer Duyurular Sidebar -->
-                <div class="col-lg-4 mt-5 mt-lg-0 ps-lg-5">
-                    <h5 style="font-size:16px;font-weight:700;color:#212121;margin-bottom:24px;padding-bottom:12px;border-bottom:2px solid #212121;">Diğer Duyurular</h5>
-                    <div id="ddDigerleri"></div>
-                </div>
             </div>
         </div>
-    </section>
-    <!-- End Content + Sidebar -->
+    </div>
+</div>
 
-    <style>
-        .sem-sidebar-item { display:block; padding:16px 0; border-bottom:1px solid #e8e8e8; text-decoration:none; }
-        .sem-sidebar-item:last-child { border-bottom:none; }
-        .sem-sidebar-item:hover .sem-sidebar-arrow { color:#ca2c31; transform:translateX(4px); }
-        .sem-sidebar-arrow { color:#ca2c31; font-size:18px; transition:transform .2s; display:inline-block; }
-    </style>
 
-    <script>
-    'use strict';
-    document.addEventListener('DOMContentLoaded', function () {
-        var DUYURULAR = [
-            {"id":1,"tarih":"12.06.2026","kategori":"Başvuru","baslik":"2026 Güz Dönemi Sertifika Programları Başvuruları Başladı","ozet":"Kariyerinize değer katacak yeni dönem eğitimlerimizin kayıtları açılmıştır. Erken kayıt fırsatlarını kaçırmayın.","icerik":"2026 Güz Dönemi sertifika programlarımızın başvuruları 12 Haziran itibarıyla açılmıştır. Havacılıktan gastronomiye 22 kategorideki programlarımız için online başvuru sistemimiz üzerinden ön kayıt yaptırabilirsiniz.<br><br>Erken kayıt döneminde başvuran adaylarımız kontenjan önceliğinden yararlanır. KÜN öğrencisi ve personeli olan adaylara %10 indirim uygulanmaktadır.<br><br>Başvuru için ilgilendiğiniz eğitimin detay sayfasındaki \'Hemen Başvur\' butonunu kullanabilir veya 0384 353 50 09 numaralı telefondan eğitim danışmanlarımıza ulaşabilirsiniz."},
-            {"id":2,"tarih":"05.06.2026","kategori":"Sınav","baslik":"Aşçılık ve Gastronomi Uygulamalı Sınav Merkezi Değişikliği","ozet":"Hafta sonu yapılacak aşçılık yeterlilik sınavımız yeni yerleşkemizdeki endüstriyel mutfakta gerçekleştirilecektir.","icerik":"14-15 Haziran tarihlerinde yapılacak PEMER-MYK Aşçı Seviye 4 uygulamalı sınavları, Mustafapaşa Yerleşkesi\'ndeki yeni endüstriyel mutfak laboratuvarımızda gerçekleştirilecektir.<br><br>Sınava girecek adayların sınav saatinden 30 dakika önce yerleşkede hazır bulunmaları, kimlik belgelerini ve sınav giriş belgelerini yanlarında getirmeleri gerekmektedir."},
-            {"id":3,"tarih":"28.05.2026","kategori":"Havacılık","baslik":"SHGM Onaylı İHA Eğitimleri Kontenjan Güncellemesi","ozet":"Yoğun talep üzerine İHA pilotluğu eğitim programımıza ek kontenjan açılmıştır.","icerik":"20 Haziran 2026 başlangıçlı İHA-2 Uçuş Eğitimi programımıza gelen yoğun talep nedeniyle 5 kişilik ek kontenjan açılmıştır.<br><br>SHGM onaylı eğitimimiz, teorik dersler ve uygulamalı uçuş oturumlarından oluşmaktadır."},
-            {"id":4,"tarih":"20.05.2026","kategori":"Genel","baslik":"Yaz Dönemi Çalışma Saatleri Güncellendi","ozet":"SEM idari ofislerimiz yaz döneminde hafta içi 08.30–17.00 saatleri arasında hizmet verecektir.","icerik":"1 Haziran – 31 Ağustos tarihleri arasında SEM idari ofislerimiz hafta içi 08.30–17.00 saatleri arasında hizmet verecektir.<br><br>Online başvuru sistemimiz ve WhatsApp danışma hattımız 7/24 erişime açıktır."},
-            {"id":5,"tarih":"12.05.2026","kategori":"Genel","baslik":"Yeni Dil Programları Tanıtım Webinarı","ozet":"BT Çalışanları İçin İngilizce ve Genel İtalyanca programlarımızın tanıtım webinarına davetlisiniz.","icerik":"25 Haziran Perşembe 20.00\'de düzenlenecek ücretsiz online tanıtım webinarında yeni dil programlarımızın müfredatı anlatılacaktır."},
-            {"id":6,"tarih":"02.05.2026","kategori":"Sertifika","baslik":"Bahar Dönemi Sertifikaları e-Devlet Sistemine Yüklendi","ozet":"2026 Bahar Dönemi mezunlarımızın sertifikaları e-Devlet üzerinden sorgulanabilir durumdadır.","icerik":"2026 Bahar Dönemi\'nde programlarını başarıyla tamamlayan tüm katılımcılarımızın sertifikaları e-Devlet sistemine barkodlu olarak yüklenmiştir."}
-        ];
+<section class="rbt-section-gapBottom rbt-section-gapTop">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="rbt-course-feature-box rbt-shadow-box thuumbnail mb--30">
+                    <img class="w-100" src="./assets/images/uploads/43fe89d562af72ec.jpg" alt="Japon Kaligrafisiyle Kanji’yi Deneyimleme Atölyesi Gerçekleştirildi">
+                </div>
+                    <p class="sem-duyuru-tarih">15.10.2026</p>
+                <div style="font-size:15px;line-height:1.85;color:#2f2f2f;">
+<p>Kapadokya Üniversitesi SEM bünyesinde düzenlenen atölyede katılımcılar, Japon kaligrafisinin estetik ve köklü dünyasını keşfetme fırsatı buldu. Etkinlik boyunca Kanji karakterlerinin anlamı, geleneksel yazım teknikleri ve uygulamalı deneyim bir araya geldi.</p>                </div>
+            </div>
 
-        var id = Number(new URLSearchParams(window.location.search).get('id')) || 1;
-        var d  = DUYURULAR.find(function (x) { return x.id === id; }) || DUYURULAR[0];
+            <div class="col-lg-4 mt-5 mt-lg-0 ps-lg-5">
+                <h5 style="font-size:16px;font-weight:700;color:#212121;margin-bottom:24px;padding-bottom:12px;border-bottom:2px solid #212121;">Diğer Duyurular</h5>
+                        <a href="duyuru-detay.html" class="sem-sidebar-item">
+                            <p class="sem-sidebar-date">22.10.2026</p>
+                            <div class="sem-sidebar-row">
+                                <p class="sem-sidebar-title">İdari İşlerde Yapay Zekâ ile Verimli Çalışma Atölyesi Düzenlendi</p>
+                                <span class="sem-sidebar-arrow">→</span>
+                            </div>
+                        </a>
+                        <a href="duyuru-detay.html" class="sem-sidebar-item">
+                            <p class="sem-sidebar-date">12.06.2026</p>
+                            <div class="sem-sidebar-row">
+                                <p class="sem-sidebar-title">Öğrenmenin Dahası Var: SEM Açılış Haftasında Yerini Aldı</p>
+                                <span class="sem-sidebar-arrow">→</span>
+                            </div>
+                        </a>
+            </div>
+        </div>
+    </div>
+</section>
 
-        document.title = d.baslik + ' | Kapadokya Üniversitesi SEM';
-        document.getElementById('bcTitle').textContent  = d.baslik;
-        document.getElementById('ddBaslik').textContent = d.baslik;
-        document.getElementById('ddTarih').textContent  = d.tarih;
-        document.getElementById('ddIcerik').innerHTML   = d.icerik;
+    </main>
 
-        document.getElementById('ddDigerleri').innerHTML = DUYURULAR
-            .filter(function (x) { return x.id !== d.id; })
-            .map(function (x) {
-                return '<a href="duyuru-detay.html?id=' + x.id + '" class="sem-sidebar-item">' +
-                    '<p style="font-size:12px;color:#6c757d;margin-bottom:6px;">' + x.tarih + '</p>' +
-                    '<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;">' +
-                        '<p style="font-size:14px;font-weight:600;color:#212121;line-height:1.4;margin:0;">' + x.baslik + '</p>' +
-                        '<span class="sem-sidebar-arrow">→</span>' +
-                    '</div>' +
-                '</a>';
-            }).join('');
-    });
-    </script>
+    <div class="rbt-progress-parent">
+        <svg class="rbt-back-circle svg-inner" width="100%" height="100%" viewBox="-1 -1 102 102" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
+        </svg>
+    </div>
 
-                <!-- Start Footer aera -->
     <footer class="rbt-footer footer-style-1 bg-color-darker overflow-hidden">
         <div class="footer-top">
             <div class="container">
@@ -752,10 +555,6 @@
                             <ul class="social-icon social-default justify-content-start">
                                 <li><a href="https://www.facebook.com/">
                                         <i class="feather-facebook"></i>
-                                    </a>
-                                </li>
-                                <li><a href="https://www.twitter.com">
-                                        <i class="feather-twitter"></i>
                                     </a>
                                 </li>
                                 <li><a href="https://www.instagram.com/">
@@ -787,7 +586,6 @@
                   <li><a href="anasayfa.html">Ana Sayfa</a></li>
                   <li><a href="tum-kurslar.html">Eğitimler</a></li>
                   <li><a href="duyurular.html">Duyurular</a></li>
-                  <li><a href="blog.html">Blog</a></li>
                   <li><a href="iletisim.html">İletişim</a></li>
                 </ul>
               </div>
@@ -822,7 +620,7 @@
                         <div class="footer-widget">
                             <h5 class="ft-title">İletişime Geçin</h5>
                             <ul class="ft-link">
-                                <li><span>Telefon:</span> <a href="#">+90 384 353 50 09</a></li>
+                                <li><span>Telefon:</span> <a href="tel:+903843535009">+90 384 353 50 09</a></li>
                                 <li><span>E-posta:</span> <a href="mailto:sem@kapadokya.edu.tr">sem@kapadokya.edu.tr</a></li>
                             </ul>
 
@@ -904,5 +702,5 @@
     <script src="./assets/js/vendor/Sortable.min.js"></script>
     <!-- Main JS -->
     <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/sem-custom.js?v=20261007"></script>
+    <script src="./assets/js/sem-custom.js?v=20261109"></script>
 </body><div></div></html>

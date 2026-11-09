@@ -11,6 +11,8 @@
    alın; sistem otomatik yedek fonta (fallback) düşer.
    Ücretsiz en yakın alternatif: "D-DIN" / "Barlow" (Google Fonts).
 --------------------------------------------------------------- */
+/* Font dosyalari assets/fonts/dinpro/ altina konunca bu blogu acin. Dosyalar yokken
+   her sayfada 404 hatasi uretiyordu; tarayici zaten yedek fonta dusuyordu.
 @font-face {
   font-family: "DIN Pro";
   src:
@@ -38,6 +40,7 @@
   font-style: normal;
   font-display: swap;
 }
+*/
 
 /* ── 2. Kurumsal Renk Paleti (RGB + Pantone) ──────────────────
    Lacivert koyu  #002855  rgb(0,40,85)      (ANA)

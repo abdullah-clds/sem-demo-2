@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="./assets/css/plugins/jodit.min.css">
 
     <link rel="stylesheet" href="./assets/css/styles.css">
-    <link rel="stylesheet" href="./assets/css/sem-custom.css?v=20261104">
+    <link rel="stylesheet" href="./assets/css/sem-custom.css?v=20261109">
     <link rel="stylesheet" href="./assets/css/sem-kurumsal.css">
     <!-- Google Analytics (GA4) — GERÇEK ÖLÇÜM KİMLİĞİ BEKLENİYOR (placeholder: G-XXXXXXXXXX), bkz. README.md -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -59,9 +59,9 @@
                 <!-- Start Header Area -->
 <header class="rbt-header rbt-header-10">
       <div class="rbt-sticky-placeholder"></div>
-      <!-- Start Header Top  -->
+      <!-- Start Header Top: içeriği (sosyal medya, telefon) yalnızca geniş ekranda var; altında boş kalmasın diye gizli -->
       <div
-        class="rbt-header-top rbt-header-top-1 header-space-betwween bg-not-transparent bg-color-darker top-expended-activation"
+        class="rbt-header-top rbt-header-top-1 header-space-betwween bg-not-transparent bg-color-darker top-expended-activation d-none d-xl-flex"
       >
         <div class="container-fluid">
           <div class="top-expended-wrapper">
@@ -71,18 +71,18 @@
                   <!-- Start Header Information List  -->
                   <div class="header-info">
                     <ul class="rbt-information-list">
+                        <li>
+                          <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+                            <i class="fab fa-instagram"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+                            <i class="fab fa-facebook-f"></i>
+                          </a>
+                        </li>
                       <li>
-                        <a href="#">
-                          <i class="fab fa-instagram"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fab fa-facebook-square"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
+                        <a href="tel:+903843535009">
                           <i class="feather-phone"></i>
                           +90 384 353 50 09
                         </a>
@@ -113,36 +113,19 @@
                 >
                   <div class="header-info d-none d-xl-block">
                     <ul class="social-share-transparent">
-                      <li>
-                        <a href="#">
-                          <i class="fab fa-facebook-f"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fab fa-twitter"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fab fa-linkedin-in"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fab fa-instagram"></i>
-                        </a>
-                      </li>
+                        <li>
+                          <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+                            <i class="fab fa-instagram"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+                            <i class="fab fa-facebook-f"></i>
+                          </a>
+                        </li>
                     </ul>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="header-info">
-              <div class="top-bar-expended d-block d-lg-none">
-                <button class="topbar-expend-button rbt-round-btn">
-                  <i class="feather-plus"></i>
-                </button>
               </div>
             </div>
           </div>
@@ -172,36 +155,19 @@
             <div class="rbt-main-navigation d-none d-xl-block">
               <nav class="mainmenu-nav">
                 <ul class="mainmenu">
-                  <li><a href="tum-kurslar.html">Eğitimler</a></li>
-                  <li><a href="hizmet-ici-egitimler.html">Hizmet İçi Eğitimler</a></li>
-                  <li><a href="mikro-yeterlilik.html">Mikro Yeterlilik</a></li>
-                  <li class="has-dropdown has-menu-child-item">
-                    <a href="#"
-                      >Sınav Merkezleri <i class="feather-chevron-down"></i
-                    ></a>
-                    <ul class="submenu">
-                      <li>
-                        <a
-                          href="https://ilkyardim.kapadokya.edu.tr/"
-                          target="_blank"
-                          rel="noopener"
-                          >İlk Yardım Eğitim Merkezi</a
-                        >
+                      <li><a href="tum-kurslar.html">Eğitimler</a></li>
+                      <li><a href="hizmet-ici-egitimler.html">Hizmet İçi Eğitimler</a></li>
+                      <li><a href="mikro-yeterlilik.html">Mikro Yeterlilik</a></li>
+                      <li class="has-dropdown has-menu-child-item">
+                        <a href="#">Sınav Merkezleri <i class="feather-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="https://ilkyardim.kapadokya.edu.tr/" target="_blank">İlk Yardım Eğitim Merkezi</a></li>
+                            <li><a href="#">SHGM Sınav Merkezi</a></li>
+                            <li><a href="egitim-kaynak-saglayici.html">Eğitim Kaynak Sağlayıcı</a></li>
+                            <li><a href="pemer.html">PEMER</a></li>
+                        </ul>
                       </li>
-                      <li>
-                        <a href="#">SHGM Sınav Merkezi</a>
-                      </li>
-                      <li>
-                        <a href="egitim-kaynak-saglayici.html"
-                          >Eğitim Kaynak Sağlayıcı</a
-                        >
-                      </li>
-                      <li>
-                        <a href="pemer.html">PEMER</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li><a href="iletisim.html">İletişim</a></li>
+                      <li><a href="iletisim.html">İletişim</a></li>
                 </ul>
               </nav>
             </div>
@@ -214,175 +180,29 @@
                   </a>
                 </li>
                 <li class="account-access rbt-user-wrapper d-none d-xl-block">
-                  <a href="#">
+                  <a href="giris.html">
                     <i class="feather-user"></i>
                     Hesabım
                   </a>
                   <div class="rbt-user-menu-list-wrapper">
                     <div class="inner">
-                      <div class="rbt-admin-profile">
-                        <div class="admin-thumbnail">
-                          <img src="./assets/images/team/avatar.jpg" alt="Kullanıcı">
-                        </div>
-                        <div class="admin-info">
-                          <span class="name">Ahmet Demir</span>
-                          <a class="rbt-btn-link color-primary" href="egitmen-panel.html">Profili Görüntüle</a>
-                        </div>
-                      </div>
-                      <ul class="user-list-wrapper">
-                        <li>
-                          <a href="egitmen-panel.html">
-                            <i class="feather-home"></i>
-                            <span>Kontrol Panelim</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-bookmark"></i>
-                            <span>Favoriler</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-shopping-bag"></i>
-                            <span>Kayıtlı Dersler</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-heart"></i>
-                            <span>İstek Listesi</span>
-                          </a>
-                        </li>
-<li>
-                          <a href="#">
-                            <i class="feather-list"></i>
-                            <span>Sınav Denemelerim</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-clock"></i>
-                            <span>Sipariş Geçmişi</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-message-square"></i>
-                            <span>Soru &amp; Cevap</span>
-                          </a>
-                        </li>
-                      </ul>
-                      <hr class="mt--10 mb--10">
-                      <ul class="user-list-wrapper">
-                        <li>
-                          <a href="#">
-                            <i class="feather-book-open"></i>
-                            <span>Başlarken</span>
-                          </a>
-                        </li>
-                      </ul>
-                      <hr class="mt--10 mb--10">
-                      <ul class="user-list-wrapper">
-                        <li>
-                          <a href="egitmen-panel.html">
-                            <i class="feather-settings"></i>
-                            <span>Ayarlar</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-log-out"></i>
-                            <span>Çıkış Yap</span>
-                          </a>
-                        </li>
-                      </ul>
+                        <ul class="user-list-wrapper">
+                          <li><a href="giris.html"><i class="feather-log-in"></i><span>Giriş Yap</span></a></li>
+                          <li><a href="kayit-ol.html"><i class="feather-user-plus"></i><span>Kayıt Ol</span></a></li>
+                        </ul>
                     </div>
                   </div>
                 </li>
                 <li class="access-icon rbt-user-wrapper d-block d-xl-none">
-                  <a class="rbt-round-btn" href="#">
+                  <a class="rbt-round-btn" href="giris.html">
                     <i class="feather-user"></i>
                   </a>
                   <div class="rbt-user-menu-list-wrapper">
                     <div class="inner">
-                      <div class="rbt-admin-profile">
-                        <div class="admin-thumbnail">
-                          <img src="./assets/images/team/avatar.jpg" alt="Kullanıcı">
-                        </div>
-                        <div class="admin-info">
-                          <span class="name">Ahmet Demir</span>
-                          <a class="rbt-btn-link color-primary" href="egitmen-panel.html">Profilimi Görüntüle</a>
-                        </div>
-                      </div>
-                      <ul class="user-list-wrapper">
-                        <li>
-                          <a href="egitmen-panel.html">
-                            <i class="feather-home"></i>
-                            <span>Kontrol Panelim</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-bookmark"></i>
-                            <span>Favoriler</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-shopping-bag"></i>
-                            <span>Kayıtlı Olduğum Eğitimler</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-heart"></i>
-                            <span>İstek Listesi</span>
-                          </a>
-                        </li>
-<li>
-                          <a href="#">
-                            <i class="feather-list"></i>
-                            <span>Sınav Denemelerim</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-clock"></i>
-                            <span>Sipariş Geçmişi</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-message-square"></i>
-                            <span>Soru &amp; Cevap</span>
-                          </a>
-                        </li>
-                      </ul>
-                      <hr class="mt--10 mb--10">
-                      <ul class="user-list-wrapper">
-                        <li>
-                          <a href="#">
-                            <i class="feather-book-open"></i>
-                            <span>Başlarken</span>
-                          </a>
-                        </li>
-                      </ul>
-                      <hr class="mt--10 mb--10">
-                      <ul class="user-list-wrapper">
-                        <li>
-                          <a href="egitmen-panel.html">
-                            <i class="feather-settings"></i>
-                            <span>Ayarlar</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="feather-log-out"></i>
-                            <span>Çıkış Yap</span>
-                          </a>
-                        </li>
-                      </ul>
+                        <ul class="user-list-wrapper">
+                          <li><a href="giris.html"><i class="feather-log-in"></i><span>Giriş Yap</span></a></li>
+                          <li><a href="kayit-ol.html"><i class="feather-user-plus"></i><span>Kayıt Ol</span></a></li>
+                        </ul>
                     </div>
                   </div>
                 </li>
@@ -408,21 +228,17 @@
         <!-- Start Search Dropdown  -->
         <div class="rbt-search-dropdown sem-search-glass">
           <div class="wrapper">
-            <form
-              id="sem-header-search-form"
-              class="sem-sg-form"
-              role="search"
-              onsubmit="
+            <form id="sem-header-search-form" class="sem-sg-form" role="search" action="tum-kurslar.html" method="get" onsubmit="
                 event.preventDefault();
                 var q = document.getElementById('sem-hdr-q').value.trim();
                 if (q)
                   window.location =
-                    'tum-kurslar.html?q=' + encodeURIComponent(q);
-              "
-            >
+                    '/egitimler?q=' + encodeURIComponent(q);
+              ">
               <i class="feather-search sem-sg-icon" aria-hidden="true"></i>
               <input
                 id="sem-hdr-q"
+                name="q"
                 type="text"
                 placeholder="Eğitim ara"
                 aria-label="Eğitim ara"
@@ -440,12 +256,12 @@
             </form>
             <div class="sem-search-cats">
               <span>Popüler aramalar</span>
-              <a href="tum-kurslar.html?kategori=havacilik">Havacılık</a>
-              <a href="tum-kurslar.html?kategori=gastronomi">Gastronomi</a>
-              <a href="tum-kurslar.html?kategori=turizm">Turizm</a>
-              <a href="tum-kurslar.html?kategori=saglik">Sağlık</a>
-              <a href="tum-kurslar.html?kategori=bilisim">Bilişim</a>
-              <a href="tum-kurslar.html?kategori=pemer-myk">PEMER / MYK</a>
+              <a href="tum-kurslar.html?kategori=modul-sinav-kurslari">Modül Sınav Kursları</a>
+              <a href="tum-kurslar.html?kategori=ascilik-egitimleri">Aşçılık Eğitimi</a>
+              <a href="tum-kurslar.html?kategori=iha-egitimleri">İHA Eğitimleri</a>
+              <a href="tum-kurslar.html?kategori=kirsal-kalkinma">Kırsal Kalkınma</a>
+              <a href="tum-kurslar.html?kategori=cocuklar-icin-ingilizce-egitimleri">Çocuklar İçin İngilizce Eğitimi</a>
+              <a href="tum-kurslar.html?kategori=baloncuk-sektor-egitimleri">Balonculuk Sektör Eğitimleri</a>
             </div>
             <div class="sem-sg-results" id="sem-sg-results" role="listbox" aria-label="Arama önizlemesi" hidden></div>
           </div>
@@ -474,7 +290,7 @@
                     <h3 class="rbt-short-title">Programlar</h3>
                     <ul class="rbt-vertical-nav-list-wrapper">
                       <li>
-                        <a href="kurs-detay.html">Meteoroloji Temel Eğitimi</a>
+                        <a href="tum-kurslar.html">Meteoroloji Temel Eğitimi</a>
                       </li>
                       <li>
                         <a href="tum-kurslar.html?kategori=havacilik"
@@ -597,7 +413,7 @@
           <div class="content">
             <div class="logo">
               <a href="anasayfa.html">
-                <img src="./assets/images/logo/sem-logo-byz.png" alt="Kapadokya Üniversitesi SEM" style="max-height:40px;">
+                <img src="./assets/images/logo/sem-logo.png" alt="Kapadokya Üniversitesi SEM" style="max-height:40px;">
               </a>
             </div>
             <div class="rbt-btn-close">
@@ -611,171 +427,430 @@
         <!-- Navigasyon -->
         <nav class="mainmenu-nav">
           <ul class="mainmenu">
-
-            <li><a href="tum-kurslar.html">Eğitimler</a></li>
-            <li><a href="hizmet-ici-egitimler.html">Hizmet İçi Eğitimler</a></li>
-            <li><a href="mikro-yeterlilik.html">Mikro Yeterlilik</a></li>
-
-            <li class="has-dropdown has-menu-child-item">
-              <a href="#">Sınav Merkezleri</a>
-              <ul class="submenu">
-                <li><a href="https://ilkyardim.kapadokya.edu.tr/" target="_blank" rel="noopener">İlk Yardım Eğitim Merkezi</a></li>
-                <li><a href="#">SHGM Sınav Merkezi</a></li>
-                <li><a href="egitim-kaynak-saglayici.html">Eğitim Kaynak Sağlayıcı</a></li>
-                <li><a href="pemer.html">PEMER</a></li>
-              </ul>
-            </li>
-
-            <li><a href="iletisim.html">İletişim</a></li>
-
+                <li><a href="tum-kurslar.html">Eğitimler</a></li>
+                <li><a href="hizmet-ici-egitimler.html">Hizmet İçi Eğitimler</a></li>
+                <li><a href="mikro-yeterlilik.html">Mikro Yeterlilik</a></li>
+                <li class="has-dropdown has-menu-child-item">
+                  <a href="#">Sınav Merkezleri</a>
+                  <ul class="submenu">
+                      <li><a href="https://ilkyardim.kapadokya.edu.tr/" target="_blank">İlk Yardım Eğitim Merkezi</a></li>
+                      <li><a href="#">SHGM Sınav Merkezi</a></li>
+                      <li><a href="egitim-kaynak-saglayici.html">Eğitim Kaynak Sağlayıcı</a></li>
+                      <li><a href="pemer.html">PEMER</a></li>
+                  </ul>
+                </li>
+                <li><a href="iletisim.html">İletişim</a></li>
           </ul>
         </nav>
 
         <!-- Alt: İletişim + Auth -->
         <div class="sem-mob-footer">
           <div class="sem-mob-contact">
-            <a href="tel:+903843535009"><i class="feather-phone"></i> (384) 353 50 09</a>
+            <a href="tel:+903843535009"><i class="feather-phone"></i> +90 384 353 50 09</a>
             <a href="mailto:sem@kapadokya.edu.tr"><i class="feather-mail"></i> sem@kapadokya.edu.tr</a>
           </div>
           <div class="sem-mob-auth">
-            <a href="giris.html" class="sem-mob-btn sem-mob-btn--outline">Giriş Yap</a>
-            <a href="kayit-ol.html" class="sem-mob-btn sem-mob-btn--solid">Kayıt Ol</a>
+              <a href="giris.html" class="sem-mob-btn sem-mob-btn--outline">Giriş Yap</a>
+              <a href="kayit-ol.html" class="sem-mob-btn sem-mob-btn--solid">Kayıt Ol</a>
           </div>
         </div>
 
       </div>
-    </div>            
+    </div>
 
-    <!-- SSS Hero -->
-    <div class="sem-sss-hero">
-        <div class="container">
-            <div class="breadcrumb-inner">
-                <ul class="page-list">
-                    <li class="rbt-breadcrumb-item"><a href="anasayfa.html">Anasayfa</a></li>
-                    <li><i class="feather-chevron-right" style="font-size:12px;color:rgba(255,255,255,0.5);"></i></li>
-                    <li class="rbt-breadcrumb-item active">SSS</li>
-                </ul>
-                <h1>Sıkça Sorulan Sorular</h1>
-                <p>Kayıt, eğitim süreci, sertifika ve ödeme hakkında merak edilenler.<br>Aradığınızı bulamazsanız bize ulaşın.</p>
+
+    <main id="main-content">
+        
+
+<div class="rbt-page-banner-wrapper">
+    <div class="rbt-banner-image">
+        <img src="./assets/images/banner/sem-egitim-motif.svg" alt="" aria-hidden="true" class="banner-motif">
+    </div>
+    <div class="rbt-banner-content">
+        <div class="rbt-banner-content-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="page-list">
+                            <li class="rbt-breadcrumb-item"><a href="anasayfa.html">Anasayfa</a></li>
+                            <li>
+                                <div class="icon-right"><i class="feather-chevron-right"></i></div>
+                            </li>
+                            <li class="rbt-breadcrumb-item active">SSS</li>
+                        </ul>
+                        <div class="title-wrapper">
+                            <h1 class="title mb--0">Sıkça Sorulan Sorular</h1>
+                        </div>
+                            <p class="description">Kayıt, eğitim süreci, sertifika ve ödeme hakkında merak edilenler. Aradığınızı bulamazsanız bize ulaşın.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- SSS Content -->
-    <div class="rbt-section-gap" style="background:#f8f9fc;">
-        <div class="container" style="max-width:860px;">
+
+<div class="rbt-section-gap" style="background:#f8f9fc;">
+    <div class="container" style="max-width:860px;">
 
             <!-- Kategori Pilleri -->
             <div class="d-flex flex-wrap gap-2 mb--30" role="group" aria-label="SSS kategorileri">
-                <button class="sem-faq-pill active" data-cat="genel">Genel</button>
-                <button class="sem-faq-pill" data-cat="kayit">Kayıt &amp; Başvuru</button>
-                <button class="sem-faq-pill" data-cat="surec">Eğitim Süreci</button>
-                <button class="sem-faq-pill" data-cat="sertifika">Sertifika</button>
-                <button class="sem-faq-pill" data-cat="odeme">Ödeme</button>
-                <button class="sem-faq-pill" data-cat="kurumsal">Kurumsal</button>
+                    <button class="sem-faq-pill active" data-cat="genel">Genel</button>
+                    <button class="sem-faq-pill " data-cat="kayit">Kayıt &amp; Başvuru</button>
+                    <button class="sem-faq-pill " data-cat="surec">Eğitim Süreci</button>
+                    <button class="sem-faq-pill " data-cat="sertifika">Sertifika</button>
+                    <button class="sem-faq-pill " data-cat="odeme">Ödeme</button>
+                    <button class="sem-faq-pill " data-cat="kurumsal">Kurumsal</button>
             </div>
-
-            <!-- Genel -->
-            <div class="sem-faq-group is-active" data-cat="genel">
-                <div class="accordion sem-sss-accordion" id="faqGenel">
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fg1">Kapadokya SEM nedir?</button></h2><div id="fg1" class="accordion-collapse collapse" data-bs-parent="#faqGenel"><div class="accordion-body">Kapadokya Üniversitesi Sürekli Eğitim Uygulama ve Araştırma Merkezi; bireylere ve kurumlara yönelik, üniversite onaylı sertifika programları düzenleyen resmi üniversite birimidir.</div></div></div>
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fg2">Eğitimlere kimler katılabilir?</button></h2><div id="fg2" class="accordion-collapse collapse" data-bs-parent="#faqGenel"><div class="accordion-body">Programa göre değişmekle birlikte eğitimlerimizin çoğu için ön koşul aranmaz; 18 yaşını doldurmuş herkes başvurabilir. Ön koşul gerektiren programlar detay sayfasında belirtilir.</div></div></div>
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fg3">Eğitimler nerede yapılıyor?</button></h2><div id="fg3" class="accordion-collapse collapse" data-bs-parent="#faqGenel"><div class="accordion-body">Online eğitimler KÜN LMS üzerinden canlı yürütülür. Yüz yüze eğitimler Nevşehir Mustafapaşa Yerleşkesi veya İstanbul Sabiha Gökçen Yerleşkesi'nde gerçekleştirilir.</div></div></div>
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fg4">Eğitim takvimini nereden takip edebilirim?</button></h2><div id="fg4" class="accordion-collapse collapse" data-bs-parent="#faqGenel"><div class="accordion-body">Ana sayfadaki Eğitim Takvimi bölümünden ve Eğitimler sayfasındaki güncel listeden takip edebilirsiniz. E-bültene kaydolursanız yeni dönemler e-postanıza gelir.</div></div></div>
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fg5">Devam zorunluluğu var mı?</button></h2><div id="fg5" class="accordion-collapse collapse" data-bs-parent="#faqGenel"><div class="accordion-body">Evet, programların çoğunda %80 devam koşulu aranır. Devam koşulunu sağlamayan katılımcılara belge düzenlenemez.</div></div></div>
+                <div class="sem-faq-group is-active" data-cat="genel">
+                    <div class="accordion sem-sss-accordion" id="faqAcc0">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq0-0">
+                                        Kapadokya SEM nedir?
+                                    </button>
+                                </h2>
+                                <div id="faq0-0" class="accordion-collapse collapse" data-bs-parent="#faqAcc0">
+                                    <div class="accordion-body">Kapadokya Üniversitesi Sürekli Eğitim Uygulama ve Araştırma Merkezi; bireylere ve kurumlara yönelik, üniversite onaylı sertifika programları düzenleyen resmi üniversite birimidir.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq0-1">
+                                        Eğitimlere kimler katılabilir?
+                                    </button>
+                                </h2>
+                                <div id="faq0-1" class="accordion-collapse collapse" data-bs-parent="#faqAcc0">
+                                    <div class="accordion-body">Programa göre değişmekle birlikte eğitimlerimizin çoğu için ön koşul aranmaz; 18 yaşını doldurmuş herkes başvurabilir. Ön koşul gerektiren programlar detay sayfasında belirtilir.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq0-2">
+                                        Eğitimler nerede yapılıyor?
+                                    </button>
+                                </h2>
+                                <div id="faq0-2" class="accordion-collapse collapse" data-bs-parent="#faqAcc0">
+                                    <div class="accordion-body">Online eğitimler KÜN LMS üzerinden canlı yürütülür. Yüz yüze eğitimler Nevşehir Mustafapaşa Yerleşkesi veya İstanbul Sabiha Gökçen Yerleşkesi'nde gerçekleştirilir.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq0-3">
+                                        Eğitim takvimini nereden takip edebilirim?
+                                    </button>
+                                </h2>
+                                <div id="faq0-3" class="accordion-collapse collapse" data-bs-parent="#faqAcc0">
+                                    <div class="accordion-body">Ana sayfadaki Eğitim Takvimi bölümünden ve Eğitimler sayfasındaki güncel listeden takip edebilirsiniz. E-bültene kaydolursanız yeni dönemler e-postanıza gelir.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq0-4">
+                                        Devam zorunluluğu var mı?
+                                    </button>
+                                </h2>
+                                <div id="faq0-4" class="accordion-collapse collapse" data-bs-parent="#faqAcc0">
+                                    <div class="accordion-body">Evet, programların çoğunda %80 devam koşulu aranır. Devam koşulunu sağlamayan katılımcılara belge düzenlenemez.</div>
+                                </div>
+                            </div>
+                    </div>
                 </div>
+                <div class="sem-faq-group " data-cat="kayit">
+                    <div class="accordion sem-sss-accordion" id="faqAcc1">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1-0">
+                                        Nasıl başvuru yapabilirim?
+                                    </button>
+                                </h2>
+                                <div id="faq1-0" class="accordion-collapse collapse" data-bs-parent="#faqAcc1">
+                                    <div class="accordion-body">İlgilendiğiniz eğitimin sayfasındaki "Hemen Başvur" butonuyla online başvuru formunu doldurabilirsiniz. Dilerseniz telefon veya WhatsApp ile de ön kayıt yaptırabilirsiniz.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1-1">
+                                        Başvuru için hangi belgeler gerekiyor?
+                                    </button>
+                                </h2>
+                                <div id="faq1-1" class="accordion-collapse collapse" data-bs-parent="#faqAcc1">
+                                    <div class="accordion-body">Online başvuruda T.C. kimlik numarası, iletişim bilgileri ve öğrenim durumu beyanı yeterlidir. Bazı akredite programlarda ek belge istenebilir.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1-2">
+                                        Başvurum onaylandı mı, nasıl öğrenirim?
+                                    </button>
+                                </h2>
+                                <div id="faq1-2" class="accordion-collapse collapse" data-bs-parent="#faqAcc1">
+                                    <div class="accordion-body">Başvurunuz alındıktan sonra eğitim danışmanlarımız kayıtlı telefon ve e-postanız üzerinden sizinle iletişime geçer.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1-3">
+                                        Kontenjan dolarsa ne olur?
+                                    </button>
+                                </h2>
+                                <div id="faq1-3" class="accordion-collapse collapse" data-bs-parent="#faqAcc1">
+                                    <div class="accordion-body">Yedek listeye alınırsınız; yer açıldığında veya yeni dönem planlandığında öncelikli olarak bilgilendirilirsiniz.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1-4">
+                                        Kaydımı iptal edebilir miyim?
+                                    </button>
+                                </h2>
+                                <div id="faq1-4" class="accordion-collapse collapse" data-bs-parent="#faqAcc1">
+                                    <div class="accordion-body">Eğitim başlangıç tarihinden önce yapılan iptallerde ücretin tamamı iade edilir. Detaylar için <a href="sozlesmeler.html">İptal ve İade Koşulları</a> sayfasına bakınız.</div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="sem-faq-group " data-cat="surec">
+                    <div class="accordion sem-sss-accordion" id="faqAcc2">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-0">
+                                        Online dersleri kaçırırsam ne olur?
+                                    </button>
+                                </h2>
+                                <div id="faq2-0" class="accordion-collapse collapse" data-bs-parent="#faqAcc2">
+                                    <div class="accordion-body">Canlı derslerin kayıtları KÜN LMS üzerinde dönem sonuna kadar erişilebilir kalır; dilediğiniz zaman tekrar izleyebilirsiniz.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-1">
+                                        Ders materyallerine nasıl erişirim?
+                                    </button>
+                                </h2>
+                                <div id="faq2-1" class="accordion-collapse collapse" data-bs-parent="#faqAcc2">
+                                    <div class="accordion-body">Kayıt işleminiz tamamlandığında LMS giriş bilgileriniz e-postanıza gönderilir; tüm materyaller sistem üzerinden paylaşılır.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-2">
+                                        Eğitimler hangi gün ve saatlerde?
+                                    </button>
+                                </h2>
+                                <div id="faq2-2" class="accordion-collapse collapse" data-bs-parent="#faqAcc2">
+                                    <div class="accordion-body">Programlar genellikle hafta içi akşam veya hafta sonu yürütülür; kesin takvim eğitim detay sayfasında ve kayıt e-postanızda yer alır.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-3">
+                                        Sınav veya değerlendirme var mı?
+                                    </button>
+                                </h2>
+                                <div id="faq2-3" class="accordion-collapse collapse" data-bs-parent="#faqAcc2">
+                                    <div class="accordion-body">Çoğu programda dönem sonunda online test veya uygulama değerlendirmesi yapılır. 100 üzerinden 70 ve üzeri alan katılımcılara Başarı Belgesi düzenlenir.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-4">
+                                        Eğitim ertelenebilir mi?
+                                    </button>
+                                </h2>
+                                <div id="faq2-4" class="accordion-collapse collapse" data-bs-parent="#faqAcc2">
+                                    <div class="accordion-body">Yeterli kontenjan oluşmazsa eğitim ileri bir tarihe alınabilir; bu durumda dileyen katılımcıya ücret iadesi yapılır.</div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="sem-faq-group " data-cat="sertifika">
+                    <div class="accordion sem-sss-accordion" id="faqAcc3">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3-0">
+                                        Sertifikam e-Devlet&#x27;te görünür mü?
+                                    </button>
+                                </h2>
+                                <div id="faq3-0" class="accordion-collapse collapse" data-bs-parent="#faqAcc3">
+                                    <div class="accordion-body">Evet. Mezuniyet işlemleri tamamlandıktan birkaç gün sonra belgeniz barkodlu olarak e-Devlet sistemine yansır.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3-1">
+                                        Sertifika ile katılım belgesi arasındaki fark nedir?
+                                    </button>
+                                </h2>
+                                <div id="faq3-1" class="accordion-collapse collapse" data-bs-parent="#faqAcc3">
+                                    <div class="accordion-body">Başarı/sertifika belgesi değerlendirmeyi geçen katılımcılara, katılım belgesi ise devam koşulunu sağlayıp değerlendirmeye girmeyen katılımcılara verilir.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3-2">
+                                        Belgemi kaybettim, yeniden alabilir miyim?
+                                    </button>
+                                </h2>
+                                <div id="faq3-2" class="accordion-collapse collapse" data-bs-parent="#faqAcc3">
+                                    <div class="accordion-body"><a href="mailto:sem@kapadokya.edu.tr">sem@kapadokya.edu.tr</a> adresine T.C. kimlik numaranızla başvurarak belge yenileme talebinde bulunabilirsiniz.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3-3">
+                                        Sertifikamın doğruluğu nasıl kontrol edilir?
+                                    </button>
+                                </h2>
+                                <div id="faq3-3" class="accordion-collapse collapse" data-bs-parent="#faqAcc3">
+                                    <div class="accordion-body">Belgenizin doğruluğunu e-Devlet üzerinden veya <a href="iletisim.html">iletişime geçerek</a> öğrenebilirsiniz.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3-4">
+                                        Sertifikalar uluslararası geçerli mi?
+                                    </button>
+                                </h2>
+                                <div id="faq3-4" class="accordion-collapse collapse" data-bs-parent="#faqAcc3">
+                                    <div class="accordion-body">Belgeler Kapadokya Üniversitesi onaylıdır; SHGM, GSTC ve MYK akreditasyonlu programların belgeleri ilgili otoritelerin kapsamında geçerlidir.</div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="sem-faq-group " data-cat="odeme">
+                    <div class="accordion sem-sss-accordion" id="faqAcc4">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4-0">
+                                        Hangi ödeme yöntemlerini kullanabilirim?
+                                    </button>
+                                </h2>
+                                <div id="faq4-0" class="accordion-collapse collapse" data-bs-parent="#faqAcc4">
+                                    <div class="accordion-body">Kredi kartı (online, taksit seçenekleriyle) veya banka havalesi/EFT ile ödeme yapabilirsiniz.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4-1">
+                                        Taksit imkânı var mı?
+                                    </button>
+                                </h2>
+                                <div id="faq4-1" class="accordion-collapse collapse" data-bs-parent="#faqAcc4">
+                                    <div class="accordion-body">Evet, anlaşmalı kartlarda taksit seçenekleri başvuru ekranında listelenir.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4-2">
+                                        KÜN öğrenci/personel indirimi nasıl uygulanır?
+                                    </button>
+                                </h2>
+                                <div id="faq4-2" class="accordion-collapse collapse" data-bs-parent="#faqAcc4">
+                                    <div class="accordion-body">Başvuru formunda KÜN mensubu olduğunuzu belirtmeniz yeterlidir; %10 indirim toplam tutara otomatik yansır.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4-3">
+                                        Fatura alabilir miyim?
+                                    </button>
+                                </h2>
+                                <div id="faq4-3" class="accordion-collapse collapse" data-bs-parent="#faqAcc4">
+                                    <div class="accordion-body">Evet, bireysel veya kurumsal fatura düzenlenir. Kurumsal fatura için şirket bilgilerinizi kayıt sırasında iletmeniz yeterlidir.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4-4">
+                                        İade süreci nasıl işliyor?
+                                    </button>
+                                </h2>
+                                <div id="faq4-4" class="accordion-collapse collapse" data-bs-parent="#faqAcc4">
+                                    <div class="accordion-body">Eğitim başlamadan önce iptallerde ücretin tamamı, ödeme yönteminize bağlı olarak 5–10 iş günü içinde iade edilir.</div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="sem-faq-group " data-cat="kurumsal">
+                    <div class="accordion sem-sss-accordion" id="faqAcc5">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5-0">
+                                        Kurumumuza özel eğitim düzenlenebilir mi?
+                                    </button>
+                                </h2>
+                                <div id="faq5-0" class="accordion-collapse collapse" data-bs-parent="#faqAcc5">
+                                    <div class="accordion-body">Evet. Müfredat, takvim ve format (online/yüz yüze/hibrit) kurumunuzun ihtiyacına göre tasarlanır.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5-1">
+                                        Yerinde eğitim mümkün mü?
+                                    </button>
+                                </h2>
+                                <div id="faq5-1" class="accordion-collapse collapse" data-bs-parent="#faqAcc5">
+                                    <div class="accordion-body">Evet; havalimanı, otel, fabrika gibi tesislerinizde yerinde eğitim uygulamaları yapılabilir.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5-2">
+                                        Minimum katılımcı sayısı var mı?
+                                    </button>
+                                </h2>
+                                <div id="faq5-2" class="accordion-collapse collapse" data-bs-parent="#faqAcc5">
+                                    <div class="accordion-body">Kurumsal gruplarda program içeriğine göre genellikle 10 kişilik minimum katılım aranır; detaylar teklif aşamasında netleştirilir.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5-3">
+                                        Çalışanlarımızın gelişimi raporlanır mı?
+                                    </button>
+                                </h2>
+                                <div id="faq5-3" class="accordion-collapse collapse" data-bs-parent="#faqAcc5">
+                                    <div class="accordion-body">Evet, İK departmanınız için periyodik devam ve başarı raporları sunulur.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5-4">
+                                        Kurumsal teklif nasıl alırım?
+                                    </button>
+                                </h2>
+                                <div id="faq5-4" class="accordion-collapse collapse" data-bs-parent="#faqAcc5">
+                                    <div class="accordion-body"><a href="iletisim.html">İletişim sayfamızdaki</a> Kurumsal Eğitim Talep Formunu doldurun; danışmanlarımız 1 iş günü içinde teklifle dönüş yapar.</div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+
+        <!-- CTA -->
+        <div class="sem-sss-cta">
+            <div>
+                <h4>Cevabını bulamadınız mı?</h4>
+                <p>Eğitim danışmanlarımız tüm sorularınız için hazır.</p>
             </div>
-
-            <!-- Kayıt & Başvuru -->
-            <div class="sem-faq-group" data-cat="kayit">
-                <div class="accordion sem-sss-accordion" id="faqKayit">
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fk1">Nasıl başvuru yapabilirim?</button></h2><div id="fk1" class="accordion-collapse collapse" data-bs-parent="#faqKayit"><div class="accordion-body">İlgilendiğiniz eğitimin sayfasındaki "Hemen Başvur" butonuyla online başvuru formunu doldurabilirsiniz. Dilerseniz telefon veya WhatsApp ile de ön kayıt yaptırabilirsiniz.</div></div></div>
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fk2">Başvuru için hangi belgeler gerekiyor?</button></h2><div id="fk2" class="accordion-collapse collapse" data-bs-parent="#faqKayit"><div class="accordion-body">Online başvuruda T.C. kimlik numarası, iletişim bilgileri ve öğrenim durumu beyanı yeterlidir. Bazı akredite programlarda ek belge istenebilir.</div></div></div>
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fk3">Başvurum onaylandı mı, nasıl öğrenirim?</button></h2><div id="fk3" class="accordion-collapse collapse" data-bs-parent="#faqKayit"><div class="accordion-body">Başvurunuz alındıktan sonra eğitim danışmanlarımız kayıtlı telefon ve e-postanız üzerinden sizinle iletişime geçer.</div></div></div>
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fk4">Kontenjan dolarsa ne olur?</button></h2><div id="fk4" class="accordion-collapse collapse" data-bs-parent="#faqKayit"><div class="accordion-body">Yedek listeye alınırsınız; yer açıldığında veya yeni dönem planlandığında öncelikli olarak bilgilendirilirsiniz.</div></div></div>
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fk5">Kaydımı iptal edebilir miyim?</button></h2><div id="fk5" class="accordion-collapse collapse" data-bs-parent="#faqKayit"><div class="accordion-body">Eğitim başlangıç tarihinden önce yapılan iptallerde ücretin tamamı iade edilir. Detaylar için <a href="sozlesmeler.html">İptal ve İade Koşulları</a> sayfasına bakınız.</div></div></div>
-                </div>
+            <div style="display:flex; gap:12px; flex-wrap:wrap;">
+                <a href="iletisim.html" class="rbt-btn btn-gradient radius-round btn-sm sem-btn-primary"><span>İletişime Geçin</span></a>
+                <a href="https://wa.me/903843535009" target="_blank" rel="noopener" class="rbt-btn radius-round btn-sm" style="background:rgba(255,255,255,0.12);border:2px solid rgba(255,255,255,0.4);color:#fff;"><span>WhatsApp</span></a>
             </div>
-
-            <!-- Eğitim Süreci -->
-            <div class="sem-faq-group" data-cat="surec">
-                <div class="accordion sem-sss-accordion" id="faqSurec">
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fs1">Online dersleri kaçırırsam ne olur?</button></h2><div id="fs1" class="accordion-collapse collapse" data-bs-parent="#faqSurec"><div class="accordion-body">Canlı derslerin kayıtları KÜN LMS üzerinde dönem sonuna kadar erişilebilir kalır; dilediğiniz zaman tekrar izleyebilirsiniz.</div></div></div>
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fs2">Ders materyallerine nasıl erişirim?</button></h2><div id="fs2" class="accordion-collapse collapse" data-bs-parent="#faqSurec"><div class="accordion-body">Kayıt işleminiz tamamlandığında LMS giriş bilgileriniz e-postanıza gönderilir; tüm materyaller sistem üzerinden paylaşılır.</div></div></div>
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fs3">Eğitimler hangi gün ve saatlerde?</button></h2><div id="fs3" class="accordion-collapse collapse" data-bs-parent="#faqSurec"><div class="accordion-body">Programlar genellikle hafta içi akşam veya hafta sonu yürütülür; kesin takvim eğitim detay sayfasında ve kayıt e-postanızda yer alır.</div></div></div>
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fs4">Sınav veya değerlendirme var mı?</button></h2><div id="fs4" class="accordion-collapse collapse" data-bs-parent="#faqSurec"><div class="accordion-body">Çoğu programda dönem sonunda online test veya uygulama değerlendirmesi yapılır. 100 üzerinden 70 ve üzeri alan katılımcılara Başarı Belgesi düzenlenir.</div></div></div>
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fs5">Eğitim ertelenebilir mi?</button></h2><div id="fs5" class="accordion-collapse collapse" data-bs-parent="#faqSurec"><div class="accordion-body">Yeterli kontenjan oluşmazsa eğitim ileri bir tarihe alınabilir; bu durumda dileyen katılımcıya ücret iadesi yapılır.</div></div></div>
-                </div>
-            </div>
-
-            <!-- Sertifika -->
-            <div class="sem-faq-group" data-cat="sertifika">
-                <div class="accordion sem-sss-accordion" id="faqSertifika">
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fse1">Sertifikam e-Devlet'te görünür mü?</button></h2><div id="fse1" class="accordion-collapse collapse" data-bs-parent="#faqSertifika"><div class="accordion-body">Evet. Mezuniyet işlemleri tamamlandıktan birkaç gün sonra belgeniz barkodlu olarak e-Devlet sistemine yansır.</div></div></div>
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fse2">Sertifika ile katılım belgesi arasındaki fark nedir?</button></h2><div id="fse2" class="accordion-collapse collapse" data-bs-parent="#faqSertifika"><div class="accordion-body">Başarı/sertifika belgesi değerlendirmeyi geçen katılımcılara, katılım belgesi ise devam koşulunu sağlayıp değerlendirmeye girmeyen katılımcılara verilir.</div></div></div>
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fse3">Belgemi kaybettim, yeniden alabilir miyim?</button></h2><div id="fse3" class="accordion-collapse collapse" data-bs-parent="#faqSertifika"><div class="accordion-body"><a href="mailto:sem@kapadokya.edu.tr">sem@kapadokya.edu.tr</a> adresine T.C. kimlik numaranızla başvurarak belge yenileme talebinde bulunabilirsiniz.</div></div></div>
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fse4">Sertifikamın doğruluğu nasıl kontrol edilir?</button></h2><div id="fse4" class="accordion-collapse collapse" data-bs-parent="#faqSertifika"><div class="accordion-body">Belgenizin doğruluğunu e-Devlet üzerinden veya <a href="iletisim.html">iletişime geçerek</a> öğrenebilirsiniz.</div></div></div>
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fse5">Sertifikalar uluslararası geçerli mi?</button></h2><div id="fse5" class="accordion-collapse collapse" data-bs-parent="#faqSertifika"><div class="accordion-body">Belgeler Kapadokya Üniversitesi onaylıdır; SHGM, GSTC ve MYK akreditasyonlu programların belgeleri ilgili otoritelerin kapsamında geçerlidir.</div></div></div>
-                </div>
-            </div>
-
-            <!-- Ödeme -->
-            <div class="sem-faq-group" data-cat="odeme">
-                <div class="accordion sem-sss-accordion" id="faqOdeme">
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fo1">Hangi ödeme yöntemlerini kullanabilirim?</button></h2><div id="fo1" class="accordion-collapse collapse" data-bs-parent="#faqOdeme"><div class="accordion-body">Kredi kartı (online, taksit seçenekleriyle) veya banka havalesi/EFT ile ödeme yapabilirsiniz.</div></div></div>
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fo2">Taksit imkânı var mı?</button></h2><div id="fo2" class="accordion-collapse collapse" data-bs-parent="#faqOdeme"><div class="accordion-body">Evet, anlaşmalı kartlarda taksit seçenekleri başvuru ekranında listelenir.</div></div></div>
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fo3">KÜN öğrenci/personel indirimi nasıl uygulanır?</button></h2><div id="fo3" class="accordion-collapse collapse" data-bs-parent="#faqOdeme"><div class="accordion-body">Başvuru formunda KÜN mensubu olduğunuzu belirtmeniz yeterlidir; %10 indirim toplam tutara otomatik yansır.</div></div></div>
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fo4">Fatura alabilir miyim?</button></h2><div id="fo4" class="accordion-collapse collapse" data-bs-parent="#faqOdeme"><div class="accordion-body">Evet, bireysel veya kurumsal fatura düzenlenir. Kurumsal fatura için şirket bilgilerinizi kayıt sırasında iletmeniz yeterlidir.</div></div></div>
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fo5">İade süreci nasıl işliyor?</button></h2><div id="fo5" class="accordion-collapse collapse" data-bs-parent="#faqOdeme"><div class="accordion-body">Eğitim başlamadan önce iptallerde ücretin tamamı, ödeme yönteminize bağlı olarak 5–10 iş günü içinde iade edilir.</div></div></div>
-                </div>
-            </div>
-
-            <!-- Kurumsal -->
-            <div class="sem-faq-group" data-cat="kurumsal">
-                <div class="accordion sem-sss-accordion" id="faqKurumsal">
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fku1">Kurumumuza özel eğitim düzenlenebilir mi?</button></h2><div id="fku1" class="accordion-collapse collapse" data-bs-parent="#faqKurumsal"><div class="accordion-body">Evet. Müfredat, takvim ve format (online/yüz yüze/hibrit) kurumunuzun ihtiyacına göre tasarlanır.</div></div></div>
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fku2">Yerinde eğitim mümkün mü?</button></h2><div id="fku2" class="accordion-collapse collapse" data-bs-parent="#faqKurumsal"><div class="accordion-body">Evet; havalimanı, otel, fabrika gibi tesislerinizde yerinde eğitim uygulamaları yapılabilir.</div></div></div>
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fku3">Minimum katılımcı sayısı var mı?</button></h2><div id="fku3" class="accordion-collapse collapse" data-bs-parent="#faqKurumsal"><div class="accordion-body">Kurumsal gruplarda program içeriğine göre genellikle 10 kişilik minimum katılım aranır; detaylar teklif aşamasında netleştirilir.</div></div></div>
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fku4">Çalışanlarımızın gelişimi raporlanır mı?</button></h2><div id="fku4" class="accordion-collapse collapse" data-bs-parent="#faqKurumsal"><div class="accordion-body">Evet, İK departmanınız için periyodik devam ve başarı raporları sunulur.</div></div></div>
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fku5">Kurumsal teklif nasıl alırım?</button></h2><div id="fku5" class="accordion-collapse collapse" data-bs-parent="#faqKurumsal"><div class="accordion-body"><a href="iletisim.html">İletişim sayfamızdaki</a> Kurumsal Eğitim Talep Formunu doldurun; danışmanlarımız 1 iş günü içinde teklifle dönüş yapar.</div></div></div>
-                </div>
-            </div>
-
-            <!-- CTA -->
-            <div class="sem-sss-cta">
-                <div>
-                    <h4>Cevabını bulamadınız mı?</h4>
-                    <p>Eğitim danışmanlarımız tüm sorularınız için hazır.</p>
-                </div>
-                <div style="display:flex; gap:12px; flex-wrap:wrap;">
-                    <a href="iletisim.html" class="rbt-btn btn-gradient radius-round btn-sm sem-btn-primary"><span>İletişime Geçin</span></a>
-                    <a href="https://wa.me/903843535009" target="_blank" rel="noopener" class="rbt-btn radius-round btn-sm" style="background:rgba(255,255,255,0.12);border:2px solid rgba(255,255,255,0.4);color:#fff;"><span>WhatsApp</span></a>
-                </div>
-            </div>
-
         </div>
+
     </div>
-    <!-- End SSS Content -->
+</div>
 
-    <script>
-    'use strict';
-    document.addEventListener('DOMContentLoaded', function () {
-        var pills  = document.querySelectorAll('.sem-faq-pill');
-        var groups = document.querySelectorAll('.sem-faq-group');
-        pills.forEach(function (pill) {
-            pill.addEventListener('click', function () {
-                pills.forEach(function (p) { p.classList.remove('active'); });
-                this.classList.add('active');
-                var cat = this.dataset.cat;
-                groups.forEach(function (g) {
-                    g.classList.toggle('is-active', g.dataset.cat === cat);
-                });
-            });
-        });
-    });
-    </script>
 
-                <!-- Start Footer aera -->
+    </main>
+
+    <div class="rbt-progress-parent">
+        <svg class="rbt-back-circle svg-inner" width="100%" height="100%" viewBox="-1 -1 102 102" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
+        </svg>
+    </div>
+
     <footer class="rbt-footer footer-style-1 bg-color-darker overflow-hidden">
         <div class="footer-top">
             <div class="container">
@@ -800,10 +875,6 @@
                             <ul class="social-icon social-default justify-content-start">
                                 <li><a href="https://www.facebook.com/">
                                         <i class="feather-facebook"></i>
-                                    </a>
-                                </li>
-                                <li><a href="https://www.twitter.com">
-                                        <i class="feather-twitter"></i>
                                     </a>
                                 </li>
                                 <li><a href="https://www.instagram.com/">
@@ -835,7 +906,6 @@
                   <li><a href="anasayfa.html">Ana Sayfa</a></li>
                   <li><a href="tum-kurslar.html">Eğitimler</a></li>
                   <li><a href="duyurular.html">Duyurular</a></li>
-                  <li><a href="blog.html">Blog</a></li>
                   <li><a href="iletisim.html">İletişim</a></li>
                 </ul>
               </div>
@@ -870,7 +940,7 @@
                         <div class="footer-widget">
                             <h5 class="ft-title">İletişime Geçin</h5>
                             <ul class="ft-link">
-                                <li><span>Telefon:</span> <a href="#">+90 384 353 50 09</a></li>
+                                <li><span>Telefon:</span> <a href="tel:+903843535009">+90 384 353 50 09</a></li>
                                 <li><span>E-posta:</span> <a href="mailto:sem@kapadokya.edu.tr">sem@kapadokya.edu.tr</a></li>
                             </ul>
 
@@ -952,5 +1022,5 @@
     <script src="./assets/js/vendor/Sortable.min.js"></script>
     <!-- Main JS -->
     <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/sem-custom.js?v=20261007"></script>
+    <script src="./assets/js/sem-custom.js?v=20261109"></script>
 </body><div></div></html>

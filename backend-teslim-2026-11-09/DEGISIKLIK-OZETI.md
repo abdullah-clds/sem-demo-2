@@ -1,6 +1,6 @@
 # Backend Ekibine — Değişiklikler (2026-11-09)
 
-Bu klasör sitenin kopyası **DEĞİLDİR**. Yalnızca bu turda eklenen 3 alanın kod
+Bu klasör sitenin kopyası **DEĞİLDİR**. Yalnızca bu turda eklenen 4 alanın kod
 parçacıklarıdır. Her klasörde: `html-degisiklik.html` (nereye ne basılacak) +
 `sem-custom.css` / `sem-custom.js` (dosyanın SONUNA eklenecek blok).
 
@@ -9,6 +9,7 @@ parçacıklarıdır. Her klasörde: `html-degisiklik.html` (nereye ne basılacak
 | [01](01-egitim-karti-tarih-rozeti/) | Eğitim kartı | "Kayıtlar Açık" rozetinin yanına aynı ölçüde, mavi **tarih rozeti** eklendi (anasayfa vitrininde görselin sağ üstünde). | `<time datetime="YYYY-MM-DD">` içine en yakın grubun başlangıç tarihini basmak. |
 | [02](02-egitim-takvimi/) | Eğitim detay → Eğitim Takvimi | Tablo kaldırıldı. Solda **aylık takvim**, sağda **grup detayları** var. | Her grup için bir `<li class="sem-takvim-grup">` basmak. **Takvim JS ile otomatik çizilir.** |
 | [03](03-hizmet-ici-personel-girisi/) | Hizmet İçi Eğitimler | Sayfa açılınca **"Kapadokya Üniversitesi personeli misiniz?"** penceresi çıkıyor. | Personel girişi yapmış kullanıcıya modal bloğunu **basmamak**. |
+| [04](04-liste-gorunumu-yatay-gorsel/) | Eğitim listesi → Liste görünümü | Görsel kart boyunca dikey uzuyordu; artık **yatay 3:2** (masaüstü 300px, tablet 240/180px, mobil 140px genişlik). | Yok — yalnızca CSS (`sem-custom.css` §11 ve tablet/mobil liste kuralları, diff dosyada). |
 
 ---
 
@@ -50,4 +51,4 @@ Statik depo bu turda canlı taslağa göre eşitlendi, yani **tasarım ekibinin 
 - **Taslakta henüz olmayan önceki teslimlerimiz korunuyor, lütfen uygulayın:**
   - Footer "Hızlı Erişim" + "Kurumsal" sütunları (2026-10-07 / 02). Blog linki ve Twitter ikonu bu turda kaldırıldı.
   - Eğitim detay yan menüsü (tarih/kontenjan alanları) ve kapak altı gezinme menüsünün kaldırılması (2026-11-04).
-- Önbellek sürümü: `?v=202611093`. Sizde zaten hash ile otomatik üretiliyor, işlem gerekmez.
+- Önbellek sürümü: `?v=202611094`. Sizde zaten hash ile otomatik üretiliyor, işlem gerekmez.

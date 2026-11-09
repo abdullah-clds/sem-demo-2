@@ -268,18 +268,25 @@ p  { font-size: 16px !important; line-height: 1.6 !important; }
 /* ── 11. Liste Görünümü — Yatay Kart Düzeni ─────────── */
 .rbt-course-grid-column.active-list-view .sem-course-card {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 300px 1fr;
   grid-template-rows: 1fr auto;
+  column-gap: 4px;
   border-radius: var(--sem-radius);
 }
 .rbt-course-grid-column.active-list-view .sem-course-card .rbt-card-img {
   grid-column: 1;
   grid-row: 1 / 3;
-  aspect-ratio: unset !important;
-  height: 100%;
-  min-height: 150px;
+  /* görsel yatay (3:2, 1500x1000) — kart boyunca dikey uzamasın */
+  aspect-ratio: 3 / 2 !important;
+  height: auto;
+  min-height: 0;
+  align-self: center;
   border-radius: var(--sem-radius);
   overflow: hidden;
+}
+.rbt-course-grid-column.active-list-view .sem-course-card .rbt-card-img > a {
+  display: block;
+  height: 100%;
 }
 .rbt-course-grid-column.active-list-view .sem-course-card .rbt-card-img img {
   width: 100%;
@@ -295,9 +302,9 @@ p  { font-size: 16px !important; line-height: 1.6 !important; }
   grid-row: 2;
   margin-top: 0;
 }
-@media (max-width: 575px) {
+@media (max-width: 991px) {
   .rbt-course-grid-column.active-list-view .sem-course-card {
-    grid-template-columns: 120px 1fr;
+    grid-template-columns: 240px 1fr;
   }
 }
 
@@ -789,14 +796,14 @@ select.sem-form-control { height: 50px; padding-top: 0; padding-bottom: 0; }
 /* ── Kurs kartı grid → liste görünümü tablet ────────────── */
 @media (max-width: 768px) {
   .rbt-course-grid-column.active-list-view .sem-course-card {
-    grid-template-columns: 150px 1fr;
+    grid-template-columns: 180px 1fr;
   }
   /* Görsel kart boyunca dar bir şerit gibi uzamasın; butonlar tam genişlik alsın */
   .rbt-course-grid-column.active-list-view .sem-course-card .rbt-card-img {
     grid-row: 1;
     height: auto;
     min-height: 0;
-    aspect-ratio: 1 / 1 !important;
+    aspect-ratio: 3 / 2 !important;
     align-self: start;
   }
   .rbt-course-grid-column.active-list-view .sem-course-card .rbt-card-img > a {
@@ -809,7 +816,7 @@ select.sem-form-control { height: 50px; padding-top: 0; padding-bottom: 0; }
 }
 @media (max-width: 576px) {
   .rbt-course-grid-column.active-list-view .sem-course-card {
-    grid-template-columns: 110px 1fr;
+    grid-template-columns: 140px 1fr;
   }
 }
 

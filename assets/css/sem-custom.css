@@ -2063,25 +2063,42 @@ html.side-nav-opened, html.side-nav-opened body { overflow: hidden; }
 .sem-card-badges {
   display: flex;
   flex-wrap: wrap;
+  align-items: stretch;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+/* durum ve tarih rozeti aynı ölçüde: aynı yükseklik, iç boşluk, yazı */
+.sem-card-badges .sem-status-badge,
+.sem-date-badge {
+  display: inline-flex !important;
   align-items: center;
-  gap: 6px;
+  margin: 0 !important;
+  padding: 5px 12px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  line-height: 18px !important;
+  border-radius: var(--sem-radius) !important;
 }
 .sem-course-card .sem-card-badges .sem-status-badge { align-self: auto; }
 .sem-date-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: .45em;
-  padding: .2em .7em;
-  border-radius: var(--sem-radius);
-  background: rgba(0, 40, 85, .06);
-  border: 1px solid rgba(0, 40, 85, .12);
-  color: var(--sem-primary);
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 1.4;
+  gap: 6px;
+  border: 0;
+  background: var(--kun-mavi, #0072ce);
+  color: #fff;
   white-space: nowrap;
 }
-.sem-date-badge i { font-size: 12px; opacity: .8; }
+.sem-date-badge i { font-size: 13px; line-height: 1; }
+
+/* Anasayfa vitrini: durum görselin sol üstünde, tarih sağ üstünde (simetrik) */
+#sem-populer-egitimler .sem-course-card .sem-card-badges { margin: 0; }
+#sem-populer-egitimler .sem-course-card .sem-date-badge {
+  position: absolute; top: 14px; right: 14px; z-index: 2;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .18);
+}
+@media (max-width: 576px) {
+  .sem-card-badges .sem-status-badge,
+  .sem-date-badge { font-size: 13px !important; }
+}
 
 /* ── Kurs detay — Eğitim Takvimi: solda aylık takvim, sağda grup detayları ── */
 .sem-takvim {
@@ -2203,6 +2220,16 @@ html.side-nav-opened, html.side-nav-opened body { overflow: hidden; }
 .sem-cal-lejant span { display: inline-flex; align-items: center; gap: 6px; }
 .sem-cal-lejant i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; }
 .sem-lej-egitim { background: var(--sem-primary); }
+.sem-cal-lejant .sem-cal-saat { margin-left: auto; color: var(--sem-primary); font-weight: 600; }
+.sem-cal-lejant .sem-cal-saat i { width: auto; height: auto; border-radius: 0; font-size: 12px; }
+.sem-takvim-saat {
+  display: inline-flex; align-items: center; gap: 4px;
+  margin-left: 8px; padding: 2px 8px;
+  border-radius: 20px;
+  background: rgba(0, 40, 85, .06);
+  font-size: 13px; font-weight: 500; color: #475569;
+}
+.sem-takvim-saat i { font-size: 12px; }
 .sem-lej-kayit { background: var(--sem-accent); }
 
 /* grup listesi */
@@ -2239,12 +2266,7 @@ html.side-nav-opened, html.side-nav-opened body { overflow: hidden; }
   font-size: 15px;
   cursor: pointer;
 }
-.sem-takvim-grup-ad {
-  font-weight: 600;
-  color: var(--sem-primary);
-  min-width: 64px;
-}
-.sem-takvim-grup-aralik { color: #475569; flex: 1; }
+.sem-takvim-grup-aralik { color: var(--sem-primary); font-weight: 600; flex: 1; }
 .sem-takvim-detay {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2271,73 +2293,3 @@ html.side-nav-opened, html.side-nav-opened body { overflow: hidden; }
 @media (max-width: 480px) {
   .sem-takvim-detay { grid-template-columns: 1fr; gap: 10px; }
 }
-
-/* ── Hizmet içi eğitimler — personel girişi penceresi ── */
-.sem-personel-modal .modal-content {
-  border: 0;
-  border-radius: 16px;
-  overflow: hidden;
-  background: #fff;
-  color: var(--sem-text);
-  box-shadow: 0 24px 60px rgba(0, 26, 58, .28);
-}
-body.sem-personel-kilit .modal-backdrop.show { opacity: .72; }
-body.sem-personel-kilit .modal-backdrop { background: var(--sem-footer-bg); backdrop-filter: blur(4px); }
-.sem-personel-ust {
-  background: var(--sem-primary);
-  padding: 22px 24px 46px;
-  text-align: center;
-}
-.sem-personel-logo { max-height: 48px; width: auto; }
-.sem-personel-govde {
-  padding: 30px 32px 28px;
-  text-align: center;
-}
-.sem-personel-ikon {
-  width: 56px; height: 56px;
-  margin: -58px auto 14px;
-  display: flex; align-items: center; justify-content: center;
-  border-radius: 50%;
-  background: #fff;
-  color: var(--sem-primary);
-  font-size: 22px;
-  box-shadow: 0 6px 18px rgba(0, 40, 85, .18);
-  position: relative;
-}
-.sem-personel-baslik {
-  font-size: 21px !important;
-  font-weight: 700;
-  color: var(--sem-primary) !important;
-  margin-bottom: 10px;
-  line-height: 1.35;
-}
-.sem-personel-metin {
-  font-size: 15px;
-  line-height: 1.6;
-  color: #475569;
-  margin-bottom: 22px;
-}
-.sem-personel-giris {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  width: 100%;
-  padding: 13px 20px;
-  border-radius: var(--sem-radius);
-  background: var(--sem-primary);
-  color: #fff !important;
-  font-size: 16px;
-  font-weight: 600;
-  transition: background-color .2s ease;
-}
-.sem-personel-giris:hover { background: var(--sem-navy-light); }
-.sem-personel-vazgec {
-  display: inline-block;
-  margin-top: 14px;
-  font-size: 14px;
-  color: #64748b !important;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-.sem-personel-vazgec:hover { color: var(--sem-primary) !important; }

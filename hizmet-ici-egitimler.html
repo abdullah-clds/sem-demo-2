@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="./assets/css/plugins/jodit.min.css">
 
     <link rel="stylesheet" href="./assets/css/styles.css">
-    <link rel="stylesheet" href="./assets/css/sem-custom.css?v=20261109">
+    <link rel="stylesheet" href="./assets/css/sem-custom.css?v=202611092">
     <link rel="stylesheet" href="./assets/css/sem-kurumsal.css">
     <!-- Google Analytics (GA4) — GERÇEK ÖLÇÜM KİMLİĞİ BEKLENİYOR (placeholder: G-XXXXXXXXXX), bkz. README.md -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -1114,34 +1114,7 @@
     </div>
     <!-- ── /semApplyModal ── -->
 
-    <!-- ── semPersonelModal: Hizmet içi eğitimler yalnızca KÜN personeline açık ──
-         BACKEND (en kolay yol): Personel girişi yapmış kullanıcıya bu bloğu HİÇ BASMAYIN — başka bir şey gerekmez.
-         Alternatif: bloğu her zaman basıp sayfaya <script>window.__semPersonel = true;</script> eklerseniz pencere açılmaz.
-         "Personel Girişi Yap" linkinin href'ini personel giriş adresinize (SSO vb.) çevirin; returnUrl ile bu sayfaya dönülür.
-         Not: Bu pencere yalnızca arayüzdür, asıl yetki kontrolü sunucuda yapılmalıdır. -->
-    <div class="modal fade sem-personel-modal" id="semPersonelModal" tabindex="-1"
-         data-bs-backdrop="static" data-bs-keyboard="false"
-         aria-labelledby="semPersonelModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="sem-personel-ust">
-            <img src="./assets/images/logo/sem-logo-byz.png" alt="Kapadokya Üniversitesi SEM" class="sem-personel-logo">
-          </div>
-          <div class="sem-personel-govde">
-            <span class="sem-personel-ikon" aria-hidden="true"><i class="feather-briefcase"></i></span>
-            <h5 class="sem-personel-baslik" id="semPersonelModalLabel">Kapadokya Üniversitesi personeli misiniz?</h5>
-            <p class="sem-personel-metin">Hizmet içi eğitimler akademik ve idari personelimize özeldir. Eğitimleri görüntülemek ve başvurmak için personel hesabınızla giriş yapın.</p>
-            <a class="sem-personel-giris" href="giris.html?returnUrl=hizmet-ici-egitimler.html">
-              <i class="feather-log-in"></i> Personel Girişi Yap
-            </a>
-            <a class="sem-personel-vazgec" href="tum-kurslar.html">Personel değilim, tüm eğitimlere göz at</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- ── /semPersonelModal ── -->
-
-    <script src="./assets/js/sem-custom.js?v=20261109"></script>
+    <script src="./assets/js/sem-custom.js?v=202611092"></script>
     <script>
     'use strict';
     (function () {

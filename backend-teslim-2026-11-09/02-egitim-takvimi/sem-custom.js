@@ -1,4 +1,4 @@
-/* sem-custom.js IIFE içine eklenir; DOMContentLoaded'da initTakvim çağrılır (bkz. 03 dosyasındaki initRevizyon). */
+/* sem-custom.js IIFE içine, "Global erişim" bölümünün üstüne eklenir. */
   /* ── Eğitim Takvimi (kurs-detay) ──────────────────────────
      Backend yalnızca <li class="sem-takvim-grup" data-baslangic data-bitis data-son-kayit>
      listesini basar. Soldaki aylık takvim bu listeden burada çizilir. */
@@ -56,7 +56,9 @@
       }
       h += '</div><div class="sem-cal-lejant">' +
         '<span><i class="sem-lej-egitim"></i>Eğitim günleri</span>' +
-        '<span><i class="sem-lej-kayit"></i>Son kayıt</span></div>';
+        '<span><i class="sem-lej-kayit"></i>Son kayıt</span>' +
+        (secili.dataset.saat ? '<span class="sem-cal-saat"><i class="feather-clock"></i>Başlangıç ' + secili.dataset.saat + '</span>' : '') +
+        '</div>';
       cal.innerHTML = h;
     }
 
@@ -88,5 +90,17 @@
     var acik = gruplar.filter(function (g) { return g.querySelector('.sem-status-badge--acik, .sem-status-badge--son'); })[0];
     root.classList.add('is-hazir');
     sec(acik || gruplar[0]);
+  }
+
+  function initRevizyon() {
+    document.querySelectorAll('[data-sem-takvim]').forEach(initTakvim);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initApplyForm);
+    document.addEventListener('DOMContentLoaded', initRevizyon);
+  } else {
+    initApplyForm();
+    initRevizyon();
   }
 

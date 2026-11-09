@@ -2,6 +2,7 @@
 <!-- Start Eğitim Takvimi
                              BACKEND: Sadece <ol class="sem-takvim-gruplar"> içine her eğitim grubu için bir <li class="sem-takvim-grup"> basın.
                              - data-baslangic / data-bitis / data-son-kayit → YYYY-MM-DD (takvim işaretlemesi bunlardan yapılır)
+                             - data-saat → HH:MM başlangıç saati (takvim altında gösterilir). Aynı saat ayrıca: aralık satırındaki <span class="sem-takvim-saat"> + Başlangıç <time datetime="YYYY-MM-DDTHH:MM"> + "Saat" satırı (başlangıç – bitiş)
                              - Soldaki aylık takvim bu listeden sem-custom.js (initTakvim) ile OTOMATİK çizilir; takvim için ayrı veri/HTML gerekmez.
                              - İlk açılışta kayıtları açık ilk grup seçilir; grup yoksa bloğun tamamı basılmaz. -->
                         <div class="rbt-course-feature-box rbt-shadow-box details-wrapper mt--30" id="details">
@@ -9,43 +10,43 @@
                             <div class="sem-takvim" data-sem-takvim>
                                 <div class="sem-takvim-cal" aria-hidden="true"></div>
                                 <ol class="sem-takvim-gruplar">
-                                    <li class="sem-takvim-grup" data-baslangic="2026-12-07" data-bitis="2026-12-18" data-son-kayit="2026-12-03">
+                                    <li class="sem-takvim-grup" data-baslangic="2026-12-07" data-saat="09:30" data-bitis="2026-12-18" data-son-kayit="2026-12-03">
                                         <button type="button" class="sem-takvim-grup-btn">
-                                            <span class="sem-takvim-grup-ad">1. Grup</span>
-                                            <span class="sem-takvim-grup-aralik">7 – 18 Aralık 2026</span>
+                                            <span class="sem-takvim-grup-aralik">7 – 18 Aralık 2026 <span class="sem-takvim-saat"><i class="feather-clock"></i>09:30</span></span>
                                             <span class="sem-status-badge sem-status-badge--acik">Kayıtlar Açık</span>
                                         </button>
                                         <dl class="sem-takvim-detay">
-                                            <div><dt>Başlangıç</dt><dd><time datetime="2026-12-07">7 Aralık 2026, Pazartesi</time></dd></div>
+                                            <div><dt>Başlangıç</dt><dd><time datetime="2026-12-07T09:30">7 Aralık 2026, Pazartesi · 09:30</time></dd></div>
                                             <div><dt>Bitiş</dt><dd><time datetime="2026-12-18">18 Aralık 2026, Cuma</time></dd></div>
+                                            <div><dt>Saat</dt><dd>09:30 – 16:30</dd></div>
                                             <div><dt>Son Kayıt</dt><dd><time datetime="2026-12-03">3 Aralık 2026, Perşembe</time></dd></div>
                                             <div><dt>Son İptal</dt><dd><time datetime="2026-12-04">4 Aralık 2026, Cuma</time></dd></div>
                                             <div><dt>Kontenjan</dt><dd>30 Kişi</dd></div>
                                         </dl>
                                     </li>
-                                    <li class="sem-takvim-grup" data-baslangic="2027-01-11" data-bitis="2027-01-22" data-son-kayit="2027-01-07">
+                                    <li class="sem-takvim-grup" data-baslangic="2027-01-11" data-saat="09:30" data-bitis="2027-01-22" data-son-kayit="2027-01-07">
                                         <button type="button" class="sem-takvim-grup-btn">
-                                            <span class="sem-takvim-grup-ad">2. Grup</span>
-                                            <span class="sem-takvim-grup-aralik">11 – 22 Ocak 2027</span>
+                                            <span class="sem-takvim-grup-aralik">11 – 22 Ocak 2027 <span class="sem-takvim-saat"><i class="feather-clock"></i>09:30</span></span>
                                             <span class="sem-status-badge sem-status-badge--acik">Kayıtlar Açık</span>
                                         </button>
                                         <dl class="sem-takvim-detay">
-                                            <div><dt>Başlangıç</dt><dd><time datetime="2027-01-11">11 Ocak 2027, Pazartesi</time></dd></div>
+                                            <div><dt>Başlangıç</dt><dd><time datetime="2027-01-11T09:30">11 Ocak 2027, Pazartesi · 09:30</time></dd></div>
                                             <div><dt>Bitiş</dt><dd><time datetime="2027-01-22">22 Ocak 2027, Cuma</time></dd></div>
+                                            <div><dt>Saat</dt><dd>09:30 – 16:30</dd></div>
                                             <div><dt>Son Kayıt</dt><dd><time datetime="2027-01-07">7 Ocak 2027, Perşembe</time></dd></div>
                                             <div><dt>Son İptal</dt><dd><time datetime="2027-01-08">8 Ocak 2027, Cuma</time></dd></div>
                                             <div><dt>Kontenjan</dt><dd>30 Kişi</dd></div>
                                         </dl>
                                     </li>
-                                    <li class="sem-takvim-grup" data-baslangic="2027-02-08" data-bitis="2027-02-19" data-son-kayit="2027-02-04">
+                                    <li class="sem-takvim-grup" data-baslangic="2027-02-08" data-saat="13:30" data-bitis="2027-02-19" data-son-kayit="2027-02-04">
                                         <button type="button" class="sem-takvim-grup-btn">
-                                            <span class="sem-takvim-grup-ad">3. Grup</span>
-                                            <span class="sem-takvim-grup-aralik">8 – 19 Şubat 2027</span>
+                                            <span class="sem-takvim-grup-aralik">8 – 19 Şubat 2027 <span class="sem-takvim-saat"><i class="feather-clock"></i>13:30</span></span>
                                             <span class="sem-status-badge sem-status-badge--yakinda">Yakında</span>
                                         </button>
                                         <dl class="sem-takvim-detay">
-                                            <div><dt>Başlangıç</dt><dd><time datetime="2027-02-08">8 Şubat 2027, Pazartesi</time></dd></div>
+                                            <div><dt>Başlangıç</dt><dd><time datetime="2027-02-08T13:30">8 Şubat 2027, Pazartesi · 13:30</time></dd></div>
                                             <div><dt>Bitiş</dt><dd><time datetime="2027-02-19">19 Şubat 2027, Cuma</time></dd></div>
+                                            <div><dt>Saat</dt><dd>13:30 – 17:30</dd></div>
                                             <div><dt>Son Kayıt</dt><dd><time datetime="2027-02-04">4 Şubat 2027, Perşembe</time></dd></div>
                                             <div><dt>Son İptal</dt><dd><time datetime="2027-02-05">5 Şubat 2027, Cuma</time></dd></div>
                                             <div><dt>Kontenjan</dt><dd>30 Kişi</dd></div>

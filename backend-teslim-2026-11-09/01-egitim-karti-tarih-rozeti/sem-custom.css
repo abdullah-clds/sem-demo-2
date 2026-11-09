@@ -3,23 +3,40 @@
 .sem-card-badges {
   display: flex;
   flex-wrap: wrap;
+  align-items: stretch;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+/* durum ve tarih rozeti aynı ölçüde: aynı yükseklik, iç boşluk, yazı */
+.sem-card-badges .sem-status-badge,
+.sem-date-badge {
+  display: inline-flex !important;
   align-items: center;
-  gap: 6px;
+  margin: 0 !important;
+  padding: 5px 12px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  line-height: 18px !important;
+  border-radius: var(--sem-radius) !important;
 }
 .sem-course-card .sem-card-badges .sem-status-badge { align-self: auto; }
 .sem-date-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: .45em;
-  padding: .2em .7em;
-  border-radius: var(--sem-radius);
-  background: rgba(0, 40, 85, .06);
-  border: 1px solid rgba(0, 40, 85, .12);
-  color: var(--sem-primary);
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 1.4;
+  gap: 6px;
+  border: 0;
+  background: var(--kun-mavi, #0072ce);
+  color: #fff;
   white-space: nowrap;
 }
-.sem-date-badge i { font-size: 12px; opacity: .8; }
+.sem-date-badge i { font-size: 13px; line-height: 1; }
+
+/* Anasayfa vitrini: durum görselin sol üstünde, tarih sağ üstünde (simetrik) */
+#sem-populer-egitimler .sem-course-card .sem-card-badges { margin: 0; }
+#sem-populer-egitimler .sem-course-card .sem-date-badge {
+  position: absolute; top: 14px; right: 14px; z-index: 2;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .18);
+}
+@media (max-width: 576px) {
+  .sem-card-badges .sem-status-badge,
+  .sem-date-badge { font-size: 13px !important; }
+}
 

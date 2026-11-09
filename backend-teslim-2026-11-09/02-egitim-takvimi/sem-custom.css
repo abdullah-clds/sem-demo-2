@@ -118,6 +118,16 @@
 .sem-cal-lejant span { display: inline-flex; align-items: center; gap: 6px; }
 .sem-cal-lejant i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; }
 .sem-lej-egitim { background: var(--sem-primary); }
+.sem-cal-lejant .sem-cal-saat { margin-left: auto; color: var(--sem-primary); font-weight: 600; }
+.sem-cal-lejant .sem-cal-saat i { width: auto; height: auto; border-radius: 0; font-size: 12px; }
+.sem-takvim-saat {
+  display: inline-flex; align-items: center; gap: 4px;
+  margin-left: 8px; padding: 2px 8px;
+  border-radius: 20px;
+  background: rgba(0, 40, 85, .06);
+  font-size: 13px; font-weight: 500; color: #475569;
+}
+.sem-takvim-saat i { font-size: 12px; }
 .sem-lej-kayit { background: var(--sem-accent); }
 
 /* grup listesi */
@@ -154,12 +164,7 @@
   font-size: 15px;
   cursor: pointer;
 }
-.sem-takvim-grup-ad {
-  font-weight: 600;
-  color: var(--sem-primary);
-  min-width: 64px;
-}
-.sem-takvim-grup-aralik { color: #475569; flex: 1; }
+.sem-takvim-grup-aralik { color: var(--sem-primary); font-weight: 600; flex: 1; }
 .sem-takvim-detay {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -186,4 +191,3 @@
 @media (max-width: 480px) {
   .sem-takvim-detay { grid-template-columns: 1fr; gap: 10px; }
 }
-

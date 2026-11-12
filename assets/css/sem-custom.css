@@ -316,12 +316,6 @@ p  { font-size: 16px !important; line-height: 1.6 !important; }
   padding-top: 40px;
 }
 
-/* kurs-detay.html: mobil sabit Başvur çubuğu için body boşluğu */
-@media (max-width: 991.98px) {
-  body.kurs-detay-page {
-    padding-bottom: 80px;
-  }
-}
 
 /* ── 12. SSS Sayfa Stilleri ─────────────────────────────── */
 .sem-faq-group { display: none; }
@@ -954,10 +948,6 @@ select.sem-form-control { height: 50px; padding-top: 0; padding-bottom: 0; }
   #sem-sss { padding-top: 40px; padding-bottom: 40px; }
 }
 
-/* ── Kurs detay mobil sabit çubuk ───────────────────────── */
-@media (max-width: 991px) {
-  body.kurs-detay-page { padding-bottom: 72px; }
-}
 
 /* ── sem-hero-search genel padding kısaltma ─────────────── */
 @media (max-width: 768px) {

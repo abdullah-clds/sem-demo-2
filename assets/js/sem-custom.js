@@ -288,31 +288,59 @@
     return { reset: function () { input.value = ''; render(); }, clearBtn: clearBtn };
   }
 
-  /* ── Sürdürülebilir Kalkınma Amaçları (SKA) — eğitim detay sağ bar ──
-     Sunucu sadece <li class="sem-ska-item"> basar; düzeni öğe sayısına göre burası seçer:
-     1–3 → liste (ikon + amaç adı), 4+ → ikon ızgarası (ad, üzerine gelince balon). */
+  /* ── Sürdürülebilir Kalkınma Amaçları (SKA) — eğitim detay, takvimin altında ──
+     Sunucu sadece <li class="sem-ska-item"> basar; düzeni CSS kurar. Liste boşsa blok gizlenir. */
   function initSka() {
     var box = document.getElementById('sem-ska');
     if (!box) return;
-    var list = box.querySelector('.sem-ska-list');
-    if (!list) return;
+    if (!box.querySelector('.sem-ska-item')) box.hidden = true;
+  }
 
-    var count = list.querySelectorAll('.sem-ska-item').length;
-    if (!count) { box.hidden = true; return; }
-    // ızgarada son satır dengeli kalsın: 6 → 3x2, 7–8 → 4 sütun, 9+ → 5 sütun
-    var cols = count <= 3 ? 1 : count <= 5 ? count : count === 6 ? 3 : count <= 8 ? 4 : 5;
-    box.setAttribute('data-layout', count <= 3 ? 'list' : 'grid');
-    list.setAttribute('data-count', count);
-    list.style.setProperty('--ska-cols', cols);
-    // balon kenardan taşmasın: ilk / son sütundakileri işaretle
-    list.querySelectorAll('.sem-ska-item').forEach(function (li, i) {
-      li.classList.toggle('is-col-first', cols > 1 && i % cols === 0);
-      li.classList.toggle('is-col-last', cols > 1 && i % cols === cols - 1);
-    });
+  /* ── Eğitim detay yan menüsü: son kayda kalan gün, diğer tarihler sayısı, bağlantı kopyalama ── */
+  function initYanMenu() {
+    var side = document.querySelector('.sem-side');
+    if (!side) return;
+
+    var kalan = side.querySelector('[data-son-kayit]');
+    if (kalan) {
+      var p = (kalan.getAttribute('data-son-kayit') || '').split('-');
+      var son = new Date(+p[0], +p[1] - 1, +p[2]);
+      var bugun = new Date(); bugun.setHours(0, 0, 0, 0);
+      var gun = Math.round((son - bugun) / 864e5);
+      if (!isNaN(gun) && gun >= 0) {
+        kalan.textContent = gun === 0 ? 'Bugün son gün' : gun + ' gün kaldı';
+        kalan.hidden = false;
+      }
+    }
+
+    var tumu = side.querySelector('[data-sem-side-tumu]');
+    if (tumu) {
+      var hedef = document.querySelector(tumu.getAttribute('href'));
+      var n = hedef ? hedef.querySelectorAll('.sem-takvim-grup').length : 0;
+      if (n < 2) tumu.hidden = true;
+      else tumu.querySelector('span').textContent = 'Tüm tarihleri gör (' + n + ' grup)';
+    }
+
+    var kopyala = side.querySelector('[data-sem-kopyala]');
+    if (kopyala) {
+      kopyala.addEventListener('click', function () {
+        var ok = function () {
+          var ikon = kopyala.querySelector('i');
+          kopyala.classList.add('is-kopyalandi'); ikon.className = 'feather-check';
+          kopyala.title = 'Kopyalandı';
+          setTimeout(function () {
+            kopyala.classList.remove('is-kopyalandi'); ikon.className = 'feather-link';
+            kopyala.title = 'Bağlantıyı kopyala';
+          }, 1800);
+        };
+        if (navigator.clipboard) navigator.clipboard.writeText(location.href).then(ok, function () {});
+      });
+    }
   }
 
 document.addEventListener('DOMContentLoaded', function () {
   initSka();
+  initYanMenu();
     var searchInput = document.getElementById('sem-search-input');
     if (searchInput) searchInput.addEventListener('input', filterCards);
 

@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="./assets/css/plugins/jodit.min.css">
 
     <link rel="stylesheet" href="./assets/css/styles.css">
-    <link rel="stylesheet" href="./assets/css/sem-custom.css?v=202611096">
+    <link rel="stylesheet" href="./assets/css/sem-custom.css?v=202611122">
     <link rel="stylesheet" href="./assets/css/sem-kurumsal.css">
     <!-- Google Analytics (GA4) — GERÇEK ÖLÇÜM KİMLİĞİ BEKLENİYOR (placeholder: G-XXXXXXXXXX), bkz. README.md -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -970,6 +970,45 @@
                         </div>
                         <!-- End Eğitim Takvimi -->
 
+                        <!-- Start Sürdürülebilir Kalkınma Amaçları (SKA / SDG)
+                             Backend: eğitime atanmış amaç sayısı kadar <li class="sem-ska-item"> basar (1–17).
+                             İkonlar: assets/images/sdg/SDG-{no}.svg, link: surdurulebilir-kalkinma-amaclari.html#amac-{no}
+                             Hiç amaç yoksa bloğun tamamı basılmaz (basılsa da boş liste JS ile gizlenir). -->
+                        <div class="rbt-course-feature-box rbt-shadow-box mt--30 sem-ska" id="sem-ska">
+                            <div class="sem-ska-head">
+                                <h4 class="rbt-title-style-3">Sürdürülebilir Kalkınma Amaçları</h4>
+                                <a class="sem-ska-info" href="surdurulebilir-kalkinma-amaclari.html">SKA nedir? <i class="feather-arrow-up-right"></i></a>
+                            </div>
+                            <p class="sem-ska-desc">Bu eğitim, Birleşmiş Milletler'in aşağıdaki amaçlarına katkı sağlar.</p>
+                            <ul class="sem-ska-list">
+                                <li class="sem-ska-item">
+                                    <a href="surdurulebilir-kalkinma-amaclari.html#amac-4">
+                                        <img src="./assets/images/sdg/SDG-4.svg" alt="" loading="lazy">
+                                        <span class="sem-ska-text"><small>Amaç 4</small><strong>Nitelikli Eğitim</strong></span>
+                                    </a>
+                                </li>
+                                <li class="sem-ska-item">
+                                    <a href="surdurulebilir-kalkinma-amaclari.html#amac-8">
+                                        <img src="./assets/images/sdg/SDG-8.svg" alt="" loading="lazy">
+                                        <span class="sem-ska-text"><small>Amaç 8</small><strong>İnsana Yakışır İş ve Ekonomik Büyüme</strong></span>
+                                    </a>
+                                </li>
+                                <li class="sem-ska-item">
+                                    <a href="surdurulebilir-kalkinma-amaclari.html#amac-9">
+                                        <img src="./assets/images/sdg/SDG-9.svg" alt="" loading="lazy">
+                                        <span class="sem-ska-text"><small>Amaç 9</small><strong>Sanayi, Yenilikçilik ve Altyapı</strong></span>
+                                    </a>
+                                </li>
+                                <li class="sem-ska-item">
+                                    <a href="surdurulebilir-kalkinma-amaclari.html#amac-13">
+                                        <img src="./assets/images/sdg/SDG-13.svg" alt="" loading="lazy">
+                                        <span class="sem-ska-text"><small>Amaç 13</small><strong>İklim Eylemi</strong></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- End Sürdürülebilir Kalkınma Amaçları -->
+
                         <!-- Start Intructor Area  -->
                         <div class="rbt-instructor rbt-shadow-box intructor-wrapper mt--30" id="intructor">
                             <div class="about-author border-0 pb--0 pt--0">
@@ -1022,115 +1061,75 @@
                 </div>
 
                 <div class="col-lg-4">
-                    <div class="course-sidebar sticky-top rbt-shadow-box course-sidebar-top rbt-gradient-border">
-                        <div class="inner">
+                    <!-- Start Başvuru Yan Menüsü (sabit/kayan)
+                         Backend: içerik eğitimin en yakın (kayıtları açık) grubundan basılır.
+                         - Durum rozeti: sem-status-badge--acik | --son | --yakinda | --kapandi
+                         - .sem-side-tarih: grup aralığı + ders saati
+                         - Son kayıt satırındaki <em data-son-kayit="YYYY-MM-DD"> içine JS kalan günü yazar ("21 gün kaldı"); tarih geçmişse gizler.
+                         - "Tüm tarihleri gör" bağlantısı takvimdeki grup sayısını JS ile yazar; tek grup varsa gizlenir. -->
+                    <aside class="sem-side course-sidebar-top" aria-label="Başvuru bilgileri">
+                        <div class="sem-side-card">
+                            <div class="sem-side-head">
+                                <span class="sem-side-eyebrow">Sıradaki grup</span>
+                                <span class="sem-status-badge sem-status-badge--acik">Kayıtlar Açık</span>
+                            </div>
 
-                            <div class="content-item-content">
-                                <div class="mb--15">
-                                    <span class="sem-status-badge sem-status-badge--acik">Kayıtlar Açık</span>
-                                </div>
+                            <div class="sem-side-tarih">
+                                <strong>7 – 18 Aralık 2026</strong>
+                                <span><i class="feather-clock"></i>09:30 – 16:30</span>
+                            </div>
 
-                                <div class="add-to-card-button mt--15">
-                                    <button class="sem-apply-btn w-100 justify-content-center"
-                                            onclick="openApplyModal('basvuru','meteoroloji','Meteoroloji Temel Eğitimi')">
-                                        Hemen Başvur <i class="feather-arrow-right"></i>
-                                    </button>
-                                </div>
+                            <ul class="sem-side-bilgi">
+                                <li>
+                                    <i class="feather-edit-3"></i><span>Son kayıt</span>
+                                    <strong><time datetime="2026-12-03">3 Aralık 2026</time><em class="sem-side-kalan" data-son-kayit="2026-12-03" hidden></em></strong>
+                                </li>
+                                <li>
+                                    <i class="feather-x-circle"></i><span>Son iptal</span>
+                                    <strong><time datetime="2026-12-04">4 Aralık 2026</time></strong>
+                                </li>
+                                <li>
+                                    <i class="feather-users"></i><span>Kontenjan</span>
+                                    <strong>30 kişi</strong>
+                                </li>
+                            </ul>
 
-                                <div class="buy-now-btn mt--15">
-                                    <button class="rbt-btn btn-border icon-hover w-100 d-block text-center"
-                                            onclick="openApplyModal('talep','meteoroloji','Meteoroloji Temel Eğitimi')"
-                                            style="border: 2px solid var(--sem-primary); cursor: pointer; background: transparent; color: var(--sem-primary); padding: 0.75rem; border-radius: 6px; font-weight: 600;">
-                                        <span class="btn-text">Talep Bırak</span>
-                                        <span class="btn-icon"><i class="feather-arrow-right"></i></span>
-                                    </button>
-                                </div>
+                            <button type="button" class="sem-side-basvur"
+                                    onclick="openApplyModal('basvuru','meteoroloji','Meteoroloji Temel Eğitimi')">
+                                Hemen Başvur <i class="feather-arrow-right"></i>
+                            </button>
 
-                                <span class="subtitle"><i class="feather-phone"></i>
-                                    Bilgi: <a href="tel:+903843535009"><strong>+90 384 353 50 09</strong></a>
+                            <a class="sem-side-tumu" href="#details" data-sem-side-tumu>
+                                <i class="feather-calendar"></i><span>Tüm tarihleri gör</span><i class="feather-chevron-down"></i>
+                            </a>
+
+                            <button type="button" class="sem-side-talep"
+                                    onclick="openApplyModal('talep','meteoroloji','Meteoroloji Temel Eğitimi')">
+                                Tarihler uymuyor mu? <strong>Talep bırakın</strong>
+                            </button>
+                        </div>
+
+                        <div class="sem-side-alt">
+                            <div class="sem-side-tel">
+                                <span class="sem-side-tel-ikon"><i class="feather-phone"></i></span>
+                                <span>
+                                    <small>Kayıt ve bilgi için</small>
+                                    <a href="tel:+905307214466">0530 721 44 66</a>
+                                    <a href="tel:+905375986671">0537 598 66 71</a>
                                 </span>
-
-
-                                <!-- Backend: tarihler eğitimin en yakın (kayıtları açık) grubundan basılır; Kontenjan = grup kontenjanı -->
-                                <div class="rbt-widget-details">
-                                    <ul class="rbt-course-details-list-wrapper">
-                                        <li><span>Eğitim Başlangıç Tarihi</span><span class="rbt-feature-value rbt-badge-5">7 Aralık 2026</span></li>
-                                        <li><span>Eğitim Bitiş Tarihi</span><span class="rbt-feature-value rbt-badge-5">18 Aralık 2026</span></li>
-                                        <li><span>Son Kayıt Tarihi</span><span class="rbt-feature-value rbt-badge-5">3 Aralık 2026</span></li>
-                                        <li><span>Son İptal Tarihi</span><span class="rbt-feature-value rbt-badge-5">4 Aralık 2026</span></li>
-                                        <li><span>Kontenjan</span><span class="rbt-feature-value rbt-badge-5">30 Kişi</span></li>
-                                    </ul>
-                                </div>
-
-                                <!-- Start Sürdürülebilir Kalkınma Amaçları (SKA / SDG)
-                                     Backend: eğitime atanmış amaç sayısı kadar <li> basar (1–17).
-                                     data-count'u JS otomatik ayarlar: 1–3 → liste (ikon + ad), 4+ → ikon ızgarası.
-                                     İkonlar: assets/images/sdg/SDG-{no}.svg, link: surdurulebilir-kalkinma-amaclari.html#amac-{no} — hiç amaç yoksa bloğun tamamı basılmaz. -->
-                                <div class="sem-ska" id="sem-ska">
-                                    <div class="sem-ska-head">
-                                        <h6 class="sem-ska-title">Sürdürülebilir Kalkınma Amaçları</h6>
-                                        <a class="sem-ska-info" href="surdurulebilir-kalkinma-amaclari.html" aria-label="Sürdürülebilir Kalkınma Amaçları nedir?" title="SKA nedir?"><i class="feather-info"></i></a>
-                                    </div>
-                                    <p class="sem-ska-desc">Bu eğitim, Birleşmiş Milletler'in aşağıdaki amaçlarına katkı sağlar.</p>
-                                    <ul class="sem-ska-list">
-                                        <li class="sem-ska-item">
-                                            <a href="surdurulebilir-kalkinma-amaclari.html#amac-4">
-                                                <img src="./assets/images/sdg/SDG-4.svg" alt="Amaç 4: Nitelikli Eğitim" loading="lazy">
-                                                <span class="sem-ska-text"><small>Amaç 4</small><strong>Nitelikli Eğitim</strong></span>
-                                            </a>
-                                        </li>
-                                        <li class="sem-ska-item">
-                                            <a href="surdurulebilir-kalkinma-amaclari.html#amac-8">
-                                                <img src="./assets/images/sdg/SDG-8.svg" alt="Amaç 8: İnsana Yakışır İş ve Ekonomik Büyüme" loading="lazy">
-                                                <span class="sem-ska-text"><small>Amaç 8</small><strong>İnsana Yakışır İş ve Ekonomik Büyüme</strong></span>
-                                            </a>
-                                        </li>
-                                        <li class="sem-ska-item">
-                                            <a href="surdurulebilir-kalkinma-amaclari.html#amac-9">
-                                                <img src="./assets/images/sdg/SDG-9.svg" alt="Amaç 9: Sanayi, Yenilikçilik ve Altyapı" loading="lazy">
-                                                <span class="sem-ska-text"><small>Amaç 9</small><strong>Sanayi, Yenilikçilik ve Altyapı</strong></span>
-                                            </a>
-                                        </li>
-                                        <li class="sem-ska-item">
-                                            <a href="surdurulebilir-kalkinma-amaclari.html#amac-13">
-                                                <img src="./assets/images/sdg/SDG-13.svg" alt="Amaç 13: İklim Eylemi" loading="lazy">
-                                                <span class="sem-ska-text"><small>Amaç 13</small><strong>İklim Eylemi</strong></span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- End Sürdürülebilir Kalkınma Amaçları -->
-
-                                <div class="social-share-wrapper mt--30 text-center">
-                                    <div class="rbt-post-share d-flex align-items-center justify-content-center">
-                                        <ul class="social-icon social-default transparent-with-border justify-content-center">
-                                            <li><a href="https://www.facebook.com/">
-                                                    <i class="feather-facebook"></i>
-                                                </a>
-                                            </li>
-                                            <li><a href="https://www.twitter.com">
-                                                    <i class="feather-twitter"></i>
-                                                </a>
-                                            </li>
-                                            <li><a href="https://www.instagram.com/">
-                                                    <i class="feather-instagram"></i>
-                                                </a>
-                                            </li>
-                                            <li><a href="https://www.linkdin.com/">
-                                                    <i class="feather-linkedin"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <hr class="mt--20">
-                                    <div class="contact-with-us text-center">
-                                        <p> Kayıt ve bilgi için </p>
-                                        <p class="rbt-badge-2 mt--10 justify-content-center w-100"><i class="feather-phone mr--5"></i> Bizi Arayın: <a href="tel:+903843535009"><strong>+90 384 353 50 09</strong></a></p>
-                                    </div>
-                                </div>
+                            </div>
+                            <div class="sem-side-paylas">
+                                <span>Paylaş</span>
+                                <ul>
+                                    <li><a href="https://www.facebook.com/" aria-label="Facebook'ta paylaş"><i class="feather-facebook"></i></a></li>
+                                    <li><a href="https://www.twitter.com" aria-label="X'te paylaş"><i class="feather-twitter"></i></a></li>
+                                    <li><a href="https://www.linkdin.com/" aria-label="LinkedIn'de paylaş"><i class="feather-linkedin"></i></a></li>
+                                    <li><button type="button" data-sem-kopyala aria-label="Bağlantıyı kopyala" title="Bağlantıyı kopyala"><i class="feather-link"></i></button></li>
+                                </ul>
                             </div>
                         </div>
-                    </div>
+                    </aside>
+                    <!-- End Başvuru Yan Menüsü -->
                 </div>
             </div>
         </div>
@@ -1459,5 +1458,5 @@
     </div>
         <!-- ── /semApplyModal ── -->
 
-    <script src="./assets/js/sem-custom.js?v=202611096"></script>
+    <script src="./assets/js/sem-custom.js?v=202611121"></script>
 </body><div></div></html>

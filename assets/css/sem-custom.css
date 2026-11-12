@@ -1893,94 +1893,47 @@ html.side-nav-opened, html.side-nav-opened body { overflow: hidden; }
   .sem-search-glass .sem-sg-pill { display: none; }
 }
 
-/* ══ Sürdürülebilir Kalkınma Amaçları (SKA) — eğitim detay sağ bar ═════
-   1–3 amaç → liste (ikon + "Amaç N" + ad); 4+ → ikon ızgarası, ad balonda.
-   Sütun sayısı JS'ten (--ska-cols): 4→4, 5→5, 6→3, 7–8→4, 9–17→5.
+/* ══ Sürdürülebilir Kalkınma Amaçları (SKA) — eğitim detay, takvimin altında ══
+   Sunucu sadece <li class="sem-ska-item"> basar (1–17). Her amaç: ikon + "Amaç N" + ad;
+   kartlar sütun genişliğine göre otomatik dizilir. Liste boşsa JS bloğu gizler.
    İkonlar BM'nin resmi Türkçe SKA ikonları (assets/images/sdg/SDG-N.svg). */
-.sem-ska {
-  margin-top: 24px; padding-top: 20px;
-  border-top: 1px solid rgba(0, 40, 85, .08);
+.sem-ska-head {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+  margin-bottom: 18px; padding-bottom: 20px; border-bottom: 2px solid var(--color-border-2);
 }
-.sem-ska-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
-.sem-ska-title {
-  margin: 0 !important; font-size: 16px !important; font-weight: 700 !important;
-  color: var(--sem-primary, #002855);
-}
+.sem-ska-head .rbt-title-style-3 { margin-bottom: 0; padding-bottom: 0; border: 0; }
 .sem-ska-info {
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 26px; height: 26px; border-radius: 50%;
-  color: rgba(0, 40, 85, .5); font-size: 15px; transition: color .2s, background .2s;
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 14px; font-weight: 500; color: #64748b; transition: color .2s;
 }
-.sem-ska-info:hover { color: var(--kun-turkuaz, #00A1AA); background: rgba(0, 161, 170, .08); }
-.sem-ska-desc { margin: 4px 0 14px !important; font-size: 13px !important; line-height: 1.5 !important; color: #6b7280; }
-.sem-ska-list { list-style: none; margin: 0; padding: 0; }
-.sem-ska-item { margin: 0; padding: 0; }
-.sem-ska-item a { display: block; position: relative; color: inherit; }
+.sem-ska-info:hover { color: var(--kun-turkuaz, #00A1AA); }
+.sem-ska-desc { margin: 0 0 18px !important; font-size: 15px !important; line-height: 1.5 !important; color: #6b7280; }
+.sem-ska-list {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px;
+}
+.sem-ska-item { margin: 0 !important; padding: 0; }
+.sem-ska-item a {
+  display: flex; align-items: center; gap: 14px; height: 100%;
+  padding: 8px; color: inherit;
+  border: 1px solid rgba(0, 40, 85, .08); border-radius: 10px; background: #fff;
+  transition: border-color .2s, box-shadow .2s, transform .2s;
+}
+.sem-ska-item a:hover, .sem-ska-item a:focus-visible {
+  border-color: rgba(0, 40, 85, .2); box-shadow: 0 6px 18px rgba(0, 40, 85, .08); transform: translateY(-2px);
+}
 .sem-ska-item img {
-  display: block; width: 100%; aspect-ratio: 1 / 1; height: auto;
-  border-radius: var(--sem-radius, 2px);
+  display: block; width: 64px; flex: 0 0 64px; aspect-ratio: 1 / 1; height: auto; border-radius: 6px;
 }
-
-/* — Liste düzeni (1–3 amaç): ikon solda, adı sağda — */
-.sem-ska[data-layout="list"] .sem-ska-list { display: flex; flex-direction: column; gap: 8px; }
-.sem-ska[data-layout="list"] .sem-ska-item a {
-  display: flex; align-items: center; gap: 14px;
-  padding: 8px; border: 1px solid rgba(0, 40, 85, .08); border-radius: var(--sem-radius, 2px);
-  background: #fff; transition: border-color .2s, box-shadow .2s, transform .2s;
-}
-.sem-ska[data-layout="list"] .sem-ska-item a:hover {
-  border-color: rgba(0, 40, 85, .2); box-shadow: 0 4px 14px rgba(0, 40, 85, .08); transform: translateX(2px);
-}
-.sem-ska[data-layout="list"] .sem-ska-item img { width: 64px; flex: 0 0 64px; }
-.sem-ska[data-layout="list"] .sem-ska-text { display: flex; flex-direction: column; min-width: 0; }
-.sem-ska[data-layout="list"] .sem-ska-text small {
+.sem-ska-text { display: flex; flex-direction: column; min-width: 0; }
+.sem-ska-text small {
   font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #8a94a3;
 }
-.sem-ska[data-layout="list"] .sem-ska-text strong {
-  font-size: 15px; font-weight: 600; line-height: 1.35; color: var(--sem-primary, #002855);
+.sem-ska-text strong { font-size: 15px; font-weight: 600; line-height: 1.35; color: var(--sem-primary, #002855); }
+@media (max-width: 575.98px) {
+  .sem-ska-list { grid-template-columns: 1fr; }
+  .sem-ska-item img { width: 56px; flex-basis: 56px; }
 }
-/* tek amaç: biraz daha büyük vitrin */
-.sem-ska[data-layout="list"] .sem-ska-list[data-count="1"] .sem-ska-item img { width: 84px; flex-basis: 84px; }
-.sem-ska[data-layout="list"] .sem-ska-list[data-count="1"] .sem-ska-text strong { font-size: 17px; }
-
-/* — Izgara düzeni (4+ amaç) — */
-.sem-ska[data-layout="grid"] .sem-ska-list {
-  display: grid; grid-template-columns: repeat(var(--ska-cols, 4), minmax(0, 1fr)); gap: 6px;
-}
-.sem-ska[data-layout="grid"] .sem-ska-item img { transition: transform .2s ease, box-shadow .2s ease; }
-.sem-ska[data-layout="grid"] .sem-ska-item a:hover img,
-.sem-ska[data-layout="grid"] .sem-ska-item a:focus-visible img {
-  transform: translateY(-2px) scale(1.04); box-shadow: 0 6px 16px rgba(0, 0, 0, .18);
-}
-/* ad balonu */
-.sem-ska[data-layout="grid"] .sem-ska-text {
-  position: absolute; left: 50%; bottom: calc(100% + 8px); z-index: 5;
-  width: max-content; max-width: 180px; padding: 7px 10px;
-  background: var(--sem-primary, #002855); color: #fff; border-radius: 6px;
-  font-size: 12px; line-height: 1.35; text-align: center;
-  box-shadow: 0 6px 18px rgba(0, 20, 50, .25);
-  opacity: 0; visibility: hidden; transform: translate(-50%, 4px);
-  transition: opacity .15s, transform .15s, visibility 0s linear .15s;
-  pointer-events: none;
-}
-.sem-ska[data-layout="grid"] .sem-ska-text::after {
-  content: ""; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
-  border: 5px solid transparent; border-top-color: var(--sem-primary, #002855);
-}
-.sem-ska[data-layout="grid"] .sem-ska-text small { display: block; font-size: 10px; opacity: .7; letter-spacing: .05em; text-transform: uppercase; }
-.sem-ska[data-layout="grid"] .sem-ska-text strong { font-weight: 600; }
-.sem-ska[data-layout="grid"] .sem-ska-item a:hover .sem-ska-text,
-.sem-ska[data-layout="grid"] .sem-ska-item a:focus-visible .sem-ska-text {
-  opacity: 1; visibility: visible; transform: translate(-50%, 0);
-  transition: opacity .15s, transform .15s;
-}
-/* kenardaki ikonlarda balon taşmasın (sınıfları JS ekler) */
-.sem-ska[data-layout="grid"] .is-col-first .sem-ska-text { left: 0; transform: translate(0, 4px); }
-.sem-ska[data-layout="grid"] .is-col-last .sem-ska-text { left: auto; right: 0; transform: translate(0, 4px); }
-.sem-ska[data-layout="grid"] .is-col-first a:hover .sem-ska-text,
-.sem-ska[data-layout="grid"] .is-col-last a:hover .sem-ska-text { transform: none; }
-.sem-ska[data-layout="grid"] .is-col-first .sem-ska-text::after { left: 22px; }
-.sem-ska[data-layout="grid"] .is-col-last .sem-ska-text::after { left: auto; right: 12px; transform: none; }
 
 /* ══ SKA sayfası (surdurulebilir-kalkinma-amaclari.html) ═══════════════
    sozlesmeler.html düzeni: gri Page Head + col-lg-8 içerik + çizgili satırlar. */
@@ -2378,3 +2331,128 @@ body.sem-personel-kilit .modal-backdrop { background: var(--sem-footer-bg); back
   transition: border-color .2s ease, background-color .2s ease;
 }
 .sem-personel-geri:hover { border-color: var(--sem-primary); background: rgba(0, 40, 85, .04); }
+
+/* ══ Eğitim detay — Başvuru yan menüsü (kayan) ════════════════════════
+   Amaç: en yakın grubun tarihini göstermek ve başvuruya yönlendirmek.
+   Sıra: durum + tarih → kritik tarihler → Başvur → diğer tarihler / talep → iletişim + paylaş. */
+.sem-side {
+  position: sticky; top: 100px; z-index: 10;
+  background: #fff;
+  border: 1px solid rgba(0, 40, 85, .10);
+  border-radius: 14px;
+  box-shadow: 0 18px 48px rgba(0, 26, 58, .14);
+  overflow: hidden;
+}
+.sem-side-card { padding: 24px 24px 18px; }
+
+.sem-side-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.sem-side-eyebrow {
+  font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: #8a94a3;
+}
+.sem-side-head .sem-status-badge { border-radius: 20px; padding: 4px 10px; font-size: 12px; }
+
+.sem-side-tarih { margin: 10px 0 18px; }
+.sem-side-tarih strong {
+  display: block; font-size: 24px; font-weight: 700; line-height: 1.25; color: var(--sem-primary);
+  letter-spacing: -.01em;
+}
+.sem-side-tarih span {
+  display: inline-flex; align-items: center; gap: 6px; margin-top: 6px;
+  font-size: 14px; font-weight: 500; color: #475569;
+}
+.sem-side-tarih span i { font-size: 14px; color: #94a3b8; }
+
+.sem-side-bilgi {
+  list-style: none; margin: 0 0 20px; padding: 4px 14px;
+  background: var(--sem-bg-2); border-radius: 10px;
+}
+.sem-side-bilgi li {
+  display: flex; align-items: center; gap: 10px;
+  margin: 0; padding: 10px 0; font-size: 14px; color: #64748b;
+}
+.sem-side-bilgi li + li { border-top: 1px solid rgba(0, 40, 85, .07); }
+.sem-side-bilgi li > i { font-size: 15px; color: #94a3b8; flex: 0 0 auto; }
+.sem-side-bilgi li > span { flex: 1 1 auto; }
+.sem-side-bilgi strong {
+  display: flex; flex-direction: column; align-items: flex-end;
+  font-size: 14px; font-weight: 600; color: var(--sem-text); text-align: right;
+}
+.sem-side-kalan {
+  font-style: normal; font-size: 12px; font-weight: 600; color: var(--sem-accent); margin-top: 1px;
+}
+
+.sem-side-basvur {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  width: 100%; height: 52px; padding: 0 20px;
+  border: 0; border-radius: 10px;
+  background: var(--sem-primary); color: #fff;
+  font-size: 16px; font-weight: 600;
+  box-shadow: 0 8px 20px rgba(0, 40, 85, .22);
+  transition: background-color .2s, transform .2s, box-shadow .2s;
+}
+.sem-side-basvur i { transition: transform .2s; }
+.sem-side-basvur:hover { background: var(--sem-navy-light); box-shadow: 0 10px 24px rgba(0, 40, 85, .28); }
+.sem-side-basvur:hover i { transform: translateX(3px); }
+.sem-side-basvur:focus-visible,
+.sem-side-tumu:focus-visible,
+.sem-side-talep:focus-visible { outline: 2px solid var(--kun-turkuaz, #00A1AA); outline-offset: 2px; }
+
+.sem-side-tumu {
+  display: flex; align-items: center; gap: 8px;
+  margin-top: 10px; padding: 11px 14px;
+  border: 1px solid rgba(0, 40, 85, .12); border-radius: 10px;
+  font-size: 14px; font-weight: 600; color: var(--sem-primary);
+  transition: border-color .2s, background-color .2s;
+}
+.sem-side-tumu span { flex: 1 1 auto; }
+.sem-side-tumu i { font-size: 15px; color: #94a3b8; }
+.sem-side-tumu:hover { border-color: var(--sem-primary); background: rgba(0, 40, 85, .03); color: var(--sem-primary); }
+
+.sem-side-talep {
+  display: block; width: 100%; margin-top: 12px; padding: 4px;
+  border: 0; background: none;
+  font-size: 14px; color: #64748b; text-align: center;
+}
+.sem-side-talep strong { color: var(--sem-primary); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(0, 40, 85, .3); }
+.sem-side-talep:hover strong { text-decoration-color: currentColor; }
+
+.sem-side-alt {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+  padding: 16px 24px; background: var(--sem-bg-2); border-top: 1px solid rgba(0, 40, 85, .07);
+}
+.sem-side-tel { display: flex; align-items: center; gap: 10px; color: var(--sem-text); }
+.sem-side-tel-ikon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border-radius: 50%;
+  background: #fff; border: 1px solid rgba(0, 40, 85, .1); color: var(--sem-primary); font-size: 15px;
+}
+.sem-side-tel small { display: block; font-size: 12px; color: #8a94a3; line-height: 1.2; }
+.sem-side-tel a { display: block; font-size: 15px; font-weight: 600; color: var(--sem-primary); line-height: 1.4; white-space: nowrap; }
+.sem-side-tel a:hover { color: var(--sem-accent); }
+
+.sem-side-paylas { display: flex; align-items: center; gap: 8px; }
+.sem-side-paylas > span { font-size: 12px; color: #8a94a3; }
+.sem-side-paylas ul { display: flex; gap: 4px; list-style: none; margin: 0; padding: 0; }
+.sem-side-paylas li { margin: 0; }
+.sem-side-paylas a,
+.sem-side-paylas button {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 30px; height: 30px; padding: 0; border: 0; border-radius: 50%;
+  background: transparent; color: #64748b; font-size: 14px;
+  transition: background-color .2s, color .2s;
+}
+.sem-side-paylas a:hover,
+.sem-side-paylas button:hover { background: #fff; color: var(--sem-primary); }
+.sem-side-paylas button.is-kopyalandi { color: var(--sem-success); }
+
+@media (min-width: 992px) {
+  .sem-side.course-sidebar-top { margin-top: -470px; }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .sem-side-card { padding: 20px 18px 16px; }
+  .sem-side-alt { padding: 14px 18px; }
+  .sem-side-tarih strong { font-size: 21px; }
+}
+@media (max-width: 991.98px) {
+  .sem-side { position: static; box-shadow: 0 6px 24px rgba(0, 26, 58, .08); }
+}

@@ -2351,16 +2351,12 @@ body.sem-personel-kilit .modal-backdrop { background: var(--sem-footer-bg); back
 }
 .sem-side-head .sem-status-badge { border-radius: 20px; padding: 4px 10px; font-size: 12px; }
 
-.sem-side-tarih { margin: 10px 0 18px; }
-.sem-side-tarih strong {
-  display: block; font-size: 24px; font-weight: 700; line-height: 1.25; color: var(--sem-primary);
-  letter-spacing: -.01em;
+.sem-side-saat {
+  display: flex; align-items: center; gap: 6px; margin: 12px 0 14px !important;
+  font-size: 14px !important; color: #475569;
 }
-.sem-side-tarih span {
-  display: inline-flex; align-items: center; gap: 6px; margin-top: 6px;
-  font-size: 14px; font-weight: 500; color: #475569;
-}
-.sem-side-tarih span i { font-size: 14px; color: #94a3b8; }
+.sem-side-saat i { font-size: 14px; color: #94a3b8; }
+.sem-side-saat strong { color: var(--sem-primary); font-weight: 600; }
 
 .sem-side-bilgi {
   list-style: none; margin: 0 0 20px; padding: 4px 14px;
@@ -2394,8 +2390,7 @@ body.sem-personel-kilit .modal-backdrop { background: var(--sem-footer-bg); back
 .sem-side-basvur:hover { background: var(--sem-navy-light); box-shadow: 0 10px 24px rgba(0, 40, 85, .28); }
 .sem-side-basvur:hover i { transform: translateX(3px); }
 .sem-side-basvur:focus-visible,
-.sem-side-tumu:focus-visible,
-.sem-side-talep:focus-visible { outline: 2px solid var(--kun-turkuaz, #00A1AA); outline-offset: 2px; }
+.sem-side-tumu:focus-visible { outline: 2px solid var(--kun-turkuaz, #00A1AA); outline-offset: 2px; }
 
 .sem-side-tumu {
   display: flex; align-items: center; gap: 8px;
@@ -2407,14 +2402,6 @@ body.sem-personel-kilit .modal-backdrop { background: var(--sem-footer-bg); back
 .sem-side-tumu span { flex: 1 1 auto; }
 .sem-side-tumu i { font-size: 15px; color: #94a3b8; }
 .sem-side-tumu:hover { border-color: var(--sem-primary); background: rgba(0, 40, 85, .03); color: var(--sem-primary); }
-
-.sem-side-talep {
-  display: block; width: 100%; margin-top: 12px; padding: 4px;
-  border: 0; background: none;
-  font-size: 14px; color: #64748b; text-align: center;
-}
-.sem-side-talep strong { color: var(--sem-primary); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(0, 40, 85, .3); }
-.sem-side-talep:hover strong { text-decoration-color: currentColor; }
 
 .sem-side-alt {
   display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
@@ -2430,28 +2417,12 @@ body.sem-personel-kilit .modal-backdrop { background: var(--sem-footer-bg); back
 .sem-side-tel a { display: block; font-size: 15px; font-weight: 600; color: var(--sem-primary); line-height: 1.4; white-space: nowrap; }
 .sem-side-tel a:hover { color: var(--sem-accent); }
 
-.sem-side-paylas { display: flex; align-items: center; gap: 8px; }
-.sem-side-paylas > span { font-size: 12px; color: #8a94a3; }
-.sem-side-paylas ul { display: flex; gap: 4px; list-style: none; margin: 0; padding: 0; }
-.sem-side-paylas li { margin: 0; }
-.sem-side-paylas a,
-.sem-side-paylas button {
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 30px; height: 30px; padding: 0; border: 0; border-radius: 50%;
-  background: transparent; color: #64748b; font-size: 14px;
-  transition: background-color .2s, color .2s;
-}
-.sem-side-paylas a:hover,
-.sem-side-paylas button:hover { background: #fff; color: var(--sem-primary); }
-.sem-side-paylas button.is-kopyalandi { color: var(--sem-success); }
-
 @media (min-width: 992px) {
   .sem-side.course-sidebar-top { margin-top: -470px; }
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .sem-side-card { padding: 20px 18px 16px; }
   .sem-side-alt { padding: 14px 18px; }
-  .sem-side-tarih strong { font-size: 21px; }
 }
 @media (max-width: 991.98px) {
   .sem-side { position: static; box-shadow: 0 6px 24px rgba(0, 26, 58, .08); }

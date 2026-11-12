@@ -296,7 +296,7 @@
     if (!box.querySelector('.sem-ska-item')) box.hidden = true;
   }
 
-  /* ── Eğitim detay yan menüsü: son kayda kalan gün, diğer tarihler sayısı, bağlantı kopyalama ── */
+  /* ── Eğitim detay yan menüsü: son kayda kalan gün, diğer tarihler sayısı ── */
   function initYanMenu() {
     var side = document.querySelector('.sem-side');
     if (!side) return;
@@ -319,22 +319,6 @@
       var n = hedef ? hedef.querySelectorAll('.sem-takvim-grup').length : 0;
       if (n < 2) tumu.hidden = true;
       else tumu.querySelector('span').textContent = 'Tüm tarihleri gör (' + n + ' grup)';
-    }
-
-    var kopyala = side.querySelector('[data-sem-kopyala]');
-    if (kopyala) {
-      kopyala.addEventListener('click', function () {
-        var ok = function () {
-          var ikon = kopyala.querySelector('i');
-          kopyala.classList.add('is-kopyalandi'); ikon.className = 'feather-check';
-          kopyala.title = 'Kopyalandı';
-          setTimeout(function () {
-            kopyala.classList.remove('is-kopyalandi'); ikon.className = 'feather-link';
-            kopyala.title = 'Bağlantıyı kopyala';
-          }, 1800);
-        };
-        if (navigator.clipboard) navigator.clipboard.writeText(location.href).then(ok, function () {});
-      });
     }
   }
 

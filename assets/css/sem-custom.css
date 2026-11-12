@@ -2417,3 +2417,7 @@ body.sem-personel-kilit .modal-backdrop { background: var(--sem-footer-bg); back
 @media (max-width: 991.98px) {
   .sem-side { position: static; box-shadow: 0 6px 24px rgba(0, 26, 58, .08); }
 }
+
+/* ══ Eğitim detay — alttaki sabit "Sepete Ekle / Başvur" çubuğu kullanılmıyor ══
+   Şablon bu bloğu basmaya devam etse bile görünmez (backend şablondan da kaldırmalı). */
+.rbt-course-action-bottom { display: none !important; }

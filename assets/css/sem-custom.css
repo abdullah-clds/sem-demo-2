@@ -1695,14 +1695,8 @@ body.sem-detay { background: #fff !important; }
 #sem-populer-egitimler .sem-course-card .card-footer .fw-bold { font-size: 17px; }
 #sem-populer-egitimler .sem-course-card .rbt-card-img img { transition: transform .5s ease; }
 #sem-populer-egitimler .sem-course-card:hover .rbt-card-img img { transform: scale(1.04); }
-/* durum rozeti görselin sol üst köşesinde (Domestika / Udemy vitrin deseni) */
+/* durum + tarih rozetleri, eğitimler listesindeki gibi başlığın üstünde (kart içeriği akışında) */
 #sem-populer-egitimler .sem-course-card { position: relative; }
-#sem-populer-egitimler .sem-course-card .sem-status-badge {
-  position: absolute !important; top: 14px; left: 14px; z-index: 2;
-  margin: 0 !important; padding: 5px 12px !important; font-size: 12px !important;
-  border-radius: var(--sem-radius) !important; box-shadow: 0 2px 6px rgba(0, 0, 0, .18);
-}
-#sem-populer-egitimler .sem-course-card .rbt-card-title.mt-2 { margin-top: 0 !important; }
 #sem-populer-egitimler .sem-course-card .card-footer .gap-3 { gap: 12px !important; }
 @media (max-width: 575px) {
   #sem-populer-egitimler .sem-featured-all { font-size: 14px; }
@@ -2039,12 +2033,6 @@ html.side-nav-opened, html.side-nav-opened body { overflow: hidden; }
 }
 .sem-date-badge i { font-size: 13px; line-height: 1; }
 
-/* Anasayfa vitrini: durum görselin sol üstünde, tarih sağ üstünde (simetrik) */
-#sem-populer-egitimler .sem-course-card .sem-card-badges { margin: 0; }
-#sem-populer-egitimler .sem-course-card .sem-date-badge {
-  position: absolute; top: 14px; right: 14px; z-index: 2;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, .18);
-}
 @media (max-width: 576px) {
   .sem-card-badges .sem-status-badge,
   .sem-date-badge { font-size: 13px !important; }

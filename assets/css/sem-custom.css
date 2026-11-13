@@ -2370,9 +2370,6 @@ body.sem-personel-kilit .modal-backdrop { background: var(--sem-footer-bg); back
 .sem-side-card { padding: 24px 24px 18px; }
 
 .sem-side-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
-.sem-side-eyebrow {
-  font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: #8a94a3;
-}
 .sem-side-head .sem-status-badge { border-radius: 20px; padding: 4px 10px; font-size: 12px; }
 
 .sem-side-saat {

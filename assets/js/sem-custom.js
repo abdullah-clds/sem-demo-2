@@ -602,6 +602,7 @@ document.addEventListener('DOMContentLoaded', function () {
       var bas = semTarih(secili.dataset.baslangic);
       var bit = semTarih(secili.dataset.bitis) || bas;
       var kayit = semTarih(secili.dataset.sonKayit);
+      var iptal = semTarih(secili.dataset.sonIptal);
       var bugun = new Date();
       var ilk = new Date(ay.getFullYear(), ay.getMonth(), 1);
       var bosluk = (ilk.getDay() + 6) % 7;            // Pazartesi ile başlayan hafta
@@ -619,21 +620,31 @@ document.addEventListener('DOMContentLoaded', function () {
       for (var d = 1; d <= gunSayisi; d++) {
         var t = new Date(ay.getFullYear(), ay.getMonth(), d);
         var c = ['sem-cal-gun'];
+        var ipucu = [];                                // fareyle üzerine gelince çıkan açıklama
+        var hg = (t.getDay() + 6) % 7;
         if (bas && t >= bas && t <= bit) {
           c.push('is-egitim');
-          if (ayniGun(t, bas)) c.push('is-bas');
-          if (ayniGun(t, bit)) c.push('is-bit');
-          var hg = (t.getDay() + 6) % 7;
+          if (ayniGun(t, bas)) { c.push('is-bas'); ipucu.push('Eğitim başlangıcı' + (secili.dataset.saat ? ' · ' + secili.dataset.saat : '')); }
+          if (ayniGun(t, bit)) { c.push('is-bit'); ipucu.push('Eğitim bitişi'); }
+          if (!ayniGun(t, bas) && !ayniGun(t, bit)) ipucu.push('Eğitim günü');
           if (hg === 0) c.push('is-hafta-bas');
           if (hg === 6) c.push('is-hafta-son');
         }
-        if (ayniGun(t, kayit)) c.push('is-kayit');
-        if (ayniGun(t, bugun)) c.push('is-bugun');
-        h += '<span class="' + c.join(' ') + '"><span>' + d + '</span></span>';
+        if (ayniGun(t, kayit)) { c.push('is-kayit'); ipucu.push('Son kayıt tarihi'); }
+        if (ayniGun(t, iptal)) { c.push('is-iptal'); ipucu.push('Son iptal tarihi'); }
+        if (ayniGun(t, bugun)) { c.push('is-bugun'); ipucu.push('Bugün'); }
+        if (ipucu.length) {
+          c.push('has-ipucu');
+          if (hg === 0) c.push('ipucu-sol');
+          if (hg === 6) c.push('ipucu-sag');
+        }
+        h += '<span class="' + c.join(' ') + '"><span>' + d + '</span>' +
+          (ipucu.length ? '<small class="sem-cal-ipucu" role="tooltip">' + ipucu.join('<br>') + '</small>' : '') + '</span>';
       }
       h += '</div><div class="sem-cal-lejant">' +
         '<span><i class="sem-lej-egitim"></i>Eğitim günleri</span>' +
         '<span><i class="sem-lej-kayit"></i>Son kayıt</span>' +
+        (iptal ? '<span><i class="sem-lej-iptal"></i>Son iptal</span>' : '') +
         (secili.dataset.saat ? '<span class="sem-cal-saat"><i class="feather-clock"></i>Başlangıç ' + secili.dataset.saat + '</span>' : '') +
         '</div>';
       cal.innerHTML = h;

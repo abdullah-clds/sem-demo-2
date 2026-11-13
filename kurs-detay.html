@@ -914,7 +914,7 @@
 
                         <!-- Start Eğitim Takvimi
                              BACKEND: Sadece <ol class="sem-takvim-gruplar"> içine her eğitim grubu için bir <li class="sem-takvim-grup"> basın.
-                             - data-baslangic / data-bitis / data-son-kayit → YYYY-MM-DD (takvim işaretlemesi bunlardan yapılır)
+                             - data-baslangic / data-bitis / data-son-kayit / data-son-iptal → YYYY-MM-DD (takvim işaretlemesi ve fareyle üzerine gelince çıkan açıklamalar bunlardan yapılır)
                              - data-saat → HH:MM başlangıç saati (takvim altında gösterilir). Aynı saat ayrıca: aralık satırındaki <span class="sem-takvim-saat"> + Başlangıç <time datetime="YYYY-MM-DDTHH:MM"> + "Saat" satırı (başlangıç – bitiş)
                              - Soldaki aylık takvim bu listeden sem-custom.js (initTakvim) ile OTOMATİK çizilir; takvim için ayrı veri/HTML gerekmez.
                              - İlk açılışta kayıtları açık ilk grup seçilir; grup yoksa bloğun tamamı basılmaz. -->
@@ -923,7 +923,7 @@
                             <div class="sem-takvim" data-sem-takvim>
                                 <div class="sem-takvim-cal" aria-hidden="true"></div>
                                 <ol class="sem-takvim-gruplar">
-                                    <li class="sem-takvim-grup" data-baslangic="2026-12-07" data-saat="09:30" data-bitis="2026-12-18" data-son-kayit="2026-12-03">
+                                    <li class="sem-takvim-grup" data-baslangic="2026-12-07" data-saat="09:30" data-bitis="2026-12-18" data-son-kayit="2026-12-03" data-son-iptal="2026-12-04">
                                         <button type="button" class="sem-takvim-grup-btn">
                                             <span class="sem-takvim-grup-aralik">7 – 18 Aralık 2026 <span class="sem-takvim-saat"><i class="feather-clock"></i>09:30</span></span>
                                             <span class="sem-status-badge sem-status-badge--acik">Kayıtlar Açık</span>
@@ -937,7 +937,7 @@
                                             <div><dt>Kontenjan</dt><dd>30 Kişi</dd></div>
                                         </dl>
                                     </li>
-                                    <li class="sem-takvim-grup" data-baslangic="2027-01-11" data-saat="09:30" data-bitis="2027-01-22" data-son-kayit="2027-01-07">
+                                    <li class="sem-takvim-grup" data-baslangic="2027-01-11" data-saat="09:30" data-bitis="2027-01-22" data-son-kayit="2027-01-07" data-son-iptal="2027-01-08">
                                         <button type="button" class="sem-takvim-grup-btn">
                                             <span class="sem-takvim-grup-aralik">11 – 22 Ocak 2027 <span class="sem-takvim-saat"><i class="feather-clock"></i>09:30</span></span>
                                             <span class="sem-status-badge sem-status-badge--acik">Kayıtlar Açık</span>
@@ -951,7 +951,7 @@
                                             <div><dt>Kontenjan</dt><dd>30 Kişi</dd></div>
                                         </dl>
                                     </li>
-                                    <li class="sem-takvim-grup" data-baslangic="2027-02-08" data-saat="13:30" data-bitis="2027-02-19" data-son-kayit="2027-02-04">
+                                    <li class="sem-takvim-grup" data-baslangic="2027-02-08" data-saat="13:30" data-bitis="2027-02-19" data-son-kayit="2027-02-04" data-son-iptal="2027-02-05">
                                         <button type="button" class="sem-takvim-grup-btn">
                                             <span class="sem-takvim-grup-aralik">8 – 19 Şubat 2027 <span class="sem-takvim-saat"><i class="feather-clock"></i>13:30</span></span>
                                             <span class="sem-status-badge sem-status-badge--yakinda">Yakında</span>

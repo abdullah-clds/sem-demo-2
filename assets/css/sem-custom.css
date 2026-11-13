@@ -2144,6 +2144,51 @@ html.side-nav-opened, html.side-nav-opened body { overflow: hidden; }
   background: var(--sem-accent);
 }
 .sem-cal-gun.is-bugun > span { text-decoration: underline; text-underline-offset: 3px; }
+/* son iptal günü: turuncu çerçeve + altında turuncu nokta */
+.sem-cal-gun.is-iptal > span { box-shadow: inset 0 0 0 1px rgba(217, 119, 6, .55); color: #b45309; font-weight: 600; }
+.sem-cal-gun.is-iptal::after {
+  content: "";
+  position: absolute;
+  bottom: 1px; left: 50%;
+  width: 4px; height: 4px; margin-left: -2px;
+  border-radius: 50%;
+  background: #d97706;
+}
+.sem-cal-gun.is-kayit.is-iptal::after { margin-left: -6px; box-shadow: 8px 0 0 var(--sem-accent); background: #d97706; }
+
+/* işaretli günlerde fareyle üzerine gelince açıklama balonu */
+.sem-cal-gun.has-ipucu { cursor: help; }
+.sem-cal-ipucu {
+  position: absolute;
+  bottom: calc(100% + 6px); left: 50%;
+  z-index: 5;
+  transform: translate(-50%, 4px);
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: var(--sem-primary, #002855);
+  color: #fff;
+  font-size: 12px; font-weight: 500; line-height: 1.45;
+  white-space: nowrap;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0, 40, 85, .22);
+  opacity: 0; visibility: hidden; pointer-events: none;
+  transition: opacity .15s ease, transform .15s ease, visibility .15s;
+}
+.sem-cal-ipucu::after {
+  content: "";
+  position: absolute;
+  top: 100%; left: 50%;
+  margin-left: -5px;
+  border: 5px solid transparent;
+  border-top-color: var(--sem-primary, #002855);
+}
+.sem-cal-gun.ipucu-sol .sem-cal-ipucu { left: 0; transform: translate(0, 4px); }
+.sem-cal-gun.ipucu-sol .sem-cal-ipucu::after { left: 18px; }
+.sem-cal-gun.ipucu-sag .sem-cal-ipucu { left: auto; right: 0; transform: translate(0, 4px); }
+.sem-cal-gun.ipucu-sag .sem-cal-ipucu::after { left: auto; right: 13px; margin-left: 0; }
+.sem-cal-gun.has-ipucu:hover .sem-cal-ipucu { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
+.sem-cal-gun.ipucu-sol:hover .sem-cal-ipucu,
+.sem-cal-gun.ipucu-sag:hover .sem-cal-ipucu { transform: translate(0, 0); }
 
 .sem-cal-lejant {
   display: flex;
@@ -2169,6 +2214,7 @@ html.side-nav-opened, html.side-nav-opened body { overflow: hidden; }
 }
 .sem-takvim-saat i { font-size: 12px; }
 .sem-lej-kayit { background: var(--sem-accent); }
+.sem-lej-iptal { background: #d97706; }
 
 /* grup listesi */
 .sem-takvim-gruplar {

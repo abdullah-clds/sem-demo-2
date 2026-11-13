@@ -2027,7 +2027,7 @@ html.side-nav-opened, html.side-nav-opened body { overflow: hidden; }
 .sem-date-badge {
   gap: 6px;
   border: 0;
-  background: var(--kun-mavi, #0072ce);
+  background: var(--kun-turkuaz, #00A1AA); /* Sepete Ekle butonuyla aynı turkuaz */
   color: #fff;
   white-space: nowrap;
 }
